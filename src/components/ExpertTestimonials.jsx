@@ -1,0 +1,255 @@
+const ExpertTestimonials = ({ testimonials }) => {
+  // Default testimonials data
+  const defaultTestimonials = [
+    {
+      quote: "I think that crypto casino projects are going to be huge in 2024",
+      body: "I'm interested in profitable casinos, and as we all know, Crypto Casinos are really profitable, have growth beyond 50% each year and have a total market capitalization of 231 Billion. Crypto casino projects are going to be huge.",
+      author: {
+        name: "Ben Crypto",
+        role: "YouTuber | 28k Followers",
+        avatar: "/testimonial-1.jpg",
+      },
+      rating: 5,
+      media: ["/thumbnail-1.jpg", "/thumbnail-2.jpg"],
+    },
+    {
+      quote: "It's crazy how many people are using these (Gambling) platforms",
+      body: "I'm interested in profitable casinos, and as we all know, Crypto Casinos are really profitable, have growth beyond 50% each year and have a total market capitalization of 231 Billion. Crypto casino projects are going to be huge.",
+      author: {
+        name: "Crypto Costa",
+        role: "YouTuber | 55k Followers",
+        avatar: "/testimonial-2.jpg",
+      },
+      rating: 5,
+      media: ["/thumbnail-3.jpg", "/thumbnail-4.jpg"],
+    },
+    {
+      quote: "I just bought the next billion dollar crypto",
+      body: "Scorpion Casino also offers staking where no other crypto casino does it before! The project will be the winner! There were $90M sold and the next reveal they did take advantage of Scorpion Casinos early.",
+      author: {
+        name: "Michael Wrubel",
+        role: "YouTuber | 370k Followers",
+        avatar: "/testimonial-3.jpg",
+      },
+      rating: 5,
+      media: ["/thumbnail-5.jpg", "/thumbnail-6.jpg"],
+    },
+  ];
+
+  const testimonialsData = testimonials || defaultTestimonials;
+
+  // Highlight keywords in gold
+  const highlightKeywords = (text) => {
+    const keywords = [
+      "crypto casino",
+      "crypto",
+      "casino",
+      "Gambling",
+      "platforms",
+      "billion dollar",
+    ];
+
+    let highlightedText = text;
+    keywords.forEach((keyword) => {
+      const regex = new RegExp(`\\b(${keyword})\\b`, "gi");
+      highlightedText = highlightedText.replace(
+        regex,
+        '<span class="bg-linear-to-r from-[#F7D774] to-[#F3B74E] bg-clip-text text-transparent">$1</span>'
+      );
+    });
+
+    return highlightedText;
+  };
+
+  // Render star rating
+  const StarRating = ({ rating }) => (
+    <div className="flex gap-1">
+      {[...Array(5)].map((_, i) => (
+        <svg
+          key={i}
+          className={`w-5 h-5 ${
+            i < rating ? "text-[#F7D774]" : "text-gray-600"
+          } drop-shadow-[0_0_4px_rgba(247,215,116,0.4)]`}
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+      ))}
+    </div>
+  );
+
+  return (
+    <section className="w-full bg-linear-to-br from-[#0B0C10] to-[#15161A] py-16 px-6 md:px-12 lg:px-24">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+            <span className="block text-white mb-2">What Crypto Experts</span>
+            <span className="block">
+              <span className="text-white">Think About </span>
+              <span className="bg-linear-to-r from-[#F7D774] to-[#F3B74E] bg-clip-text text-transparent">
+                $SCORP
+              </span>
+            </span>
+          </h2>
+        </div>
+
+        {/* Testimonial Cards */}
+        <div className="space-y-12">
+          {testimonialsData.map((testimonial, index) => {
+            const isReversed = index % 2 === 1;
+
+            return (
+              <div
+                key={index}
+                className="group relative rounded-2xl bg-linear-to-br from-[#1a1a1a] via-[#0f0f0f] to-[#0a0a0a] p-6 md:p-8 border border-white/5 ring-1 ring-[#F7D774]/10 hover:scale-[1.01] transition-all duration-300 hover:ring-[#F7D774]/20 overflow-hidden"
+              >
+                {/* Radial Gold Glow Background */}
+                <div
+                  className={`absolute inset-0 bg-gradient-radial from-[#F7D774]/10 via-transparent to-transparent opacity-30 blur-3xl pointer-events-none ${
+                    isReversed ? "left-0" : "right-0"
+                  }`}
+                ></div>
+
+                {/* Card Content */}
+                <div
+                  className={`relative flex flex-col ${
+                    isReversed ? "md:flex-row-reverse" : "md:flex-row"
+                  } items-center gap-6 md:gap-10`}
+                >
+                  {/* Text Block */}
+                  <div className="flex-1 text-center md:text-left">
+                    {/* Quote Mark */}
+                    <div className="mb-4">
+                      <svg
+                        className="w-8 h-8 text-white/20"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
+                      </svg>
+                    </div>
+
+                    {/* Headline */}
+                    <h3
+                      className="text-xl md:text-2xl font-bold text-white mb-4 leading-relaxed"
+                      dangerouslySetInnerHTML={{
+                        __html: highlightKeywords(testimonial.quote),
+                      }}
+                    />
+
+                    {/* Body Paragraph */}
+                    <p className="text-sm md:text-base text-gray-300/80 leading-relaxed mb-6">
+                      {testimonial.body}
+                    </p>
+
+                    {/* Author Pill */}
+                    <div className="inline-flex items-center gap-3 bg-linear-to-r from-[#F7D774]/20 to-transparent rounded-full px-4 py-2 mb-4 backdrop-blur-sm">
+                      {testimonial.author.avatar && (
+                        <div className="w-8 h-8 rounded-full bg-linear-to-br from-[#F7D774] to-[#F3B74E] p-[2px]">
+                          <div className="w-full h-full rounded-full bg-black flex items-center justify-center overflow-hidden">
+                            <img
+                              src={testimonial.author.avatar}
+                              alt={testimonial.author.name}
+                              className="w-full h-full object-cover"
+                              onError={(e) => {
+                                e.target.style.display = "none";
+                                e.target.parentElement.innerHTML = `
+                                  <svg class="w-5 h-5 text-[#F7D774]" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                                  </svg>
+                                `;
+                              }}
+                            />
+                          </div>
+                        </div>
+                      )}
+                      <div className="text-left">
+                        <p className="text-white font-bold text-sm">
+                          {testimonial.author.name}
+                        </p>
+                        <p className="text-gray-400 text-xs">
+                          {testimonial.author.role}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Star Rating */}
+                    <StarRating rating={testimonial.rating} />
+                  </div>
+
+                  {/* Media Block */}
+                  <div className="flex-1 relative">
+                    <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
+                      {testimonial.media.map((thumbnail, thumbIndex) => (
+                        <div
+                          key={thumbIndex}
+                          className={`relative rounded-lg overflow-hidden border-2 border-[#F7D774]/30 shadow-[0_0_20px_rgba(247,215,116,0.2)] hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(247,215,116,0.4)] transition-all duration-300 ${
+                            thumbIndex === 0 ? "col-span-2" : ""
+                          }`}
+                        >
+                          <img
+                            src={thumbnail}
+                            alt={`${testimonial.author.name} video thumbnail ${
+                              thumbIndex + 1
+                            }`}
+                            className="w-full h-48 object-cover"
+                            onError={(e) => {
+                              e.target.style.display = "none";
+                              e.target.parentElement.innerHTML = `
+                                <div class="w-full h-48 bg-linear-to-br from-[#1a1a1a] to-[#0f0f0f] flex items-center justify-center">
+                                  <svg class="w-16 h-16 text-[#F7D774]/30" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
+                                  </svg>
+                                </div>
+                              `;
+                            }}
+                          />
+
+                          {/* Scorpion Logo Overlay (for first thumbnail) */}
+                          {thumbIndex === 0 && (
+                            <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                              <div className="bg-linear-to-br from-[#F7D774] to-[#F3B74E] rounded-lg px-4 py-2">
+                                <span className="text-black font-bold text-lg">
+                                  $SCORP
+                                </span>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      ))}
+
+                      {/* Circular Influencer Portrait Overlay */}
+                      {testimonial.author.avatar && (
+                        <div className="absolute -bottom-4 -right-4 w-20 h-20 rounded-full bg-linear-to-br from-[#F7D774] to-[#F3B74E] p-[3px] shadow-[0_0_30px_rgba(247,215,116,0.6)]">
+                          <div className="w-full h-full rounded-full bg-black flex items-center justify-center overflow-hidden">
+                            <img
+                              src={testimonial.author.avatar}
+                              alt={testimonial.author.name}
+                              className="w-full h-full object-cover"
+                              onError={(e) => {
+                                e.target.style.display = "none";
+                                e.target.parentElement.innerHTML = `
+                                  <svg class="w-10 h-10 text-[#F7D774]" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                                  </svg>
+                                `;
+                              }}
+                            />
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ExpertTestimonials;

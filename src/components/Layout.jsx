@@ -6,7 +6,6 @@ import Footer from "./Footer";
 function Layout() {
   return (
     <div>
-      {/* <ScrollToTop /> */}
       <div className="">
         <Navbar />
       </div>

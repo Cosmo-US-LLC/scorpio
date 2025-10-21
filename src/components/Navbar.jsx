@@ -1,21 +1,29 @@
 import React, { useState } from "react";
-
+import Logo from "../assets/navabar/logo.webp";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="bg-black text-white fixed top-0 left-0 w-full z-50 shadow-md">
-      <div className="container mx-auto flex items-center justify-between px-6 py-4">
-        {/* Logo / Brand */}
-        <h1 className="font-actay text-2xl">Scorpio</h1>
-
-        {/* Desktop Menu */}
-        <nav className="hidden md:flex space-x-8 font-inter text-sm uppercase">
-          <a href="#" className="hover:text-[#B88A44] transition">Home</a>
-          <a href="#" className="hover:text-[#B88A44] transition">About</a>
-          <a href="#" className="hover:text-[#B88A44] transition">Services</a>
-          <a href="#" className="hover:text-[#B88A44] transition">Contact</a>
+      <div className="max-w-[1280px] w-full  mx-auto md:px-0 max-md:px-4 py-4">
+       
+       <div className="w-full flex justify-between items-center">
+        
+        <div className="max-w-[138px] w-[100%]">
+          <img src={Logo} alt="" />
+        </div>
+        <nav className="hidden md:flex space-x-[27px] ">
+          <a href="#" className="hover:text-[#B88A44] a_tags transition">What is Scorpion Casino?</a>
+          <a href="#" className="hover:text-[#B88A44] a_tags transition">How to Buy</a>
+          <a href="#" className="hover:text-[#B88A44] a_tags transition">Whitepaper</a>
+          <a href="#" className="hover:text-[#B88A44] a_tags transition">Tokenomics</a>
+          <a href="#" className="hover:text-[#B88A44] a_tags transition">Growth Potential</a>
+          <a href="#" className="hover:text-[#B88A44] a_tags transition">FAQ</a>
+          <a href="#" className="hover:text-[#B88A44] a_tags transition">English</a>
         </nav>
+
+        <button className="px-[13px] btn-primary cursor-pointer py-[16px]">Connect Wallet</button>
+       </div>
 
         {/* Mobile Menu Button */}
         <button
