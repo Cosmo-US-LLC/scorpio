@@ -102,7 +102,6 @@ body {
 
   h2 {
     color: #fff;
-
     text-align: center;
     font-family: "Actay Wide";
     font-size: 48px;
@@ -136,6 +135,14 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: 110%;
+  }
+  h6 {
+    font-family: "Actay Wide";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 20.8px */
+    letter-spacing: -0.48px;
   }
   p {
     color: #cacaca;
@@ -209,16 +216,59 @@ body {
   .card {
     background: #b88a44;
   }
+  .dropdown_bg{
+    border-radius: 84.498px;
+border: 0.85px solid rgba(255, 255, 255, 0.12);
+background: rgba(255, 253, 253, 0.02);
+box-shadow: 0 -2.485px 8.497px 0 rgba(255, 255, 255, 0.58) inset, 0 3.399px 50.979px 0 rgba(255, 255, 255, 0.08) inset;
+  }
+  .walletinput_bg{
+   border-radius: 6.838px;
+border: 0.684px solid rgba(255, 255, 255, 0.20);
+background: rgba(255, 255, 255, 0.20);
+}
 }
 
 @layer utilities {
-  .text-gradient {
-    background: linear-gradient(to right, #4a6bbe, #8f578f);
+  .text_gradient {
+    background: linear-gradient(
+      90deg,
+      #f9f295 5.47%,
+      #e0aa3e 38.55%,
+      #f9f295 69.43%,
+      #b88a44 97.22%
+    );
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   /* Accordion animations */
+
+  .bg_herosection {
+    background-image: url(../src//assets/herosection/herobg.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+   .bg_resultssection {
+    background-image: url(../src//assets/results/results_bg.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .bg_gambling_con{
+ background-image: url(../src//assets/gambling/gambling_bg.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .bg_gambling_inner{
+ background-image: url(../src//assets/gambling/gambling_inner.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
   @keyframes accordion-down {
     from {
       height: 0;
