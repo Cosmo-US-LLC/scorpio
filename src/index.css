@@ -40,10 +40,19 @@
 body {
   margin: 0 auto;
   min-height: 100vh;
+  background: #0b0d10;
 }
 
 @layer base {
   h1 {
+    color: #fff;
+    font-family: "Actay Wide", sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+  }
+  .h1 {
     color: #fff;
     font-family: "Actay Wide", sans-serif;
     font-size: 40px;
@@ -136,13 +145,67 @@ body {
     line-height: 140%;
     letter-spacing: 0.32px;
   }
+  .btn-primary {
+    position: relative;
+    color: #0d0e1e;
+    text-align: center;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    border: none;
+    border-radius: 136.752px;
+    padding: 12px 36px;
+    background: linear-gradient(
+      90deg,
+      rgba(249, 242, 149, 0.2) 5.47%,
+      rgba(224, 170, 62, 0.2) 38.55%,
+      rgba(249, 242, 149, 0.2) 69.43%,
+      rgba(184, 138, 68, 0.2) 97.22%
+    );
+    box-shadow: 0 -1.368px 2.735px 0 #f5e99c inset,
+      0 1.368px 2.735px 0 #f5e99c inset;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  /* Outer blurred gradient layer */
+  .btn-primary::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 136.752px;
+    background: linear-gradient(
+      90deg,
+      #f9f295 5.47%,
+      #e0aa3e 38.55%,
+      #f9f295 69.43%,
+      #b88a44 97.22%
+    );
+    filter: blur(6.8px);
+    z-index: -2;
+  }
+
+  /* Soft overlay layer */
+  .btn-primary::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 136.752px;
+    background: linear-gradient(
+      90deg,
+      rgba(249, 242, 149, 0.2) 5.47%,
+      rgba(224, 170, 62, 0.2) 38.55%,
+      rgba(249, 242, 149, 0.2) 69.43%,
+      rgba(184, 138, 68, 0.2) 97.22%
+    );
+    box-shadow: 0 -1.368px 2.735px 0 #f5e99c inset,
+      0 1.368px 2.735px 0 #f5e99c inset;
+    z-index: -1;
+  }
 }
 
 @layer components {
-  .btn {
-    background: #b88a44;
-  }
-
   .card {
     background: #b88a44;
   }

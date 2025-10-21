@@ -9,10 +9,12 @@ import PressMediaSection from "../components/PressMediaSection";
 import AmbassadorsSection from "../components/AmbassadorsSection";
 import FaqSection from "../components/FaqSection";
 import PressReleaseSection from "@/components/PressReleaseSection";
+import Herosection from "./herosection";
 
 function Home() {
   return (
     <div className="">
+      <Herosection />
       <FutureSection />
       <ScorpSection />
       <ExpertTestimonials />
