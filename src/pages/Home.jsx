@@ -10,11 +10,43 @@ import AmbassadorsSection from "../components/AmbassadorsSection";
 import FaqSection from "../components/FaqSection";
 import PressReleaseSection from "@/components/PressReleaseSection";
 import Herosection from "./herosection";
+import CaseStudySection from "../components/CaseStudySection";
+import BreakingBarriersSection from "../components/BreakingBarriersSection";
+import MarketOpportunitySection from "../components/MarketOpportunitySection";
+import RoadmapSection from "../components/RoadmapSection";
+import WhitepaperSection from "../components/WhitepaperSection";
+import ComparisonChartSection from "../components/ComparisonChartSection";
+import StakingRewardsSection from "../components/StakingRewardsSection";
+import BuyInCompetitionSection from "../components/BuyInCompetitionSection";
+import ExtraRewardsSection from "../components/ExtraRewardsSection";
+import TrustBadgesSection from "@/components/TrustBadgesSection";
+import BenefitsSection from "../components/BenefitsSection";
+import FutureCryptoSection from "../components/FutureCryptoSection";
+import ExchangeLaunchSection from "../components/ExchangeLaunchSection";
+import ResultsSection from "../components/ResultsSection";
+import FeaturedInSection from "../components/FeaturedInSection";
+import SCORPUtilitySection from "../components/SCORPUtilitySection";
 
 function Home() {
   return (
     <div className="">
       <Herosection />
+      <FeaturedInSection />
+      <ResultsSection />
+      <ExchangeLaunchSection />
+      <FutureCryptoSection />
+      <TrustBadgesSection />
+      <BenefitsSection />
+      <ExtraRewardsSection />
+      <BuyInCompetitionSection />
+      <StakingRewardsSection />
+      <SCORPUtilitySection />
+      <ComparisonChartSection />
+      <WhitepaperSection />
+      <RoadmapSection />
+      <MarketOpportunitySection />
+      <BreakingBarriersSection />
+      <CaseStudySection />
       <FutureSection />
       <ScorpSection />
       <ExpertTestimonials />
