@@ -1,32 +1,30 @@
 @import "tailwindcss";
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Actay Wide';
-  src: url('../public/font/ActayWide-Bold.otf') format('opentype');
+  font-family: "Actay Wide";
+  src: url("../public/font/ActayWide-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Actay Wide';
-  src: url('../public/font/Actay-Regular.otf') format('opentype');
+  font-family: "Actay Wide";
+  src: url("../public/font/Actay-Regular.otf") format("opentype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Actay Wide';
-  src: url('../public/font/ActayCondensed-Thin.otf') format('opentype');
+  font-family: "Actay Wide";
+  src: url("../public/font/ActayCondensed-Thin.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
-
 
 :root {
   line-height: 1.5;
@@ -39,59 +37,63 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 body {
   margin: 0 auto;
   min-height: 100vh;
+  background: #0B0D10;
 }
 
-
 @layer base {
-
-   h1 {
-    color: #FFF;
-    font-family: 'Actay Wide', sans-serif;
+  h1 {
+    color: #fff;
+    font-family: "Actay Wide", sans-serif;
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
-    line-height: 120%; 
+    line-height: 120%;
   }
   .h1 {
-    color: #FFF;
-    font-family: 'Actay Wide', sans-serif;
+    color: #fff;
+    font-family: "Actay Wide", sans-serif;
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
-    line-height: 120%; 
+    line-height: 120%;
   }
-  .a_tags{
-   color: #FFF;
-font-family: 'Inter', sans-serif;
-font-size: 14px;
-font-style: normal;
-font-weight: 700;
-line-height: 110%; 
-letter-spacing: 0.28px;
+  .a_tags {
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: 0.28px;
   }
 
   .alt {
-    color: #FFFFFE;
-    font-family: 'Actay Wide', sans-serif;
+    color: #fffffe;
+    font-family: "Actay Wide", sans-serif;
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%;
   }
   .heading-alt {
-   background: linear-gradient(90deg, #F9F295 5.47%, #E0AA3E 38.55%, #F9F295 69.43%, #B88A44 97.22%);
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+    background: linear-gradient(
+      90deg,
+      #f9f295 5.47%,
+      #e0aa3e 38.55%,
+      #f9f295 69.43%,
+      #b88a44 97.22%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .faded {
     color: rgba(255, 255, 254, 0.5);
-    font-family: 'Actay Wide', sans-serif;
+    font-family: "Actay Wide", sans-serif;
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
@@ -99,67 +101,121 @@ background-clip: text;
   }
 
   h2 {
-    color: #FFF;
+    color: #fff;
 
-text-align: center;
-font-family: "Actay Wide";
-font-size: 48px;
-font-style: normal;
-font-weight: 700;
-line-height: 110%;
+    text-align: center;
+    font-family: "Actay Wide";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
   }
-  h3{
-    color: #FFFFFE;
-text-align: center;
-font-family: "Actay Wide";
-font-size: 22px;
-font-style: normal;
-font-weight: 700;
-line-height: 110%
+  h3 {
+    color: #fffffe;
+    text-align: center;
+    font-family: "Actay Wide";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
   }
-  h4{
-    color: #FFFFFE;
+  h4 {
+    color: #fffffe;
 
-text-align: center;
-font-family: "Actay Wide";
-font-size: 20px;
-font-style: normal;
-font-weight: 700;
-line-height: 110%;
+    text-align: center;
+    font-family: "Actay Wide";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
   }
-  h5{
-    color: #FFFFFE;
-font-family: "Actay Wide";
-font-size: 18.347px;
-font-style: normal;
-font-weight: 700;
-line-height: 110%;
+  h5 {
+    color: #fffffe;
+    font-family: "Actay Wide";
+    font-size: 18.347px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
   }
   p {
-    color: #CACACA;
-    font-family: 'Inter', sans-serif;
+    color: #cacaca;
+    font-family: "Inter", sans-serif;
     font-size: 16px;
     font-weight: 400;
-    line-height: 140%; 
+    line-height: 140%;
     letter-spacing: 0.32px;
   }
+ .btn-primary {
+  position: relative;
+  color: #0d0e1e;
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  border: none;
+  border-radius: 136.752px;
+  padding: 12px 36px;
+  background: linear-gradient(
+    90deg,
+    rgba(249, 242, 149, 0.2) 5.47%,
+    rgba(224, 170, 62, 0.2) 38.55%,
+    rgba(249, 242, 149, 0.2) 69.43%,
+    rgba(184, 138, 68, 0.2) 97.22%
+  );
+  box-shadow: 0 -1.368px 2.735px 0 #f5e99c inset,
+              0 1.368px 2.735px 0 #f5e99c inset;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Outer blurred gradient layer */
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 136.752px;
+  background: linear-gradient(
+    90deg,
+    #f9f295 5.47%,
+    #e0aa3e 38.55%,
+    #f9f295 69.43%,
+    #b88a44 97.22%
+  );
+  filter: blur(6.8px);
+  z-index: -2;
+}
+
+/* Soft overlay layer */
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 136.752px;
+  background: linear-gradient(
+    90deg,
+    rgba(249, 242, 149, 0.2) 5.47%,
+    rgba(224, 170, 62, 0.2) 38.55%,
+    rgba(249, 242, 149, 0.2) 69.43%,
+    rgba(184, 138, 68, 0.2) 97.22%
+  );
+  box-shadow: 0 -1.368px 2.735px 0 #f5e99c inset,
+              0 1.368px 2.735px 0 #f5e99c inset;
+  z-index: -1;
+}
+
 }
 
 @layer components {
-  .btn {
-   background: #B88A44
-  }
-
   .card {
-      background: #B88A44
+    background: #b88a44;
   }
 }
 
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(to right, #4A6BBE, #8F578F);
+    background: linear-gradient(to right, #4a6bbe, #8f578f);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }
-
