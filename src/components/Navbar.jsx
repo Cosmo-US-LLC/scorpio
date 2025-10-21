@@ -1,11 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../assets/navabar/logo.webp";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Detect scroll and toggle blur effect
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="bg-black text-white fixed top-0 left-0 w-full z-50 shadow-md">
-      <div className="max-w-[1280px] w-full  mx-auto md:px-0 max-md:px-4 py-4">
+    <header
+    className={`fixed left-0 w-full z-50 text-white   transition-all duration-300 ${
+        isScrolled
+          ? "backdrop-blur-md bg-[rgba(5, 5, 5, 0.45)] top-0"
+          : "bg-transparent top-2"
+      }`}>
+      <div className="max-w-[1280px] w-full border-b-[1px] border-white mx-auto md:px-0 max-md:px-4 py-4">
        
        <div className="w-full flex justify-between items-center">
         
