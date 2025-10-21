@@ -1,9 +1,28 @@
 import React from "react";
+import PoweredBy from "../components/PoweredBy";
+import FutureSection from "../components/FutureSection";
+import ScorpSection from "../components/ScorpSection";
+import ExpertTestimonials from "../components/ExpertTestimonials";
+import SuccessStories from "../components/SuccessStories";
+import CollaborationSection from "../components/CollaborationSection";
+import PressMediaSection from "../components/PressMediaSection";
+import AmbassadorsSection from "../components/AmbassadorsSection";
+import FaqSection from "../components/FaqSection";
+import PressReleaseSection from "@/components/PressReleaseSection";
 
 function Home() {
   return (
-    <div className="min-h-screen w-full bg-amber-900 flex items-center justify-center">
-      <h2 className="text-center">home</h2>
+    <div className="">
+      <FutureSection />
+      <ScorpSection />
+      <ExpertTestimonials />
+      <SuccessStories />
+      <CollaborationSection />
+      <PressMediaSection />
+      <PressReleaseSection />
+      <AmbassadorsSection />
+      <PoweredBy />
+      <FaqSection />
     </div>
   );
 }
