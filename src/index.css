@@ -193,7 +193,6 @@ body {
     z-index: -2;
   }
 
-  /* Soft overlay layer */
   .btn-primary::after {
     content: "";
     position: absolute;
