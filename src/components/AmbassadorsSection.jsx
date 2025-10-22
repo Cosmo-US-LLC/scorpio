@@ -1,10 +1,13 @@
+import cokiSinger from "../assets/scorpion_casino/coki_singer.webp";
+import tbaImage from "../assets/scorpion_casino/TBA_image.webp";
+
 const AmbassadorsSection = ({ ambassadors }) => {
   // Default ambassadors data
   const defaultAmbassadors = [
     {
       name: "GOKI RAMIREZ",
       verified: true,
-      avatar: "/goki-ramirez.jpg",
+      avatar: cokiSinger,
       followers: "@10.7k followers",
       description: "Famous Singer and Model",
       link: {
@@ -14,8 +17,8 @@ const AmbassadorsSection = ({ ambassadors }) => {
     },
     {
       name: "TBA",
-      verified: false,
-      avatar: "/tba-ambassador.jpg",
+      verified: true,
+      avatar: tbaImage,
       followers: "New Ambassador",
       description: "Will be announced soon",
       link: {
@@ -28,64 +31,21 @@ const AmbassadorsSection = ({ ambassadors }) => {
   const ambassadorsData = ambassadors || defaultAmbassadors;
 
   return (
-    <section className="relative w-full bg-linear-to-b from-black to-[#0F0F0F] py-12 px-6 md:px-16 overflow-hidden">
-      {/* Faint Grid Overlay */}
-      <div
-        className="absolute inset-0 opacity-[0.02]"
-        style={{
-          backgroundImage: `linear-gradient(to right, #ffffff 1px, transparent 1px),
-                           linear-gradient(to bottom, #ffffff 1px, transparent 1px)`,
-          backgroundSize: "50px 50px",
-        }}
-      ></div>
-
-      {/* Scattered Golden Star Icons */}
-      <svg
-        className="absolute top-8 left-[15%] w-4 h-4 text-[#F7D774] opacity-40 animate-pulse"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7.4-6.3-4.8-6.3 4.8 2.3-7.4-6-4.6h7.6z" />
-      </svg>
-      <svg
-        className="absolute top-20 right-[20%] w-3 h-3 text-[#F7D774] opacity-30 animate-pulse"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7.4-6.3-4.8-6.3 4.8 2.3-7.4-6-4.6h7.6z" />
-      </svg>
-      <svg
-        className="absolute bottom-32 left-[10%] w-4 h-4 text-[#F7D774] opacity-50 animate-pulse"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7.4-6.3-4.8-6.3 4.8 2.3-7.4-6-4.6h7.6z" />
-      </svg>
-      <svg
-        className="absolute bottom-16 right-[25%] w-3 h-3 text-[#F7D774] opacity-40 animate-pulse"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7.4-6.3-4.8-6.3 4.8 2.3-7.4-6-4.6h7.6z" />
-      </svg>
-
-      <div className="relative max-w-7xl mx-auto">
-        {/* Section Heading */}
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+    <section className="relative w-full overflow-hidden">
+      <div className="max-w-[1280px] mx-auto relative scorpion_gbg flex flex-col gap-16 items-center justify-center">
+        <div className="text-center">
+          <h2 className="">
             <span className="text-white">Scorpion Casino </span>
-            <span className="bg-linear-to-r from-[#F7D774] to-[#F3B74E] bg-clip-text text-transparent">
-              Ambassadors
-            </span>
+            <span className="text_gradient">Ambassadors</span>
           </h2>
         </div>
 
         {/* Ambassador Cards */}
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
           {ambassadorsData.map((ambassador, index) => (
             <div
               key={index}
-              className="group w-full md:w-[calc(50%-1rem)] max-w-md rounded-xl bg-linear-to-br from-[#1a1a1a] via-[#0f0f0f] to-black p-6 md:p-8 border border-white/10 hover:border-[#F7D774]/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(247,215,116,0.15)]"
+              className="group rounded-xl bg-linear-to-br from-[#1a1a1a] via-[#0f0f0f] to-black p-6 md:p-8 border border-white/10 hover:border-[#F7D774]/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(247,215,116,0.15)]"
             >
               {/* Content Container */}
               <div className="flex flex-col items-center text-center">
@@ -117,7 +77,7 @@ const AmbassadorsSection = ({ ambassadors }) => {
                   </h3>
                   {ambassador.verified && (
                     <svg
-                      className="w-5 h-5 text-blue-500"
+                      className="w-6 h-6 pb-1.5 text-blue-500"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >

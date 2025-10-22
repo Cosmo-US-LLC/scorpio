@@ -1,3 +1,6 @@
+import pressRelease1 from "../assets/press_release/press_release_c1.webp";
+import pressRelease2 from "../assets/press_release/press_release_c2.webp";
+import pressRelease3 from "../assets/press_release/press_release_c3.webp";
 import {
   Carousel,
   CarouselContent,
@@ -11,7 +14,7 @@ const PressReleaseSection = ({ articles }) => {
   const defaultArticles = [
     {
       id: 1,
-      image: "/press-release-1.jpg",
+      image: pressRelease1,
       title:
         "Scorpion Casino: The Crypto-Based Gambling Revolution that's Taking Hold of Crypto With One Day to Go",
       excerpt:
@@ -20,7 +23,7 @@ const PressReleaseSection = ({ articles }) => {
     },
     {
       id: 2,
-      image: "/press-release-2.jpg",
+      image: pressRelease2,
       title:
         "Scorpion Casino is The Ultimate Destination for Licensed and Regulated Online Gambling",
       excerpt:
@@ -29,7 +32,7 @@ const PressReleaseSection = ({ articles }) => {
     },
     {
       id: 3,
-      image: "/press-release-3.jpg",
+      image: pressRelease3,
       title:
         "Could Scorpion Casino Token Dethrone Dogecoin? Unlocking Daily Earnings of $10,000 and...",
       excerpt:
