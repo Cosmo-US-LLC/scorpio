@@ -208,6 +208,57 @@ body {
       0 1.368px 2.735px 0 #f5e99c inset;
     z-index: -1;
   }
+
+  .btn-secondary {
+    position: relative;
+    cursor: pointer;
+    color: #0d0e1e;
+    text-align: center;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    border: none;
+    border-radius: 176px;
+    background: linear-gradient(
+      90deg,
+      rgba(191, 191, 190, 0.2) 5.47%,
+      rgba(253, 254, 254, 0.2) 38.55%,
+      rgba(181, 181, 181, 0.2) 69.43%,
+      rgba(245, 244, 245, 0.2) 97.22%
+    );
+    box-shadow: 0 -1.76px 3.52px 0 #fff inset, 0 1.76px 3.52px 0 #fff inset;
+  }
+  .btn-secondary::before {
+     content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 176px;
+    background: linear-gradient(
+      90deg,
+      #bfbfbe 5.47%,
+      #fdfefe 38.55%,
+      #b5b5b5 69.43%,
+      #f5f4f5 97.22%
+    );
+    filter: blur(8.799999237060547px);
+    z-index: -2;
+
+  }
+  .btn-secondary::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 176px;
+    background: linear-gradient(
+      90deg,
+      rgba(191, 191, 190, 0.2) 5.47%,
+      rgba(253, 254, 254, 0.2) 38.55%,
+      rgba(181, 181, 181, 0.2) 69.43%,
+      rgba(245, 244, 245, 0.2) 97.22%
+    );
+    box-shadow: 0 -1.76px 3.52px 0 #fff inset, 0 1.76px 3.52px 0 #fff inset;
+     z-index: -1;
+  }
 }
 
 @layer components {
@@ -241,6 +292,18 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  .text_gradient_gray {
+    background: linear-gradient(
+      90deg,
+      #e5e4e2 5.47%,
+      #8999b7 38.55%,
+      #acb2bd 69.43%,
+      #8899b6 97.22%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
   /* Accordion animations */
 
@@ -264,6 +327,31 @@ body {
   }
   .bg_gambling_inner {
     background-image: url(../src//assets/gambling/gambling_inner.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .Benefits_bg {
+    background-image: url(../src//assets/Benefits/Benefit_bg.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .how_to_buy_bg {
+    background-image: url(../src/assets/howtobuy/how_to_buy_bg.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .staking_rewards_bg{
+   background-image: url(../src/assets/stakingrewards/staking_rewards_bg.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+  }
+  .howdoesit_bg{
+    background-image: url(../src/assets/HowDoesIt/howdoesit_bg.webp);
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;

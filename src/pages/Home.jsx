@@ -20,12 +20,14 @@ import StakingRewardsSection from "../components/StakingRewardsSection";
 import BuyInCompetitionSection from "../components/BuyInCompetitionSection";
 import ExtraRewardsSection from "../components/ExtraRewardsSection";
 import TrustBadgesSection from "@/components/TrustBadgesSection";
+import HowToBuySection from "@/components/howtobuySection";
 import BenefitsSection from "../components/BenefitsSection";
 import FutureCryptoSection from "../components/FutureCryptoSection";
 import ExchangeLaunchSection from "../components/ExchangeLaunchSection";
 import ResultsSection from "../components/ResultsSection";
 import FeaturedInSection from "../components/FeaturedInSection";
 import SCORPUtilitySection from "../components/SCORPUtilitySection";
+import HowDoesItSection from "@/components/HowDoesIt";
 
 function Home() {
   return (
@@ -39,7 +41,9 @@ function Home() {
       <BenefitsSection />
       <ExtraRewardsSection />
       <BuyInCompetitionSection />
+      <HowToBuySection />
       <StakingRewardsSection />
+       <HowDoesItSection />
       <SCORPUtilitySection />
       <ComparisonChartSection />
       <WhitepaperSection />

@@ -65,26 +65,23 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
   };
 
   return (
-    <section className="relative w-full bg-linear-to-b from-black to-[#121212] py-16 px-6 md:px-16 overflow-hidden">
-      {/* Decorative Glow Accents */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-[#F7D774] opacity-5 blur-[120px] rounded-full pointer-events-none"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#F7D774] opacity-5 blur-[120px] rounded-full pointer-events-none"></div>
+    <section className="relative w-full  py-16 px-6 md:px-16 ">
 
-      <div className="max-w-7xl mx-auto rounded-2xl shadow-[0_0_40px_rgba(247,215,116,0.15)]">
+      <div className="max-w-[1280px] mx-auto w-[100%] px-[40px] py-[44px]"
+      style={{
+        borderRadius:"16px",
+        border:"0.764px solid rgba(255, 255, 255, 0.50)",
+        background:"linear-gradient(90deg, rgba(224, 170, 62, 0.05) 38.55%, rgba(184, 138, 68, 0.05) 97.22%)",
+        backdropFilter:"blur(2.599111318588257px)"
+      }}
+      >
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            <span className="text-white">Biggest Buy-In </span>
-            <span className="bg-linear-to-r from-[#F7D774] to-[#F3B74E] bg-clip-text text-transparent">
-              Competition
-            </span>
+        <div className="flex justify-between mb-[30px] ms-start">
+          <h2 className="text_gradient min-w-[400px] text-start pr-2 mr-4 w-[100%] border-r-[1px] border-[#E5E7EB]">
+           biggest buy-in competition
           </h2>
-          <p className="text-sm md:text-base leading-6 mt-4 text-gray-300/90 max-w-3xl mx-auto">
-            We've established a Top 10 Biggest Buy-In competition for all
-            pre-sale participants, with a prize pool of 25,000 USD (in
-            $SCORP2.0). This is our way of rewarding those who recognise the
-            immense potential before others and have made a significant
-            contribution to the $SCORP ecosystem.
+          <p className="">
+           We’ve established a Top 10 Biggest Buy-in competition for all pre-sale participants, with a prize pool of 25,000 USD (in $SCORP2.0). This is our way of rewarding those who recognise the immense potential before others and have made a significant contribution to the success of the Scorpion Casino ecosystem.
           </p>
         </div>
 
@@ -272,32 +269,7 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
         </div>
       </div>
 
-      {/* Decorative Bottom Stars */}
-      <div className="flex justify-center gap-6 mt-8">
-        <svg
-          className="w-3 h-3 text-[#F7D774] opacity-50 animate-pulse"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7.4-6.3-4.8-6.3 4.8 2.3-7.4-6-4.6h7.6z" />
-        </svg>
-        <svg
-          className="w-2 h-2 text-[#F7D774] opacity-40 animate-pulse"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-          style={{ animationDelay: "0.5s" }}
-        >
-          <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7.4-6.3-4.8-6.3 4.8 2.3-7.4-6-4.6h7.6z" />
-        </svg>
-        <svg
-          className="w-3 h-3 text-[#F7D774] opacity-50 animate-pulse"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-          style={{ animationDelay: "1s" }}
-        >
-          <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7.4-6.3-4.8-6.3 4.8 2.3-7.4-6-4.6h7.6z" />
-        </svg>
-      </div>
+     
     </section>
   );
 };
