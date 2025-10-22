@@ -140,9 +140,8 @@ body {
     font-family: "Actay Wide";
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
-    line-height: 130%; /* 20.8px */
-    letter-spacing: -0.48px;
+    font-weight: 600;
+    line-height: 25px; /* 20.8px */
   }
   p {
     color: #cacaca;
@@ -215,17 +214,18 @@ body {
   .card {
     background: #b88a44;
   }
-  .dropdown_bg{
+  .dropdown_bg {
     border-radius: 84.498px;
-border: 0.85px solid rgba(255, 255, 255, 0.12);
-background: rgba(255, 253, 253, 0.02);
-box-shadow: 0 -2.485px 8.497px 0 rgba(255, 255, 255, 0.58) inset, 0 3.399px 50.979px 0 rgba(255, 255, 255, 0.08) inset;
+    border: 0.85px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 253, 253, 0.02);
+    box-shadow: 0 -2.485px 8.497px 0 rgba(255, 255, 255, 0.58) inset,
+      0 3.399px 50.979px 0 rgba(255, 255, 255, 0.08) inset;
   }
-  .walletinput_bg{
-   border-radius: 6.838px;
-border: 0.684px solid rgba(255, 255, 255, 0.20);
-background: rgba(255, 255, 255, 0.20);
-}
+  .walletinput_bg {
+    border-radius: 6.838px;
+    border: 0.684px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
+  }
 }
 
 @layer utilities {
@@ -250,20 +250,20 @@ background: rgba(255, 255, 255, 0.20);
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
-   .bg_resultssection {
+  .bg_resultssection {
     background-image: url(../src//assets/results/results_bg.webp);
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
-  .bg_gambling_con{
- background-image: url(../src//assets/gambling/gambling_bg.webp);
+  .bg_gambling_con {
+    background-image: url(../src//assets/gambling/gambling_bg.webp);
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
-  .bg_gambling_inner{
- background-image: url(../src//assets/gambling/gambling_inner.webp);
+  .bg_gambling_inner {
+    background-image: url(../src//assets/gambling/gambling_inner.webp);
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -292,5 +292,25 @@ background: rgba(255, 255, 255, 0.20);
 
   .animate-accordion-up {
     animation: accordion-up 0.2s ease-out;
+  }
+}
+
+/* heading responsive */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 35.2px;
+  }
+
+  h6 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%;
   }
 }
