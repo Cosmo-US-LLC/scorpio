@@ -99,7 +99,6 @@ export default function Footer() {
           <div className="w-[18%]">
             <h3 className="text-[#ffffff] text-left mb-4">Join Our Social</h3>
             <div className="flex gap-4 mb-4">
-              {/* Twitter Icon */}
               <a
                 href="#"
                 className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-all"
@@ -114,7 +113,6 @@ export default function Footer() {
                 </svg>
               </a>
 
-              {/* Instagram Icon */}
               <a
                 href="#"
                 className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-all"
@@ -129,7 +127,6 @@ export default function Footer() {
                 </svg>
               </a>
 
-              {/* Telegram Icon */}
               <a
                 href="#"
                 className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-all"
