@@ -1,9 +1,18 @@
+import th_logos1 from "../assets/ComparisonChartSection/th_logos (5).webp"
+import th_logos2 from "../assets/ComparisonChartSection/th_logos (6).webp"
+import th_logos3 from "../assets/ComparisonChartSection/th_logos (4).webp"
+import th_logos4 from "../assets/ComparisonChartSection/th_logos (3).webp"
+import th_logos5 from "../assets/ComparisonChartSection/th_logos (2).webp"
+import th_logos6 from "../assets/ComparisonChartSection/th_logos (1).webp"
+import heart from "../assets/ComparisonChartSection/heart.webp"
+
+
 const ComparisonChartSection = () => {
   // Platform data with logos and support status
   const platforms = [
     {
-      name: "Scorpion Casino",
-      logo: "🦂",
+      name: "Scorpion Casino ",
+      logo: th_logos1,
       features: {
         crypto: true,
         liveBets: true,
@@ -15,7 +24,7 @@ const ComparisonChartSection = () => {
     },
     {
       name: "Bc.Games",
-      logo: "🎮",
+      logo: th_logos2,
       features: {
         crypto: true,
         liveBets: true,
@@ -27,11 +36,11 @@ const ComparisonChartSection = () => {
     },
     {
       name: "Roobet",
-      logo: "🦘",
+      logo: th_logos3,
       features: {
         crypto: true,
-        liveBets: false,
-        affiliate: false,
+        liveBets: true,
+        affiliate: true,
         token: false,
         staking: false,
         passive: false,
@@ -39,11 +48,11 @@ const ComparisonChartSection = () => {
     },
     {
       name: "Rollbit",
-      logo: "🎲",
+      logo: th_logos4,
       features: {
         crypto: true,
-        liveBets: false,
-        affiliate: false,
+        liveBets: true,
+        affiliate: true,
         token: true,
         staking: false,
         passive: false,
@@ -51,23 +60,23 @@ const ComparisonChartSection = () => {
     },
     {
       name: "Owl Games",
-      logo: "🦉",
+      logo: th_logos5,
       features: {
         crypto: true,
-        liveBets: false,
-        affiliate: false,
-        token: false,
+        liveBets: true,
+        affiliate: true,
+        token: true,
         staking: false,
         passive: false,
       },
     },
     {
       name: "Stake",
-      logo: "🎰",
+      logo: th_logos6,
       features: {
         crypto: true,
-        liveBets: false,
-        affiliate: false,
+        liveBets: true,
+        affiliate: true,
         token: false,
         staking: false,
         passive: false,
@@ -85,40 +94,50 @@ const ComparisonChartSection = () => {
   ];
 
   return (
-    <section className="relative w-full bg-linear-to-br from-black via-[#0a0a0a] to-[#1a0f0f] py-16 px-6 md:px-12 overflow-hidden">
-      {/* Decorative Glow Effects */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-red-900/10 blur-[120px] rounded-full pointer-events-none"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-900/10 blur-[120px] rounded-full pointer-events-none"></div>
+    <section className="relative w-full disrupting_bg  py-16 px-6 md:px-12 ">
+        <div
+        className="absolute bottom-[60px] mx-auto"
+        style={{
+          width: "1280px",
+          height: "316px",
+          borderRadius: "1262px",
+          background: "#4D1200",
+          filter: "blur(250px)",
+          zIndex: 0,
+        }}
+      ></div>
 
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1280px] w-full mx-auto p-[44px]"
+       style={{
+          borderRadius: "30.769px",
+          border:"rgba(27, 26, 22, 0.40)",
+          background: "rgba(27, 26, 22, 0.40)",
+          backdropFilter: "blur(7.692295551300049px)",
+        }}
+      >
         {/* Title */}
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-12">
-          Disrupting The Gambling Industry
+        <h2 className=" text-center mb-12">
+          Disrupting the gambling industry
         </h2>
 
-        {/* Comparison Chart Container */}
-        <div className="rounded-3xl bg-linear-to-b from-[#1a1a1a]/80 to-[#0a0a0a]/80 backdrop-blur-sm border border-white/5 p-6 md:p-8 shadow-[0_0_80px_rgba(139,0,0,0.3)]">
-          {/* Header Row - Platform Names & Logos */}
+        <div className="rounded-3xl ">
           <div className="flex items-center mb-8">
-            {/* Empty cell for feature column */}
-            <div className="flex-1 min-w-[140px] md:min-w-[180px]"></div>
+            <div className=" min-w-[140px] md:min-w-[180px]"></div>
 
             {/* Platform Columns */}
             <div className="flex flex-1 justify-between gap-2 md:gap-4">
               {platforms.map((platform, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center justify-center flex-1 min-w-[60px] md:min-w-[90px] group"
+                  className="flex flex-col items-center justify-center max-h-[30.769px] flex-1 min-w-[60px] space-y-[9px] "
                 >
-                  {/* Platform Logo */}
-                  <div className="text-4xl md:text-5xl mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12">
-                    {platform.logo}
-                  </div>
+                 
+                 <img className="max-h-[30.769px]" src={platform.logo} alt={platform.name} />
 
                   {/* Platform Name */}
-                  <p className="text-xs md:text-sm text-white font-medium text-center leading-tight">
+                  <h5 className="tracking-[-1px]">
                     {platform.name}
-                  </p>
+                  </h5>
                 </div>
               ))}
             </div>
@@ -132,13 +151,13 @@ const ComparisonChartSection = () => {
             {features.map((feature, rowIndex) => (
               <div
                 key={feature.id}
-                className="flex items-center py-3 rounded-xl transition-all duration-300 hover:bg-white/5"
+                className="flex items-center py-1 rounded-xl "
               >
                 {/* Feature Label Column */}
-                <div className="flex-1 min-w-[140px] md:min-w-[180px]">
-                  <p className="text-sm md:text-base text-gray-300 font-medium">
+                <div className="min-w-[140px] md:min-w-[180px]">
+                  <h5 className="text-start">
                     {feature.label}
-                  </p>
+                  </h5>
                 </div>
 
                 {/* Platform Support Columns */}
@@ -149,18 +168,12 @@ const ComparisonChartSection = () => {
                       className="flex items-center justify-center flex-1 min-w-[60px] md:min-w-[90px]"
                     >
                       {platform.features[feature.id] ? (
-                        <span
-                          className="text-2xl md:text-3xl transition-all duration-300 hover:scale-125 cursor-pointer"
-                          style={{
-                            filter:
-                              "drop-shadow(0 0 8px rgba(239, 68, 68, 0.8)) drop-shadow(0 0 12px rgba(239, 68, 68, 0.6))",
-                          }}
-                        >
-                          ❤️
-                        </span>
+                      <>
+                      <img src={heart} className="max-h-[33.846px]" alt="Disrupting the gambling industry" />
+                      </>
                       ) : (
-                        <span className="text-2xl md:text-3xl opacity-20">
-                          ○
+                        <span className="h-2 w-2">
+                          
                         </span>
                       )}
                     </div>
@@ -169,21 +182,9 @@ const ComparisonChartSection = () => {
               </div>
             ))}
           </div>
-
-          {/* Bottom Decorative Divider */}
-          <div className="mt-8 h-px bg-linear-to-r from-transparent via-red-500/30 to-transparent shadow-[0_0_15px_rgba(239,68,68,0.4)]"></div>
         </div>
 
-        {/* Bottom Decorative Stars */}
-        <div className="flex justify-center gap-4 mt-6">
-          <svg
-            className="w-3 h-3 text-red-500 opacity-60 animate-pulse"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7.4-6.3-4.8-6.3 4.8 2.3-7.4-6-4.6h7.6z" />
-          </svg>
-        </div>
+       
       </div>
     </section>
   );

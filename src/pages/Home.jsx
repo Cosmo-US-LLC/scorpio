@@ -28,6 +28,8 @@ import ResultsSection from "../components/ResultsSection";
 import FeaturedInSection from "../components/FeaturedInSection";
 import SCORPUtilitySection from "../components/SCORPUtilitySection";
 import HowDoesItSection from "@/components/HowDoesIt";
+import AllocationSection from "@/components/AllocationSection";
+import TokenDetailsSection from "@/components/TokenDetailsSection";
 
 function Home() {
   return (
@@ -47,6 +49,8 @@ function Home() {
       <SCORPUtilitySection />
       <ComparisonChartSection />
       <WhitepaperSection />
+      <AllocationSection />
+      <TokenDetailsSection />
       <RoadmapSection />
       <MarketOpportunitySection />
       <BreakingBarriersSection />
