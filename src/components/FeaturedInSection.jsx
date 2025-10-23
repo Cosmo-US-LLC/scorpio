@@ -31,9 +31,9 @@ const FeaturedInSection = () => {
   return (
     <section className="relative w-ful mt-[-40px]  pb-16 px-6 md:px-20 overflow-hidden">
     
-      <div className="relative max-w-7xl mx-auto rounded-2xl">
+      <div className="relative max-w-7xl mx-auto rounded-2xl Featured_mobile max-md:p-4">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center max-md:mb-8 md:mb-12">
           <h2 className="text-center"
           style={{
             color:"rgba(255, 255, 255, 0.50)"
@@ -44,7 +44,7 @@ const FeaturedInSection = () => {
         </div>
 
         {/* Logo Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 md:gap-[24px] items-center justify-items-center">
+        <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 max-md:gap-3 md:gap-8 md:gap-[24px] items-center justify-items-center">
           {publications.map((publication) => (
             <div
               key={publication.id}
