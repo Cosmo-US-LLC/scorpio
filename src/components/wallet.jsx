@@ -43,7 +43,7 @@ const Wallet = ({ onTabChange }) => {
 
   return (
     <div
-      className="justify-between space-y-[10px] flex p-[24px] flex-col relative w-full min-h-full isolate"
+      className="justify-between max-md:space-y-[15px] md:space-y-[10px] flex max-md:p-[12px] md:p-[24px] flex-col relative w-full min-h-full isolate"
       style={{
         borderRadius: "13.675px",
         border: "0.684px solid #D4AA49",
@@ -51,7 +51,7 @@ const Wallet = ({ onTabChange }) => {
         backdropFilter: "blur(6.837605953216553px)",
       }}
     >
-      <h2 className="text-center text-[25px]"
+      <h2 className="text-center md:text-[25px] max-md:!text-[22px]"
       style={{
         color:"rgba(255, 255, 254, 0.50)"
       }}
@@ -60,7 +60,7 @@ const Wallet = ({ onTabChange }) => {
         className="px-[30px] py-[20px] space-y-[8px] border-[1px] border-[#F9F295] rounded-[8px]"
         style={{ background: "#000" }}
       >
-        <h2 className="text-center text_gradient text-[40px] font-[700]">
+        <h2 className="text-center text_gradient md:text-[40px] max-md:!text-[32px] font-[700]">
           $10,107,398.8
         </h2>
         <div className="">
@@ -69,9 +69,9 @@ const Wallet = ({ onTabChange }) => {
               80% of presale stage softcap
             </p>
           </div>
-          <div className="bg-gray-800 w-[100%] h-[17px] rounded-[20px]">
+          <div className="bg-gray-800 w-[100%] md:h-[17px] max-md:h-[32px] rounded-[20px]">
             <div
-              className="h-[17px] rounded-[20px]"
+              className="md:h-[17px] max-md:h-[32px] rounded-[20px]"
               style={{
                 width: "65%",
                 background: "#E2B146",
@@ -90,7 +90,7 @@ const Wallet = ({ onTabChange }) => {
           </div>
         </div>
         <div className="">
-          <h5 className="text-center">18,948 Holders</h5>
+          <h5 className="text-center max-md:!text-[18px]">18,948 Holders</h5>
         </div>
       </div>
 
@@ -110,16 +110,16 @@ const Wallet = ({ onTabChange }) => {
       </div>
 
       <div
-        className="rounded-[68.376px] flex items-center justify-center space-x-4 py-2 px-4 w-full"
+        className="rounded-[68.376px] flex items-center justify-center max-md:space-x-0 md:space-x-4 md:py-2 max-md:py-1 md:px-4 max-md:px-1 w-full"
         style={{
           background: "rgba(60, 60, 60, 0.50)",
         }}
       >
-        <p className="!text-[14px]">
+        <p className="md:!text-[14px] max-md:!text-[13px] max-md:pr-[2px]">
           Presale Price = <span className="text_gradient">$0.055</span>
         </p>
-        <p className="!text-[14px]">|</p>
-        <p className="!text-[14px]">
+        <p className="md:!text-[14px] max-md:!text-[13px]">|</p>
+        <p className="md:!text-[14px] max-md:!text-[13px] max-md:pl-[2px]">
           Listing Price = <span className="text_gradient">$0.15</span>
         </p>
       </div>
@@ -190,7 +190,7 @@ const Wallet = ({ onTabChange }) => {
         <div className="space-y-[8px]">
             <div className="flex justify-center space-x-3">
         <button
-          className="!text-[14px] px-[35px] flex items-center justify-center py-[5px]"
+          className="!text-[14px] max-md:px-[15px] md:px-[35px] flex items-center justify-center py-[5px]"
           style={{
             borderRadius: "68.376px",
             background: "rgba(0, 0, 0, 0.50)",
@@ -222,7 +222,7 @@ const Wallet = ({ onTabChange }) => {
           Bonus Code
         </button>
         <button
-          className="!text-[14px] px-[35px] flex items-center justify-center py-[5px]"
+          className="!text-[14px] max-md:px-[15px] md:px-[35px] flex items-center justify-center py-[5px]"
           style={{
             borderRadius: "68.376px",
             background: "rgba(0, 0, 0, 0.50)",
@@ -256,7 +256,7 @@ const Wallet = ({ onTabChange }) => {
       </div>
       <div className="flex justify-center space-x-3">
         <button
-          className="!text-[14px] px-[35px] flex items-center justify-center py-[5px]"
+          className="!text-[14px] max-md:px-[15px] md:px-[35px] flex items-center justify-center py-[5px]"
           style={{
             borderRadius: "68.376px",
             background: "rgba(0, 0, 0, 0.50)",
@@ -292,7 +292,7 @@ const Wallet = ({ onTabChange }) => {
 
       <button
         onClick={handleBuy}
-        className="btn-primary !text-[20px] !text-[#000] w-[100%] !py-[16px]"
+        className="btn-primary !text-[20px] !text-[#000] w-[100%] max-md:py-[14px] md:!py-[16px]"
       >
         Connect Wallet
       </button>
