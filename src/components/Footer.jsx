@@ -6,57 +6,59 @@ import redGbg from "../assets/footer/red_gbg.webp";
 
 export default function Footer() {
   return (
-    <footer className="w-full py-12 relative">
+    <footer className="w-full py-12 max-md:py-6 max-md:px-4 relative">
       <img
         src={goldGbg}
         alt="footer background"
-        className="absolute bottom-0 left-0 w-[400px] h-[400px] z-1"
+        className="absolute bottom-0 left-0 w-[400px] h-[400px] z-1 max-md:w-[200px] max-md:h-[200px]"
       />
       <img
         src={redGbg}
         alt="footer background"
-        className="absolute top-0 right-0 w-[400px] h-full z-1"
+        className="absolute top-0 right-0 w-[400px] h-full z-1 max-md:w-[200px] max-md:h-[300px]"
       />
-      <div className="max-w-[1280px] mx-auto rounded-2xl flex flex-col gap-6 bg-[#12131FB2] border border-[#363636] px-6 py-8 relative z-1">
-        <div className="flex flex-row justify-between gap-10 pb-3">
-          <div className="w-[34%] flex flex-col gap-4">
+      <div className="max-w-[1280px] mx-auto rounded-2xl flex flex-col gap-6 bg-[#12131FB2] border border-[#363636] px-6 py-8 relative z-1 max-md:px-4 max-md:py-6 max-md:gap-8">
+        <div className="flex flex-row justify-between gap-10 pb-3 max-md:flex-col max-md:gap-8 max-md:pb-0">
+          <div className="w-[34%] flex flex-col gap-4 max-md:w-full max-md:gap-3">
             <div className="max-w-[188px]">
               <img src={Logo} alt="footer logo" />
             </div>
 
-            <p className="text-[#CACACA]">
+            <p className="text-[#CACACA] max-md:text-sm max-md:leading-relaxed">
               Step into the world of casinos, high stakes, and incredible
               rewards by joining the Scorpion community today!Experience the
-              unmatched privileges and benefits of being part of the world’s
+              unmatched privileges and benefits of being part of the world's
               first social online gambling ecosystem powered by $SCORP.
             </p>
           </div>
 
-          <div className="w-[15%] ml-12">
-            <h3 className="text-[#ffffff] text-left mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+          <div className="w-[15%] ml-12 max-md:w-full max-md:ml-0">
+            <h3 className="text-[#ffffff] text-left mb-4 max-md:text-lg max-md:mb-3">
+              Quick Links
+            </h3>
+            <ul className="space-y-2 max-md:space-y-2.5">
               <li>
-                <Link to="/" className="quick-link">
+                <Link to="/" className="quick-link max-md:text-sm">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about-us" className="quick-link">
+                <Link to="/about-us" className="quick-link max-md:text-sm">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/faqs" className="quick-link">
+                <Link to="/faqs" className="quick-link max-md:text-sm">
                   FAQ's
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="quick-link">
+                <Link to="/contact" className="quick-link max-md:text-sm">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link to="/pricing" className="quick-link">
+                <Link to="/pricing" className="quick-link max-md:text-sm">
                   Pricing
                 </Link>
               </li>
@@ -64,31 +66,48 @@ export default function Footer() {
           </div>
 
           {/* Column 3: Docs */}
-          <div className="w-[18%]">
-            <h3 className="text-[#ffffff] text-left mb-4">Docs</h3>
-            <ul className="space-y-2">
+          <div className="w-[18%] max-md:w-full">
+            <h3 className="text-[#ffffff] text-left mb-4 max-md:text-lg max-md:mb-3">
+              Docs
+            </h3>
+            <ul className="space-y-2 max-md:space-y-2.5">
               <li>
-                <Link to="/privacy-policy" className="quick-link">
+                <Link
+                  to="/privacy-policy"
+                  className="quick-link max-md:text-sm"
+                >
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to="/cookies-policy" className="quick-link">
+                <Link
+                  to="/cookies-policy"
+                  className="quick-link max-md:text-sm"
+                >
                   Cookies Policy
                 </Link>
               </li>
               <li>
-                <Link to="/terms-of-service" className="quick-link">
+                <Link
+                  to="/terms-of-service"
+                  className="quick-link max-md:text-sm"
+                >
                   Terms of Service
                 </Link>
               </li>
               <li>
-                <Link to="/token-sale-agreement" className="quick-link">
+                <Link
+                  to="/token-sale-agreement"
+                  className="quick-link max-md:text-sm"
+                >
                   Token Sale Agreement
                 </Link>
               </li>
               <li>
-                <Link to="/live-support-24-7" className="quick-link">
+                <Link
+                  to="/live-support-24-7"
+                  className="quick-link max-md:text-sm"
+                >
                   Live Support 24/7
                 </Link>
               </li>
@@ -96,16 +115,18 @@ export default function Footer() {
           </div>
 
           {/* Column 4: Join Our Social */}
-          <div className="w-[18%]">
-            <h3 className="text-[#ffffff] text-left mb-4">Join Our Social</h3>
-            <div className="flex gap-4 mb-4">
+          <div className="w-[18%] max-md:w-full">
+            <h3 className="text-[#ffffff] text-left mb-4 max-md:text-lg max-md:mb-3">
+              Join Our Social
+            </h3>
+            <div className="flex gap-4 mb-4 max-md:gap-3 max-md:mb-3">
               <a
                 href="#"
-                className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-all"
+                className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-all max-md:w-9 max-md:h-9"
                 aria-label="Twitter"
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-5 h-5 max-md:w-4 max-md:h-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -115,11 +136,11 @@ export default function Footer() {
 
               <a
                 href="#"
-                className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-all"
+                className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-all max-md:w-9 max-md:h-9"
                 aria-label="Instagram"
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-5 h-5 max-md:w-4 max-md:h-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -129,11 +150,11 @@ export default function Footer() {
 
               <a
                 href="#"
-                className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-all"
+                className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-all max-md:w-9 max-md:h-9"
                 aria-label="Telegram"
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-5 h-5 max-md:w-4 max-md:h-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -141,8 +162,8 @@ export default function Footer() {
                 </svg>
               </a>
             </div>
-            <div className="flex flex-row gap-1 text-[#CACACA]">
-              <span className="block mb-1">Email:</span>
+            <div className="flex flex-row gap-1 text-[#CACACA] max-md:text-sm max-md:flex-col max-md:gap-1">
+              <span className="block mb-1 max-md:mb-0">Email:</span>
               <a
                 href="mailto:info@scropion.casino"
                 className="hover:text-white hover:underline transition-all"
@@ -153,30 +174,47 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-6 pt-6 border-t border-[#363636]">
-          <div className="flex flex-col gap-2">
-            <h3 className="text-left">Scorpion Casino</h3>
-            <p className="text-[#CACACA]  ">Registration Number: 14904288</p>
-            <div className="flex flex-wrap gap-x-4 gap-y-2">
-              <Link to="/terms-of-service" className="gradient_quick_links">
+        <div className="flex flex-col gap-6 pt-6 border-t border-[#363636] max-md:gap-5 max-md:pt-5">
+          <div className="flex flex-col gap-2 max-md:gap-3">
+            <h3 className="text-left max-md:text-lg">Scorpion Casino</h3>
+            <p className="text-[#CACACA] max-md:text-sm">
+              Registration Number: 14904288
+            </p>
+            <div className="flex flex-wrap gap-x-4 gap-y-2 max-md:gap-x-3 max-md:gap-y-2">
+              <Link
+                to="/terms-of-service"
+                className="gradient_quick_links max-md:text-xs"
+              >
                 Terms of Service
               </Link>
-              <Link to="/privacy-policy" className="gradient_quick_links">
+              <Link
+                to="/privacy-policy"
+                className="gradient_quick_links max-md:text-xs"
+              >
                 Privacy Policy
               </Link>
-              <Link to="/contact-us" className="gradient_quick_links">
+              <Link
+                to="/contact-us"
+                className="gradient_quick_links max-md:text-xs"
+              >
                 Contact Us
               </Link>
-              <Link to="/token-sale-agreement" className="gradient_quick_links">
+              <Link
+                to="/token-sale-agreement"
+                className="gradient_quick_links max-md:text-xs"
+              >
                 Token Sale Agreement
               </Link>
-              <Link to="/buy-scorp-manually" className="gradient_quick_links">
+              <Link
+                to="/buy-scorp-manually"
+                className="gradient_quick_links max-md:text-xs"
+              >
                 Buy SCORP Manually
               </Link>
             </div>
           </div>
 
-          <p className="text-[#B4A5A5]">
+          <p className="text-[#B4A5A5] max-md:text-xs max-md:leading-relaxed">
             Scorpion Casino operates the website Scorpion.casino (“Platform”).
             By using the Platform, you accept our Terms of Service, Privacy
             Policy, Cookie Policy, and the SCORP2.0 Token sale agreement.
@@ -197,7 +235,7 @@ export default function Footer() {
             total loss.
           </p>
 
-          <div className="text-center text-[#ffffff]">
+          <div className="text-center text-[#ffffff] max-md:text-sm max-md:pt-2">
             Copyright {new Date().getFullYear()} Scorpion Casino | All Rights
             Reserved.
           </div>

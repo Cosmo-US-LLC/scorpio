@@ -381,6 +381,12 @@ body {
   }
 }
 
+.glass-box {
+  background: rgba(27, 26, 22, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* for Safari support */
+}
+
 /* footer classes Start*/
 
 .quick-link {

@@ -90,17 +90,17 @@ const ExpertTestimonials = ({ testimonials }) => {
   );
 
   return (
-    <section className="w-full bg-linear-to-br from-[#0B0C10] to-[#15161A] py-16 px-6 md:px-12 lg:px-24">
+    <section className="w-full bg-[#0B0D10] py-16 px-6 md:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-            <span className="block text-white mb-2">What Crypto Experts</span>
+          <h2 className="text-center">
+            <span className="block text-[#ffffff] mb-2">
+              What Crypto Experts
+            </span>
             <span className="block">
-              <span className="text-white">Think About </span>
-              <span className="bg-linear-to-r from-[#F7D774] to-[#F3B74E] bg-clip-text text-transparent">
-                $SCORP
-              </span>
+              <span className="text-[#ffffff]">Think About </span>
+              <span className="text_gradient">$SCORP</span>
             </span>
           </h2>
         </div>
@@ -122,7 +122,7 @@ const ExpertTestimonials = ({ testimonials }) => {
                 }}
               >
                 {/* Dark Overlay for better text readability */}
-                <div className="absolute inset-0 bg-black/60 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>
 
                 {/* Card Content */}
                 <div
@@ -135,7 +135,7 @@ const ExpertTestimonials = ({ testimonials }) => {
                     {/* Quote Mark */}
                     <div className="mb-4">
                       <svg
-                        className="w-8 h-8 text-white/20"
+                        className="w-16 h-16 text-white/20"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
@@ -145,20 +145,21 @@ const ExpertTestimonials = ({ testimonials }) => {
 
                     {/* Headline */}
                     <h3
-                      className="text-xl md:text-2xl font-bold text-white mb-4 leading-relaxed"
+                      className="text-left mb-4 text_gradient"
                       dangerouslySetInnerHTML={{
                         __html: highlightKeywords(testimonial.quote),
                       }}
                     />
 
                     {/* Body Paragraph */}
-                    <p className="text-sm md:text-base text-gray-300/80 leading-relaxed mb-6">
-                      {testimonial.body}
-                    </p>
+                    <p className="text-[#CACACA] mb-6">{testimonial.body}</p>
 
                     {/* Author Pill */}
-                    <div className="inline-flex items-center gap-3 bg-linear-to-r from-[#F7D774]/20 to-transparent rounded-full px-4 py-2 mb-4 backdrop-blur-sm">
-                      {testimonial.author.avatar && (
+                    <div className="inline-flex items-center gap-3  py-2 mb-4 ">
+                      <div className="w-[200px]">
+                        <button className="btn-primary">Buy $SCORP</button>
+                      </div>
+                      {/* {testimonial.author.avatar && (
                         <div className="w-8 h-8 rounded-full bg-linear-to-br from-[#F7D774] to-[#F3B74E] p-[2px]">
                           <div className="w-full h-full rounded-full bg-black flex items-center justify-center overflow-hidden">
                             <img
@@ -176,12 +177,12 @@ const ExpertTestimonials = ({ testimonials }) => {
                             />
                           </div>
                         </div>
-                      )}
+                      )} */}
                       <div className="text-left">
-                        <p className="text-white font-bold text-sm">
+                        {/* <p className="text-white font-bold text-sm">
                           {testimonial.author.name}
-                        </p>
-                        <p className="text-gray-400 text-xs">
+                        </p> */}
+                        <p className="text-[#CACACA]">
                           {testimonial.author.role}
                         </p>
                       </div>
@@ -204,6 +205,7 @@ const ExpertTestimonials = ({ testimonials }) => {
                     </div>
                   </div>
                 </div>
+                <div class="absolute bottom-0  w-full h-[1px] bg-gradient-to-r from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
               </div>
             );
           })}

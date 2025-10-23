@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import { Plus } from "lucide-react";
 import { defaultFaqs } from "@/utils/faqData";
+import whiteGbg from "../assets/scorpion_casino/white_gbg.png";
 
 const FaqSection = ({ faqs }) => {
   const faqsData = faqs || defaultFaqs;
@@ -73,7 +74,7 @@ const FaqSection = ({ faqs }) => {
   };
 
   return (
-    <section className="w-full bg-linear-to-b from-[#0C0D10] to-[#131419] py-16 md:py-24 px-4 md:px-8">
+    <section className="w-full bg-[#0B0D10] py-16 md:py-24 px-4 md:px-8">
       <div className="max-w-4xl md:max-w-5xl mx-auto">
         {/* Heading Block */}
         <div className="text-center mb-8 md:mb-10">
@@ -102,7 +103,7 @@ const FaqSection = ({ faqs }) => {
               {/* Subtle inner radial glow */}
               <div className="absolute inset-0 bg-gradient-radial from-white/3 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
 
-              <AccordionTrigger className="relative flex w-full items-center justify-between py-3 text-left hover:cursor-pointer transition-colors rounded-lg px-2 -mx-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F7D774] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0C0D10] [&[data-state=open]>div>div]:rotate-45">
+              <AccordionTrigger className="relative z-10 flex w-full items-center justify-between py-3 text-left hover:cursor-pointer transition-colors rounded-lg px-2 -mx-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F7D774] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0C0D10] [&[data-state=open]>div>div]:rotate-45">
                 <span className="text-base md:text-lg font-semibold text-[#fffffe] pr-8 group-data-[state=open]:text-[#EDC967] transition-colors duration-300">
                   {faq.question}
                 </span>
@@ -113,9 +114,14 @@ const FaqSection = ({ faqs }) => {
                 </div>
               </AccordionTrigger>
 
-              <AccordionContent className="pt-3 border-t border-white/5 mt-3">
+              <AccordionContent className="pt-3 z-10 border-t border-white/5 mt-3">
                 {renderContent(faq)}
               </AccordionContent>
+              <img
+                src={whiteGbg}
+                alt="white gbg"
+                className="absolute top-0 left-0 w-full h-full z-0"
+              />
             </AccordionItem>
           ))}
         </Accordion>

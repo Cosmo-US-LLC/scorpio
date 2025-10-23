@@ -1,5 +1,6 @@
 import cokiSinger from "../assets/scorpion_casino/coki_singer.webp";
 import tbaImage from "../assets/scorpion_casino/TBA_image.webp";
+import whiteGbg from "../assets/scorpion_casino/white_gbg.png";
 
 const AmbassadorsSection = ({ ambassadors }) => {
   // Default ambassadors data
@@ -31,7 +32,7 @@ const AmbassadorsSection = ({ ambassadors }) => {
   const ambassadorsData = ambassadors || defaultAmbassadors;
 
   return (
-    <section className="relative w-full overflow-hidden">
+    <section className="relative bg-[#0B0D10] w-full overflow-hidden">
       <div className="max-w-[1280px] mx-auto relative scorpion_gbg flex flex-col gap-16 items-center justify-center">
         <div className="text-center">
           <h2 className="">
@@ -45,7 +46,7 @@ const AmbassadorsSection = ({ ambassadors }) => {
           {ambassadorsData.map((ambassador, index) => (
             <div
               key={index}
-              className="group rounded-xl bg-linear-to-br from-[#1a1a1a] via-[#0f0f0f] to-black p-6 md:p-8 border border-white/10 hover:border-[#F7D774]/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(247,215,116,0.15)]"
+              className="group relative rounded-xl bg-linear-to-br from-[#1a1a1a] via-[#0f0f0f] to-black p-6 md:p-8 border border-white/10"
             >
               {/* Content Container */}
               <div className="flex flex-col items-center text-center">
@@ -108,6 +109,11 @@ const AmbassadorsSection = ({ ambassadors }) => {
                   {ambassador.link.text}
                 </a>
               </div>
+              <img
+                src={whiteGbg}
+                alt="white gbg"
+                className="absolute top-0 left-0 w-full h-full"
+              />
             </div>
           ))}
         </div>
