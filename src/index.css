@@ -41,6 +41,7 @@ body {
   margin: 0 auto;
   min-height: 100vh;
   background: #0b0d10;
+  overflow-x: hidden;
 }
 
 @layer base {
@@ -350,6 +351,24 @@ body {
   }
   .howdoesit_bg {
     background-image: url(../src/assets/HowDoesIt/howdoesit_bg.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .SCORPUtility_bg{
+    background-image: url(../src/assets/SCORPUtilitySection/scorpio_ui_bg.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .disrupting_bg{
+     background-image: url(../src/assets/ComparisonChartSection/comp_bg.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .Roadmap_bg{
+     background-image: url(../src/assets/Roadmap/roadmap_bg.webp);
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
