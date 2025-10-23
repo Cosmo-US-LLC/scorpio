@@ -8,7 +8,7 @@ const FutureCryptoSection = () => {
     className="absolute top-[200px] z-[-1]"
     style={{
       width: "1262px",
-      height: "316px",
+      height: "216px",
       borderRadius: "1262px",
       background: "#4D1200",
       filter: "blur(250px)",

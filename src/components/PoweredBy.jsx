@@ -1,28 +1,46 @@
+import React from "react";
+import evolution from "../assets/poweredBy/PB_1.svg";
+import amatic from "../assets/poweredBy/PB_2.svg";
+import betradar from "../assets/poweredBy/PB_3.svg";
+import wazdan from "../assets/poweredBy/PB_4.svg";
+import macaw from "../assets/poweredBy/PB_5.svg";
+import habanero from "../assets/poweredBy/PB_6.svg";
+import microgaming from "../assets/poweredBy/PB_7.svg";
+import hacksawgaming from "../assets/poweredBy/PB_8.svg";
+import evenbetgaming from "../assets/poweredBy/PB_9.svg";
+import globalbet from "../assets/poweredBy/PB_10.svg";
+import goldenrace from "../assets/poweredBy/PB_11.svg";
+import spribe from "../assets/poweredBy/PB_12.svg";
+import egt from "../assets/poweredBy/PB_13.svg";
+import playngo from "../assets/poweredBy/PB_14.svg";
+import netent from "../assets/poweredBy/PB_15.svg";
+import novomatic from "../assets/poweredBy/PB_16.svg";
+
 const PoweredBy = () => {
   const partners = [
-    { name: "Evolution", logo: "EVOLUTION" },
-    { name: "Amatic", logo: "AMATIC" },
-    { name: "Betradar", logo: "betradar" },
-    { name: "Wazdan", logo: "WAZDAN" },
-    { name: "MACAW", logo: "MACAW" },
-    { name: "Habanero", logo: "HABANERO" },
-    { name: "Microgaming", logo: "Microgaming" },
-    { name: "Hacksaw Gaming", logo: "HACKSAW GAMING" },
-    { name: "Even Bet Gaming", logo: "EVEN BET GAMING" },
-    { name: "Global Bet", logo: "GLOBALBET" },
-    { name: "Golden Race", logo: "GOLDENRACE" },
-    { name: "Spribe", logo: "SPRIBE" },
-    { name: "EGT", logo: "EGT" },
-    { name: "Play'n GO", logo: "PLAY'N GO" },
-    { name: "NetEnt", logo: "NETENT" },
-    { name: "Novomatic", logo: "NOVOMATIC" },
+    { name: "Evolution", logo: evolution },
+    { name: "Amatic", logo: amatic },
+    { name: "Betradar", logo: betradar },
+    { name: "Wazdan", logo: wazdan },
+    { name: "MACAW", logo: macaw },
+    { name: "Habanero", logo: habanero },
+    { name: "Microgaming", logo: microgaming },
+    { name: "Hacksaw Gaming", logo: hacksawgaming },
+    { name: "Even Bet Gaming", logo: evenbetgaming },
+    { name: "Global Bet", logo: globalbet },
+    { name: "Golden Race", logo: goldenrace },
+    { name: "Spribe", logo: spribe },
+    { name: "EGT", logo: egt },
+    { name: "Play'n GO", logo: playngo },
+    { name: "NetEnt", logo: netent },
+    { name: "Novomatic", logo: novomatic },
   ];
 
   return (
     <section className="w-full bg-[#000000] py-16 px-6 md:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto">
         {/* Heading with gradient */}
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12 md:mb-16">
+        <h2 className="text-center mb-12 md:mb-16">
           <span className="bg-linear-to-r from-[#d4af37] to-white bg-clip-text text-transparent">
             Powered By
           </span>
@@ -36,9 +54,11 @@ const PoweredBy = () => {
               className="flex items-center justify-center w-[calc(50%-3rem)] sm:w-[calc(33.333%-3rem)] lg:w-[calc(25%-3rem)] transition-transform duration-300 ease-in-out hover:scale-110"
             >
               <div className="h-12 flex items-center justify-center px-4">
-                <span className="text-white font-bold text-lg md:text-xl tracking-wide whitespace-nowrap opacity-80 hover:opacity-100 transition-opacity">
-                  {partner.logo}
-                </span>
+                <img
+                  src={partner.logo}
+                  alt={`${partner.name} logo`}
+                  className="h-full w-auto object-contain "
+                />
               </div>
             </div>
           ))}

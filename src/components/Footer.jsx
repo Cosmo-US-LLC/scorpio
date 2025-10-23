@@ -1,128 +1,104 @@
 import React from "react";
+import { Link } from "react-router";
+import Logo from "../assets/navabar/logo.webp";
+import goldGbg from "../assets/footer/gold_gbg.webp";
+import redGbg from "../assets/footer/red_gbg.webp";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-gradient-to-b from-[#000000] via-[#1a1a1a] to-[#2a2520] py-12 px-6 md:px-16">
-      <div className="max-w-7xl mx-auto rounded-2xl">
-        {/* Main Footer Content - 4 Columns */}
-        <div className="flex flex-col md:flex-row md:justify-between gap-8 md:gap-12">
-          {/* Column 1: Logo & Description */}
-          <div className="flex-1 max-w-xs">
-            <div className="mb-4">
-              <h2 className="text-2xl md:text-3xl font-bold">
-                <span className="text-white">SCORPION </span>
-                <span className="text-[#d4af37]">CASINO</span>
-              </h2>
+    <footer className="w-full py-12 relative">
+      <img
+        src={goldGbg}
+        alt="footer background"
+        className="absolute bottom-0 left-0 w-[400px] h-[400px] z-1"
+      />
+      <img
+        src={redGbg}
+        alt="footer background"
+        className="absolute top-0 right-0 w-[400px] h-full z-1"
+      />
+      <div className="max-w-[1280px] mx-auto rounded-2xl flex flex-col gap-6 bg-[#12131FB2] border border-[#363636] px-6 py-8 relative z-1">
+        <div className="flex flex-row justify-between gap-10 pb-3">
+          <div className="w-[34%] flex flex-col gap-4">
+            <div className="max-w-[188px]">
+              <img src={Logo} alt="footer logo" />
             </div>
-            <p className="text-[#CACACA] text-sm leading-relaxed">
+
+            <p className="text-[#CACACA]">
               Step into the world of casinos, high stakes, and incredible
-              rewards by joining the Scorpion community today! Experience the
-              unmatched privileges and benefits of being part of the world's
+              rewards by joining the Scorpion community today!Experience the
+              unmatched privileges and benefits of being part of the world’s
               first social online gambling ecosystem powered by $SCORP.
             </p>
           </div>
 
-          {/* Column 2: Quick Links */}
-          <div className="">
-            <h3 className="text-white font-bold text-lg mb-4">Quick Links</h3>
+          <div className="w-[15%] ml-12">
+            <h3 className="text-[#ffffff] text-left mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#"
-                  className="text-[#CACACA] hover:text-white hover:underline transition-all text-sm"
-                >
+                <Link to="/" className="quick-link">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-[#CACACA] hover:text-white hover:underline transition-all text-sm"
-                >
+                <Link to="/about-us" className="quick-link">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-[#CACACA] hover:text-white hover:underline transition-all text-sm"
-                >
+                <Link to="/faqs" className="quick-link">
                   FAQ's
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-[#CACACA] hover:text-white hover:underline transition-all text-sm"
-                >
+                <Link to="/contact" className="quick-link">
                   Contact
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-[#CACACA] hover:text-white hover:underline transition-all text-sm"
-                >
+                <Link to="/pricing" className="quick-link">
                   Pricing
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
 
           {/* Column 3: Docs */}
-          <div className="">
-            <h3 className="text-white font-bold text-lg mb-4">Docs</h3>
+          <div className="w-[18%]">
+            <h3 className="text-[#ffffff] text-left mb-4">Docs</h3>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#"
-                  className="text-[#CACACA] hover:text-white hover:underline transition-all text-sm"
-                >
+                <Link to="/privacy-policy" className="quick-link">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-[#CACACA] hover:text-white hover:underline transition-all text-sm"
-                >
+                <Link to="/cookies-policy" className="quick-link">
                   Cookies Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-[#CACACA] hover:text-white hover:underline transition-all text-sm"
-                >
+                <Link to="/terms-of-service" className="quick-link">
                   Terms of Service
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-[#CACACA] hover:text-white hover:underline transition-all text-sm"
-                >
+                <Link to="/token-sale-agreement" className="quick-link">
                   Token Sale Agreement
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-[#CACACA] hover:text-white hover:underline transition-all text-sm"
-                >
+                <Link to="/live-support-24-7" className="quick-link">
                   Live Support 24/7
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
 
           {/* Column 4: Join Our Social */}
-          <div className="">
-            <h3 className="text-white font-bold text-lg mb-4">
-              Join Our Social
-            </h3>
+          <div className="w-[18%]">
+            <h3 className="text-[#ffffff] text-left mb-4">Join Our Social</h3>
             <div className="flex gap-4 mb-4">
-              {/* Twitter Icon */}
               <a
                 href="#"
                 className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-all"
@@ -137,7 +113,6 @@ export default function Footer() {
                 </svg>
               </a>
 
-              {/* Instagram Icon */}
               <a
                 href="#"
                 className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-all"
@@ -152,7 +127,6 @@ export default function Footer() {
                 </svg>
               </a>
 
-              {/* Telegram Icon */}
               <a
                 href="#"
                 className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-all"
@@ -167,7 +141,7 @@ export default function Footer() {
                 </svg>
               </a>
             </div>
-            <div className="text-sm text-[#CACACA]">
+            <div className="flex flex-row gap-1 text-[#CACACA]">
               <span className="block mb-1">Email:</span>
               <a
                 href="mailto:info@scropion.casino"
@@ -179,75 +153,54 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Horizontal Divider */}
-        <div className="border-t border-gray-700 my-6"></div>
-
-        {/* Company Info Section */}
-        <div className="mb-6">
-          <h3 className="text-white font-bold text-lg mb-2">Scorpion Casino</h3>
-          <p className="text-[#CACACA] text-xs mb-3">
-            Registration Number: 14904288
-          </p>
-          <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs mb-4">
-            <a
-              href="#"
-              className="text-[#CACACA] hover:text-white hover:underline transition-all"
-            >
-              Terms of Service
-            </a>
-            <a
-              href="#"
-              className="text-[#CACACA] hover:text-white hover:underline transition-all"
-            >
-              Privacy Policy
-            </a>
-            <a
-              href="#"
-              className="text-[#CACACA] hover:text-white hover:underline transition-all"
-            >
-              Contact Us
-            </a>
-            <a
-              href="#"
-              className="text-[#CACACA] hover:text-white hover:underline transition-all"
-            >
-              Token Sale Agreement
-            </a>
-            <a
-              href="#"
-              className="text-[#CACACA] hover:text-white hover:underline transition-all"
-            >
-              Buy SCORP Manually
-            </a>
+        <div className="flex flex-col gap-6 pt-6 border-t border-[#363636]">
+          <div className="flex flex-col gap-2">
+            <h3 className="text-left">Scorpion Casino</h3>
+            <p className="text-[#CACACA]  ">Registration Number: 14904288</p>
+            <div className="flex flex-wrap gap-x-4 gap-y-2">
+              <Link to="/terms-of-service" className="gradient_quick_links">
+                Terms of Service
+              </Link>
+              <Link to="/privacy-policy" className="gradient_quick_links">
+                Privacy Policy
+              </Link>
+              <Link to="/contact-us" className="gradient_quick_links">
+                Contact Us
+              </Link>
+              <Link to="/token-sale-agreement" className="gradient_quick_links">
+                Token Sale Agreement
+              </Link>
+              <Link to="/buy-scorp-manually" className="gradient_quick_links">
+                Buy SCORP Manually
+              </Link>
+            </div>
           </div>
-        </div>
 
-        {/* Disclaimer */}
-        <div className="mb-6">
-          <p className="text-[#808080] text-xs leading-relaxed">
-            Scorpion Casino operates the website Scorpion.casino ("Platform").
+          <p className="text-[#B4A5A5]">
+            Scorpion Casino operates the website Scorpion.casino (“Platform”).
             By using the Platform, you accept our Terms of Service, Privacy
             Policy, Cookie Policy, and the SCORP2.0 Token sale agreement.
             Cryptocurrency may be unregulated in your jurisdiction. The value of
             cryptocurrencies may go down as well as up. Profits may be subject
             to capital gains or other taxes applicable in your jurisdiction.
-            You, and you alone, are solely responsible for determining whether
-            any purchase or related transaction is appropriate for you based on
-            your personal objectives, financial situation, and risk tolerance.
-            You should consult with trusted, licensed legal professionals for
-            legal, tax, insurance, or business advice. Scorpion Casino does not
-            guarantee any performance, outcome, or return of capital for any
-            cryptocurrency posted on this website. By accessing this site and
-            any pages thereof, you agree to be bound by the SCORP2.0 sales
-            agreement. Buying cryptocurrencies involves risk and may not be
-            suitable for all investors.
+            Nothing on this website should be construed as an offer or
+            recommendation to buy, sell or invest. You are solely responsible
+            for determining whether any purchase or related transaction is
+            appropriate for you based on your personal objectives, financial
+            situation, and risk tolerance.You should consult with trusted,
+            licensed legal professionals and advisors for legal, tax, insurance,
+            or business advice. Scorpion Casino does not guarantee any
+            performance, outcome, or return of capital for any cryptocurrency
+            posted on this website. By accessing this site and any pages
+            thereof, you agree to be bound by the SCORP2.0 sales agreement.
+            Buying cryptocurrencies involves risk and may result in partial or
+            total loss.
           </p>
-        </div>
 
-        {/* Copyright */}
-        <div className="text-center text-[#808080] text-xs pt-4 border-t border-gray-800">
-          Copyright {new Date().getFullYear()} Scorpion Casino | All Rights
-          Reserved.
+          <div className="text-center text-[#ffffff]">
+            Copyright {new Date().getFullYear()} Scorpion Casino | All Rights
+            Reserved.
+          </div>
         </div>
       </div>
     </footer>

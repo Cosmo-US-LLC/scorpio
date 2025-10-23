@@ -1,3 +1,10 @@
+import ben_crypto from "../assets/crypto_expert/ben_crypto.webp";
+import costa_crypto from "../assets/crypto_expert/costa_crypto.webp";
+import michael_crypto from "../assets/crypto_expert/michael_crypto.webp";
+import card1BG from "../assets/crypto_expert/red_c1_bg.webp";
+import card2BG from "../assets/crypto_expert/red_c2_bg.webp";
+import card3BG from "../assets/crypto_expert/red_c1_bg.webp";
+
 const ExpertTestimonials = ({ testimonials }) => {
   // Default testimonials data
   const defaultTestimonials = [
@@ -7,10 +14,11 @@ const ExpertTestimonials = ({ testimonials }) => {
       author: {
         name: "Ben Crypto",
         role: "YouTuber | 28k Followers",
-        avatar: "/testimonial-1.jpg",
+        avatar: ben_crypto,
       },
       rating: 5,
-      media: ["/thumbnail-1.jpg", "/thumbnail-2.jpg"],
+      image: ben_crypto,
+      backgroundImage: card1BG,
     },
     {
       quote: "It's crazy how many people are using these (Gambling) platforms",
@@ -18,10 +26,11 @@ const ExpertTestimonials = ({ testimonials }) => {
       author: {
         name: "Crypto Costa",
         role: "YouTuber | 55k Followers",
-        avatar: "/testimonial-2.jpg",
+        avatar: costa_crypto,
       },
       rating: 5,
-      media: ["/thumbnail-3.jpg", "/thumbnail-4.jpg"],
+      image: costa_crypto,
+      backgroundImage: card2BG,
     },
     {
       quote: "I just bought the next billion dollar crypto",
@@ -29,10 +38,11 @@ const ExpertTestimonials = ({ testimonials }) => {
       author: {
         name: "Michael Wrubel",
         role: "YouTuber | 370k Followers",
-        avatar: "/testimonial-3.jpg",
+        avatar: michael_crypto,
       },
       rating: 5,
-      media: ["/thumbnail-5.jpg", "/thumbnail-6.jpg"],
+      image: michael_crypto,
+      backgroundImage: card3BG,
     },
   ];
 
@@ -103,14 +113,16 @@ const ExpertTestimonials = ({ testimonials }) => {
             return (
               <div
                 key={index}
-                className="group relative rounded-2xl bg-linear-to-br from-[#1a1a1a] via-[#0f0f0f] to-[#0a0a0a] p-6 md:p-8 border border-white/5 ring-1 ring-[#F7D774]/10 hover:scale-[1.01] transition-all duration-300 hover:ring-[#F7D774]/20 overflow-hidden"
+                className="group relative rounded-2xl p-6 md:p-8 border border-white/5 ring-1 ring-[#F7D774]/10 hover:scale-[1.01] transition-all duration-300 hover:ring-[#F7D774]/20 overflow-hidden"
+                style={{
+                  backgroundImage: `url(${testimonial.backgroundImage})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
               >
-                {/* Radial Gold Glow Background */}
-                <div
-                  className={`absolute inset-0 bg-gradient-radial from-[#F7D774]/10 via-transparent to-transparent opacity-30 blur-3xl pointer-events-none ${
-                    isReversed ? "left-0" : "right-0"
-                  }`}
-                ></div>
+                {/* Dark Overlay for better text readability */}
+                <div className="absolute inset-0 bg-black/60 pointer-events-none"></div>
 
                 {/* Card Content */}
                 <div
@@ -181,65 +193,14 @@ const ExpertTestimonials = ({ testimonials }) => {
 
                   {/* Media Block */}
                   <div className="flex-1 relative">
-                    <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
-                      {testimonial.media.map((thumbnail, thumbIndex) => (
-                        <div
-                          key={thumbIndex}
-                          className={`relative rounded-lg overflow-hidden border-2 border-[#F7D774]/30 shadow-[0_0_20px_rgba(247,215,116,0.2)] hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(247,215,116,0.4)] transition-all duration-300 ${
-                            thumbIndex === 0 ? "col-span-2" : ""
-                          }`}
-                        >
-                          <img
-                            src={thumbnail}
-                            alt={`${testimonial.author.name} video thumbnail ${
-                              thumbIndex + 1
-                            }`}
-                            className="w-full h-48 object-cover"
-                            onError={(e) => {
-                              e.target.style.display = "none";
-                              e.target.parentElement.innerHTML = `
-                                <div class="w-full h-48 bg-linear-to-br from-[#1a1a1a] to-[#0f0f0f] flex items-center justify-center">
-                                  <svg class="w-16 h-16 text-[#F7D774]/30" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
-                                  </svg>
-                                </div>
-                              `;
-                            }}
-                          />
-
-                          {/* Scorpion Logo Overlay (for first thumbnail) */}
-                          {thumbIndex === 0 && (
-                            <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                              <div className="bg-linear-to-br from-[#F7D774] to-[#F3B74E] rounded-lg px-4 py-2">
-                                <span className="text-black font-bold text-lg">
-                                  $SCORP
-                                </span>
-                              </div>
-                            </div>
-                          )}
-                        </div>
-                      ))}
-
-                      {/* Circular Influencer Portrait Overlay */}
-                      {testimonial.author.avatar && (
-                        <div className="absolute -bottom-4 -right-4 w-20 h-20 rounded-full bg-linear-to-br from-[#F7D774] to-[#F3B74E] p-[3px] shadow-[0_0_30px_rgba(247,215,116,0.6)]">
-                          <div className="w-full h-full rounded-full bg-black flex items-center justify-center overflow-hidden">
-                            <img
-                              src={testimonial.author.avatar}
-                              alt={testimonial.author.name}
-                              className="w-full h-full object-cover"
-                              onError={(e) => {
-                                e.target.style.display = "none";
-                                e.target.parentElement.innerHTML = `
-                                  <svg class="w-10 h-10 text-[#F7D774]" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
-                                  </svg>
-                                `;
-                              }}
-                            />
-                          </div>
-                        </div>
-                      )}
+                    <div className="max-w-md mx-auto">
+                      <div className="relative rounded-xl overflow-hidden border-2 border-[#F7D774]/30 shadow-[0_0_20px_rgba(247,215,116,0.2)] hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(247,215,116,0.4)] transition-all duration-300">
+                        <img
+                          src={testimonial.image}
+                          alt={testimonial.author.name}
+                          className="w-full h-auto object-cover"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
