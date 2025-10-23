@@ -1,6 +1,7 @@
 import logo1 from "../assets/press_and_media/logo_1.webp";
 import logo2 from "../assets/press_and_media/logo_2.webp";
 import logo3 from "../assets/press_and_media/logo_3.webp";
+import whiteGbg from "../assets/scorpion_casino/white_gbg.png";
 
 const PressMediaSection = ({ pressItems }) => {
   const defaultPressItems = [
@@ -27,7 +28,7 @@ const PressMediaSection = ({ pressItems }) => {
   const pressData = pressItems || defaultPressItems;
 
   return (
-    <section className="w-full h-[580px] flex items-center justify-center press_media_section_bg">
+    <section className="w-full h-[580px] flex items-center justify-center ">
       <div className="max-w-[1280px] mx-auto rounded-2xl flex flex-col gap-12">
         <div className="text-center ">
           <h2 className="">
@@ -40,9 +41,10 @@ const PressMediaSection = ({ pressItems }) => {
           {pressData.map((item, index) => (
             <div
               key={index}
-              className="group rounded-xl bg-linear-to-br from-[#1a1a1a] via-[#0f0f0f] to-black p-6 md:p-8 border border-white/10 hover:border-[#F7D774]/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(247,215,116,0.1)]"
+              className="group relative rounded-xl bg-[#0B0D10] p-6 md:p-8 border border-white/10"
             >
-              {/* Logo/Publication Name */}
+              <div class="absolute bottom-0  w-[359px] h-[1px] bg-gradient-to-r from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
+
               <div className="flex items-center justify-center mb-6 h-24 w-full pb-4 border-b border-gray-600">
                 <img
                   src={item.logo}
@@ -57,6 +59,11 @@ const PressMediaSection = ({ pressItems }) => {
                   {item.quote}
                 </p>
               </div>
+              <img
+                src={whiteGbg}
+                alt="white gbg"
+                className="absolute top-0 left-0 w-full h-full z-0"
+              />
             </div>
           ))}
         </div>

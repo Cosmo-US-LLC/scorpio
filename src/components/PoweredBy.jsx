@@ -37,8 +37,8 @@ const PoweredBy = () => {
   ];
 
   return (
-    <section className="w-full bg-[#000000] py-16 px-6 md:px-12 lg:px-24">
-      <div className="max-w-7xl mx-auto">
+    <section className="w-full bg-[#0B0D10] py-16">
+      <div className="max-w-7xl mx-auto ">
         {/* Heading with gradient */}
         <h2 className="text-center mb-12 md:mb-16">
           <span className="bg-linear-to-r from-[#d4af37] to-white bg-clip-text text-transparent">
@@ -46,14 +46,13 @@ const PoweredBy = () => {
           </span>
         </h2>
 
-        {/* Logos Container - Using Flexbox */}
         <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
           {partners.map((partner, index) => (
             <div
               key={index}
-              className="flex items-center justify-center w-[calc(50%-3rem)] sm:w-[calc(33.333%-3rem)] lg:w-[calc(25%-3rem)] transition-transform duration-300 ease-in-out hover:scale-110"
+              className="flex items-center justify-center w-[calc(50%-3rem)] sm:w-[calc(33.333%-3rem)] lg:w-[calc(25%-3rem)] "
             >
-              <div className="h-12 flex items-center justify-center px-4">
+              <div className="h-12 flex items-center justify-center ">
                 <img
                   src={partner.logo}
                   alt={`${partner.name} logo`}

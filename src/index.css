@@ -41,6 +41,7 @@ body {
   margin: 0 auto;
   min-height: 100vh;
   background: #0b0d10;
+  overflow-x: hidden;
 }
 
 @layer base {
@@ -354,6 +355,24 @@ body {
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
+  .SCORPUtility_bg{
+    background-image: url(../src/assets/SCORPUtilitySection/scorpio_ui_bg.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .disrupting_bg{
+     background-image: url(../src/assets/ComparisonChartSection/comp_bg.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .Roadmap_bg{
+     background-image: url(../src/assets/Roadmap/roadmap_bg.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
   @keyframes accordion-down {
     from {
       height: 0;
@@ -379,6 +398,12 @@ body {
   .animate-accordion-up {
     animation: accordion-up 0.2s ease-out;
   }
+}
+
+.glass-box {
+  background: rgba(27, 26, 22, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* for Safari support */
 }
 
 /* footer classes Start*/

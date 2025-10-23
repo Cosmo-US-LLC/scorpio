@@ -1,6 +1,7 @@
 import rollbit from "../assets/success_stories/rollbit.webp";
 import funtoken from "../assets/success_stories/funtoken.webp";
 import stake from "../assets/success_stories/stake.webp";
+import whiteGbg from "../assets/scorpion_casino/white_gbg.png";
 
 const SuccessStories = ({ stories }) => {
   const defaultStories = [
@@ -49,8 +50,14 @@ const SuccessStories = ({ stories }) => {
             {storiesData.map((story, index) => (
               <div
                 key={index}
-                className="group relative rounded-2xl bg-linear-to-br from-[#1a1a1a] via-[#0f0f0f] to-black p-6 md:p-8 border border-white/10 hover:border-[#F7D774]/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(247,215,116,0.15)] hover:-translate-y-1"
+                className="group relative rounded-2xl bg-linear-to-br from-[#1a1a1a] via-[#0f0f0f] to-black p-6 md:p-8 border border-white/10"
               >
+                <img
+                  src={whiteGbg}
+                  alt="white gbg"
+                  className="absolute top-0 left-0 w-full h-full z-0"
+                />
+                <div class="absolute bottom-0  w-[359px] h-[1px] bg-gradient-to-r from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
                 <div className="relative flex flex-col items-center text-center">
                   {/* Brand Logo/Icon */}
                   <div className="mb-6">

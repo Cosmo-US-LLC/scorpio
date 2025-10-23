@@ -5,14 +5,12 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import {
-  CheckCircle,
-  Circle,
-  Target,
-  Rocket,
-  Award,
-  Users,
-} from "lucide-react";
+
+import card_icon1 from "../assets/Roadmap/road_card (4).webp";
+import card_icon2 from "../assets/Roadmap/road_card (3).webp";
+import card_icon3 from "../assets/Roadmap/road_card (2).webp";
+import card_icon4 from "../assets/Roadmap/road_card (1).webp";
+import tick from "../assets/Roadmap/tick.webp";
 
 const RoadmapSection = ({ phases }) => {
   // Default roadmap phases data
@@ -21,12 +19,13 @@ const RoadmapSection = ({ phases }) => {
       id: 1,
       phase: "Phase 1",
       title: "Foundation",
-      icon: "target",
+      icon: card_icon1,
       tasks: [
-        { text: "Smart Contract Development", completed: true },
-        { text: "Website Launch", completed: true },
-        { text: "Community Building", completed: true },
-        { text: "Initial Marketing Campaign", completed: true },
+        { text: "Idea conception", completed: true },
+        { text: "Team onboarding", completed: true },
+        { text: "Integrating Coinspaid", completed: true },
+        { text: "Developing the Ecosystem", completed: true },
+        { text: "Applying for an eGambling License", completed: true },
       ],
       status: "completed",
     },
@@ -34,12 +33,14 @@ const RoadmapSection = ({ phases }) => {
       id: 2,
       phase: "Phase 2",
       title: "Pre-Sale",
-      icon: "rocket",
+      icon: card_icon2,
       tasks: [
-        { text: "Token Pre-Sale Launch", completed: true },
-        { text: "Partnership Announcements", completed: true },
-        { text: "Influencer Marketing", completed: true },
-        { text: "Security Audits", completed: true },
+        { text: "$SCORP Token creation", completed: true },
+        { text: "Whitepaper Release", completed: true },
+        { text: "Integrating Betradar", completed: true },
+        { text: "Scorpion.casino Release", completed: true },
+        { text: "$SCORP Token Audit", completed: true },
+        { text: "Pre Sale start", completed: true },
       ],
       status: "completed",
     },
@@ -47,12 +48,13 @@ const RoadmapSection = ({ phases }) => {
       id: 3,
       phase: "Phase 3",
       title: "Platform Launch",
-      icon: "award",
+      icon: card_icon3,
       tasks: [
-        { text: "Casino Platform Beta", completed: true },
-        { text: "Token Listing on DEX", completed: true },
-        { text: "Staking Mechanism Live", completed: false },
-        { text: "Mobile App Development", completed: false },
+        { text: "Launching Affiliate Program", completed: true },
+        { text: "Integrating the Level System", completed: true },
+        { text: "Listing on CEX", completed: true },
+        { text: "Further Casino Development", completed: true },
+        { text: "Community Events", completed: true },
       ],
       status: "current",
     },
@@ -60,12 +62,13 @@ const RoadmapSection = ({ phases }) => {
       id: 4,
       phase: "Phase 4",
       title: "Expansion",
-      icon: "users",
+      icon: card_icon4,
       tasks: [
-        { text: "Major CEX Listings", completed: false },
-        { text: "Global Marketing Push", completed: false },
-        { text: "Additional Game Integration", completed: false },
-        { text: "Strategic Partnerships", completed: false },
+        { text: "Live Affiliate Events", completed: false },
+        { text: "Partner Up with Softswiss", completed: false },
+        { text: "Influencer Marketing", completed: false },
+        { text: "Collaborations with Athletes", completed: false },
+        { text: "More to come", completed: false },
       ],
       status: "upcoming",
     },
@@ -73,31 +76,40 @@ const RoadmapSection = ({ phases }) => {
 
   const phasesData = phases || defaultPhases;
 
-  const getIcon = (iconName) => {
-    const icons = {
-      target: Target,
-      rocket: Rocket,
-      award: Award,
-      users: Users,
-    };
-    const IconComponent = icons[iconName] || Target;
-    return <IconComponent className="w-8 h-8 text-[#F7D774]" />;
-  };
+
 
   const getStatusBadge = (status) => {
     const badges = {
       completed: (
-        <span className="px-4 py-2 rounded-full bg-gray-700/50 text-gray-400 text-xs font-medium">
+        <span className="rounded-[89.222px] px-[20px] py-[10px]"
+          style={{
+                    border: "0.892px solid rgba(255, 255, 255, 0.12)",
+                    background: "rgba(255, 253, 253, 0.02)",
+                    boxShadow:"0 1.784px 8.922px 0 rgba(255, 255, 255, 0.20) inset"
+                  }}
+        >
           Completed
         </span>
       ),
       current: (
-        <span className="px-4 py-2 rounded-full bg-linear-to-r from-[#F7D774] to-[#F3B74E] text-black text-xs font-bold">
+        <span className="rounded-[89.222px] px-[20px] py-[10px]"
+          style={{
+                    border: "0.892px solid rgba(255, 255, 255, 0.12)",
+                    background: "linear-gradient(90deg, rgba(249, 242, 149, 0.20) 5.47%, rgba(224, 170, 62, 0.20) 38.55%, rgba(249, 242, 149, 0.20) 69.43%, rgba(184, 138, 68, 0.20) 97.22%)",
+                    boxShadow:"0 -1.442px 2.884px 0 #F5E99C inset, 0 1.442px 2.884px 0 #F5E99C inset"
+                  }}
+        >
           Current Phase
         </span>
       ),
       upcoming: (
-        <span className="px-4 py-2 rounded-full bg-gray-800/50 text-gray-500 text-xs font-medium">
+        <span className="px-[20px] py-[10px] rounded-[89.222px]"
+         style={{
+                    border: "0.892px solid rgba(255, 255, 255, 0.12)",
+                    background: "linear-gradient(90deg, rgba(249, 242, 149, 0.20) 5.47%, rgba(224, 170, 62, 0.20) 38.55%, rgba(249, 242, 149, 0.20) 69.43%, rgba(184, 138, 68, 0.20) 97.22%)",
+                    boxShadow:"0 -1.442px 2.884px 0 #F5E99C inset, 0 1.442px 2.884px 0 #F5E99C inset"
+                  }}
+        >
           Coming Soon
         </span>
       ),
@@ -106,42 +118,15 @@ const RoadmapSection = ({ phases }) => {
   };
 
   return (
-    <section className="relative w-full bg-linear-to-b from-black to-[#121212] py-16 px-6 md:px-12 overflow-hidden">
-      {/* Decorative Stars/Shine */}
-      <svg
-        className="absolute top-20 left-[10%] w-4 h-4 text-[#F7D774] opacity-40 animate-pulse"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7.4-6.3-4.8-6.3 4.8 2.3-7.4-6-4.6h7.6z" />
-      </svg>
-      <svg
-        className="absolute top-1/3 right-[8%] w-3 h-3 text-[#d4af37] opacity-35 animate-pulse"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7.4-6.3-4.8-6.3 4.8 2.3-7.4-6-4.6h7.6z" />
-      </svg>
-      <svg
-        className="absolute bottom-1/4 left-[5%] w-5 h-5 text-[#F7D774] opacity-30 animate-pulse"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7.4-6.3-4.8-6.3 4.8 2.3-7.4-6-4.6h7.6z" />
-      </svg>
-
-      <div className="max-w-7xl mx-auto">
-        {/* Heading Block */}
+    <section className="relative w-full  py-16 px-6 md:px-12 Roadmap_bg">
+      <div className="max-w-[1280px] mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3">
-            Roadmap
-          </h2>
-          <p className="text-sm md:text-base text-gray-400">
+          <h2 className="text-center">Roadmap</h2>
+          <p className="">
             Our journey to revolutionize the crypto casino industry
           </p>
         </div>
 
-        {/* Carousel */}
         <div className="relative px-0 md:px-12">
           <Carousel
             opts={{
@@ -154,55 +139,112 @@ const RoadmapSection = ({ phases }) => {
               {phasesData.map((phase) => (
                 <CarouselItem
                   key={phase.id}
-                  className="pl-4 md:pl-6 basis-full md:basis-1/2 lg:basis-1/3"
+                  className="pl-4 md:pl-6 basis-full rounded-[16.067px] sm:basis-1/2 lg:basis-[28%] xl:basis-[28%]"
+                
                 >
-                  <div className="h-full">
-                    <div className="group rounded-2xl bg-linear-to-b from-[#1a1b20] to-[#0f0f14] border border-white/10 p-6 flex flex-col justify-between h-full transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#F7D774]/20">
-                      {/* Header */}
-                      <div className="mb-6">
-                        {/* Icon */}
-                        <div className="mb-4">{getIcon(phase.icon)}</div>
+                  <div className="h-full relative ">
+                    <div className="!overflow-hidden rounded-[16.067px] p-6 flex flex-col justify-between h-full "
+                      style={{
+                    border: "0.803px solid rgba(255, 255, 255, 0.10)",
+                    background: "rgba(27, 26, 22, 0.40)",
+                    backdropFilter: "blur(8.033333778381348px)",
+                  }}
+                    >
+                      <div className="">
+                        <img
+                          className="mb-4 max-w-[88.367px]"
+                          src={phase.icon}
+                          alt={phase.title}
+                        />
+                        <h6 className="text_gradient">{phase.phase}</h6>
 
-                        {/* Phase Number */}
-                        <p className="text-xs text-gray-500 font-medium mb-2">
-                          {phase.phase}
-                        </p>
-
-                        {/* Phase Title */}
-                        <h3 className="text-xl font-bold uppercase text-[#F7D774] tracking-wide">
+                        <h4 className="text-start text_gradient">
                           {phase.title}
-                        </h3>
+                        </h4>
                       </div>
+                      <div className="h-[1px] bg-[#36383F] w-[100%] mt-3 mb-3"></div>
 
-                      {/* Checklist */}
                       <div className="flex-1 mb-6">
-                        <ul className="space-y-3">
+                        <ul className="space-y-1">
                           {phase.tasks.map((task, index) => (
                             <li key={index} className="flex items-start gap-3">
                               {task.completed ? (
-                                <CheckCircle className="w-5 h-5 text-[#F7D774] shrink-0 mt-0.5" />
+                                <>
+                                  <img
+                                    src={tick}
+                                    className="w-[15.289px]"
+                                    alt="crypto casino"
+                                  />
+                                </>
                               ) : (
-                                <Circle className="w-5 h-5 text-gray-600 shrink-0 mt-0.5" />
+                                <div
+                                  className="w-[15.289px] h-[15.289px]"
+                                  style={{
+                                    borderRadius: "3.058px",
+                                    border:
+                                      "0.764px solid rgba(255, 255, 255, 0.20)",
+                                    background: "#313133",
+                                  }}
+                                ></div>
                               )}
-                              <span className="text-sm text-gray-300 leading-relaxed">
+                              <h6 className="text-sm text-gray-300 leading-relaxed">
                                 {task.text}
-                              </span>
+                              </h6>
                             </li>
                           ))}
                         </ul>
                       </div>
 
-                      {/* Footer - Status Badge */}
-                      <div className="text-center pt-4 border-t border-white/5">
+                            <div className="flex justify-end">
                         {getStatusBadge(phase.status)}
                       </div>
+                   
+                     <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                 
+                  viewBox="0 0 233 228"
+                  fill="none"
+                  className="absolute -bottom-3 left-0  "
+                >
+                  <g filter="url(#filter0_f_206_2451)">
+                    <ellipse
+                      cx="116.668"
+                      cy="199.967"
+                      rx="107.067"
+                      ry="20.9672"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_f_206_2451"
+                      x="-168.843"
+                      y="0.555557"
+                      width="571.022"
+                      height="398.823"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="BackgroundImageFix"
+                        result="shape"
+                      />
+                      <feGaussianBlur
+                        stdDeviation="89.2222"
+                        result="effect1_foregroundBlur_206_2451"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
                     </div>
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
 
-            {/* Navigation Arrows - Hidden on Mobile */}
             <div className="hidden md:block">
               <CarouselPrevious />
               <CarouselNext />
