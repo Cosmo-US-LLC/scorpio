@@ -30,3 +30,27 @@
   background-repeat: no-repeat;
   height: 540px;
 }
+.breaking_barriers_section_bg {
+  background-image: url(../assets/breaking_down/bracking_down_gbg.webp);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.huge_market_section_bg {
+  background-image: url(../assets/huge_market/huge_market_box_bg.webp);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.huge_market_gbg {
+  background-image: url(../assets/huge_market/huge_Market_gbg.webp);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.case_study_section_bg {
+  background-image: url(../assets/crypto_casino/crypto_casino_gbg.webp);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}

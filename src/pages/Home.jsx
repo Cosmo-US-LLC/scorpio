@@ -43,7 +43,7 @@ function Home() {
       <BuyInCompetitionSection />
       <HowToBuySection />
       <StakingRewardsSection />
-       <HowDoesItSection />
+      <HowDoesItSection />
       <SCORPUtilitySection />
       <ComparisonChartSection />
       <WhitepaperSection />
