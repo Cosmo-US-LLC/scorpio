@@ -65,9 +65,9 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
   };
 
   return (
-    <section className="relative w-full  py-16 px-6 md:px-16 ">
+    <section className="relative w-full max-md:pt-0 py-16 px-4 md:px-16 ">
 
-      <div className="max-w-[1280px] mx-auto w-[100%] px-[40px] py-[44px]"
+      <div className="max-w-[1280px] mx-auto w-[100%] max-md:px-[20px] max-md:py-[24px] md:px-[40px] md:py-[44px]"
       style={{
         borderRadius:"16px",
         border:"0.764px solid rgba(255, 255, 255, 0.50)",
@@ -76,11 +76,11 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
       }}
       >
         {/* Header */}
-        <div className="flex justify-between mb-[30px] ms-start">
-          <h2 className="text_gradient min-w-[400px] text-start pr-2 mr-4 w-[100%] border-r-[1px] border-[#E5E7EB]">
+        <div className="flex max-md:flex-col justify-between mb-[30px] ms-start">
+          <h2 className="text_gradient md:min-w-[400px] max-md:mb-4 max-md:pb-2 max-md:text-center text-start md:pr-2 md:mr-4 w-[100%] md:border-r-[1px] max-md:border-b border-[#E5E7EB]">
            biggest buy-in competition
           </h2>
-          <p className="">
+          <p className="max-md:text-center">
            We’ve established a Top 10 Biggest Buy-in competition for all pre-sale participants, with a prize pool of 25,000 USD (in $SCORP2.0). This is our way of rewarding those who recognise the immense potential before others and have made a significant contribution to the success of the Scorpion Casino ecosystem.
           </p>
         </div>
@@ -88,7 +88,7 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
         {/* Table Container */}
         <div className="rounded-2xl overflow-hidden border border-white/5 backdrop-blur-sm">
           {/* Desktop Table */}
-          <div className="hidden md:block overflow-x-auto">
+          <div className="block md:block overflow-x-auto">
             <table className="w-full">
               <thead>
                 <tr className="bg-black/50">
@@ -193,7 +193,7 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
           </div>
 
           {/* Mobile Cards */}
-          <div className="block md:hidden space-y-4 p-4">
+          {/* <div className="block md:hidden space-y-4 p-4">
             {leaderboardData.map((entry, index) => (
               <div
                 key={index}
@@ -258,7 +258,7 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Load More Button */}

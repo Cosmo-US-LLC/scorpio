@@ -66,6 +66,9 @@ body {
     h2 {
       font-size: 22px;
     }
+     h3 {
+    font-size: 18px !important;
+  }
     .Featured_mobile {
       border-radius: 16px;
       border: 0.764px solid rgba(255, 255, 255, 0.1);
@@ -375,6 +378,33 @@ body {
     background-repeat: no-repeat;
   }
 
+  .disrupting_bg {
+    background-image: url(../src/assets/ComparisonChartSection/comp_bg.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .Roadmap_bg {
+    background-image: url(../src/assets/Roadmap/roadmap_bg.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+   @media (max-width: 768px) {
+   .bg_gambling_inner {
+    background-image: url(../src//assets/gambling/gambling_inner_mob.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .staking_rewards_bg {
+    background-image: url(../src/assets/stakingrewards/staking_rewards_bg_mob.webp);
+  }
+   .SCORPUtility_bg {
+    background-image: url(../src/assets/SCORPUtilitySection/scorpio_ui_bg_mob.webp);
+  }
+  }
   @keyframes accordion-down {
     from {
       height: 0;

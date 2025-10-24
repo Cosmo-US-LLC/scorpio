@@ -29,7 +29,7 @@ const FeaturedInSection = () => {
   ];
 
   return (
-    <section className="relative w-ful mt-[-40px]  pb-16 px-6 md:px-20 overflow-hidden">
+    <section className="relative w-ful mt-[-40px]  pb-16 px-4 md:px-20 overflow-hidden">
     
       <div className="relative max-w-7xl mx-auto rounded-2xl Featured_mobile max-md:p-4">
         {/* Header */}

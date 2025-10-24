@@ -36,7 +36,7 @@ const ExchangeLaunchSection = () => {
   ];
 
   return (
-    <section className="relative w-full  py-14 px-6 md:px-16 overflow-hidden max-w-[1280px] mx-auto">
+    <section className="relative w-full  py-14 px-4 md:px-16 overflow-hidden max-w-[1280px] mx-auto">
       
       <div className="">
         {/* Heading */}
@@ -48,7 +48,7 @@ const ExchangeLaunchSection = () => {
         </div>
 
         {/* Exchange Carousel */}
-        <div className="grid grid-cols-5 space-x-4 ">
+        <div className="grid max-md:grid-cols-1  md:grid-cols-5  max-md:space-y-[10px] md:space-x-4 ">
           {exchanges.map((exchange) => (
             <div
               className="relative overflow-hidden rounded-[15px]"
@@ -65,7 +65,7 @@ const ExchangeLaunchSection = () => {
                 }}
               >
                 <div
-                  className={`flex flex-col  items-center justify-center h-[195px] w-full `}
+                  className={`flex flex-col  items-center justify-center max-md:h-[100px] md:h-[195px] w-full `}
                 >
                   <img src={exchange.logo} alt="" />
                 </div>

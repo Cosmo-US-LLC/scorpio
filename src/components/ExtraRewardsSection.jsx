@@ -81,19 +81,19 @@ const ExtraRewardsSection = () => {
   };
 
   return (
-    <section className="relative w-full b py-16 px-6 md:px-16 ">
+    <section className="relative w-full max-md:pt-0 py-16 px-4 md:px-16 ">
       {/* Decorative Glow Accents */}
 
-      <div className="max-w-7xl mx-auto rounded-2xl">
+      <div className="max-w-[1280px] mx-auto rounded-2xl">
         <div className="flex flex-col md:flex-row items-center justify-between gap-10">
         
           <div className="w-full max-w-[550px] ">
-            <h2 className="mb-2 text-start min-w-[550px]">
+            <h2 className="mb-2 max-md:text-center md:text-start max-md:min-w-[100%] md:min-w-[550px]">
               Get Extra <span className="text_gradient">Rewards starting</span>{" "}
               from $1,000
             </h2>
 
-            <p className="text-sm md:text-base leading-6 mt-4 text-gray-300/90 max-w-xl">
+            <p className="max-md:text-center md:text-base  mt-4 ">
               Not only will you get more $SCORP2.0, but you’ll also unlock
               greater rewards! Enroll in the Elite Scorpion Members Club and
               enjoy incredible benefits starting from as little as $1000. These
@@ -133,20 +133,20 @@ const ExtraRewardsSection = () => {
             </div>
           </div>
 
-          <div className="w-full max-w-[753px] overflow-hidden min-w-[753px]  rounded-[15.289px] px-[24px] py-[32px] "
+          <div className="w-full md:max-w-[753px] overflow-hidden md:min-w-[753px]  rounded-[15.289px] px-[24px] py-[32px] "
           style={{
             border:"0.764px solid rgba(255, 255, 255, 0.10)",
             background:"rgba(27, 26, 22, 0.40)",
             backdropFilter:"blur(7.644444465637207px)"
           }}
           >
-            <div className="flex justify-between items-center space-x-6 ">
+            <div className="flex max-md:flex-col max-md:space-y-[20px] justify-between items-center md:space-x-6 ">
               
-              <div className="relative max-w-[300px] w-[100%]">
+              <div className="relative md:max-w-[300px] w-[100%]">
                 <h3 className="text_gradient_gray text-start !text-[30px]">
                   {tierInfo.tier} <br /> SCORPION NFT
                 </h3>
-                <p className="pb-4 pt-2">
+                <p className="pb-4 pt-2 ">
                   When you spend {tierInfo.threshold} or more
                 </p>
                 <div className="">
@@ -171,7 +171,7 @@ const ExtraRewardsSection = () => {
                     <div key={index} className="flex items-start gap-3">
                       <div className="flex items-center gap-2 flex-1">
                      <img src={tick} className="w-[19.876px] h-[19.876px]" alt="" />
-                        <h4 className="">
+                        <h4 className="max-md:!text-[14px]">
                           {reward.text}
                         </h4>
                         {reward.info && (
