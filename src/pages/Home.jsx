@@ -34,7 +34,7 @@ import TokenDetailsSection from "@/components/TokenDetailsSection";
 function Home() {
   return (
     <div className="">
-      {/* <Herosection />
+      <Herosection />
       <FeaturedInSection />
       <ResultsSection />
       <ExchangeLaunchSection />
@@ -46,7 +46,7 @@ function Home() {
       <HowToBuySection />
       <StakingRewardsSection />
       <HowDoesItSection />
-      <SCORPUtilitySection /> */}
+      <SCORPUtilitySection />
       <ComparisonChartSection />
       <WhitepaperSection />
       <AllocationSection />
