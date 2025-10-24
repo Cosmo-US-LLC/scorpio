@@ -374,18 +374,7 @@ body {
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
-  .disrupting_bg {
-    background-image: url(../src/assets/ComparisonChartSection/comp_bg.webp);
-    background-position: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-  }
-  .Roadmap_bg {
-    background-image: url(../src/assets/Roadmap/roadmap_bg.webp);
-    background-position: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-  }
+
   @keyframes accordion-down {
     from {
       height: 0;

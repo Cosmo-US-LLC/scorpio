@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -13,6 +14,9 @@ import card_icon4 from "../assets/Roadmap/road_card (1).webp";
 import tick from "../assets/Roadmap/tick.webp";
 
 const RoadmapSection = ({ phases }) => {
+  const [api, setApi] = useState(null);
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
   // Default roadmap phases data
   const defaultPhases = [
     {
@@ -76,39 +80,57 @@ const RoadmapSection = ({ phases }) => {
 
   const phasesData = phases || defaultPhases;
 
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
 
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
 
   const getStatusBadge = (status) => {
     const badges = {
       completed: (
-        <span className="rounded-[89.222px] px-[20px] py-[10px]"
+        <span
+          className="rounded-[89.222px] px-3 sm:px-4 md:px-[20px] py-2 md:py-[10px] text-xs sm:text-sm md:text-base"
           style={{
-                    border: "0.892px solid rgba(255, 255, 255, 0.12)",
-                    background: "rgba(255, 253, 253, 0.02)",
-                    boxShadow:"0 1.784px 8.922px 0 rgba(255, 255, 255, 0.20) inset"
-                  }}
+            border: "0.892px solid rgba(255, 255, 255, 0.12)",
+            background: "rgba(255, 253, 253, 0.02)",
+            boxShadow: "0 1.784px 8.922px 0 rgba(255, 255, 255, 0.20) inset",
+          }}
         >
           Completed
         </span>
       ),
       current: (
-        <span className="rounded-[89.222px] px-[20px] py-[10px]"
+        <span
+          className="rounded-[89.222px] px-3 sm:px-4 md:px-[20px] py-2 md:py-[10px] text-xs sm:text-sm md:text-base"
           style={{
-                    border: "0.892px solid rgba(255, 255, 255, 0.12)",
-                    background: "linear-gradient(90deg, rgba(249, 242, 149, 0.20) 5.47%, rgba(224, 170, 62, 0.20) 38.55%, rgba(249, 242, 149, 0.20) 69.43%, rgba(184, 138, 68, 0.20) 97.22%)",
-                    boxShadow:"0 -1.442px 2.884px 0 #F5E99C inset, 0 1.442px 2.884px 0 #F5E99C inset"
-                  }}
+            border: "0.892px solid rgba(255, 255, 255, 0.12)",
+            background:
+              "linear-gradient(90deg, rgba(249, 242, 149, 0.20) 5.47%, rgba(224, 170, 62, 0.20) 38.55%, rgba(249, 242, 149, 0.20) 69.43%, rgba(184, 138, 68, 0.20) 97.22%)",
+            boxShadow:
+              "0 -1.442px 2.884px 0 #F5E99C inset, 0 1.442px 2.884px 0 #F5E99C inset",
+          }}
         >
           Current Phase
         </span>
       ),
       upcoming: (
-        <span className="px-[20px] py-[10px] rounded-[89.222px]"
-         style={{
-                    border: "0.892px solid rgba(255, 255, 255, 0.12)",
-                    background: "linear-gradient(90deg, rgba(249, 242, 149, 0.20) 5.47%, rgba(224, 170, 62, 0.20) 38.55%, rgba(249, 242, 149, 0.20) 69.43%, rgba(184, 138, 68, 0.20) 97.22%)",
-                    boxShadow:"0 -1.442px 2.884px 0 #F5E99C inset, 0 1.442px 2.884px 0 #F5E99C inset"
-                  }}
+        <span
+          className="px-3 sm:px-4 md:px-[20px] py-2 md:py-[10px] rounded-[89.222px] text-xs sm:text-sm md:text-base"
+          style={{
+            border: "0.892px solid rgba(255, 255, 255, 0.12)",
+            background:
+              "linear-gradient(90deg, rgba(249, 242, 149, 0.20) 5.47%, rgba(224, 170, 62, 0.20) 38.55%, rgba(249, 242, 149, 0.20) 69.43%, rgba(184, 138, 68, 0.20) 97.22%)",
+            boxShadow:
+              "0 -1.442px 2.884px 0 #F5E99C inset, 0 1.442px 2.884px 0 #F5E99C inset",
+          }}
         >
           Coming Soon
         </span>
@@ -118,21 +140,22 @@ const RoadmapSection = ({ phases }) => {
   };
 
   return (
-    <section className="relative w-full  py-16 px-6 md:px-12 Roadmap_bg">
+    <section className="relative w-full py-12 md:py-16 px-4 md:px-6 lg:px-12 Roadmap_bg">
       <div className="max-w-[1280px] mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 md:mb-12">
           <h2 className="text-center">Roadmap</h2>
-          <p className="">
+          <p className="text-sm md:text-base">
             Our journey to revolutionize the crypto casino industry
           </p>
         </div>
 
-        <div className="relative px-0 md:px-12">
+        <div className="relative px-0 sm:px-4 md:px-12">
           <Carousel
             opts={{
               align: "start",
               loop: false,
             }}
+            setApi={setApi}
             className="w-full"
           >
             <CarouselContent className="-ml-4 md:-ml-6">
@@ -140,32 +163,34 @@ const RoadmapSection = ({ phases }) => {
                 <CarouselItem
                   key={phase.id}
                   className="pl-4 md:pl-6 basis-full rounded-[16.067px] sm:basis-1/2 lg:basis-[28%] xl:basis-[28%]"
-                
                 >
-                  <div className="h-full relative ">
-                    <div className="!overflow-hidden rounded-[16.067px] p-6 flex flex-col justify-between h-full "
+                  <div className="h-full relative">
+                    <div
+                      className="overflow-hidden! rounded-[16.067px] p-4 sm:p-5 md:p-6 flex flex-col justify-between h-full"
                       style={{
-                    border: "0.803px solid rgba(255, 255, 255, 0.10)",
-                    background: "rgba(27, 26, 22, 0.40)",
-                    backdropFilter: "blur(8.033333778381348px)",
-                  }}
+                        border: "0.803px solid rgba(255, 255, 255, 0.10)",
+                        background: "rgba(27, 26, 22, 0.40)",
+                        backdropFilter: "blur(8.033333778381348px)",
+                      }}
                     >
                       <div className="">
                         <img
-                          className="mb-4 max-w-[88.367px]"
+                          className="mb-3 md:mb-4 max-w-[70px] sm:max-w-[80px] md:max-w-[88.367px]"
                           src={phase.icon}
                           alt={phase.title}
                         />
-                        <h6 className="text_gradient">{phase.phase}</h6>
+                        <h6 className="text_gradient text-sm md:text-base">
+                          {phase.phase}
+                        </h6>
 
-                        <h4 className="text-start text_gradient">
+                        <h4 className="text-start text_gradient text-base md:text-lg">
                           {phase.title}
                         </h4>
                       </div>
-                      <div className="h-[1px] bg-[#36383F] w-[100%] mt-3 mb-3"></div>
+                      <div className="h-px bg-[#36383F] w-full mt-2 md:mt-3 mb-2 md:mb-3"></div>
 
-                      <div className="flex-1 mb-6">
-                        <ul className="space-y-1">
+                      <div className="flex-1 mb-4 md:mb-6">
+                        <ul className="space-y-1 md:space-y-1">
                           {phase.tasks.map((task, index) => (
                             <li key={index} className="flex items-start gap-3">
                               {task.completed ? (
@@ -187,7 +212,7 @@ const RoadmapSection = ({ phases }) => {
                                   }}
                                 ></div>
                               )}
-                              <h6 className="text-sm text-gray-300 leading-relaxed">
+                              <h6 className="text-xs sm:text-sm text-gray-300 leading-relaxed">
                                 {task.text}
                               </h6>
                             </li>
@@ -195,59 +220,83 @@ const RoadmapSection = ({ phases }) => {
                         </ul>
                       </div>
 
-                            <div className="flex justify-end">
+                      <div className="flex justify-center sm:justify-end">
                         {getStatusBadge(phase.status)}
                       </div>
-                   
-                     <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                 
-                  viewBox="0 0 233 228"
-                  fill="none"
-                  className="absolute -bottom-3 left-0  "
-                >
-                  <g filter="url(#filter0_f_206_2451)">
-                    <ellipse
-                      cx="116.668"
-                      cy="199.967"
-                      rx="107.067"
-                      ry="20.9672"
-                      fill="white"
-                    />
-                  </g>
-                  <defs>
-                    <filter
-                      id="filter0_f_206_2451"
-                      x="-168.843"
-                      y="0.555557"
-                      width="571.022"
-                      height="398.823"
-                      filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
-                    >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                      <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="BackgroundImageFix"
-                        result="shape"
-                      />
-                      <feGaussianBlur
-                        stdDeviation="89.2222"
-                        result="effect1_foregroundBlur_206_2451"
-                      />
-                    </filter>
-                  </defs>
-                </svg>
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 233 228"
+                        fill="none"
+                        className="absolute -bottom-3 left-0  "
+                      >
+                        <g filter="url(#filter0_f_206_2451)">
+                          <ellipse
+                            cx="116.668"
+                            cy="199.967"
+                            rx="107.067"
+                            ry="20.9672"
+                            fill="white"
+                          />
+                        </g>
+                        <defs>
+                          <filter
+                            id="filter0_f_206_2451"
+                            x="-168.843"
+                            y="0.555557"
+                            width="571.022"
+                            height="398.823"
+                            filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB"
+                          >
+                            <feFlood
+                              flood-opacity="0"
+                              result="BackgroundImageFix"
+                            />
+                            <feBlend
+                              mode="normal"
+                              in="SourceGraphic"
+                              in2="BackgroundImageFix"
+                              result="shape"
+                            />
+                            <feGaussianBlur
+                              stdDeviation="89.2222"
+                              result="effect1_foregroundBlur_206_2451"
+                            />
+                          </filter>
+                        </defs>
+                      </svg>
                     </div>
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
 
-            <div className="hidden md:block">
-              <CarouselPrevious />
-              <CarouselNext />
+            {/* Navigation Arrows - Positioned on sides for desktop */}
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+
+            {/* Mobile Navigation Arrows with Dots - Below carousel */}
+            <div className="flex md:hidden justify-center items-center gap-4 mt-8">
+              <CarouselPrevious className="static! transform-none! h-10 w-10" />
+
+              {/* Pagination Dots */}
+              <div className="flex gap-2 pb-9">
+                {Array.from({ length: count }).map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => api?.scrollTo(index)}
+                    className={`transition-all duration-300 rounded-full ${
+                      index === current
+                        ? "w-8 h-2 bg-linear-to-r from-[#F9F295] via-[#E0AA3E] to-[#B88A44]"
+                        : "w-2 h-2 bg-white/30 hover:bg-white/50"
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
+
+              <CarouselNext className="static! transform-none! h-10 w-10" />
             </div>
           </Carousel>
         </div>

@@ -28,9 +28,9 @@ const PressMediaSection = ({ pressItems }) => {
   const pressData = pressItems || defaultPressItems;
 
   return (
-    <section className="w-full h-[580px] flex items-center justify-center ">
-      <div className="max-w-[1280px] mx-auto rounded-2xl flex flex-col gap-12">
-        <div className="text-center ">
+    <section className="w-full min-h-[400px] md:h-[580px] flex items-center justify-center py-12 md:py-16 px-4 md:px-6 lg:px-8">
+      <div className="max-w-[1280px] mx-auto rounded-2xl flex flex-col gap-8 md:gap-12">
+        <div className="text-center">
           <h2 className="">
             <span className="text-white">Press And </span>
             <span className="text_gradient">Media</span>
@@ -41,11 +41,11 @@ const PressMediaSection = ({ pressItems }) => {
           {pressData.map((item, index) => (
             <div
               key={index}
-              className="group relative rounded-xl bg-[#0B0D10] p-6 md:p-8 border border-white/10"
+              className="group relative rounded-xl bg-[#0B0D10] p-5 sm:p-6 md:p-8 border border-white/10"
             >
-              <div class="absolute bottom-0  w-[359px] h-[1px] bg-gradient-to-r from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
+              <div className="absolute bottom-0 w-full h-[1px] bg-gradient-to-r from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
 
-              <div className="flex items-center justify-center mb-6 h-24 w-full pb-4 border-b border-gray-600">
+              <div className="flex items-center justify-center mb-5 md:mb-6 h-20 sm:h-24 w-full pb-3 md:pb-4 border-b border-gray-600 relative z-10">
                 <img
                   src={item.logo}
                   alt={`${item.name} logo`}
@@ -54,7 +54,7 @@ const PressMediaSection = ({ pressItems }) => {
               </div>
 
               {/* Quote */}
-              <div className="text-center">
+              <div className="text-center relative z-10">
                 <p className="text-sm md:text-base text-gray-300/90 leading-relaxed italic">
                   {item.quote}
                 </p>
@@ -62,7 +62,7 @@ const PressMediaSection = ({ pressItems }) => {
               <img
                 src={whiteGbg}
                 alt="white gbg"
-                className="absolute top-0 left-0 w-full h-full z-0"
+                className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none"
               />
             </div>
           ))}

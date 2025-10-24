@@ -32,8 +32,8 @@ const AmbassadorsSection = ({ ambassadors }) => {
   const ambassadorsData = ambassadors || defaultAmbassadors;
 
   return (
-    <section className="relative bg-[#0B0D10] w-full overflow-hidden">
-      <div className="max-w-[1280px] mx-auto relative scorpion_gbg flex flex-col gap-16 items-center justify-center">
+    <section className="relative bg-[#0B0D10] w-full overflow-hidden py-12 md:py-16 lg:py-20">
+      <div className="max-w-[1280px] mx-auto relative scorpion_gbg flex flex-col gap-8 md:gap-16 items-center justify-center px-4 md:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="">
             <span className="text-white">Scorpion Casino </span>
@@ -42,14 +42,14 @@ const AmbassadorsSection = ({ ambassadors }) => {
         </div>
 
         {/* Ambassador Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full">
           {ambassadorsData.map((ambassador, index) => (
             <div
               key={index}
-              className="group relative rounded-xl bg-linear-to-br from-[#1a1a1a] via-[#0f0f0f] to-black p-6 md:p-8 border border-white/10"
+              className="group relative rounded-xl bg-linear-to-br from-[#1a1a1a] via-[#0f0f0f] to-black p-5 sm:p-6 md:p-8 border border-white/10"
             >
               {/* Content Container */}
-              <div className="flex flex-col items-center text-center">
+              <div className="flex flex-col items-center text-center relative z-10">
                 {/* Profile Image */}
                 <div className="relative">
                   <div className="h-24 w-24 md:h-28 md:w-28 rounded-full ring-2 ring-[#F7D774] ring-offset-2 ring-offset-black shadow-[0_0_20px_rgba(247,215,116,0.3)] overflow-hidden">
@@ -92,19 +92,19 @@ const AmbassadorsSection = ({ ambassadors }) => {
                 </div>
 
                 {/* Followers/Status */}
-                <p className="text-sm text-gray-400 mb-3">
+                <p className="text-sm text-[#fff] mb-3">
                   {ambassador.followers}
                 </p>
 
                 {/* Description */}
-                <p className="text-sm md:text-base text-gray-300/80 mb-6">
+                <p className="text-sm md:text-base text-[#fff] mb-4">
                   {ambassador.description}
                 </p>
 
                 {/* CTA Link */}
                 <a
                   href={ambassador.link.url}
-                  className="text-sm text-yellow-400 hover:text-yellow-300 hover:underline transition-colors duration-200"
+                  className="text-sm text-[#fff] hover:text-yellow-300 underline transition-colors duration-200  px-4 -mx-4"
                 >
                   {ambassador.link.text}
                 </a>
@@ -112,8 +112,9 @@ const AmbassadorsSection = ({ ambassadors }) => {
               <img
                 src={whiteGbg}
                 alt="white gbg"
-                className="absolute top-0 left-0 w-full h-full"
+                className="absolute top-0 left-0 w-full h-full pointer-events-none"
               />
+              <div class="absolute bottom-0  w-full h-[1px] bg-gradient-to-r from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
             </div>
           ))}
         </div>
