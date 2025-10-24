@@ -3,20 +3,20 @@ import scorpioToken from "../assets/breaking_down/scorpio_token.webp";
 
 const BreakingBarriersSection = () => {
   return (
-    <section className="relative w-full overflow-hidden h-[660px] flex items-center justify-center">
-      <div className="max-w-[1280px] mx-auto rounded-2xl breaking_barriers_section_bg flex items-center justify-center gap-10 px-8 py-8">
-        <div className="w-[50%] flex flex-col gap-6">
+    <section className="relative w-full overflow-hidden min-h-[600px] md:h-[660px] flex items-center justify-center py-12 md:py-16 px-4 md:px-6 lg:px-8">
+      <div className="max-w-[1280px] mx-auto rounded-2xl breaking_barriers_section_bg flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 px-4 sm:px-6 md:px-8 py-8 md:py-8">
+        <div className="w-full md:w-[50%] flex flex-col gap-4 md:gap-6">
           <h2 className="text-left max-w-[530px]">
             <span className="text-[#ffffff] ">Breaking Down</span> <br />
             <span className="text-[#ffffff] ">The Barriers To</span> <br />
             <span className="text-[#CACACA] ">The Casino Industry</span>
           </h2>
 
-          <h6 className="text-[#ffffff] text-left">
+          <h6 className="text-[#ffffff] text-left text-sm md:text-base">
             $SCORP Delivers Exclusive Insider Access to the world of Gambling.
           </h6>
 
-          <h6 className="text-[#CACACA]">
+          <h6 className="text-[#CACACA] text-sm md:text-base">
             Launching an online casino from scratch typically takes 6-18 months
             of intense preparation, a $2 million investment, legal connections,
             and years of experience in the gambling industry. These high
@@ -27,11 +27,11 @@ const BreakingBarriersSection = () => {
           </h6>
         </div>
 
-        <div className="w-[50%] relative pt-16 pb-4 px-8">
+        <div className="w-full md:w-[50%] relative pt-8 md:pt-16 pb-4 px-4 md:px-8">
           <img
             src={scorpioToken}
             alt="Scorpion Casino Token"
-            className="w-[200px] h-[200px] object-cover rounded-xl z-10 absolute -left-[60px] bottom-[-50px]"
+            className="w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] md:w-[200px] md:h-[200px] object-cover rounded-xl z-10 absolute -left-[20px] sm:-left-[40px] md:-left-[60px] bottom-[-30px] sm:bottom-[-40px] md:bottom-[-50px]"
           />
           <div className="relative rounded-xl overflow-hidden">
             <img
