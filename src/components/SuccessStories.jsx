@@ -31,10 +31,10 @@ const SuccessStories = ({ stories }) => {
   const storiesData = stories || defaultStories;
 
   return (
-    <section className="relative w-full h-[800px] flex items-center justify-center">
-      <div className="relative max-w-[1280px] mx-auto flex flex-col items-center justify-center">
+    <section className="relative w-full min-h-[980px] md:h-[800px] flex items-center justify-center py-12 md:py-16 px-4 md:px-6 lg:px-8">
+      <div className="relative max-w-[1280px] mx-auto Success_stories_bg flex flex-col items-center justify-center gap-8 md:gap-12">
         {/* Section Heading */}
-        <div className="text-center ">
+        <div className="text-center">
           <h2 className="">
             <span className="text-white">
               Success Stories & <br /> Growth{" "}
@@ -44,25 +44,25 @@ const SuccessStories = ({ stories }) => {
           </h2>
         </div>
 
-        <div className="success_stories_section_bg flex items-center justify-center">
+        <div className="success_stories_section_bg flex items-center justify-center w-full">
           {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full">
             {storiesData.map((story, index) => (
               <div
                 key={index}
-                className="group relative rounded-2xl bg-linear-to-br from-[#1a1a1a] via-[#0f0f0f] to-black p-6 md:p-8 border border-white/10"
+                className="group relative rounded-2xl bg-linear-to-br from-[#1a1a1a] via-[#0f0f0f] to-black p-5 sm:p-6 md:p-8 border border-white/10"
               >
-                <img
+                {/* <img
                   src={whiteGbg}
                   alt="white gbg"
-                  className="absolute top-0 left-0 w-full h-full z-0"
-                />
-                <div class="absolute bottom-0  w-[359px] h-[1px] bg-gradient-to-r from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
-                <div className="relative flex flex-col items-center text-center">
+                  className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none"
+                /> */}
+                <div className="absolute bottom-0 w-full h-[1px] bg-gradient-to-r from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
+                <div className="relative flex flex-col items-center text-center z-10">
                   {/* Brand Logo/Icon */}
-                  <div className="mb-6">
+                  <div className="mb-5 md:mb-6">
                     <div
-                      className={`w-20 h-20 rounded-full ${story.iconColor} flex items-center justify-center shadow-lg ring-2 ring-white/10 group-hover:ring-[#F7D774]/30 transition-all duration-300`}
+                      className={`w-16 h-16 sm:w-20 sm:h-20 rounded-full ${story.iconColor} flex items-center justify-center shadow-lg ring-2 ring-white/10 group-hover:ring-[#F7D774]/30 transition-all duration-300`}
                     >
                       <img
                         src={story.logo}
@@ -73,10 +73,12 @@ const SuccessStories = ({ stories }) => {
                   </div>
 
                   {/* Brand Name */}
-                  <h3 className="text_gradient mb-4">{story.name}</h3>
+                  <h3 className="text_gradient mb-3 md:mb-4">{story.name}</h3>
 
                   {/* Description */}
-                  <p className="text-[#CACACA]">{story.description}</p>
+                  <p className="text-[#CACACA] text-sm md:text-base">
+                    {story.description}
+                  </p>
                 </div>
               </div>
             ))}

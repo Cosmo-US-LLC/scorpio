@@ -90,30 +90,27 @@ const ExpertTestimonials = ({ testimonials }) => {
   );
 
   return (
-    <section className="w-full bg-[#0B0D10] py-16 px-6 md:px-12 lg:px-24">
+    <section className="w-full bg-[#0B0D10] py-12 md:py-16 px-4 md:px-6 lg:px-12 xl:px-24">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-center">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-center md:max-w-[660px] mx-auto">
             <span className="block text-[#ffffff] mb-2">
-              What Crypto Experts
-            </span>
-            <span className="block">
-              <span className="text-[#ffffff]">Think About </span>
-              <span className="text_gradient">$SCORP</span>
+              What Crypto Experts Think About{" "}
+              <span className="text_gradient">$SCORP2.0</span>
             </span>
           </h2>
         </div>
 
         {/* Testimonial Cards */}
-        <div className="space-y-12">
+        <div className="space-y-8 md:space-y-12">
           {testimonialsData.map((testimonial, index) => {
             const isReversed = index % 2 === 1;
 
             return (
               <div
                 key={index}
-                className="group relative rounded-2xl p-6 md:p-8 border border-white/5 ring-1 ring-[#F7D774]/10 hover:scale-[1.01] transition-all duration-300 hover:ring-[#F7D774]/20 overflow-hidden"
+                className="group relative rounded-2xl p-5 sm:p-6 md:p-8 border border-white/5 ring-1 ring-[#F7D774]/10 hover:scale-[1.01] transition-all duration-300 hover:ring-[#F7D774]/20 overflow-hidden"
                 style={{
                   backgroundImage: `url(${testimonial.backgroundImage})`,
                   backgroundSize: "cover",
@@ -131,11 +128,11 @@ const ExpertTestimonials = ({ testimonials }) => {
                   } items-center gap-6 md:gap-10`}
                 >
                   {/* Text Block */}
-                  <div className="flex-1 text-center md:text-left">
+                  <div className="flex-1 text-center md:text-left w-full">
                     {/* Quote Mark */}
-                    <div className="mb-4">
+                    <div className="mb-3 md:mb-4">
                       <svg
-                        className="w-16 h-16 text-white/20"
+                        className="w-12 h-12 md:w-16 md:h-16 text-white/20"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
@@ -145,19 +142,23 @@ const ExpertTestimonials = ({ testimonials }) => {
 
                     {/* Headline */}
                     <h3
-                      className="text-left mb-4 text_gradient"
+                      className="text-center md:text-left mb-3 md:mb-4 text_gradient"
                       dangerouslySetInnerHTML={{
                         __html: highlightKeywords(testimonial.quote),
                       }}
                     />
 
                     {/* Body Paragraph */}
-                    <p className="text-[#CACACA] mb-6">{testimonial.body}</p>
+                    <p className="text-[#CACACA] mb-5 md:mb-6 text-sm md:text-base">
+                      {testimonial.body}
+                    </p>
 
                     {/* Author Pill */}
-                    <div className="inline-flex items-center gap-3  py-2 mb-4 ">
-                      <div className="w-[200px]">
-                        <button className="btn-primary">Buy $SCORP</button>
+                    <div className="flex flex-col sm:flex-row items-center gap-3 py-2 mb-4">
+                      <div className="w-full sm:w-[200px]">
+                        <button className="btn-primary w-full">
+                          Buy $SCORP
+                        </button>
                       </div>
                       {/* {testimonial.author.avatar && (
                         <div className="w-8 h-8 rounded-full bg-linear-to-br from-[#F7D774] to-[#F3B74E] p-[2px]">
@@ -193,8 +194,8 @@ const ExpertTestimonials = ({ testimonials }) => {
                   </div>
 
                   {/* Media Block */}
-                  <div className="flex-1 relative">
-                    <div className="max-w-md mx-auto">
+                  <div className="flex-1 relative w-full">
+                    <div className="max-w-xs sm:max-w-sm md:max-w-md mx-auto">
                       <div className="relative rounded-xl overflow-hidden border-2 border-[#F7D774]/30 shadow-[0_0_20px_rgba(247,215,116,0.2)] hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(247,215,116,0.4)] transition-all duration-300">
                         <img
                           src={testimonial.image}
@@ -205,7 +206,7 @@ const ExpertTestimonials = ({ testimonials }) => {
                     </div>
                   </div>
                 </div>
-                <div class="absolute bottom-0  w-full h-[1px] bg-gradient-to-r from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
+                <div className="absolute bottom-0 w-full h-[1px] bg-gradient-to-r from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
               </div>
             );
           })}
