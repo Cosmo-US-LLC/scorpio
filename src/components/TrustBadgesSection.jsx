@@ -28,7 +28,7 @@ const TrustBadgesSection = () => {
   ];
 
   return (
-    <section className="relative w-full  py-16 px-6 md:px-16 overflow-hidden">
+    <section className="relative w-full max-md:!pt-0 py-16 px-6 md:px-16 overflow-hidden">
       
 
       <div className="relative z-[9] max-w-[1280px] w-[100%] mx-auto ">
@@ -37,7 +37,7 @@ const TrustBadgesSection = () => {
           {badges.map((badge) => (
             <div
               key={badge.id}
-              className="px-[22px] pt-[22px] pb-[40px] text-center relative overflow-hidden"
+              className="px-[22px] pt-[22px] pb-[40px] max-md:flex max-md:justify-between max-md:flex-row-reverse text-center max-md:space-x-2 relative overflow-hidden"
               style={{
                 background: " rgba(27, 26, 22, 0.40)",
                 border: "1px solid rgba(255, 255, 255, 0.10)",
@@ -45,15 +45,16 @@ const TrustBadgesSection = () => {
                 backdropFilter: "blur(10px)",
               }}
             >
-              <div className="flex max-w-[110px] mx-auto justify-center items-center mb-6">
+              <div className="flex md:max-w-[110px] max-w-[100px] mx-auto justify-center items-center md:mb-6 max-md:ml-2 ">
                 <img src={badge.icon} alt={badge.title} />
               </div>
 
-              <h3 className="mb-[20px]">
+              <div>
+                <h3 className="mb-[20px] max-md:text-start">
                 {badge.title}
               </h3>
 
-              <p className="border-t-[1px] border-[#36383F] pt-[20px]">
+              <p className="border-t-[1px] max-md:text-start border-[#36383F] pt-[20px]">
                 {badge.description}
               </p>
                    <svg
@@ -96,6 +97,7 @@ const TrustBadgesSection = () => {
                     </filter>
                   </defs>
                 </svg>
+              </div>
             </div>
           ))}
         </div>

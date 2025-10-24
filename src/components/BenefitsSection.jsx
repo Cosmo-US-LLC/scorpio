@@ -46,7 +46,7 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section className="relative w-full  py-20 px-6 md:px-16  Benefits_bg">
+    <section className="relative w-full max-md:pt-0 py-20 px-4 md:px-16  Benefits_bg">
       <div
         className="absolute bottom-[60px]"
         style={{
@@ -59,18 +59,18 @@ const BenefitsSection = () => {
         }}
       ></div>
       <div className="relative max-w-7xl mx-auto">
-        <div className="text-center max-w-[725px] mx-auto mb-[129px]">
+        <div className="text-center max-w-[725px] mx-auto max-md:mb-[90px] md:mb-[129px]">
           <h2 className="">
             <span className="text_gradient">Benefits</span> of buying{" "}
             <span className="text_gradient">$SCORP2.0</span> in the pre-sale
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[15px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-md:gap-y-[5rem] md:gap-[15px]">
           {benefits.map((benefit) => (
             <div
               key={benefit.id}
-              className="bg-[#1a1a1a] relative rounded-xl max-w-[310px] w-[100%] px-[12px] pb-[38px] flex flex-col items-center text-center "
+              className="bg-[#1a1a1a] relative rounded-xl max-md:max-w-[100%] md:max-w-[310px] w-[100%] px-[12px] pb-[38px] flex flex-col items-center text-center "
               style={{
                 borderRadius:"16px",
                 border:"0.764px solid rgba(255, 255, 255, 0.50)",

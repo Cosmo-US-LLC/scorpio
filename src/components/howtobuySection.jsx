@@ -27,9 +27,9 @@ const HowToBuySection = () => {
   ];
 
   return (
-    <section className="relative w-full  py-16 px-6 md:px-16 ">
+    <section className="relative w-full max-md:pt-0 py-16 px-4 md:px-16 ">
        <div
-        className="absolute bottom-[300px]"
+        className="absolute bottom-[300px] max-md:-left-40"
         style={{
           width: "1162px",
           height: "200px",
@@ -39,13 +39,13 @@ const HowToBuySection = () => {
           zIndex: 0,
         }}
       ></div>
-        <div className="text-center max-w-[725px] mx-auto mb-[59px]">
+        <div className="text-center max-w-[725px] mx-auto mb-12 md:mb-[59px]">
           <h2 className="">
           How To Buy SCORP2.0
           </h2>
         </div>
 
-      <div className="relative z-[9] how_to_buy_bg max-w-[1280px] w-[100%] mx-auto ">
+      <div className="relative z-[9] how_to_buy_bg max-w-[1280px] w-[100%] max-md:space-y-[10px] mx-auto ">
         {/* howToBuy Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px]">
           {howToBuy.map((badge) => (
@@ -79,13 +79,13 @@ const HowToBuySection = () => {
           <img src={howtobuy} alt="how to buy" />
         </div>
 
-        <div className="flex items-center mt-[-50px] justify-center space-x-5">
-          <button className="px-[57px] py-[19px] btn-primary"
+        <div className="flex items-center md:mt-[-50px] justify-center space-x-5">
+          <button className="md:px-[57px] max-md:px-[20px] max-md:py-[10px] md:py-[19px] btn-primary max-md:!text-[16px]"
            style={{
     boxShadow: "0 -1.76px 3.52px 0 #F5E99C inset, 0 1.76px 3.52px 0 #F5E99C inset",
   }}
           >Buy $SCORP2.0</button>
-          <button className="px-[57px] py-[19px] btn-secondary"> Need Support?</button>
+          <button className="max-md:!text-[16px] md:px-[57px] max-md:px-[20px] max-md:py-[10px] md:py-[19px] btn-secondary"> Need Support?</button>
         </div>
 
        

@@ -45,7 +45,7 @@ const ResultsSection = () => {
   return (
     <div className="relative">
       <div
-        className="absolute bottom-[60px]"
+        className="absolute max-md:top-[60px] md:bottom-[60px]"
         style={{
           width: "1262px",
           height: "416px",
@@ -56,22 +56,20 @@ const ResultsSection = () => {
         }}
       ></div>
       <section
-        className="relative w-full bg_resultssection  px-6 md:px-16 overflow-hidden
+        className="relative w-full bg_resultssection  px-4 md:px-16 overflow-hidden
     "
       >
         <div
-          className="max-w-[1280px] relative mx-auto pt-[85px] pb-[34px]"
-          style={{
-            borderRadius: "17.844px",
-            border: "0.892px solid rgba(255, 255, 255, 0.10)",
-            background: "rgba(27, 26, 22, 0.40)",
-            backdropFilter: "blur(8.922223091125488px)",
-          }}
+          className="max-w-[1280px] relative mx-auto pt-[85px] pb-[34px]  md:rounded-[17.844px] 
+    md:border md:border-[rgba(255,255,255,0.10)] 
+    md:bg-[rgba(27,26,22,0.40)] 
+    md:backdrop-blur-[8.922223091125488px]"
+          
         >
           <div className="">
             {/* Header */}
             <div className="text-center space-y-[15px] mb-12 max-w-[684px] mx-auto">
-              <h2 className="">
+              <h2 className="max-md:tracking-[-0.5px]">
                 Results of
                 <span className="text_gradient"> SCORP 1.0</span>
               </h2>
@@ -133,7 +131,7 @@ const ResultsSection = () => {
             </div>
 
             {/* Results Cards - Desktop Grid */}
-            <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-2 lg:gap-[20px] px-[15px]">
+            <div className=" grid grid-cols-1 md:grid md:grid-cols-3 lg:grid-cols-5 gap-2 lg:gap-[20px] px-[15px]">
               {results.map((result) => (
                 <div
                   key={result.id}
@@ -168,8 +166,8 @@ const ResultsSection = () => {
                   <p className="">{result.description}</p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="233"
-                    height="228"
+                    // width="233"
+                    // height="228"
                     viewBox="0 0 233 228"
                     fill="none"
                     className="absolute -bottom-3 left-0  "
@@ -221,30 +219,7 @@ const ResultsSection = () => {
               ))}
             </div>
 
-            {/* Results Cards - Mobile Horizontal Scroll */}
-            <div className="md:hidden flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide">
-              {results.map((result) => (
-                <div
-                  key={result.id}
-                  className="shrink-0 w-72 snap-center bg-black/40 backdrop-blur-sm border border-white/10 rounded-lg shadow-lg p-6 flex flex-col items-center text-center"
-                >
-                  {/* Icon */}
-                  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-[#F7D774]/10 border border-[#F7D774]/20 mb-4">
-                    {result.icon}
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-lg font-semibold text-white mb-3">
-                    {result.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-sm text-gray-400 leading-6">
-                    {result.description}
-                  </p>
-                </div>
-              ))}
-            </div>
+          
 
             {/* Bottom Decorative Element */}
           </div>
