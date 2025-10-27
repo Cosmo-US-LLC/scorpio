@@ -9,7 +9,7 @@ const BenefitsSection = () => {
       id: 1,
       title: "LOWEST $SCORP2.0 PRICE",
       description:
-        "Buy $SCORP2.0 at its lowest price before it launches on centralised and decentralised exchanges.",
+        "During the pre-sale, you can buy $SCORP2.0 at its lowest price before it launches on centralised and decentralised exchanges.",
       icon: benefitsicon1,
       height: "230px",
       width: "274.003px",
@@ -18,7 +18,7 @@ const BenefitsSection = () => {
       id: 2,
       title: "RECEIVE UP TO 40% CASINO CREDITS",
       description:
-        "Receive up to 40% free credits to play on Scorpion Casino - no conditions or obligations attached!",
+        "Receive up to 40% free credits to play on Scorpion.Casino - no conditions or obligations attached!",
       icon: benefitsicon2,
       height: "248px",
       width: "258.004px",
@@ -27,7 +27,7 @@ const BenefitsSection = () => {
       id: 3,
       title: "$250K GIVEAWAY PARTICIPATION",
       description:
-        "Participate in the $250k Giveaway and go all out to win! Big! This event is exclusively available to Pre-Sale $SCORP2.0 buyers.",
+        "Participate in our 250k Giveaway and go all out to win big! This event is exclusively available for Pre-Sale buyers.",
       icon: benefitsicon3,
       height: "184px",
       width: "205.223px",
@@ -37,7 +37,7 @@ const BenefitsSection = () => {
       id: 4,
       title: "DAILY PASSIVE STAKING INCOME",
       description:
-        "Get paid every day! Staking rewards automatically added to your wallet - even during the pre-sale period!",
+        "Get daily passive staking income automatically added to your wallet - even during the pre-sale period!",
       icon: benefitsicon4,
       height: "199px",
       width: "206px",
@@ -61,8 +61,8 @@ const BenefitsSection = () => {
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center max-w-[725px] mx-auto max-md:mb-[90px] md:mb-[129px]">
           <h2 className="">
-            <span className="text_gradient">Benefits</span> of buying{" "}
-            <span className="text_gradient">$SCORP2.0</span> in the pre-sale
+            <span className="text_gradient">Benefits</span> Of Buying{" "}
+            <span className="text_gradient">$SCORP2.0</span> In The Pre-sale
           </h2>
         </div>
 

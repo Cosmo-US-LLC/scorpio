@@ -36,13 +36,13 @@ const ExchangeLaunchSection = () => {
   ];
 
   return (
-    <section className="relative w-full  py-14 px-4 md:px-16 overflow-hidden max-w-[1280px] mx-auto">
+    <section className="relative w-full  pb-14 pt-[80px] px-4 md:px-16 overflow-hidden max-w-[1280px] mx-auto">
       
       <div className="">
         {/* Heading */}
         <div className="max-w-[925px] w-[100%] mx-auto mb-10">
           <h2 className="">
-            <span className="text_gradient">$SCORP2.0</span> is set to launch on{" "}
+            <span className="text_gradient">$SCORP2.0</span> Is Set To Launch On{" "}
             <span className="text_gradient">Multiple Exchanges</span>
           </h2>
         </div>
@@ -58,7 +58,7 @@ const ExchangeLaunchSection = () => {
             >
               <div
                 key={exchange.id}
-                className="   relative z-[99]"
+                className="   relative z-[9]"
                 style={{
                   background: "rgba(18, 19, 31, 0.40)",
                   backdropFilter: "blur(7.717472076416016px)",

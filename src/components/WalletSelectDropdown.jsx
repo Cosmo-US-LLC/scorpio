@@ -1,62 +1,79 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
-const WalletSelectDropdown = ({ tokens = [], selectedTokenId, onChange }) => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const containerRef = useRef(null);
+export default function WalletSelectDropdown({ tokens, onChange }) {
+  const [open, setOpen] = useState(false);
+  const [selected, setSelected] = useState(tokens[0]);
+  const dropdownRef = useRef(null);
+
+  const handleSelect = (token) => {
+    setSelected(token);
+    setOpen(false);
+    onChange?.(token);
+  };
 
   useEffect(() => {
-    console.log("Tokens received in WalletSelectDropdown:", tokens);
-  }, [tokens]);
-
-  // Pick selected token based on ID or default to first
-  const selectedToken =
-    tokens.find((t) => t.id === selectedTokenId) || tokens[0];
-
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        containerRef.current &&
-        !containerRef.current.contains(event.target)
-      ) {
-        setDropdownOpen(false);
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setOpen(false);
       }
-    };
+    }
+
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
 
   return (
-    <div className=" flex flex-col w-full" ref={containerRef}>
-      {/* Dropdown Button */}
+    <div className="relative w-[100%]" ref={dropdownRef}>
       <button
-        onClick={() => setDropdownOpen((open) => !open)}
-        className="flex items-center justify-start  px-3 py-3 gap-[6px] cursor-pointer transition-all  dropdown_bg"
+        onClick={() => setOpen(!open)}
+        className="flex items-center justify-between w-full pl-[8px] min-h-[45px] pr-[16px] py-[6px] rounded-full cursor-pointer"
+        style={{ background: "rgba(176, 176, 176, 0.17)",
+          border:"0.85px solid rgba(255, 255, 255, 0.12)",
+          borderRadius:"84.498px"
+
+
+         }}
       >
-        {selectedToken && (
-          <>
-            <img
-              className="w-[18px] h-[18px] object-cover"
-              src={selectedToken.icon}
-              alt={selectedToken.symbol}
-            />
-            <p className="!text-[14px] font-[700">
-              {selectedToken.symbol.toUpperCase()}
-            </p>
-          </>
-        )}
+        <span className="flex items-center 2xl:gap-2 xl:gap-2 lg:gap-2 md:gap-2 sm:gap-[5px] gap-[4px] text-[11.7px] font-[700] font-[Inter]">
+          <div className="min-w-[20px]">
+            {selected.icon && (
+              <img
+                src={selected.icon}
+                alt={selected.symbol}
+                className="2xl:max-h-[22px] xl:max-h-[22px] lg:max-h-[22px] md:max-h-[22px] sm:max-h-[16px] max-h-[16px]"
+              />
+            )}
+          </div>
+          <span
+            className={`leading-[15px] text-[#fff] text-start ${
+              selected.symbol === "More"
+                ? "text-[14px] "
+                : "2xl:text-[14px] xl:text-[14px] lg:text-[14px] md:text-[14px] sm:text-[9.7px] text-[9.7px] "
+            }`}
+          >
+            {selected.symbol}
+            <br />
+            {selected.sub_symbol && (
+              <span className="text-[12px] text-gray-500 leading-[8px] font-[400]">
+                {selected.sub_symbol}
+              </span>
+            )}
+          </span>
+        </span>
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
-          fill="none"
-            className={`w-3 h-3 flex-shrink-0 ml-auto transition-transform ${
-            dropdownOpen ? "rotate-180" : ""
+          className={`w-4 h-4 transition-transform text-[#0c2f71] ${
+            open ? "rotate-180" : ""
           }`}
+          xmlns="http://www.w3.org/2000/svg"
+          width="19"
+          height="19"
+          viewBox="0 0 19 19"
+          fill="none"
         >
           <path
-            d="M15.9566 7.61182L10.9322 12.6363C10.3388 13.2296 9.36781 13.2296 8.77443 12.6363L3.75 7.61182"
+            d="M15.355 6.89648L10.3306 11.9209C9.73723 12.5143 8.76625 12.5143 8.17287 11.9209L3.14844 6.89648"
             stroke="white"
             stroke-width="1.27411"
             stroke-miterlimit="10"
@@ -66,32 +83,32 @@ const WalletSelectDropdown = ({ tokens = [], selectedTokenId, onChange }) => {
         </svg>
       </button>
 
-      {/* Dropdown List */}
-      {tokens.length > 0 && (
+      {open && (
         <div
-          className={`absolute top-8 left-0 w-full bg-[#fff] border border-[#D3D3D3] shadow-md rounded-[6px] z-[9999] max-h-48 overflow-y-auto transition-all duration-200 ${
-            dropdownOpen
-              ? "opacity-100 translate-y-1 pointer-events-auto"
-              : "opacity-0 -translate-y-2 pointer-events-none"
-          }`}
+          className="absolute left-0 max-h-[250px] overflow-y-scroll mt-1 w-full border border-gray-300 rounded-md shadow-md z-10 overflow-hidden"
+          style={{
+            background: "#929292ff",
+            backdropFilter: "blur(5px)",
+          }}
         >
-          {tokens.map((token, index) => (
+          {tokens.map((token) => (
             <button
-              key={index}
-              className="flex items-center gap-x-[6px] py-2 px-2 w-full text-left hover:bg-gray-100"
-              onClick={() => {
-                console.log("Selected token:", token);
-                onChange(token);
-                setDropdownOpen(false);
-              }}
+              key={token.id}
+              onClick={() => handleSelect(token)}
+              className="flex items-center text-[#fff] gap-x-2 w-full px-3 py-2 text-[11.7px] font-[700] font-[Inter] text-left hover:bg-[#8a8a8aff] bg-[#929292ff]"
             >
-              <img
-                className="w-[18px] h-[18px] object-cover"
-                src={token.icon}
-                alt={token.symbol}
-              />
-              <span className="text-[#545454] text-[11.688px] font-[700] leading-[1]">
-                {token.symbol.toUpperCase()}
+              {token.icon && (
+                <img
+                  src={token.icon}
+                  alt={token.symbol}
+                  className="max-h-[20px]"
+                />
+              )}
+              <span className="flex flex-col leading-[10px] space-y-[-10px]">
+                {token.symbol}
+                <span className="text-[9px] font-[500]">
+                  {token.sub_symbol}
+                </span>
               </span>
             </button>
           ))}
@@ -99,6 +116,4 @@ const WalletSelectDropdown = ({ tokens = [], selectedTokenId, onChange }) => {
       )}
     </div>
   );
-};
-
-export default WalletSelectDropdown;
+}

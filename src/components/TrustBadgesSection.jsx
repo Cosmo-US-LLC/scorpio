@@ -1,6 +1,6 @@
 import trusticon1 from "../assets/TrustBadgesSection/trusticons (3).webp";
-import trusticon2 from "../assets/TrustBadgesSection/trusticons (2).webp";
-import trusticon3 from "../assets/TrustBadgesSection/trusticons (1).webp";
+import trusticon2 from "../assets/TrustBadgesSection/trusticons (1).webp";
+import trusticon3 from "../assets/TrustBadgesSection/trusticons (4).webp";
 
 const TrustBadgesSection = () => {
   const badges = [
@@ -62,7 +62,7 @@ const TrustBadgesSection = () => {
                  
                   viewBox="0 0 233 228"
                   fill="none"
-                  className="absolute -bottom-3 left-0  "
+                  className="absolute bottom-0 left-0  "
                 >
                   <g filter="url(#filter0_f_206_2451)">
                     <ellipse

@@ -15,17 +15,13 @@ const FutureSection = () => {
 
             {/* Subheading */}
             <h6 className="text-left text-[#FFF] text-sm md:text-base">
-              Gambling is one of the oldest and most lucrative industries in the
-              history of mankind and digitization is just the next logical step.
+              Gambling is one of the oldest and most lucrative industries in the history of mankind and digitization is just the next logical step.
             </h6>
 
             {/* Body Paragraph */}
             <h6 className="text-left text-[#CACACA] text-sm md:text-base">
-              People have been gambling for the last 5,000 years, regardless of
-              location, time, or market conditions. Gambling is hard-wired in
-              human psychology. This makes our staking platform one of the most
-              infallible opportunities to generate cash flow with passionate
-              long-term appeal and a low risk-reward ratio.
+             People have been gambling for the last 3,000 years, regardless of location, time, or market conditions. Gambling is hard-wired in human psychology. This makes an online gambling platform one of the most interesting opportunities
+to generate cash flow with passive staking income, and build long-term wealth.
             </h6>
 
             {/* CTA Button */}

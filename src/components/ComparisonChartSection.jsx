@@ -117,7 +117,7 @@ const ComparisonChartSection = () => {
       >
         {/* Title */}
         <h2 className="text-center !text-[30px] md:!text-[48px] mb-8 md:mb-12">
-          Disrupting the gambling industry
+          Disrupting The Gambling Industry
         </h2>
 
         <div className="rounded-3xl">
