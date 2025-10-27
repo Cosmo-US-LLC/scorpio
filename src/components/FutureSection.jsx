@@ -50,4 +50,4 @@ to generate cash flow with passive staking income, and build long-term wealth.
   );
 };
 
-export default FutureSection;
+export default FutureSection; 
