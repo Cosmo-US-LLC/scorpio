@@ -277,6 +277,37 @@ body {
     box-shadow: 0 -1.76px 3.52px 0 #fff inset, 0 1.76px 3.52px 0 #fff inset;
     z-index: -1;
   }
+
+   .btn-fade {
+    position: relative;
+    cursor: pointer;
+    color: #0d0e1e;
+    text-align: center;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+   
+  }
+  .btn-fade::before {
+    content: "";
+    position: absolute;
+    width: 239.304px;
+    inset: 0;
+   border-radius: 153.846px;
+background: linear-gradient(90deg, #F9F295 5.47%, #E0AA3E 38.55%, #F9F295 69.43%, #B88A44 97.22%);
+filter: blur(7.692307949066162px);
+    z-index: -1;
+
+  }
+  .btn-fade::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  border-radius: 153.846px;
+background: linear-gradient(90deg, rgba(249, 242, 149, 0.20) 5.47%, rgba(224, 170, 62, 0.20) 38.55%, rgba(249, 242, 149, 0.20) 69.43%, rgba(184, 138, 68, 0.20) 97.22%);
+box-shadow: 0 -1.538px 3.077px 0 #F5E99C inset, 0 1.538px 3.077px 0 #F5E99C inset;
+    z-index: -1;
+  }
 }
 
 @layer components {

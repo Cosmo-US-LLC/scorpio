@@ -24,10 +24,10 @@ export default function Navbar() {
 
   return (
     <header
-    className={`fixed left-0 w-full z-50 text-white   transition-all duration-300 ${
+    className={`fixed left-0 w-full z-[999] text-white  transition-all duration-300 ${
         isScrolled
-          ? "backdrop-blur-md bg-[rgba(5, 5, 5, 0.45)] top-0"
-          : "bg-transparent top-2"
+          ? "backdrop-blur-md bg-[rgba(5, 5, 5, 0.45)] top-0 "
+          : "bg-transparent top-0 "
       }`}>
       <div className="max-w-[1280px] w-full border-b-[1px] border-white mx-auto md:px-0 max-md:px-4 py-4">
        

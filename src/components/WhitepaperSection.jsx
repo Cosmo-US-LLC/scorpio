@@ -20,17 +20,14 @@ const WhitepaperSection = () => {
         />
         <div className="space-y-4 sm:space-y-6 md:space-y-[30px] max-w-[538px] w-full relative z-10">
           <h2 className="text-center md:text-start ">
-            Scorpion Casino <span className="text_gradient">whitepaper</span>
+            Scorpion Casino <span className="text_gradient">Whitepaper</span>
           </h2>
 
           <p className=" text-center md:text-start text-sm md:text-base">
-            Reading the $SCORPION CASINO Whitepaper is a great way to learn more
-            about the unique $SCORPION ecosystem and how the $SCORP token works.
-            It covers everything from the casino's features to tokenomics, and
-            explains in detail how it stands out from other crypto projects.
+            Reading the SCORPION CASINO Whitepaper is a great way to learn more about the unique SCORPION ecosystem and how the $SCORP token can benefit you. It highlights the groundbreaking innovations and explains in detail how it stands out from other crypto projects.
           </p>
 
-          <button className="btn-primary text-base sm:text-lg md:text-[20px] font-[800] px-4 sm:px-6 md:px-[27px] py-3 sm:py-4 md:py-[22px] w-full sm:w-auto">
+          <button className="btn-fade text-base sm:text-lg md:text-[20px] font-[800] px-4 sm:px-6 md:px-[27px] py-3 sm:py-4 md:py-[22px] w-full sm:w-auto">
             Read the Whitepaper
           </button>
         </div>

@@ -1,5 +1,8 @@
+import { useState } from "react";
+
 const BuyInCompetitionSection = ({ leaderboard }) => {
-  // Default leaderboard data matching the screenshot
+
+  
   const defaultLeaderboard = [
     {
       rank: 1,
@@ -46,42 +49,83 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
       nft: "Diamond",
       prize: "$1500",
     },
+     {
+      rank: 6,
+      wallet: "0xbbf...c027c",
+      date: "2024-03-05",
+      txCount: 2,
+      totalBuy: "$105,349.88",
+      nft: "Diamond",
+      prize: "$1500",
+    },
+     {
+      rank: 7,
+      wallet: "0xbbf...c027c",
+      date: "2024-03-05",
+      txCount: 2,
+      totalBuy: "$105,349.88",
+      nft: "Diamond",
+      prize: "$1500",
+    },
+     {
+      rank: 8,
+      wallet: "0xbbf...c027c",
+      date: "2024-03-05",
+      txCount: 2,
+      totalBuy: "$105,349.88",
+      nft: "Diamond",
+      prize: "$1500",
+    },
+     {
+      rank: 9,
+      wallet: "0xbbf...c027c",
+      date: "2024-03-05",
+      txCount: 2,
+      totalBuy: "$105,349.88",
+      nft: "Diamond",
+      prize: "$1500",
+    },
+     {
+      rank: 10,
+      wallet: "0xbbf...c027c",
+      date: "2024-03-05",
+      txCount: 2,
+      totalBuy: "$105,349.88",
+      nft: "Diamond",
+      prize: "$1500",
+    },
   ];
 
-  const leaderboardData = leaderboard || defaultLeaderboard;
+ const leaderboardData = leaderboard || defaultLeaderboard;
 
-  // Function to get rank pill styling
-  const getRankStyle = (rank) => {
-    switch (rank) {
-      case 1:
-        return "bg-linear-to-r from-[#fcd34d] to-[#F7D774] text-black";
-      case 2:
-        return "bg-linear-to-r from-[#C0C0C0] to-[#A8A8A8] text-black";
-      case 3:
-        return "bg-linear-to-r from-[#CD7F32] to-[#B87333] text-white";
-      default:
-        return "bg-white/10 text-gray-300";
-    }
+  const [visibleCount, setVisibleCount] = useState(5);
+
+  const handleLoadMore = () => {
+    setVisibleCount(leaderboardData.length); // show all
   };
-
   return (
     <section className="relative w-full max-md:pt-0 py-16 px-4 md:px-16 ">
-
-      <div className="max-w-[1280px] mx-auto w-[100%] max-md:px-[20px] max-md:py-[24px] md:px-[40px] md:py-[44px]"
-      style={{
-        borderRadius:"16px",
-        border:"0.764px solid rgba(255, 255, 255, 0.50)",
-        background:"linear-gradient(90deg, rgba(224, 170, 62, 0.05) 38.55%, rgba(184, 138, 68, 0.05) 97.22%)",
-        backdropFilter:"blur(2.599111318588257px)"
-      }}
+      <div
+        className="max-w-[1280px] mx-auto w-[100%] max-md:px-[20px] max-md:py-[24px] md:px-[40px] md:py-[44px]"
+        style={{
+          borderRadius: "16px",
+          border: "0.764px solid rgba(68, 68, 68, 0.5)",
+          background:
+            "linear-gradient(90deg, rgba(224, 170, 62, 0.05) 38.55%, rgba(184, 138, 68, 0.05) 97.22%)",
+          backdropFilter: "blur(2.599111318588257px)",
+        }}
       >
         {/* Header */}
         <div className="flex max-md:flex-col justify-between mb-[30px] ms-start">
           <h2 className="text_gradient md:min-w-[400px] max-md:mb-4 max-md:pb-2 max-md:text-center text-start md:pr-2 md:mr-4 w-[100%] md:border-r-[1px] max-md:border-b border-[#E5E7EB]">
-           biggest buy-in competition
+            Biggest Buy-in Competition
           </h2>
           <p className="max-md:text-center">
-           We’ve established a Top 10 Biggest Buy-in competition for all pre-sale participants, with a prize pool of 25,000 USD (in $SCORP2.0). This is our way of rewarding those who recognise the immense potential before others and have made a significant contribution to the success of the Scorpion Casino ecosystem.
+            We’ve established a Top 10 Biggest Buy-in competition for all
+            pre-sale participants, with a prize pool of 25,000 USD (in
+            $SCORP2.0). This is our way of rewarding those who recognise the
+            immense potential before others and have made a significant
+            contribution to the success of the Scorpion Casino ecosystem.
           </p>
         </div>
 
@@ -89,33 +133,109 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
         <div className="rounded-2xl overflow-hidden border border-white/5 backdrop-blur-sm">
           {/* Desktop Table */}
           <div className="block md:block overflow-x-auto">
-            <table className="w-full">
+            <table className="w-[98%] mx-auto mt-10 mb-10 p-10" >
               <thead>
-                <tr className="bg-black/50">
-                  <th className="px-4 py-4 text-left text-xs font-bold uppercase tracking-wider text-gray-400">
+                <tr className="">
+                  <th className=" w-[120px] px-2 py-4 !text-center text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
                     Rank
                   </th>
-                  <th className="px-4 py-4 text-left text-xs font-bold uppercase tracking-wider text-gray-400">
+                  <th className="w-[200px] px-3 py-4 !text-center text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
                     Wallet
                   </th>
-                  <th className="px-4 py-4 text-left text-xs font-bold uppercase tracking-wider text-gray-400">
+                  <th className="w-[120px] px-3 py-4 !text-center text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
                     Date
                   </th>
-                  <th className="px-4 py-4 text-left text-xs font-bold uppercase tracking-wider text-gray-400">
+                  <th className="w-[200px] px-3 py-4  py-4 text-left text-xs font-bold uppercase tracking-wider text-[#F9C333] !text-center">
                     No. of TX
                   </th>
-                  <th className="px-4 py-4 text-left text-xs font-bold uppercase tracking-wider text-gray-400">
+                  <th className="w-[200px] px-3  py-4 text-left text-xs font-bold uppercase tracking-wider text-[#F9C333] !text-center">
                     Total Buy
                   </th>
-                  <th className="px-4 py-4 text-left text-xs font-bold uppercase tracking-wider text-gray-400">
+                  <th className="w-[200px] px-3 !text-center py-4 text-left text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
                     NFT
                   </th>
-                  <th className="px-4 py-4 text-left text-xs font-bold uppercase tracking-wider text-gray-400">
+                  <th className="w-[200px] px-3 py-4 text-left !text-center text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
                     Prize
                   </th>
                 </tr>
               </thead>
-              <tbody>
+              
+                  <tbody className="w-full">
+              {leaderboardData.slice(0, visibleCount).map((entry, index) => {
+                let bgColor = "";
+                let textColor = "";
+
+                if (entry.rank === 1) {
+                  bgColor = "bg-[rgba(255,217,0,0.63)]";
+                  textColor = "text-[#FFF9AD]";
+                } else if (entry.rank === 2) {
+                  bgColor = "bg-[rgba(192,192,192,0.69)]";
+                  textColor = "text-[#FFF9AD]";
+                } else if (entry.rank === 3) {
+                  bgColor = "bg-[rgba(205,128,50,0.71)]";
+                  textColor = "text-[#FFF9AD]";
+                } else {
+                  bgColor = index % 2 === 0 ? "bg-transparent" : "bg-transparent";
+                  textColor = "text-gray-300";
+                }
+
+                return (
+                  <tr
+                    key={index}
+                    className={`w-full  transition-colors  ${bgColor}`}
+                  >
+                    {/* Rank */}
+                    <td className={`px-4 !text-center rounded-l-[30px] py-4 font-bold ${textColor}`}>
+                      {entry.rank === 1
+                        ? "1st"
+                        : entry.rank === 2
+                        ? "2nd"
+                        : entry.rank === 3
+                        ? "3rd"
+                        : `${entry.rank}th`}
+                    </td>
+
+                    {/* Wallet */}
+                    <td
+                      className={`px-4  py-4 !text-center text-sm font-medium ${textColor}`}
+                    >
+                      {entry.wallet}
+                    </td>
+
+                    {/* Date */}
+                    <td className={`px-4 py-4 !text-center text-sm ${textColor}`}>
+                      {entry.date}
+                    </td>
+
+                    {/* TX Count */}
+                    <td
+                      className={`px-4 py-4 text-center text-sm  ${textColor}`}
+                    >
+                      {entry.txCount}
+                    </td>
+
+                    {/* Total Buy */}
+                    <td
+                      className={`px-4 py-4 text-sm !text-center font-semibold ${textColor}`}
+                    >
+                      {entry.totalBuy}
+                    </td>
+
+                    {/* NFT */}
+                    <td className="px-4 py-4 text-sm !text-center">
+                     {entry.nft}
+                    </td>
+
+                    {/* Prize */}
+                    <td className={`px-4 py-4  rounded-r-[30px] !text-center font-bold ${textColor}`}>
+                      {entry.prize}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+            
+              {/* <tbody>
                 {leaderboardData.map((entry, index) => (
                   <tr
                     key={index}
@@ -123,7 +243,6 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
                       index % 2 === 0 ? "bg-black/30" : "bg-black/50"
                     }`}
                   >
-                    {/* Rank */}
                     <td className="px-4 py-4">
                       <span
                         className={`inline-flex items-center justify-center px-4 py-1.5 rounded-full text-sm font-bold ${getRankStyle(
@@ -140,27 +259,21 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
                       </span>
                     </td>
 
-                    {/* Wallet */}
                     <td className="px-4 py-4 text-sm font-medium text-gray-200">
                       {entry.wallet}
                     </td>
-
-                    {/* Date */}
                     <td className="px-4 py-4 text-sm text-gray-300">
                       {entry.date}
                     </td>
 
-                    {/* TX Count */}
                     <td className="px-4 py-4 text-sm text-gray-300 text-center">
                       {entry.txCount}
                     </td>
 
-                    {/* Total Buy */}
                     <td className="px-4 py-4 text-sm font-semibold text-white">
                       {entry.totalBuy}
                     </td>
 
-                    {/* NFT */}
                     <td className="px-4 py-4">
                       <div className="flex items-center gap-2">
                         <svg
@@ -175,8 +288,6 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
                         </span>
                       </div>
                     </td>
-
-                    {/* Prize */}
                     <td className="px-4 py-4">
                       <span
                         className={`text-sm font-bold ${
@@ -188,8 +299,9 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
                     </td>
                   </tr>
                 ))}
-              </tbody>
+              </tbody> */}
             </table>
+        
           </div>
 
           {/* Mobile Cards */}
@@ -262,14 +374,17 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
         </div>
 
         {/* Load More Button */}
-        <div className="flex justify-center mt-8">
-          <button className="inline-flex items-center justify-center px-8 py-3 bg-linear-to-r from-[#fcd34d] to-[#fbbf24] text-black font-semibold text-base rounded-full hover:shadow-[0_0_20px_rgba(252,211,77,0.7)] transition-all duration-300 hover:scale-105">
-            Load More
-          </button>
-        </div>
+        {visibleCount < leaderboardData.length && (
+          <div className="flex justify-center mt-8">
+            <button
+              onClick={handleLoadMore}
+              className="inline-flex items-center justify-center px-8 py-3 text-black font-semibold text-base rounded-full btn-primary"
+            >
+              Load More
+            </button>
+          </div>
+        )}
       </div>
-
-     
     </section>
   );
 };
