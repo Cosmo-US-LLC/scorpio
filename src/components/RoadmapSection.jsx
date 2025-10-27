@@ -145,7 +145,7 @@ const RoadmapSection = ({ phases }) => {
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-center">Roadmap</h2>
           <p className="text-sm md:text-base">
-            Our journey to revolutionize the crypto casino industry
+            This is the official Scorpion Casino Roadmap
           </p>
         </div>
 

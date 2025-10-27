@@ -23,18 +23,15 @@ const FutureCryptoSection = () => {
         <div className=" flex max-md:flex-col max-md:space-y-[32px] justify-between items-center ">
           <div className="max-w-[664px] w-[100%] space-y-[15px] max-md:flex max-md:flex-col max-md:items-center ">
             <h2 className="md:text-start text-center">
-              $SCORP2.0 is the <span className="faded">future</span> leading <span className="faded">gambling</span> cryptocurrency
+              $SCORP2.0 Is The <span className="faded">Future</span> Leading <span className="faded">Gambling</span> Cryptocurrency
             </h2>
 
             <p className="md:text-start text-center">
-              The $SCORP2.0 token is empowering the SCORPION ecosystem, offering
-              over 30,000 betting opportunities monthly, 210 casino games, and
-              160 sports to choose from. It's licensed, transparent, and
-              provably fair platform!
+             The $SCORP2.0 token is empowering the SCORPION ecosystem, offering over 30,000 betting opportunities monthly, 210 casino games, and 160 live games on a licensed, transparent, and provably fair platform. 
             </p>
 
             <p className="md:text-start text-center">
-              Don't wait, come check us out now!
+             Don’t wait, come check us out now!
             </p>
 
             <button className="btn-primary px-[71px]  py-[18px]">

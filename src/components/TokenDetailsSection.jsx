@@ -1,6 +1,7 @@
-import AllocationImg from "../assets/AllocationSection/Allocation_img.webp";
-
+import copy from "../assets/AllocationSection/copy.svg";
+import toast from "react-hot-toast";
 const TokenDetailsSection = () => {
+  const walletAddress = "0x37803eccdb9f1889c0974bea0ddb4d7929119a7";
   return (
     <section className="relative w-full py-12 md:py-16 px-4 md:px-6 lg:px-16 overflow-hidden">
       <div className="max-w-[1280px] relative w-full mx-auto">
@@ -69,12 +70,31 @@ const TokenDetailsSection = () => {
                 </p>
               </div>
               <div className="md:hidden w-full h-[1px] bg-gradient-to-r from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
+              
+
               <div className="sm:col-span-2 md:col-span-2 w-full space-y-2 md:space-y-[12px]">
                 <h4 className="text-start text-sm md:text-base">
                   Token Contract Address
                 </h4>
                 <p className="text-sm md:text-[15px] text-[#fff] break-words">
-                  0x37803eccdb9f1889c0974bea0ddb4d7929119a7
+                  {walletAddress}
+                  <span>
+                    <img
+                      className="inline-block cursor-pointer ml-1"
+                      src={copy}
+                      alt="Copy"
+                      onClick={() => {
+                        navigator.clipboard.writeText(walletAddress);
+                        toast.success("Wallet address copied!", {
+                          style: {
+                            borderRadius: "10px",
+                            background: "#333",
+                            color: "#fff",
+                          },
+                        });
+                      }}
+                    />
+                  </span>
                 </p>
               </div>
               <div className="space-y-2 md:space-y-[12px]">
@@ -92,31 +112,43 @@ const TokenDetailsSection = () => {
                 backdropFilter: "blur(8.922223091125488px)",
               }}
             >
-              <div className="space-y-2 md:space-y-[12px]">
-                <h4 className="text-start text-sm md:text-base">
+              <div className="space-y-2 md:space-y-[12px] flex w-[100%]"
+            
+              >
+                <div className="w-full">
+                  <h4 className="text-start text-sm md:text-base">
                   Pre-Sale Details
                 </h4>
                 <p className="text-sm md:text-base font-medium">
                   3,000,000,000 $SCORP tokens will be sold during the pre-sale.
                 </p>
+                </div>
+                <div className="max-md:hidden w-[1px] ml-8 mr-2 h-full bg-gradient-to-b from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
               </div>
               <div className="md:hidden w-full h-[1px] bg-gradient-to-r from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
-              <div className="space-y-2 md:space-y-[12px]">
-                <h4 className="text-start text-sm md:text-base">
+              
+              <div className="space-y-2 flex  items-center md:space-y-[12px]">
+               <div>
+                 <h4 className="text-start text-sm md:text-base">
                   Current Stage Price
                 </h4>
                 <p className="text-sm md:text-base font-medium">
                   1 $SCORP = $0.055
                 </p>
+               </div>
+                   <div className="max-md:hidden w-[1px] ml-40 mr-2 h-full bg-gradient-to-b from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
               </div>
               <div className="md:hidden w-full h-[1px] bg-gradient-to-r from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
-              <div className="space-y-2 md:space-y-[12px]">
+              <div className="space-y-2 md:space-y-[12px]"
+              >
+                
                 <h4 className="text-start text-sm md:text-base">
                   Exchange Listing Price
                 </h4>
                 <p className="text-sm md:text-base font-medium">
                   1 $SCORP = $0.15
                 </p>
+          
               </div>
             </div>
           </div>

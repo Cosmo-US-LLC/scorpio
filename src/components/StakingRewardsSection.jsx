@@ -1,5 +1,6 @@
 import staking_rewards_img from "../assets/stakingrewards/staking_rewards.webp";
 import vect_1 from "../assets/stakingrewards/vect_1.webp";
+import vect_2 from "../assets/stakingrewards/vect_2.webp";
 import vect_1_mob from "../assets/stakingrewards/vect_1_mob.webp";
 
 const StakingRewardsSection = () => {
@@ -8,6 +9,7 @@ const StakingRewardsSection = () => {
     
 
       <div className="relative staking_rewards_bg max-md:px-[20px] max-md:py-[30px]  md:px-[60px] md:py-[40px] overflow-hidden max-w-[1280px] mx-auto max-md:rounded-[16px]">
+            <img src={vect_2}  className="max-w-[155.777px] z-[9] md:block hidden -right-6 absolute -bottom-12" alt="Staking Rewards" />
         <div className="flex max-md:flex-col justify-between items-center gap-15 lg:gap-16">
          
           <div className=" relative">
@@ -27,11 +29,7 @@ const StakingRewardsSection = () => {
 
             {/* Description */}
             <p className="mb-[31px] md:text-start text-center">
-              Get paid every day even during the pre-sale based on the amount of
-              $SCORP2.0 you hold. The faster you buy, $SCORP2.0 tokens will
-              unlock your passive staking rewards. Payments are made in USDT,
-              and the rewards will grow over time. Don't miss this opportunity
-              to be one of the first to enjoy truly passive staking income.
+           Get paid every day even during the pre-sale based on the amount of $SCORP2.0 you hold. The faster you buy $SCORP2.0 tokens and the more you acquire, the higher your rewards (in USDT and $SCORP2.0) will grow over time. Don’t miss this opportunity to be one of the first  to enjoy truly passive staking income.
             </p>
 
             {/* CTA Button */}

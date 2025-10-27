@@ -1,4 +1,4 @@
-import howdoesit_img from "../assets/HowDoesIt/howdoesit_img.webp";
+import howdoesit_img from "../assets/HowDoesIt/howdoesit_img.png";
 import howdoesit_img_mob from "../assets/HowDoesIt/howdoesit_img_mob.webp";
 import trusticon1 from "../assets/HowDoesIt/howdoes_icns (3).webp";
 import trusticon2 from "../assets/HowDoesIt/howdoes_icns (2).webp";
@@ -24,7 +24,7 @@ const HowDoesItSection = () => {
       id: 3,
       title: "Daily Profits",
       description:
-        "The other half of the tokens obtained through the buyback process will be automatically transferred to the Scorpion Staking Pool. This staking pool then distributes rewards daily to $SCORP2.0 holders based on the number of tokens they hold, generating daily profits ",
+        "The other half of the tokens obtained through the buyback process will be automatically transferred to the Scorpion Staking Pool. This staking pool then distributes rewards daily to $SCORP2.0 holders based on the number of tokens they hold, generating daily profits for them.",
       icon: trusticon3,
     },
   ];
@@ -34,7 +34,7 @@ const HowDoesItSection = () => {
       <div className="relative z-[9] max-w-[1280px] w-[100%] mx-auto ">
         <div className="text-center max-w-[932px] mx-auto mb-[49px]">
           <h2 className="text-center mb-4">
-            How does it <span className="faded">work</span>?
+            How Does It <span className="faded">Work</span>?
           </h2>
           <p className="text-center">
             Curious about how the Scorpion Casino ecosystem works? Here’s a
