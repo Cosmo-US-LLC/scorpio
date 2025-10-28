@@ -23,7 +23,7 @@ const FutureCryptoSection = () => {
         <div className=" flex max-md:flex-col max-md:space-y-[32px] justify-between items-center ">
           <div className="max-w-[664px] w-[100%] space-y-[15px] max-md:flex max-md:flex-col max-md:items-center ">
             <h2 className="md:text-start text-center">
-              $SCORP2.0 Is The <span className="faded">Future</span> Leading <span className="faded">Gambling</span> Cryptocurrency
+              $SCORP2.0 Is The <span className="faded_heading">Future</span> Leading <span className="faded_heading">Gambling</span> Cryptocurrency
             </h2>
 
             <p className="md:text-start text-center">
