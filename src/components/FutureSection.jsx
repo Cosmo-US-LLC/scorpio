@@ -26,7 +26,7 @@ to generate cash flow with passive staking income, and build long-term wealth.
 
             {/* CTA Button */}
             <div className="w-full sm:w-[300px]">
-              <button className="btn-primary w-full">Buy $SCORP</button>
+              <button className="btn-primary w-full">Buy $SCORP2.0</button>
             </div>
           </div>
 

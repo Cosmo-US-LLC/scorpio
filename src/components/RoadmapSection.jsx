@@ -183,7 +183,7 @@ const RoadmapSection = ({ phases }) => {
                           {phase.phase}
                         </h6>
 
-                        <h4 className="text-start text_gradient text-base md:text-lg">
+                        <h4 className="uppercase text-start text_gradient text-base md:text-lg">
                           {phase.title}
                         </h4>
                       </div>
