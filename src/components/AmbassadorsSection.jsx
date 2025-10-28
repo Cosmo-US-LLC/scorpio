@@ -1,6 +1,7 @@
 import cokiSinger from "../assets/scorpion_casino/coki_singer.webp";
 import tbaImage from "../assets/scorpion_casino/TBA_image.webp";
 import whiteGbg from "../assets/scorpion_casino/white_gbg.png";
+import imgtick from "../assets/scorpion_casino/image (2).webp";
 
 const AmbassadorsSection = ({ ambassadors }) => {
   // Default ambassadors data
@@ -9,7 +10,7 @@ const AmbassadorsSection = ({ ambassadors }) => {
       name: "GOKI RAMIREZ",
       verified: true,
       avatar: cokiSinger,
-      followers: "@10.7k followers",
+      followers: "970.7k followers",
       description: "Famous Singer and Model",
       link: {
         text: "Official Announcement",
@@ -73,38 +74,29 @@ const AmbassadorsSection = ({ ambassadors }) => {
 
                 {/* Name with Verification Badge */}
                 <div className="flex items-center gap-2 mt-4 mb-2">
-                  <h3 className="text-lg md:text-xl font-bold text-white uppercase tracking-wide">
+                  <h4 className=" text_gradient  font-bold text-white uppercase tracking-wide">
                     {ambassador.name}
-                  </h3>
+                  </h4>
+                  
                   {ambassador.verified && (
-                    <svg
-                      className="w-6 h-6 pb-1.5 text-blue-500"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
+                 <img src={imgtick} className="w-[20.86px]" alt="" />
                   )}
                 </div>
 
                 {/* Followers/Status */}
-                <p className="text-sm text-[#fff] mb-3">
+                <p className=" text-[#fff] mb-3">
                   {ambassador.followers}
                 </p>
 
                 {/* Description */}
-                <p className="text-sm md:text-base text-[#fff] mb-4">
+                <p className=" md:text-base text-[#fff] mb-4">
                   {ambassador.description}
                 </p>
 
                 {/* CTA Link */}
                 <a
                   href={ambassador.link.url}
-                  className="text-sm text-[#fff] hover:text-yellow-300 underline transition-colors duration-200  px-4 -mx-4"
+                  className="text-[14px] text-[#fff] hover:text-[#E0AA3E] underline transition-colors duration-200  px-4 -mx-4"
                 >
                   {ambassador.link.text}
                 </a>
