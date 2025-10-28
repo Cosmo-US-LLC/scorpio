@@ -80,6 +80,10 @@
 }
 
 @media (max-width: 768px) {
+  .success_stories_section_bg {
+  background-image: url(../assets/success_stories/success_stories_gbg.webp);
+  height: auto;
+}
   .Roadmap_bg {
     background-image: url(../assets/Roadmap/roadmap_gbg_mob.webp);
     background-position: center;
