@@ -84,8 +84,7 @@ const PressReleaseSection = ({ articles }) => {
                     className="pl-4 basis-full md:basis-1/2 lg:basis-1/3"
                   >
                     <a href={article.link} className="block group">
-                      <div className="rounded-xl relative bg-[#1A1B1F] border border-white/10 overflow-hidden h-full flex flex-col">
-                        {/* Image */}
+                      <div className="rounded-xl relative bg-[#1A1B1F] border border-white/10 overflow-hidden h-full min-h-[486px] flex flex-col">
                         <img
                           src={whiteGbg}
                           alt="white gbg"
@@ -100,7 +99,6 @@ const PressReleaseSection = ({ articles }) => {
                           />
                         </div>
 
-                        {/* Text Content */}
                         <div className="p-4 sm:p-5 md:p-6 flex-1 flex flex-col relative z-10">
                           <h6 className="text-left mb-2 md:mb-3 line-clamp-3">
                             {article.title}
@@ -115,11 +113,9 @@ const PressReleaseSection = ({ articles }) => {
                 ))}
               </CarouselContent>
 
-              {/* Navigation Arrows - Positioned on sides for desktop */}
               <CarouselPrevious className="hidden md:flex" />
               <CarouselNext className="hidden md:flex" />
 
-              {/* Mobile Navigation Arrows - Below carousel */}
               <div className="flex md:hidden justify-center gap-4 mt-8">
                 <CarouselPrevious className="!static !transform-none h-10 w-10" />
                 <CarouselNext className="!static !transform-none h-10 w-10" />
@@ -128,7 +124,6 @@ const PressReleaseSection = ({ articles }) => {
           </div>
         </div>
 
-        {/* Optional: Pagination dots could be added here */}
       </div>
     </section>
   );
