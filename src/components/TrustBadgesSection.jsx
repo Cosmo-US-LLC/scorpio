@@ -8,21 +8,21 @@ const TrustBadgesSection = () => {
       id: 1,
       title: "Secured Licensed Platform",
       description:
-        "The SCORPION platform is regulated and licensed by the Curacao EGaming  licensing entity.",
+        "The SCORPION platform is regulated and licensed by the Curacao EGaming licensing entity.",
       icon: trusticon1,
     },
     {
       id: 2,
       title: "Team is KYC Verified",
       description:
-        "The Scorpion Team has been successfully verified by Assure DeFi at the KYC Gold Standard.",
+        "The Scorpion Team has been successfully verified by Assure DeFi the KYC Gold Standard.",
       icon: trusticon2,
     },
     {
       id: 3,
       title: "Audited by Solidproof",
       description:
-        "Scorpion Casino has been fully audited  by Solidproof and shown to  be 100% secure.",
+        "Scorpion Casino has been fully audited by Coinsult and shown to be 100% secure.",
       icon: trusticon3,
     },
   ];

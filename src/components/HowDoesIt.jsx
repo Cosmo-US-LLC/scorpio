@@ -1,4 +1,4 @@
-import howdoesit_img from "../assets/HowDoesIt/howdoesit_img.png";
+import howdoesit_img from "../assets/HowDoesIt/howdoesit_img.webp";
 import howdoesit_img_mob from "../assets/HowDoesIt/howdoesit_img_mob.webp";
 import trusticon1 from "../assets/HowDoesIt/howdoes_icns (3).webp";
 import trusticon2 from "../assets/HowDoesIt/howdoes_icns (2).webp";
