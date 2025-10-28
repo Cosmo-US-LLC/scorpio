@@ -113,7 +113,6 @@ body {
   .faded {
     color: rgba(255, 255, 254, 0.5);
     font-family: "Actay Wide", sans-serif;
-    font-size: 40px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%;
@@ -132,7 +131,6 @@ body {
   .faded_heading {
     color: rgba(255, 255, 254, 0.5);
     font-family: "Actay Wide", sans-serif;
-    font-size: 48px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%;
