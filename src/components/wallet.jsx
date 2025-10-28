@@ -1,5 +1,6 @@
 import { useState } from "react";
 import WalletSelectDropdown from "./WalletSelectDropdown";
+import USDTicon from "../assets/tokens/usdt.svg"
 
 import Scorpiontoken from "../assets/tokens/Scorpion_token.svg";
 import { tokenImageMap, chainImgMap } from "../assets/tokens";
@@ -238,7 +239,7 @@ const Wallet = ({ onTabChange }) => {
               <div className="w-[100%] justify-center flex  items-center">
                 <img
                   className="w-[25.813px] h-[25.813px] object-cover"
-                  src={selectedToken?.icon || "/placeholder.svg"}
+                  src={selectedToken?.icon || USDTicon}
                   alt={selectedToken?.symbol || "token"}
                 />
               </div>
