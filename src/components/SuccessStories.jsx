@@ -46,11 +46,21 @@ const SuccessStories = ({ stories }) => {
 
         <div className="success_stories_section_bg flex items-center justify-center w-full">
           {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-[16px] w-full">
             {storiesData.map((story, index) => (
-              <div
+            <div
+            className="min-h-[446px] overflow-hidden flex flex-col justify-center"
+              style={{
+                  background: " rgba(27, 26, 22, 0.40)",
+                  border: "0.892px solid rgba(255, 255, 255, 0.10)",
+                  borderRadius: "17.844px",
+                  backdropFilter: "blur(8.922223091125488px)",
+                }}
+            >
+                <div
                 key={index}
-                className="group relative rounded-2xl bg-linear-to-br from-[#1a1a1a] via-[#0f0f0f] to-black p-5 sm:p-6 md:p-8 border border-white/10"
+                className="min-h-[366px] px-[27px]"
+               
               >
                 {/* <img
                   src={whiteGbg}
@@ -60,7 +70,7 @@ const SuccessStories = ({ stories }) => {
                 <div className="absolute bottom-0 w-full h-[1px] bg-gradient-to-r from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
                 <div className="relative flex flex-col items-center text-center z-10">
                   {/* Brand Logo/Icon */}
-                  <div className="mb-5 md:mb-6">
+                  <div className="mb-5 md:mb-[35px]">
                     <div
                       className={`w-16 h-16 sm:w-20 sm:h-20 rounded-full ${story.iconColor} flex items-center justify-center shadow-lg ring-2 ring-white/10 group-hover:ring-[#F7D774]/30 transition-all duration-300`}
                     >
@@ -73,7 +83,8 @@ const SuccessStories = ({ stories }) => {
                   </div>
 
                   {/* Brand Name */}
-                  <h3 className="text_gradient mb-3 md:mb-4">{story.name}</h3>
+                  <h3 className="text_gradient mb-3 md:mb-[19px]">{story.name}</h3>
+                  <div className="h-[1px] w-[100%] bg-[#36383F] mb-[17px]"></div>
 
                   {/* Description */}
                   <p className="text-[#CACACA] text-sm md:text-base">
@@ -81,6 +92,7 @@ const SuccessStories = ({ stories }) => {
                   </p>
                 </div>
               </div>
+            </div>
             ))}
           </div>
         </div>

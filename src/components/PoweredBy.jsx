@@ -38,7 +38,13 @@ const PoweredBy = () => {
 
   return (
     <section className="w-full bg-[#0B0D10] py-16">
-      <div className="max-w-7xl mx-auto ">
+      <div className="max-w-[1280px] rounded-[17.591px] mx-auto px-[56px] py-[50px]"
+      style={{
+        border:" 0.88px solid #414141d2",
+        background:"rgba(18, 19, 31, 0.70)",
+        backdropFilter:"blur(8.795538902282715px)"
+      }}
+      >
         {/* Heading with gradient */}
         <h2 className="text-center mb-12 md:mb-16">
           <span className="bg-linear-to-r from-[#d4af37] to-white bg-clip-text text-transparent">

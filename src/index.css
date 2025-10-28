@@ -127,6 +127,7 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: 110%;
+    text-transform: capitalize;
   }
   .faded_heading {
     color: rgba(255, 255, 254, 0.5);

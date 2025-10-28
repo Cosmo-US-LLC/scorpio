@@ -41,15 +41,21 @@ const PressMediaSection = ({ pressItems }) => {
           {pressData.map((item, index) => (
             <div
               key={index}
-              className="group relative rounded-xl bg-[#0B0D10] p-5 sm:p-6 md:p-8 border border-white/10"
+              className="group relative rounded-xl p-5 sm:p-6 md:p-12 md:pb-19 overflow-hidden"
+              style={{
+                  background: " rgba(27, 26, 22, 0.40)",
+                  border: "0.892px solid rgba(255, 255, 255, 0.10)",
+                  borderRadius: "17.844px",
+                  backdropFilter: "blur(8.922223091125488px)",
+                }}
             >
               <div className="absolute bottom-0 w-full h-[1px] bg-gradient-to-r from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
 
-              <div className="flex items-center justify-center mb-5 md:mb-6 h-20 sm:h-24 w-full pb-3 md:pb-4 border-b border-gray-600 relative z-10">
+              <div className="flex items-center justify-center mb-5 md:mb-6  sm:h-24 w-full pb-3 md:pb-10 border-b border-gray-600 relative z-10">
                 <img
                   src={item.logo}
                   alt={`${item.name} logo`}
-                  className="max-h-full max-w-full object-contain"
+                  className="max-h-[90px] max-w-full "
                 />
               </div>
 
