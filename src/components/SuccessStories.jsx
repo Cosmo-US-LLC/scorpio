@@ -31,8 +31,8 @@ const SuccessStories = ({ stories }) => {
   const storiesData = stories || defaultStories;
 
   return (
-    <section className="relative w-full min-h-[980px] md:h-[800px] flex items-center justify-center py-12 md:py-16 px-4 md:px-6 lg:px-8">
-      <div className="relative max-w-[1280px] mx-auto Success_stories_bg flex flex-col items-center justify-center gap-8 md:gap-12">
+    <section className="relative w-full h-auto md:h-[800px] flex items-center justify-center py-12 md:py-16 px-4 md:px-6 lg:px-8">
+      <div className="md:relative max-w-[1280px] mx-auto Success_stories_bg flex flex-col items-center justify-center gap-8 md:gap-12">
         {/* Section Heading */}
         <div className="text-center">
           <h2 className="">
@@ -44,12 +44,12 @@ const SuccessStories = ({ stories }) => {
           </h2>
         </div>
 
-        <div className="success_stories_section_bg flex items-center justify-center w-full">
+        <div className="success_stories_section_bg flex  items-center h-full justify-center w-full">
           {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-[16px] w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-6 md:gap-[16px] w-full">
             {storiesData.map((story, index) => (
             <div
-            className="min-h-[446px] overflow-hidden flex flex-col justify-center"
+            className="md:min-h-[446px] max-md:py-[30px] overflow-hidden flex flex-col justify-center"
               style={{
                   background: " rgba(27, 26, 22, 0.40)",
                   border: "0.892px solid rgba(255, 255, 255, 0.10)",
@@ -59,7 +59,7 @@ const SuccessStories = ({ stories }) => {
             >
                 <div
                 key={index}
-                className="min-h-[366px] px-[27px]"
+                className="md:min-h-[366px] px-[27px]"
                
               >
                 {/* <img
