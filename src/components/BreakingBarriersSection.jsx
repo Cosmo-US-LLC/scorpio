@@ -12,11 +12,11 @@ const BreakingBarriersSection = () => {
             <span className="text-[#CACACA] ">The Casino Industry</span>
           </h2>
 
-          <h6 className="text-[#ffffff] text-left text-sm md:text-base">
+          <p className="text-[#fff] font-[700] text-left md:text-base">
             $SCORP Delivers Exclusive Insider Access to the world of Gambling.
-          </h6>
+          </p>
 
-          <h6 className="text-[#CACACA] text-sm md:text-base">
+          <p className="text-[#CACACA] md:text-base">
             Launching an online casino from scratch typically takes 6-18 months
             of intense preparation, a $2 million investment, legal connections,
             and years of experience in the gambling industry. These high
@@ -24,7 +24,7 @@ const BreakingBarriersSection = () => {
             cryptocurrency, anyone can participate in this lucrative field
             without massive capital or experience and potentially earn
             substantial profits.
-          </h6>
+          </p>
         </div>
 
         <div className="w-full md:w-[50%] relative pt-8 md:pt-16 pb-4 px-4 md:px-8">

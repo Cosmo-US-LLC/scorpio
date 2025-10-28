@@ -1,8 +1,6 @@
 import { useState } from "react";
 
 const BuyInCompetitionSection = ({ leaderboard }) => {
-
-  
   const defaultLeaderboard = [
     {
       rank: 1,
@@ -49,7 +47,7 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
       nft: "Diamond",
       prize: "$1500",
     },
-     {
+    {
       rank: 6,
       wallet: "0xbbf...c027c",
       date: "2024-03-05",
@@ -58,7 +56,7 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
       nft: "Diamond",
       prize: "$1500",
     },
-     {
+    {
       rank: 7,
       wallet: "0xbbf...c027c",
       date: "2024-03-05",
@@ -67,7 +65,7 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
       nft: "Diamond",
       prize: "$1500",
     },
-     {
+    {
       rank: 8,
       wallet: "0xbbf...c027c",
       date: "2024-03-05",
@@ -76,7 +74,7 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
       nft: "Diamond",
       prize: "$1500",
     },
-     {
+    {
       rank: 9,
       wallet: "0xbbf...c027c",
       date: "2024-03-05",
@@ -85,7 +83,7 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
       nft: "Diamond",
       prize: "$1500",
     },
-     {
+    {
       rank: 10,
       wallet: "0xbbf...c027c",
       date: "2024-03-05",
@@ -96,13 +94,16 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
     },
   ];
 
- const leaderboardData = leaderboard || defaultLeaderboard;
+  const leaderboardData = leaderboard || defaultLeaderboard;
 
-  const [visibleCount, setVisibleCount] = useState(5);
+  const initialCount = 5;
+
+  const [visibleCount, setVisibleCount] = useState(initialCount);
 
   const handleLoadMore = () => {
-    setVisibleCount(leaderboardData.length); // show all
+    setVisibleCount((prev) => prev + 5); // load 5 more items
   };
+  
   return (
     <section className="relative w-full max-md:pt-0 py-16 px-4 md:px-16 ">
       <div
@@ -133,7 +134,7 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
         <div className="rounded-2xl overflow-hidden border border-white/5 backdrop-blur-sm">
           {/* Desktop Table */}
           <div className="block md:block overflow-x-auto">
-            <table className="w-[98%] mx-auto mt-10 mb-10 p-10" >
+            <table className="w-[98%] mx-auto mt-10 mb-10 p-10">
               <thead>
                 <tr className="">
                   <th className=" w-[120px] px-2 py-4 !text-center text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
@@ -159,82 +160,89 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
                   </th>
                 </tr>
               </thead>
-              
-                  <tbody className="w-full">
-              {leaderboardData.slice(0, visibleCount).map((entry, index) => {
-                let bgColor = "";
-                let textColor = "";
 
-                if (entry.rank === 1) {
-                  bgColor = "bg-[rgba(255,217,0,0.63)]";
-                  textColor = "text-[#FFF9AD]";
-                } else if (entry.rank === 2) {
-                  bgColor = "bg-[rgba(192,192,192,0.69)]";
-                  textColor = "text-[#FFF9AD]";
-                } else if (entry.rank === 3) {
-                  bgColor = "bg-[rgba(205,128,50,0.71)]";
-                  textColor = "text-[#FFF9AD]";
-                } else {
-                  bgColor = index % 2 === 0 ? "bg-transparent" : "bg-transparent";
-                  textColor = "text-gray-300";
-                }
+              <tbody className="w-full">
+                {leaderboardData.slice(0, visibleCount).map((entry, index) => {
+                  let bgColor = "";
+                  let textColor = "";
 
-                return (
-                  <tr
-                    key={index}
-                    className={`w-full  transition-colors  ${bgColor}`}
-                  >
-                    {/* Rank */}
-                    <td className={`px-4 !text-center rounded-l-[30px] py-4 font-bold ${textColor}`}>
-                      {entry.rank === 1
-                        ? "1st"
-                        : entry.rank === 2
-                        ? "2nd"
-                        : entry.rank === 3
-                        ? "3rd"
-                        : `${entry.rank}th`}
-                    </td>
+                  if (entry.rank === 1) {
+                    bgColor = "bg-[rgba(255,217,0,0.63)]";
+                    textColor = "text-[#FFF9AD]";
+                  } else if (entry.rank === 2) {
+                    bgColor = "bg-[rgba(192,192,192,0.69)]";
+                    textColor = "text-[#FFF9AD]";
+                  } else if (entry.rank === 3) {
+                    bgColor = "bg-[rgba(205,128,50,0.71)]";
+                    textColor = "text-[#FFF9AD]";
+                  } else {
+                    bgColor =
+                      index % 2 === 0 ? "bg-transparent" : "bg-transparent";
+                    textColor = "text-gray-300";
+                  }
 
-                    {/* Wallet */}
-                    <td
-                      className={`px-4  py-4 !text-center text-sm font-medium ${textColor}`}
+                  return (
+                    <tr
+                      key={index}
+                      className={`w-full  transition-colors  ${bgColor}`}
                     >
-                      {entry.wallet}
-                    </td>
+                      {/* Rank */}
+                      <td
+                        className={`px-4 !text-center rounded-l-[30px] py-4 font-bold ${textColor}`}
+                      >
+                        {entry.rank === 1
+                          ? "1st"
+                          : entry.rank === 2
+                          ? "2nd"
+                          : entry.rank === 3
+                          ? "3rd"
+                          : `${entry.rank}th`}
+                      </td>
 
-                    {/* Date */}
-                    <td className={`px-4 py-4 !text-center text-sm ${textColor}`}>
-                      {entry.date}
-                    </td>
+                      {/* Wallet */}
+                      <td
+                        className={`px-4  py-4 !text-center text-sm font-medium ${textColor}`}
+                      >
+                        {entry.wallet}
+                      </td>
 
-                    {/* TX Count */}
-                    <td
-                      className={`px-4 py-4 text-center text-sm  ${textColor}`}
-                    >
-                      {entry.txCount}
-                    </td>
+                      {/* Date */}
+                      <td
+                        className={`px-4 py-4 !text-center text-sm ${textColor}`}
+                      >
+                        {entry.date}
+                      </td>
 
-                    {/* Total Buy */}
-                    <td
-                      className={`px-4 py-4 text-sm !text-center font-semibold ${textColor}`}
-                    >
-                      {entry.totalBuy}
-                    </td>
+                      {/* TX Count */}
+                      <td
+                        className={`px-4 py-4 text-center text-sm  ${textColor}`}
+                      >
+                        {entry.txCount}
+                      </td>
 
-                    {/* NFT */}
-                    <td className="px-4 py-4 text-sm !text-center">
-                     {entry.nft}
-                    </td>
+                      {/* Total Buy */}
+                      <td
+                        className={`px-4 py-4 text-sm !text-center font-semibold ${textColor}`}
+                      >
+                        {entry.totalBuy}
+                      </td>
 
-                    {/* Prize */}
-                    <td className={`px-4 py-4  rounded-r-[30px] !text-center font-bold ${textColor}`}>
-                      {entry.prize}
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-            
+                      {/* NFT */}
+                      <td className="px-4 py-4 text-sm !text-center">
+                        {entry.nft}
+                      </td>
+
+                      {/* Prize */}
+                      <td
+                        className={`px-4 py-4  rounded-r-[30px] !text-center font-bold ${textColor}`}
+                      >
+                        {entry.prize}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+
               {/* <tbody>
                 {leaderboardData.map((entry, index) => (
                   <tr
@@ -301,7 +309,6 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
                 ))}
               </tbody> */}
             </table>
-        
           </div>
 
           {/* Mobile Cards */}
@@ -373,15 +380,23 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
           </div> */}
         </div>
 
-        {/* Load More Button */}
-        {visibleCount < leaderboardData.length && (
+       {leaderboardData.length > 0 && (
           <div className="flex justify-center mt-8">
-            <button
-              onClick={handleLoadMore}
-              className="inline-flex items-center justify-center px-8 py-3 text-black font-semibold text-base rounded-full btn-primary"
-            >
-              Load More
-            </button>
+            {visibleCount < leaderboardData.length ? (
+              <button
+                onClick={handleLoadMore}
+                className="inline-flex items-center justify-center px-8 py-3 text-black font-semibold text-base rounded-full btn-primary"
+              >
+                Load More
+              </button>
+            ) : (
+              <button
+                onClick={() => setVisibleCount(initialCount)}
+                className="inline-flex items-center justify-center px-8 py-3 text-black font-semibold text-base rounded-full btn-primary"
+              >
+                View Less
+              </button>
+            )}
           </div>
         )}
       </div>

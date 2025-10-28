@@ -32,12 +32,12 @@ const ScorpSection = () => {
               <span className="text-white/50">$SCORP?</span>
             </h2>
 
-            <h6 className="text-left text-[#FFF] text-sm md:text-base">
+            <p className="text-left text-[#FFF] font-[700] md:text-base">
               Gambling is one of the oldest and most lucrative industries in the
               history of mankind and digitization is just the next logical step.
-            </h6>
+            </p>
 
-            <p className="text-left text-[#CACACA] text-sm md:text-base">
+            <p className="text-left text-[#CACACA]  md:text-base">
               The $SCORP token is the one-stop token that will facilitate all
               forms of gambling with a licensed, independent, and provably fair
               Crypto platform. It comes with different advantages and use cases.
@@ -48,12 +48,12 @@ const ScorpSection = () => {
               {features.map((feature, index) => (
                 <li key={index} className="flex items-center gap-2 md:gap-3">
                  <img src={tick} className="h-[18px]" alt="" />
-                  <h6 className="text-sm md:text-base">{feature}</h6>
+                  <h5 className="font-[700] md:text-base">{feature}</h5>
                 </li>
               ))}
             </ul>
 
-            <p className="text-[#FFFFFF] text-xs md:text-sm italic">
+            <p className="text-[#FFFFFF] font-[700] text-xs md: italic">
               And Much More...
             </p>
 

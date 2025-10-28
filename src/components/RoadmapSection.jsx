@@ -22,7 +22,7 @@ const RoadmapSection = ({ phases }) => {
     {
       id: 1,
       phase: "Phase 1",
-      title: "Foundation",
+      title: "Preparation",
       icon: card_icon1,
       tasks: [
         { text: "Idea conception", completed: true },
@@ -36,7 +36,7 @@ const RoadmapSection = ({ phases }) => {
     {
       id: 2,
       phase: "Phase 2",
-      title: "Pre-Sale",
+      title: "Pre-Launch",
       icon: card_icon2,
       tasks: [
         { text: "$SCORP Token creation", completed: true },
@@ -51,7 +51,7 @@ const RoadmapSection = ({ phases }) => {
     {
       id: 3,
       phase: "Phase 3",
-      title: "Platform Launch",
+      title: "Launch",
       icon: card_icon3,
       tasks: [
         { text: "Launching Affiliate Program", completed: true },
@@ -65,7 +65,7 @@ const RoadmapSection = ({ phases }) => {
     {
       id: 4,
       phase: "Phase 4",
-      title: "Expansion",
+      title: "Exponential growth",
       icon: card_icon4,
       tasks: [
         { text: "Live Affiliate Events", completed: false },
@@ -192,7 +192,7 @@ const RoadmapSection = ({ phases }) => {
                       <div className="flex-1 mb-4 md:mb-6">
                         <ul className="space-y-1 md:space-y-1">
                           {phase.tasks.map((task, index) => (
-                            <li key={index} className="flex items-start gap-3">
+                            <li key={index} className="flex items-start py-1 gap-x-3">
                               {task.completed ? (
                                 <>
                                   <img
@@ -212,9 +212,9 @@ const RoadmapSection = ({ phases }) => {
                                   }}
                                 ></div>
                               )}
-                              <h6 className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                              <p className="text-[16px] sm:text-sm text-[#D1D5DB] leading-[100%]">
                                 {task.text}
-                              </h6>
+                              </p>
                             </li>
                           ))}
                         </ul>

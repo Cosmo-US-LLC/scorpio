@@ -160,7 +160,7 @@ const ExtraRewardsSection = () => {
                   {tierInfo.tier} <br /> SCORPION NFT
                 </h3>
                 <p className="pb-4 pt-2 ">
-                  When you spend {tierInfo.threshold} or more
+                  When you spend {formatCurrency(spendAmount)} or more
                 </p>
                 <div className="">
                   <img src={tierInfo.card} alt="" />

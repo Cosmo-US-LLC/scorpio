@@ -7,7 +7,7 @@ const AmbassadorsSection = ({ ambassadors }) => {
   // Default ambassadors data
   const defaultAmbassadors = [
     {
-      name: "GOKI RAMIREZ",
+      name: "COKI RAMIREZ",
       verified: true,
       avatar: cokiSinger,
       followers: "970.7k followers",
