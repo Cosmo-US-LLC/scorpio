@@ -20,7 +20,7 @@ const TrustBadgesSection = () => {
     },
     {
       id: 3,
-      title: "Audited by Solidproof",
+      title: "Audited by Coinsult",
       description:
         "Scorpion Casino has been fully audited by Coinsult and shown to be 100% secure.",
       icon: trusticon3,
