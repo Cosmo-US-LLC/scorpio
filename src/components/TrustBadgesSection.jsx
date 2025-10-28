@@ -54,7 +54,7 @@ const TrustBadgesSection = () => {
                 {badge.title}
               </h3>
 
-              <p className="border-t-[1px] max-md:text-start border-[#36383F] pt-[20px]">
+              <p className="border-t-[1px] md:px-[20px] max-md:text-start border-[#36383F] pt-[20px]">
                 {badge.description}
               </p>
                    <svg
