@@ -12,17 +12,17 @@ const CollaborationSection = () => {
           </h2>
 
           <div className="space-y-3 md:space-y-4">
-            <h6 className="text-[#CACACA]">
+            <p className="text-[#CACACA]">
               Scorpion Casino is partnering with Tenset, the masterminds behind the success stories of Meta Hero (100x return from its pre-sale) and Everdome (80x return from its pre-sale).
-            </h6>
+            </p>
 
-            <h6 className="text-[#CACACA]">
+            <p className="text-[#CACACA]">
             Tenset’s Infinity Program has an impressive track record in working with new cryptocurrencies and delivering high returns to early supporters. 
-            </h6>
+            </p>
 
-            <h6 className="text-[#CACACA]">
+            <p className="text-[#CACACA]">
                 This partnership required months to establish and is set to take $SCORP2.0 to the next level.
-            </h6>
+            </p>
           </div>
 
           <div className="w-full sm:w-[300px]">

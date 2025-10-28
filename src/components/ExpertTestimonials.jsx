@@ -142,14 +142,14 @@ const ExpertTestimonials = ({ testimonials }) => {
                     <div className="flex flex-col sm:flex-row items-center gap-3 py-2 mb-4">
                       <div className="w-full sm:w-[200px]">
                         <button className="btn-primary w-full">
-                          Buy $SCORP
+                          {testimonial.author.name}
                         </button>
                       </div>
 
                       <div className="text-left">
-                        <h5 className="text-[#CACACA]">
+                        <p className="text-[18px] font-[700] text-[#CACACA]">
                           {testimonial.author.role}
-                        </h5>
+                        </p>
                       </div>
                     </div>
 

@@ -1,4 +1,4 @@
-import copy from "../assets/AllocationSection/copy.svg";
+import copy from "../assets/AllocationSection/copy.webp";
 import toast from "react-hot-toast";
 const TokenDetailsSection = () => {
   const walletAddress = "0x37803eccdb9f1889c0974bea0ddb4d7929119a7";
@@ -80,18 +80,12 @@ const TokenDetailsSection = () => {
                   {walletAddress}
                   <span>
                     <img
-                      className="inline-block cursor-pointer ml-1"
+                      className="inline-block cursor-pointer ml-1 max-h-[13.333px]"
                       src={copy}
                       alt="Copy"
                       onClick={() => {
                         navigator.clipboard.writeText(walletAddress);
-                        toast.success("Wallet address copied!", {
-                          style: {
-                            borderRadius: "10px",
-                            background: "#333",
-                            color: "#fff",
-                          },
-                        });
+                        toast.success("Wallet address copied!");
                       }}
                     />
                   </span>
@@ -127,7 +121,7 @@ const TokenDetailsSection = () => {
               </div>
               <div className="md:hidden w-full h-[1px] bg-gradient-to-r from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
               
-              <div className="space-y-2 flex  items-center md:space-y-[12px]">
+              <div className="space-y-2 flex  items-start md:pl-17 md:space-y-[12px]">
                <div>
                  <h4 className="text-start text-sm md:text-base">
                   Current Stage Price
@@ -136,7 +130,7 @@ const TokenDetailsSection = () => {
                   1 $SCORP = $0.055
                 </p>
                </div>
-                   <div className="max-md:hidden w-[1px] ml-40 mr-2 h-full bg-gradient-to-b from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
+                   <div className="max-md:hidden w-[1px] ml-20 mr-2 h-full bg-gradient-to-b from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
               </div>
               <div className="md:hidden w-full h-[1px] bg-gradient-to-r from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
               <div className="space-y-2 md:space-y-[12px]"

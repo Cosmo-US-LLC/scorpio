@@ -49,18 +49,18 @@ const MarketOpportunitySection = () => {
             </span>{" "}
           </h2>
 
-          <h6 className="text-[#CACACA] text-sm md:text-base">
+          <p className="text-[#CACACA] md:text-base">
            Since 2017, the crypto casino industry has surged in value, now reaching $250 million. But that's just a tiny bit (0.1%) of the huge $263.3 billion online gambling industry. 
-          </h6>
+          </p>
 
-          <h6 className="text-[#CACACA] text-sm md:text-base">
+          <p className="text-[#CACACA] md:text-base">
             That market keeps growing by about 8% each year, meaning it gets even bigger, with more billions rolling in. People love Crypto Casinos because they’re easy to use and keep things private. Scorpion Casino sets itself apart by establishing the most extensive community reward system, giving back more to its community than 
 any other casino. 
-          </h6>
+          </p>
           
-          <h6 className="text-[#CACACA] text-sm md:text-base">
+          <p className="text-[#CACACA] md:text-base">
              This innovative community incentive program, offering daily staking rewards based on the casino's performance, coupled with the $SCORP2.0 token and the burn and buy-back mechanism, has the potential to attract thousands of players daily and might push Scorpion Casino to become one of the market leaders.
-          </h6>
+          </p>
 
           <div className="w-full sm:w-[300px]">
             <button className="btn-primary w-full">Buy $SCORP2.0</button>{" "}
