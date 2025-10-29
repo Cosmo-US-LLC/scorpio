@@ -28,7 +28,7 @@ const WhitepaperSection = () => {
           </p>
 
           <button
-              onClick={() => window.open("https://scorpion-backup.netlify.app/static/media/whitepaper.8983ca9fb05005cbdcf0.pdf", "_blank")}
+              onClick={() => window.open("https://scorpio-casino.netlify.app/doc/whitepaper.pdf", "_blank")}
           className="btn-fade text-base sm:text-lg md:text-[20px] font-[800] px-4 sm:px-6 md:px-[27px] py-3 sm:py-4 md:py-[22px] w-full sm:w-auto">
             Read the Whitepaper
           </button>
