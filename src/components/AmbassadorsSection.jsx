@@ -14,7 +14,7 @@ const AmbassadorsSection = ({ ambassadors }) => {
       description: "Famous Singer and Model",
       link: {
         text: "Official Announcement",
-        url: "https://x.com/cokiramirez/status/1750980072952000736 ",
+        url: "https://x.com/cokiramirez/status/1750980072952000736",
       },
     },
     {

@@ -98,7 +98,10 @@ const HowToBuySection = () => {
     boxShadow: "0 -1.76px 3.52px 0 #F5E99C inset, 0 1.76px 3.52px 0 #F5E99C inset",
   }}
           >Buy $SCORP2.0</button>
-          <button className="max-md:!text-[16px] md:px-[57px] max-md:px-[20px] max-md:py-[10px] md:py-[19px] btn-secondary"> Need Support?</button>
+          <button 
+              onClick={() => window.open("https://t.me/scorpioncasino_official", "_blank")}
+          
+          className="max-md:!text-[16px] md:px-[57px] max-md:px-[20px] max-md:py-[10px] md:py-[19px] btn-secondary"> Need Support?</button>
         </div>
 
        
