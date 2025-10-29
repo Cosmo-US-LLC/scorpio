@@ -11,7 +11,7 @@ import Wallet from "../components/wallet";
 
 function Herosection() {
   return (
-    <div className=" pt-[120px] pb-[160px] max-w-[1280px] w-full mx-auto md:px-0 max-md:px-4 h-full bg_herosection relative">
+    <div id="wallet" className=" pt-[120px] pb-[160px] max-w-[1280px] w-full mx-auto md:px-0 max-md:px-4 h-full bg_herosection relative">
      <div className="max-md:block md:flex max-md:space-y-[47px] justify-between items-center w-[100%]">
         <div className="max-w-[745px] space-y-[20px] w-full">
             <h3 className="text_gradient text-[16px] !font-[700]">FAST-GROWING CASINO REVEALS NEW 2.0 TOKEN WITH SHOCKING REWARD SYSTEM</h3>
@@ -32,7 +32,7 @@ function Herosection() {
                 <img src={poster} className="max-md:max-w-[100%] md:max-w-[642px] min-h-[369px] aspect-[698/429]" alt="poster" />
             </div>
         </div>
-          <img src={vector3} className="max-md:hidden  absolute max-w-[43.203px] left-[31.5%] z-[4] top-[46%]" alt="SCORP2" />
+          <img src={vector3} className="max-md:hidden  absolute max-w-[43.203px] left-[31.5%] z-[4] top-[45%]" alt="SCORP2" />
             <img src={vector4} className="max-md:hidden  absolute max-w-[27.907px] right-[58.5%] z-[4] top-[45%]" alt="SCORP2" />
         <img src={vector1} className="max-md:hidden  absolute max-w-[358.368px] right-[31.5%] z-[4] top-[27%]" alt="SCORP2" />
         <img src={vector2} className="absolute max-md:hidden max-w-[109.584px] right-[36%] z-[4] bottom-[25%]" alt="SCORP2" />

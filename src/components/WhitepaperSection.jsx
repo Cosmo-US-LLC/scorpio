@@ -3,7 +3,7 @@ import whitepapervect from "../assets/whitepaper/whitepaper_vec.webp";
 
 const WhitepaperSection = () => {
   return (
-    <section className="relative w-full py-12 md:py-16 px-4 md:px-6 lg:px-16">
+    <section id="whitepaper" className="relative w-full py-12 md:py-16 px-4 md:px-6 lg:px-16">
       <div
         className="max-w-[1280px] border border-white/10 overflow-hidden relative pl-6 sm:pl-12 md:pl-20 lg:pl-[120px] pr-6 sm:pr-10 md:pr-12 lg:pr-[60px] py-6 md:py-8 lg:py-0 flex flex-col lg:flex-row justify-between items-center w-full mx-auto"
         style={{
@@ -27,7 +27,9 @@ const WhitepaperSection = () => {
             Reading the SCORPION CASINO Whitepaper is a great way to learn more about the unique SCORPION ecosystem and how the $SCORP token can benefit you. It highlights the groundbreaking innovations and explains in detail how it stands out from other crypto projects.
           </p>
 
-          <button className="btn-fade text-base sm:text-lg md:text-[20px] font-[800] px-4 sm:px-6 md:px-[27px] py-3 sm:py-4 md:py-[22px] w-full sm:w-auto">
+          <button
+              onClick={() => window.open("https://scorpion-backup.netlify.app/static/media/whitepaper.8983ca9fb05005cbdcf0.pdf", "_blank")}
+          className="btn-fade text-base sm:text-lg md:text-[20px] font-[800] px-4 sm:px-6 md:px-[27px] py-3 sm:py-4 md:py-[22px] w-full sm:w-auto">
             Read the Whitepaper
           </button>
         </div>
@@ -37,6 +39,7 @@ const WhitepaperSection = () => {
             src={whitepaperimg}
             alt="Scorpion Casino whitepaper"
             className="w-full h-auto object-contain"
+            
           />
         </div>
       </div>

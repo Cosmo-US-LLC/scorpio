@@ -31,7 +31,7 @@ const SuccessStories = ({ stories }) => {
   const storiesData = stories || defaultStories;
 
   return (
-    <section className="relative w-full h-auto md:h-[800px] flex items-center justify-center py-12 md:py-16 px-4 md:px-6 lg:px-8">
+    <section id="growth-potential" className="relative w-full h-auto md:h-[800px] flex items-center justify-center py-12 md:py-16 px-4 md:px-6 lg:px-8">
       <div className="md:relative max-w-[1280px] mx-auto Success_stories_bg flex flex-col items-center justify-center gap-8 md:gap-12">
         {/* Section Heading */}
         <div className="text-center">
