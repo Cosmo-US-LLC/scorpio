@@ -93,7 +93,7 @@ const ComparisonChartSection = () => {
   ];
 
   return (
-    <section className="relative w-full disrupting_bg py-12 md:py-16 px-1 md:px-6 lg:px-12 overflow-hidden">
+    <section className="relative w-full disrupting_bg py-0 max-md:pb-6 md:py-16 px-1 md:px-6 lg:px-12 overflow-hidden">
       <div
         className="absolute bottom-[60px] left-1/2 -translate-x-1/2 mx-auto hidden md:block"
         style={{
@@ -107,7 +107,7 @@ const ComparisonChartSection = () => {
       ></div>
 
       <div
-        className="max-w-[1280px] w-full mx-auto p-4 sm:p-6 md:p-8 lg:p-[44px]"
+        className="max-w-[1280px] w-full mx-auto p-4 max-md:pt-6 sm:p-6 md:p-8 lg:p-[44px]"
         style={{
           borderRadius: "30.769px",
           border: "rgba(27, 26, 22, 0.40)",
