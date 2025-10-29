@@ -29,7 +29,7 @@ const FeaturedInSection = () => {
   ];
 
   return (
-    <section className="relative w-ful mt-[-80px] pb-16 px-4 md:px-16 ">
+    <section className="relative w-ful md:mt-[-80px] mt-[-100px]  md:pb-16 px-4 md:px-16 ">
     <div
         className="absolute max-md:top-[60px] md:left-[30%] md:bottom-[200px]"
         style={{

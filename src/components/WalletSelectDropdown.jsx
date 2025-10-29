@@ -56,7 +56,7 @@ export default function WalletSelectDropdown({ tokens, onChange }) {
             {selected.symbol}
             <br />
             {selected.sub_symbol && (
-              <span className="text-[12px] text-gray-500 leading-[8px] font-[400]">
+              <span className="md:text-[12px] text-[9px] text-gray-500 leading-[8px] font-[400]">
                 {selected.sub_symbol}
               </span>
             )}

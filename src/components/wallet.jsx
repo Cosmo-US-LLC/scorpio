@@ -105,7 +105,7 @@ const Wallet = ({ onTabChange }) => {
             <div
               className="md:h-[17px] max-md:h-[32px] rounded-[20px]"
               style={{
-                width: "65%",
+                width: "80%",
                 background: "#E2B146",
               }}
             />
@@ -250,7 +250,7 @@ const Wallet = ({ onTabChange }) => {
 
       <div className="space-y-[5px]">
         <p className="text-[14px] font-[700]">
-          You Receive + <span className="text-[#E0AA3E] underline">Bronze NFT</span>:
+          You Receive + <span className="text-[#E0AA3E] underline font-[700]">Bronze NFT</span>:
         </p>
         <div className="px-2 rounded-[8px] walletinput_bg">
           <div className="px-1 flex justify-between items-center">

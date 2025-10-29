@@ -1,10 +1,21 @@
+import { useState, useEffect } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import resulticon1 from "../assets/results/resulticon (5).webp";
 import resulticon2 from "../assets/results/resulticon (4).webp";
 import resulticon3 from "../assets/results/resulticon (3).webp";
 import resulticon4 from "../assets/results/resulticon (2).webp";
 import resulticon5 from "../assets/results/resulticon (1).webp";
 
-const ResultsSection = () => {
+const ResultsSection = ({ phases }) => {
+  const [api, setApi] = useState(null);
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
   const results = [
     {
       id: 1,
@@ -35,6 +46,21 @@ const ResultsSection = () => {
     },
   ];
 
+  const phasesData = phases || results;
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
   return (
     <div className="relative">
       <div
@@ -53,11 +79,10 @@ const ResultsSection = () => {
     "
       >
         <div
-          className="max-w-[1280px] relative mx-auto pt-[85px] pb-[34px]  md:rounded-[17.844px] 
+          className="max-w-[1280px] relative mx-auto md:pt-[85px] pt-[65px] pb-[34px]  md:rounded-[17.844px] 
     md:border md:border-[rgba(255,255,255,0.10)] 
     md:bg-[rgba(27,26,22,0.40)] 
     md:backdrop-blur-[8.922223091125488px]"
-          
         >
           <div className="">
             {/* Header */}
@@ -124,7 +149,7 @@ const ResultsSection = () => {
             </div>
 
             {/* Results Cards - Desktop Grid */}
-            <div className=" grid grid-cols-1 md:grid md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-[20px] px-[15px]">
+            <div className="max-md:hidden  grid grid-cols-1 md:grid md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-[20px] px-[15px]">
               {results.map((result) => (
                 <div
                   key={result.id}
@@ -212,7 +237,136 @@ const ResultsSection = () => {
               ))}
             </div>
 
-          
+            <div className="relative px-0 sm:px-4 md:px-12 md:hidden">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: false,
+                }}
+                setApi={setApi}
+                className="w-full"
+              >
+                <CarouselContent className="-ml-4 md:-ml-6">
+                  {results.map((result) => (
+                    <CarouselItem
+                      key={result.id}
+                      className="pl-4 md:pl-6 basis-full rounded-[16.067px] sm:basis-1/2"
+                    >
+                      <div
+                        key={result.id}
+                        className=" overflow-hidden px-6 py-10 flex flex-col items-center text-center "
+                        style={{
+                          borderRadius: "17.844px",
+                          border: "0.892px solid rgba(255, 255, 255, 0.10)",
+                          background: "rgba(27, 26, 22, 0.40)",
+                          backdropFilter: "blur(8.922223091125488px)",
+                        }}
+                      >
+                        {/* Icon */}
+                        <img
+                          src={result.icon}
+                          className="w-[98.144px] h-[98.144px]"
+                          alt={result.title}
+                        />
+
+                        <h4 className="text-center text_gradient mt-[36px]">
+                          {result.title}
+                        </h4>
+
+                        <div
+                          className="w-full h-[1px] mt-[18px] mb-[18px]"
+                          style={{
+                            background: "rgba(255, 255, 255, 0.10)",
+                          }}
+                        >
+                          {" "}
+                        </div>
+
+                        <p className="">{result.description}</p>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          // width="233"
+                          // height="228"
+                          viewBox="0 0 233 228"
+                          fill="none"
+                          className="absolute -bottom-3 left-0  "
+                        >
+                          <g filter="url(#filter0_f_206_2451)">
+                            <ellipse
+                              cx="116.668"
+                              cy="199.967"
+                              rx="107.067"
+                              ry="20.9672"
+                              fill="white"
+                            />
+                          </g>
+                          <defs>
+                            <filter
+                              id="filter0_f_206_2451"
+                              x="-168.843"
+                              y="0.555557"
+                              width="571.022"
+                              height="398.823"
+                              filterUnits="userSpaceOnUse"
+                              color-interpolation-filters="sRGB"
+                            >
+                              <feFlood
+                                flood-opacity="0"
+                                result="BackgroundImageFix"
+                              />
+                              <feBlend
+                                mode="normal"
+                                in="SourceGraphic"
+                                in2="BackgroundImageFix"
+                                result="shape"
+                              />
+                              <feGaussianBlur
+                                stdDeviation="89.2222"
+                                result="effect1_foregroundBlur_206_2451"
+                              />
+                            </filter>
+                          </defs>
+                        </svg>
+                        <div
+                          className="h-[1px] w-[100%] absolute bottom-0 left-0 "
+                          style={{
+                            background:
+                              "linear-gradient(90deg, rgba(255, 255, 255, 0.00) 26.44%, #FFF 50.22%, rgba(255, 255, 255, 0.00) 75.48%)",
+                          }}
+                        ></div>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+
+                {/* Navigation Arrows - Positioned on sides for desktop */}
+                <CarouselPrevious className="hidden md:flex" />
+                <CarouselNext className="hidden md:flex" />
+
+                {/* Mobile Navigation Arrows with Dots - Below carousel */}
+                <div className="flex md:hidden justify-center items-center gap-4 mt-8">
+                  <CarouselPrevious className="static! transform-none! h-10 w-10" />
+
+                  {/* Pagination Dots */}
+                  <div className="flex gap-2 pb-9">
+                    {Array.from({ length: count }).map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => api?.scrollTo(index)}
+                        className={`transition-all duration-300 rounded-full ${
+                          index === current
+                            ? "w-8 h-2 bg-linear-to-r from-[#F9F295] via-[#E0AA3E] to-[#B88A44]"
+                            : "w-2 h-2 bg-white/30 hover:bg-white/50"
+                        }`}
+                        aria-label={`Go to slide ${index + 1}`}
+                      />
+                    ))}
+                  </div>
+
+                  <CarouselNext className="static! transform-none! h-10 w-10" />
+                </div>
+              </Carousel>
+            </div>
 
             {/* Bottom Decorative Element */}
           </div>
