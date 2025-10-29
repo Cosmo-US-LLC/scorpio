@@ -444,6 +444,9 @@ box-shadow: 0 -1.538px 3.077px 0 #F5E99C inset, 0 1.538px 3.077px 0 #F5E99C inse
    .SCORPUtility_bg {
     background-image: url(../src/assets/SCORPUtilitySection/scorpio_ui_bg_mob.webp);
   }
+  .bg_herosection {
+    background-image: url(../src//assets/herosection/hero_secrtion.webp);
+  }
   }
   @keyframes accordion-down {
     from {
