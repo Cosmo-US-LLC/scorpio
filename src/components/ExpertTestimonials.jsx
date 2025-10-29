@@ -77,8 +77,8 @@ const ExpertTestimonials = ({ testimonials }) => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-10 md:mb-16">
-          <h2 className="text-center md:max-w-[660px] mx-auto">
-            <span className="block text-[#ffffff] mb-2">
+          <h2 className="text-center  max-md:!text-[28px] md:max-w-[660px] mx-auto">
+            <span className="block max-md:tracking-[-1.5px] text-[#ffffff] mb-2">
               What Crypto Experts Think About{" "}
               <span className="text_gradient">$SCORP2.0</span>
             </span>

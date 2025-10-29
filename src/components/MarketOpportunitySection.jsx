@@ -32,7 +32,7 @@ const MarketOpportunitySection = () => {
               $250 Million
             </h6>
           </div>
-          <div className="absolute bottom-[-15px] sm:bottom-[8px] md:bottom-[10px] right-[80px] sm:right-[120px] md:right-[145px] text-center">
+          <div className="absolute bottom-[-45px] sm:bottom-[8px] md:bottom-[10px] right-[80px] sm:right-[120px] md:right-[145px] text-center">
             <h6 className="text-xs sm:text-sm text-[#CACACA]  md:text-base">
               Global Online Gambling Industry
             </h6>
@@ -42,7 +42,7 @@ const MarketOpportunitySection = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-[60%] flex flex-col gap-4 md:gap-6 px-4 md:px-0">
+        <div className="w-full md:w-[60%] max-md:pt-12 flex flex-col gap-4 md:gap-6 px-4 md:px-0">
           <h2 className="text-left">
             <span className="text-[#ffffff]">
               Huge <span className="text-[#CACACA]">Market</span> Opportunity

@@ -113,7 +113,7 @@ const TokenDetailsSection = () => {
                   <h4 className="text-start text-sm md:text-base">
                   Pre-Sale Details
                 </h4>
-                <p className="text-sm md:text-base font-medium">
+                <p className="text-sm md:text-base font-medium max-md:max-w-[240px]">
                   3,000,000,000 $SCORP tokens will be sold during the pre-sale.
                 </p>
                 </div>

@@ -72,7 +72,7 @@ const SuccessStories = ({ stories }) => {
                   {/* Brand Logo/Icon */}
                   <div className="mb-5 md:mb-[35px]">
                     <div
-                      className={`w-16 h-16 sm:w-20 sm:h-20 rounded-full ${story.iconColor} flex items-center justify-center shadow-lg ring-2 ring-white/10 group-hover:ring-[#F7D774]/30 transition-all duration-300`}
+                      className={`w-30 h-30 sm:w-40 sm:h-40 rounded-full ${story.iconColor} flex items-center justify-center shadow-lg ring-2 ring-white/10 group-hover:ring-[#F7D774]/30 transition-all duration-300`}
                     >
                       <img
                         src={story.logo}
