@@ -97,7 +97,7 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
   return (
     <section className="relative w-full max-md:pt-0 py-16 px-4 md:px-16 ">
       <div
-        className="max-w-[1280px] mx-auto w-[100%] max-md:px-[20px] max-md:py-[24px] md:px-[40px] md:py-[44px]"
+        className="max-w-[1280px] mx-auto w-[100%] max-md:px-[10px] max-md:py-[24px] md:px-[40px] md:py-[44px]"
         style={{
           borderRadius: "16px",
           border: "0.764px solid rgba(68, 68, 68, 0.5)",
@@ -122,27 +122,26 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
 
         {/* Table Container */}
         <div className="rounded-2xl overflow-hidden border border-white/5 backdrop-blur-sm">
-          {/* Desktop Table */}
           <div className="block md:block overflow-x-auto">
             <table className="w-[98%] mx-auto mt-10 mb-10 p-10">
               <thead>
                 <tr className="">
-                  <th className=" w-[120px] px-2 py-4 !text-center text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
+                  <th className=" w-[120px] px-2 py-4 max-md:!text-start !text-center text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
                     Rank
                   </th>
-                  <th className="w-[200px] px-3 py-4 !text-center text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
+                  <th className="w-[200px] px-3 py-4 max-md:!text-start !text-center text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
                     Wallet
                   </th>
-                  <th className="w-[200px] px-3 py-4  py-4 text-left text-xs font-bold uppercase tracking-wider text-[#F9C333] !text-center">
+                  <th className="max-md:hidden w-[200px] px-3 py-4  py-4 text-left max-md:text-[10px] text-xs font-bold uppercase tracking-wider text-[#F9C333] max-md:!text-start !text-center">
                     No. of TX
                   </th>
-                  <th className="w-[200px] px-3  py-4 text-left text-xs font-bold uppercase tracking-wider text-[#F9C333] !text-center">
+                  <th className="w-[200px] px-3  py-4 text-left max-md:text-[10px] text-xs font-bold uppercase tracking-wider text-[#F9C333] max-md:!text-start !text-center">
                     Total Buy
                   </th>
-                  <th className="w-[200px] px-3 !text-center py-4 text-left text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
+                  <th className=" max-md:hidden w-[200px] px-3 max-md:!text-start !text-center py-4 text-left max-md:text-[10px] text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
                     NFT
                   </th>
-                  <th className="w-[200px] px-3 py-4 text-left !text-center text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
+                  <th className="w-[200px] px-3 py-4 text-left max-md:!text-start !text-center max-md:text-[10px] text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
                     Prize
                   </th>
                 </tr>
@@ -175,7 +174,7 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
                     >
                       {/* Rank */}
                       <td
-                        className={`px-4 !text-center rounded-l-[30px] py-4 font-bold ${textColor}`}
+                        className={`px-4 max-md:px-2 max-md:py-2 max-md:text-[14px] !text-center rounded-l-[30px] py-4 font-bold ${textColor}`}
                       >
                         {entry.rank === 1
                           ? "1st"
@@ -188,33 +187,33 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
 
                       {/* Wallet */}
                       <td
-                        className={`px-4  py-4 !text-center text-sm font-medium ${textColor}`}
+                        className={`px-4 max-md:px-2 max-md:py-2 max-md:text-[14px]  py-4 !text-center text-sm font-medium ${textColor}`}
                       >
                         {entry.wallet}
                       </td>
 
                       {/* TX Count */}
                       <td
-                        className={`px-4 py-4 text-center text-sm  ${textColor}`}
+                        className={` max-md:hidden px-4 max-md:px-2 max-md:py-2 max-md:text-[14px] py-4 text-center text-sm  ${textColor}`}
                       >
                         {entry.txCount}
                       </td>
 
                       {/* Total Buy */}
                       <td
-                        className={`px-4 py-4 text-sm !text-center font-semibold ${textColor}`}
+                        className={`px-4 max-md:px-2 max-md:py-2 max-md:text-[14px] py-4 text-sm !text-center font-semibold ${textColor}`}
                       >
                         {entry.totalBuy}
                       </td>
 
                       {/* NFT */}
-                      <td className="px-4 py-4 text-sm !text-center">
+                      <td className="max-md:hidden px-4 max-md:px-2 max-md:py-2 max-md:text-[14px] py-4 text-sm !text-center">
                         {entry.nft}
                       </td>
 
                       {/* Prize */}
                       <td
-                        className={`px-4 py-4  rounded-r-[30px] !text-center font-bold ${textColor}`}
+                        className={`px-4 max-md:px-2 max-md:py-2 max-md:text-[14px] py-4  rounded-r-[30px] !text-center font-bold ${textColor}`}
                       >
                         {entry.prize}
                       </td>
