@@ -5,7 +5,6 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
     {
       rank: 1,
       wallet: "0x0de...8e610",
-      date: "2024-03-18",
       txCount: 1,
       totalBuy: "$315,513.01",
       nft: "Diamond",
@@ -14,7 +13,6 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
     {
       rank: 2,
       wallet: "0x5B9...18e01",
-      date: "2023-07-27",
       txCount: 5,
       totalBuy: "$201,191.17",
       nft: "Diamond",
@@ -23,7 +21,6 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
     {
       rank: 3,
       wallet: "0xe8e...32b4f",
-      date: "2024-03-17",
       txCount: 1,
       totalBuy: "$108,999.00",
       nft: "Diamond",
@@ -32,7 +29,6 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
     {
       rank: 4,
       wallet: "0x9bd...674ec",
-      date: "2024-03-09",
       txCount: 23,
       totalBuy: "$108,799.20",
       nft: "Diamond",
@@ -41,7 +37,6 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
     {
       rank: 5,
       wallet: "0xbbf...c027c",
-      date: "2024-03-05",
       txCount: 2,
       totalBuy: "$105,349.88",
       nft: "Diamond",
@@ -50,7 +45,6 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
     {
       rank: 6,
       wallet: "0xbbf...c027c",
-      date: "2024-03-05",
       txCount: 2,
       totalBuy: "$105,349.88",
       nft: "Diamond",
@@ -59,7 +53,6 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
     {
       rank: 7,
       wallet: "0xbbf...c027c",
-      date: "2024-03-05",
       txCount: 2,
       totalBuy: "$105,349.88",
       nft: "Diamond",
@@ -68,7 +61,6 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
     {
       rank: 8,
       wallet: "0xbbf...c027c",
-      date: "2024-03-05",
       txCount: 2,
       totalBuy: "$105,349.88",
       nft: "Diamond",
@@ -77,7 +69,6 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
     {
       rank: 9,
       wallet: "0xbbf...c027c",
-      date: "2024-03-05",
       txCount: 2,
       totalBuy: "$105,349.88",
       nft: "Diamond",
@@ -86,7 +77,6 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
     {
       rank: 10,
       wallet: "0xbbf...c027c",
-      date: "2024-03-05",
       txCount: 2,
       totalBuy: "$105,349.88",
       nft: "Diamond",
@@ -142,9 +132,6 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
                   </th>
                   <th className="w-[200px] px-3 py-4 !text-center text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
                     Wallet
-                  </th>
-                  <th className="w-[120px] px-3 py-4 !text-center text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
-                    Date
                   </th>
                   <th className="w-[200px] px-3 py-4  py-4 text-left text-xs font-bold uppercase tracking-wider text-[#F9C333] !text-center">
                     No. of TX
@@ -204,13 +191,6 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
                         className={`px-4  py-4 !text-center text-sm font-medium ${textColor}`}
                       >
                         {entry.wallet}
-                      </td>
-
-                      {/* Date */}
-                      <td
-                        className={`px-4 py-4 !text-center text-sm ${textColor}`}
-                      >
-                        {entry.date}
                       </td>
 
                       {/* TX Count */}
