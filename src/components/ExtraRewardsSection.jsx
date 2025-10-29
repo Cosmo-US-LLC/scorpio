@@ -10,7 +10,7 @@ const ExtraRewardsSection = () => {
   const [spendAmount, setSpendAmount] = useState(56256);
 
   const getTierInfo = (amount) => {
-    if (amount >= 90000) {
+    if (amount >= 100000) {
       return {
         tier: "Diamond",
         nft: "Diamond Scorpion NFT",
@@ -24,7 +24,7 @@ const ExtraRewardsSection = () => {
           { text: "Scorpion Casino VIP Package", tick: true },
         ],
       };
-    } else if (amount >= 58256) {
+    } else if (amount >= 26,369) {
       return {
         tier: "Platinum",
         nft: "Platinum Scorpion NFT",
@@ -38,7 +38,7 @@ const ExtraRewardsSection = () => {
           { text: "Scorpion Casino VIP Package", tick: false },
         ],
       };
-    } else if (amount >= 10000) {
+    } else if (amount >= 10435) {
       return {
         tier: "GOLD",
         nft: "Gold Scorpion NFT",
@@ -52,7 +52,7 @@ const ExtraRewardsSection = () => {
           { text: "Scorpion Casino VIP Package", tick: false },
         ],
       };
-    } else if (amount >= 1000) {
+    } else if (amount >= 5306) {
       return {
         tier: "SILVER",
         nft: "Silver Scorpion NFT",
@@ -122,7 +122,7 @@ const ExtraRewardsSection = () => {
               <div className="relative">
                 <input
                   type="range"
-                  min="100"
+                  min="1000"
                   max="100000"
                   step="100"
                   value={spendAmount}
@@ -130,9 +130,9 @@ const ExtraRewardsSection = () => {
                   className="w-full h-[18px] rounded-full appearance-none cursor-pointer slider-custom"
                   style={{
                     background: `linear-gradient(to right, #94A7B5 ${
-                      (spendAmount / 100000) * 100
+                      ((spendAmount - 1000) / (100000 - 1000)) * 100
                     }%, rgba(255, 255, 255, 0.20) ${
-                      (spendAmount / 100000) * 100
+                      ((spendAmount - 1000) / (100000 - 1000)) * 100
                     }%, rgba(255, 255, 255, 0.20))`,
                   }}
                 />
@@ -147,14 +147,14 @@ const ExtraRewardsSection = () => {
           </div>
 
           <div
-            className="w-full md:max-w-[723px] overflow-hidden md:max-w-[723px]  rounded-[15.289px] px-[24px] py-[32px] "
+            className="w-full md:max-w-[700px] overflow-hidden md:max-w-[700px]  rounded-[15.289px] px-[24px] py-[32px] "
             style={{
               border: "0.764px solid rgba(255, 255, 255, 0.10)",
               background: "rgba(27, 26, 22, 0.40)",
               backdropFilter: "blur(7.644444465637207px)",
             }}
           >
-            <div className="flex max-md:flex-col max-md:space-y-[20px] justify-between items-center md:space-x-6 ">
+            <div className="flex max-md:flex-col max-md:space-y-[20px] justify-between items-center md:space-x-4 ">
               <div className="relative md:max-w-[300px] w-[100%]">
                 <h3 className="text_gradient_gray  text-start !text-[30px]">
                   {tierInfo.tier} <br /> SCORPION NFT
@@ -191,13 +191,12 @@ const ExtraRewardsSection = () => {
                             alt="Tick icon"
                           />
                         ) : (
-                          <div 
-                           style={{
-                    borderRadius: "3.058px",
-                    border:"0.764px solid rgba(255, 255, 255, 0.20)",
-                    background:
-                      "#313133",
-                  }}
+                          <div
+                            style={{
+                              borderRadius: "3.058px",
+                              border: "0.764px solid rgba(255, 255, 255, 0.20)",
+                              background: "#313133",
+                            }}
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"

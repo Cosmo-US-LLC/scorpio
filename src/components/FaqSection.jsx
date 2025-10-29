@@ -104,7 +104,7 @@ const FaqSection = ({ faqs }) => {
               <div className="absolute inset-0 bg-gradient-radial from-white/3 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
 
               <AccordionTrigger className="relative z-10 flex w-full items-center justify-between py-3 text-left hover:cursor-pointer transition-colors rounded-lg px-2 -mx-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F7D774] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0C0D10] [&[data-state=open]>div>div]:rotate-45">
-                <span className="text-base md:text-lg font-semibold text-[#fffffe] pr-8 group-data-[state=open]:text-[#EDC967] transition-colors duration-300">
+                <span className="text-base font-[700] md:text-lg  text-[#fffffe] pr-8 group-data-[state=open]:text-[#EDC967] transition-colors duration-300">
                   {faq.question}
                 </span>
                 <div className="flex items-center justify-center shrink-0">

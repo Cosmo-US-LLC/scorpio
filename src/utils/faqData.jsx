@@ -1,5 +1,12 @@
 // FAQ data for Scorpion Casino
 export const defaultFaqs = [
+   {
+    id: "scorpion-casino",
+    question: "What is SCORPION CASINO?",
+    type: "text",
+    answer:
+      "The SCORPION ecosystem is your one-stop-shop for online gambling, powered by the $SCORP token. With over 30,000 monthly betting opportunities, 210 casino games, and 160 live games, there’s no shortage of thrilling options. Plus, our licensed, transparent, and provably fair platform ensures a secure and trustworthy gaming experience for all.",
+  },
   {
     id: "pre-sale",
     question: "What is a pre-sale?",
@@ -22,13 +29,6 @@ export const defaultFaqs = [
         </p>
       </div>
     ),
-  },
-  {
-    id: "scorpion-casino",
-    question: "What is SCORPION CASINO?",
-    type: "text",
-    answer:
-      "The SCORPION ecosystem is your one-stop-shop for online gambling, powered by the $SCORP token. With over 30,000 monthly betting opportunities, 210 casino games, and 160 live games, there’s no shortage of thrilling options. Plus, our licensed, transparent, and provably fair platform ensures a secure and trustworthy gaming experience for all.",
   },
   {
     id: "why-pre-sale",
