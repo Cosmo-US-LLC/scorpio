@@ -272,7 +272,6 @@ const RoadmapSection = ({ phases }) => {
               ))}
             </CarouselContent>
 
-            {/* Navigation Arrows - Positioned on sides for desktop */}
             <CarouselPrevious className="hidden md:flex" />
             <CarouselNext className="hidden md:flex" />
 
