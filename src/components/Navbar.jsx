@@ -65,7 +65,9 @@ export default function Navbar() {
               </svg>
             </button>
             <div className="max-w-[138px] w-[100%]">
+              <a href="/">
               <img src={Logo} alt="" />
+              </a>
             </div>
           </div>
           <nav className="hidden md:flex space-x-[27px] items-center ">
