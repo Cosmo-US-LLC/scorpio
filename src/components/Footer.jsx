@@ -79,44 +79,44 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 max-md:space-y-2.5">
               <li>
-                <Link
-                  to="https://scorpio-casino.netlify.app/doc/Privacy.pdf"
+                <a
+                  target="_blank" href="https://scorpio-casino.netlify.app/doc/Privacy.pdf"
                   className="quick-link max-md:text-sm"
                 >
                   Privacy Policy
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  to="https://scorpio-casino.netlify.app/doc/Cookies-Policy-SC.pdf"
+                <a
+                  target="_blank" href="https://scorpio-casino.netlify.app/doc/Cookies-Policy-SC.pdf"
                   className="quick-link max-md:text-sm"
                 >
                   Cookies Policy
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  to="https://scorpio-casino.netlify.app/doc/Terms-of-Service.pdf"
+                <a
+                  target="_blank" href="https://scorpio-casino.netlify.app/doc/Terms-of-Service.pdf"
                   className="quick-link max-md:text-sm"
                 >
                   Terms of Service
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  to="https://scorpio-casino.netlify.app/doc/TokenSaleAgreement.pdf"
+                <a
+                  target="_blank" href="https://scorpio-casino.netlify.app/doc/TokenSaleAgreement.pdf"
                   className="quick-link max-md:text-sm"
                 >
                   Token Sale Agreement
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  to="https://t.me/scorpioncasino_official"
+                <a
+                  target="_blank" href="https://t.me/scorpioncasino_official"
                   className="quick-link max-md:text-sm"
                 >
                   Live Support 24/7
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -188,30 +188,30 @@ export default function Footer() {
               Registration Number: 14904288
             </p>
             <div className="flex flex-wrap gap-x-4 gap-y-2 max-md:gap-x-3 max-md:gap-y-2">
-              <Link
-                to="https://scorpio-casino.netlify.app/doc/Terms-of-Service.pdf"
+              <a
+                target="_blank" href="https://scorpio-casino.netlify.app/doc/Terms-of-Service.pdf"
                 className="gradient_quick_links max-md:text-xs"
               >
                 Terms of Service
-              </Link>
-              <Link
-                to="https://scorpio-casino.netlify.app/doc/Privacy.pdf"
+              </a>
+              <a
+                target="_blank" href="https://scorpio-casino.netlify.app/doc/Privacy.pdf"
                 className="gradient_quick_links max-md:text-xs"
               >
                 Privacy Policy
-              </Link>
-              <Link
-                to="https://t.me/scorpioncasino_official"
+              </a>
+              <a
+                target="_blank" href="https://t.me/scorpioncasino_official"
                 className="gradient_quick_links max-md:text-xs"
               >
                 Contact Us
-              </Link>
-              <Link
-                to="https://scorpio-casino.netlify.app/doc/TokenSaleAgreement.pdf"
+              </a>
+              <a
+                target="_blank" href="https://scorpio-casino.netlify.app/doc/TokenSaleAgreement.pdf"
                 className="gradient_quick_links max-md:text-xs"
               >
                 Token Sale Agreement
-              </Link>
+              </a>
             </div>
           </div>
 
