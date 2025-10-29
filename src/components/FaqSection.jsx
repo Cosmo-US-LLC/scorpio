@@ -74,7 +74,7 @@ const FaqSection = ({ faqs }) => {
   };
 
   return (
-    <section className="w-full bg-[#0B0D10] py-16 md:py-24 px-4 md:px-8">
+    <section id="faq" className="w-full bg-[#0B0D10] py-16 md:py-24 px-4 md:px-8">
       <div className="max-w-4xl md:max-w-5xl mx-auto">
         {/* Heading Block */}
         <div className="text-center mb-8 md:mb-10">

@@ -63,7 +63,20 @@ any other casino.
           </p>
 
           <div className="w-full sm:w-[300px]">
-            <button className="btn-primary w-full">Buy $SCORP2.0</button>{" "}
+            <button 
+              onClick={(e) => {
+                e.preventDefault();
+                const target = document.querySelector("#wallet");
+                if (target) {
+                  const yOffset = 20;
+                  const y =
+                    target.getBoundingClientRect().top +
+                    window.scrollY +
+                    yOffset;
+                  window.scrollTo({ top: y, behavior: "smooth" });
+                }
+              }}
+            className="btn-primary w-full">Buy $SCORP2.0</button>{" "}
           </div>
         </div>
       </div>
