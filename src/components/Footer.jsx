@@ -80,7 +80,7 @@ export default function Footer() {
             <ul className="space-y-2 max-md:space-y-2.5">
               <li>
                 <Link
-                  to="https://scorpio-casino.netlify.app/assets/doc/Privacy.pdf"
+                  to="https://scorpio-casino.netlify.app/doc/Privacy.pdf"
                   className="quick-link max-md:text-sm"
                 >
                   Privacy Policy
@@ -88,7 +88,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  to="https://scorpio-casino.netlify.app/assets/doc/Cookies-Policy-SC.pdf"
+                  to="https://scorpio-casino.netlify.app/doc/Cookies-Policy-SC.pdf"
                   className="quick-link max-md:text-sm"
                 >
                   Cookies Policy
@@ -96,7 +96,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  to="https://scorpio-casino.netlify.app/assets/doc/Terms-of-Service.pdf"
+                  to="https://scorpio-casino.netlify.app/doc/Terms-of-Service.pdf"
                   className="quick-link max-md:text-sm"
                 >
                   Terms of Service
@@ -104,7 +104,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  to="https://scorpio-casino.netlify.app/assets/doc/TokenSaleAgreement.pdf"
+                  to="https://scorpio-casino.netlify.app/doc/TokenSaleAgreement.pdf"
                   className="quick-link max-md:text-sm"
                 >
                   Token Sale Agreement
@@ -189,13 +189,13 @@ export default function Footer() {
             </p>
             <div className="flex flex-wrap gap-x-4 gap-y-2 max-md:gap-x-3 max-md:gap-y-2">
               <Link
-                to="https://scorpio-casino.netlify.app/assets/doc/Terms-of-Service.pdf"
+                to="https://scorpio-casino.netlify.app/doc/Terms-of-Service.pdf"
                 className="gradient_quick_links max-md:text-xs"
               >
                 Terms of Service
               </Link>
               <Link
-                to="https://scorpio-casino.netlify.app/assets/doc/Privacy.pdf"
+                to="https://scorpio-casino.netlify.app/doc/Privacy.pdf"
                 className="gradient_quick_links max-md:text-xs"
               >
                 Privacy Policy
@@ -207,7 +207,7 @@ export default function Footer() {
                 Contact Us
               </Link>
               <Link
-                to="https://scorpio-casino.netlify.app/assets/doc/TokenSaleAgreement.pdf"
+                to="https://scorpio-casino.netlify.app/doc/TokenSaleAgreement.pdf"
                 className="gradient_quick_links max-md:text-xs"
               >
                 Token Sale Agreement
