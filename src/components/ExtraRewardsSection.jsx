@@ -115,7 +115,7 @@ const ExtraRewardsSection = () => {
 
             <div className="mt-8">
               <div className="flex justify-between items-center mb-3">
-                <h6 className="">How much do you want to sh6end?</h6>
+                <h6 className="">How much do you want to spend?</h6>
                 <h6 className="">{formatCurrency(spendAmount)}</h6>
               </div>
 
