@@ -27,13 +27,6 @@ const ResultsSection = () => {
       icon: resulticon3,
     },
     {
-      id: 4,
-      title: "Performance",
-      description:
-        "$SCORP surged by 560% from its launch price to its all-time high.",
-      icon: resulticon4,
-    },
-    {
       id: 5,
       title: "Migration",
       description:
@@ -68,7 +61,7 @@ const ResultsSection = () => {
         >
           <div className="">
             {/* Header */}
-            <div className="text-center space-y-[15px] mb-12 max-w-[684px] mx-auto">
+            <div className="text-center space-y-[15px] mb-12 max-w-[720px] mx-auto">
               <h2 className="max-md:tracking-[-0.5px]">
                 Results of
                 <span className="text_gradient"> SCORP 1.0</span>
@@ -131,11 +124,11 @@ const ResultsSection = () => {
             </div>
 
             {/* Results Cards - Desktop Grid */}
-            <div className=" grid grid-cols-1 md:grid md:grid-cols-3 lg:grid-cols-5 gap-2 lg:gap-[20px] px-[15px]">
+            <div className=" grid grid-cols-1 md:grid md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-[20px] px-[15px]">
               {results.map((result) => (
                 <div
                   key={result.id}
-                  className=" overflow-hidden p-4 flex flex-col items-center text-center "
+                  className=" overflow-hidden px-6 py-10 flex flex-col items-center text-center "
                   style={{
                     borderRadius: "17.844px",
                     border: "0.892px solid rgba(255, 255, 255, 0.10)",

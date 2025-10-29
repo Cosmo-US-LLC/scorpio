@@ -26,7 +26,7 @@ const FutureCryptoSection = () => {
               $SCORP2.0 Is The <span className="faded_heading">Future</span> Leading <span className="faded_heading">Gambling</span> Cryptocurrency
             </h2>
 
-            <p className="md:text-start text-center">
+            <p className="md:text-start text-center md:max-w-[580px]">
              The $SCORP2.0 token is empowering the SCORPION ecosystem, offering over 30,000 betting opportunities monthly, 210 casino games, and 160 live games on a licensed, transparent, and provably fair platform. 
             </p>
 
@@ -34,7 +34,9 @@ const FutureCryptoSection = () => {
              Don’t wait, come check us out now!
             </p>
 
-            <button className="btn-primary px-[71px]  py-[18px]">
+            <button className="btn-primary px-[71px]  py-[18px]" 
+              onClick={() => window.open("https://scorpion.casino", "_blank")}
+            >
               Visit Casino
             </button>
           </div>

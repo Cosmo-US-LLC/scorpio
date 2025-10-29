@@ -29,11 +29,28 @@ const FeaturedInSection = () => {
   ];
 
   return (
-    <section className="relative w-ful mt-[-40px]  pb-16 px-4 md:px-20 overflow-hidden">
-    
-      <div className="relative max-w-7xl mx-auto rounded-2xl Featured_mobile max-md:p-4">
+    <section className="relative w-ful mt-[-80px] pb-16 px-4 md:px-16 ">
+    <div
+        className="absolute max-md:top-[60px] md:left-[30%] md:bottom-[200px]"
+        style={{
+          width: "662px",
+          height: "216px",
+          borderRadius: "1262px",
+          background: "#4D1200",
+          filter: "blur(250px)",
+          zIndex: 0,
+        }}
+      ></div>
+      <div className="relative max-w-[1280px] md:py-[48px] md:px-6 py-[20px] mx-auto rounded-2xl Featured_mobile max-md:p-4"
+         style={{
+                background: "rgba(27, 26, 22, 0.40)",
+                border: "0.764px solid rgba(255, 255, 255, 0.10)",
+                borderRadius: "16px",
+                backdropFilter: "blur(8.922223091125488px)",
+              }}
+      >
         {/* Header */}
-        <div className="text-center max-md:mb-8 md:mb-12">
+        <div className="text-center max-md:mb-8 md:mb-[28px]">
           <h2 className="text-center"
           style={{
             color:"rgba(255, 255, 255, 0.50)"
