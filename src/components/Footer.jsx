@@ -5,6 +5,17 @@ import goldGbg from "../assets/footer/gold_gbg.webp";
 import redGbg from "../assets/footer/red_gbg.webp";
 
 export default function Footer() {
+  const quickLinks = [
+    {
+      href: "#what-is-scorpion",
+      label: "What is Scorpion Casino?",
+      offset: -50,
+    },
+    { href: "#how-to-buy", label: "How to Buy", offset: -50 },
+    { href: "#whitepaper", label: "Whitepaper", offset: -50 },
+    { href: "#growth-potential", label: "Growth Potential", offset: -50 },
+    { href: "#faq", label: "FAQ", offset: -10 },
+  ];
   return (
     <footer className="w-full py-12 max-md:py-6 max-md:px-4 relative">
       <img
@@ -32,36 +43,32 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="w-[15%] ml-12 max-md:w-full max-md:ml-0">
+          <div className="w-[20%] ml-12 max-md:w-full max-md:ml-0">
             <h3 className="text-[#ffffff] text-left mb-4 max-md:text-lg max-md:mb-3">
               Quick Links
             </h3>
             <ul className="space-y-2 max-md:space-y-2.5">
-              <li>
-                <Link to="/" className="quick-link max-md:text-sm">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/about-us" className="quick-link max-md:text-sm">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/faqs" className="quick-link max-md:text-sm">
-                  FAQ's
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="quick-link max-md:text-sm">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link to="/pricing" className="quick-link max-md:text-sm">
-                  Pricing
-                </Link>
-              </li>
+              {quickLinks.map((item) => (
+                <li key={item.href}>
+                  <a
+                    href={item.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const element = document.querySelector(item.href);
+                      if (element) {
+                        const y =
+                          element.getBoundingClientRect().top +
+                          window.scrollY +
+                          item.offset;
+                        window.scrollTo({ top: y, behavior: "smooth" });
+                      }
+                    }}
+                    className="quick-link cursor-pointer max-md:text-sm hover:text-[#B88A44] transition"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -121,7 +128,7 @@ export default function Footer() {
             </h3>
             <div className="flex gap-4 mb-4 max-md:gap-3 max-md:mb-3">
               <a
-                href="#"
+                href="https://x.com/ScorpionCasino "
                 className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-all max-md:w-9 max-md:h-9"
                 aria-label="Twitter"
               >
@@ -135,7 +142,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="#"
+                href="https://www.instagram.com/scorpion.casino/ "
                 className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-all max-md:w-9 max-md:h-9"
                 aria-label="Instagram"
               >
@@ -149,7 +156,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="#"
+                href="https://t.me/scorpioncasino_official"
                 className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-all max-md:w-9 max-md:h-9"
                 aria-label="Telegram"
               >
@@ -194,7 +201,7 @@ export default function Footer() {
                 Privacy Policy
               </Link>
               <Link
-                to="/contact-us"
+                to="https://t.me/scorpioncasino_official"
                 className="gradient_quick_links max-md:text-xs"
               >
                 Contact Us

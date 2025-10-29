@@ -9,7 +9,14 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Detect scroll and toggle blur effect
+  const navLinks = [
+  { href: "#what-is-scorpion", label: "What is Scorpion Casino?", offset: -50 },
+  { href: "#how-to-buy", label: "How to Buy", offset: -50 },
+  { href: "#whitepaper", label: "Whitepaper", offset: -50 },
+  { href: "#tokenomics", label: "Tokenomics", offset: -70 },
+  { href: "#growth-potential", label: "Growth Potential", offset: -50 },
+  { href: "#faq", label: "FAQ", offset: -10 },
+];
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
@@ -62,24 +69,26 @@ export default function Navbar() {
             </div>
           </div>
           <nav className="hidden md:flex space-x-[27px] items-center ">
-            <a href="#" className="hover:text-[#B88A44] a_tags transition">
-              What is Scorpion Casino?
-            </a>
-            <a href="#" className="hover:text-[#B88A44] a_tags transition">
-              How to Buy
-            </a>
-            <a href="#" className="hover:text-[#B88A44] a_tags transition">
-              Whitepaper
-            </a>
-            <a href="#" className="hover:text-[#B88A44] a_tags transition">
-              Tokenomics
-            </a>
-            <a href="#" className="hover:text-[#B88A44] a_tags transition">
-              Growth Potential
-            </a>
-            <a href="#" className="hover:text-[#B88A44] a_tags transition">
-              FAQ
-            </a>
+            {navLinks.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.querySelector(item.href);
+                  if (element) {
+                    const y =
+                      element.getBoundingClientRect().top +
+                      window.scrollY +
+                      item.offset;
+                    window.scrollTo({ top: y, behavior: "smooth" });
+                  }
+                }}
+                className="hover:text-[#B88A44] a_tags transition cursor-pointer"
+              >
+                {item.label}
+              </a>
+            ))}
             <div className="px-3 py-[5px] cursor-pointer flex space-x-1 border-[1px] border-[#fff] rounded-[4px]">
               <img src={enflag} alt="english" />
               <a href="#" className="hover:text-[#B88A44] a_tags transition">

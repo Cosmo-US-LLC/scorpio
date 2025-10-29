@@ -14,7 +14,7 @@ const ExtraRewardsSection = () => {
       return {
         tier: "Diamond",
         nft: "Diamond Scorpion NFT",
-        threshold: "$90000",
+        threshold: "$100000",
         card: card5,
         rewards: [
           { text: "60% $SCORP2.0 Bonus", tick: true },
@@ -24,11 +24,11 @@ const ExtraRewardsSection = () => {
           { text: "Scorpion Casino VIP Package", tick: true },
         ],
       };
-    } else if (amount >= 26,369) {
+    } else if (amount >= 26369) {
       return {
         tier: "Platinum",
         nft: "Platinum Scorpion NFT",
-        threshold: "$58,256",
+        threshold: "$26369",
         card: card4,
         rewards: [
           { text: "40% $SCORP2.0 Bonus", tick: true },
@@ -258,7 +258,20 @@ const ExtraRewardsSection = () => {
                     </div>
                   ))}
                 </div>
-                <button className="btn-primary w-full">Buy $SCORP2.0</button>
+                <button 
+                  onClick={(e) => {
+                e.preventDefault();
+                const target = document.querySelector("#wallet");
+                if (target) {
+                  const yOffset = 20;
+                  const y =
+                    target.getBoundingClientRect().top +
+                    window.scrollY +
+                    yOffset;
+                  window.scrollTo({ top: y, behavior: "smooth" });
+                }
+              }}
+                className="btn-primary w-full">Buy $SCORP2.0</button>
 
                 <p className="!leading-[111%] pt-4 text-center !text-[14px]">
                   You will get the membership NFT <br /> automatically when you

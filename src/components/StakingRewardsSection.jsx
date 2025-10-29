@@ -33,7 +33,20 @@ const StakingRewardsSection = () => {
             </p>
 
             {/* CTA Button */}
-            <button className="btn-primary px-[40px] py-[16px] text-[20px]">
+            <button 
+              onClick={(e) => {
+                e.preventDefault();
+                const target = document.querySelector("#wallet");
+                if (target) {
+                  const yOffset = 20;
+                  const y =
+                    target.getBoundingClientRect().top +
+                    window.scrollY +
+                    yOffset;
+                  window.scrollTo({ top: y, behavior: "smooth" });
+                }
+              }}
+            className="btn-primary px-[40px] py-[16px] text-[20px]">
               Buy $SCORP2.0
             </button>
 

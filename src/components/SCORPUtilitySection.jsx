@@ -31,7 +31,20 @@ const SCORPUtilitySection = () => {
                 35+ Different <span className="faded_heading">Sports</span>
               </h2>
               <p className="max-md:text-center">Scorpion Casino provides various sports betting opportunities, including football, tennis, American football, horse racing, basketball, golf, boxing,  and MMA.</p>
-              <button className="btn-primary md:text-[20px] text-[16px] md:px-[51px] px-[31px] md:py-[19px] py-[12px]  max-md:min-w-[100%]">Buy $SCORP2.0</button>
+              <button 
+                onClick={(e) => {
+                e.preventDefault();
+                const target = document.querySelector("#wallet");
+                if (target) {
+                  const yOffset = 20;
+                  const y =
+                    target.getBoundingClientRect().top +
+                    window.scrollY +
+                    yOffset;
+                  window.scrollTo({ top: y, behavior: "smooth" });
+                }
+              }}
+              className="btn-primary md:text-[20px] text-[16px] md:px-[51px] px-[31px] md:py-[19px] py-[12px]  max-md:min-w-[100%]">Buy $SCORP2.0</button>
             </div>
             <div className="md:min-h-[500px] min-h-[380px] max-md:pt-4"> 
               <img className="md:block hidden max-w-[636.797px] absolute w-[100%] right-0" src={sportsImg} alt=" 35+ Different Sports" />
@@ -60,7 +73,20 @@ const SCORPUtilitySection = () => {
                 200+ Casino  <span className="faded_heading">Games</span>
               </h2>
               <p className="max-md:text-center">Scorpion Casino offers a complete online casino with over 200+ games from all major game providers. Casino games include slots, blackjack, roulette, poker, live casino, and more.</p>
-              <button className="btn-primary md:px-[51px] max-md:min-w-[100%] px-[31px] md:py-[19px] py-[12px] text-[16px] md:text-[20px]">Buy $SCORP2.0</button>
+              <button 
+                onClick={(e) => {
+                e.preventDefault();
+                const target = document.querySelector("#wallet");
+                if (target) {
+                  const yOffset = 20;
+                  const y =
+                    target.getBoundingClientRect().top +
+                    window.scrollY +
+                    yOffset;
+                  window.scrollTo({ top: y, behavior: "smooth" });
+                }
+              }}
+              className="btn-primary md:px-[51px] max-md:min-w-[100%] px-[31px] md:py-[19px] py-[12px] text-[16px] md:text-[20px]">Buy $SCORP2.0</button>
             </div>
           </div>
             <div className="md:flex md:justify-between max-md:mt-12 md:items-center max-md:grid max-md:grid-cols-3 max-md:gap-y-[20px] md:space-x-4">

@@ -2,7 +2,7 @@ import AllocationImg from "../assets/AllocationSection/Allocation_img.webp";
 
 const AllocationSection = () => {
   return (
-    <section className="relative w-full py-12 md:py-12 px-4 md:px-6 lg:px-16 overflow-hidden">
+    <section id="tokenomics" className="relative w-full py-12 md:py-12 px-4 md:px-6 lg:px-16 overflow-hidden">
       <div className="max-w-[1280px] relative w-full mx-auto">
         <div
           className="absolute bottom-[100px] sm:bottom-[150px] md:bottom-[190px] left-1/2 -translate-x-1/2 mx-auto hidden sm:block"
