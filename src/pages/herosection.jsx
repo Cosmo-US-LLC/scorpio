@@ -38,9 +38,10 @@ function Herosection() {
                  <img src={licensedLogo} className="max-md:max-w-[116.837px] max-h-[43.321px]" alt="Licensed" /> 
                 </div>
             </div>
-            <div className="pt-17">
+            <div className="pt-4 md:pt-17">
                 {/* <video src=""></video> */}
-                <img src={poster} className="max-md:max-w-[100%] md:max-w-[656px] min-h-[377px] aspect-[656/377]" alt="poster" />
+                <img src={poster} className=" hidden md:block max-md:max-w-[100%] md:max-w-[656px] min-h-[377px] aspect-[656/377]" alt="poster" />
+                   <img src={poster} className="block md:hidden max-md:max-w-[100%] md:max-w-[656px] min-h-[203px] " alt="poster" />
             </div>
         </div>
           {/* <img src={vector3} className="max-md:hidden  absolute max-w-[43.203px] left-[31.5%] z-[4] top-[45%]" alt="SCORP2" />

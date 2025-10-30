@@ -46,7 +46,7 @@ const TrustBadgesSection = () => {
               }}
             >
               <div className="flex md:max-w-[110px] max-w-[100px] mx-auto justify-center items-center md:mb-6 max-md:ml-2 ">
-                <img src={badge.icon} alt={badge.title} />
+                <img src={badge.icon} className="min-w-[100px] min-h-[100px]" alt={badge.title} />
               </div>
 
               <div>
@@ -60,9 +60,8 @@ const TrustBadgesSection = () => {
                    <svg
                   xmlns="http://www.w3.org/2000/svg"
                  
-                  viewBox="0 0 233 228"
                   fill="none"
-                  className="absolute bottom-0 left-0  "
+                  className="absolute w-full h-full bottom-0 left-0  "
                 >
                   <g filter="url(#filter0_f_206_2451)">
                     <ellipse

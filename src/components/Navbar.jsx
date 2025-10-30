@@ -231,48 +231,44 @@ export default function Navbar() {
             }}
           ></div>
           <div className="space-y-[27px]">
-            <h5>
-              <a href="#" className="text-[16px] block hover:text-[#B88A44]">
-                What is Scorpion Casino?
+            {navLinks.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsOpen(false);
+                  const element = document.querySelector(item.href);
+                  if (element) {
+                    const y =
+                      element.getBoundingClientRect().top +
+                      window.scrollY +
+                      item.offset;
+                    window.scrollTo({ top: y, behavior: "smooth" });
+                  }
+                }}
+                className="hover:text-[#B88A44]  a_tags transition cursor-pointer"
+              >
+              <h5>
+              <a href="#" className="text-[16px] mb-[27px] block hover:text-[#B88A44]">
+                  {item.label}
               </a>
             </h5>
-            <h5>
-              <a href="#" className="text-[16px] block hover:text-[#B88A44]">
-                How to Buy
               </a>
-            </h5>
-            <h5>
-              <a href="#" className="text-[16px] block hover:text-[#B88A44]">
-                Whitepaper
-              </a>
-            </h5>
-            <h5>
-              <a href="#" className="text-[16px] block hover:text-[#B88A44]">
-                Tokenomics
-              </a>
-            </h5>
-            <h5>
-              <a href="#" className="text-[16px] block hover:text-[#B88A44]">
-                Growth Potential
-              </a>
-            </h5>
-            <h5>
-              <a href="#" className="text-[16px] block hover:text-[#B88A44]">
-                FAQ
-              </a>
-            </h5>
-            <h5>
-              <a href="#" className="text-[16px] block hover:text-[#B88A44]">
-                English
-              </a>
-            </h5>
+            ))}
           </div>
           <div className="space-y-2">
             <h5>Join Our Social </h5>
             <div className="flex justify-center items-center space-x-2">
+              <a href="https://x.com/ScorpionCasino" target="_blank" rel="noopener noreferrer">
               <img className="w-[36px] h-[36px]" src={social1} alt="" />
+              </a>
+              <a href="https://t.me/scorpioncasino_official" target="_blank" rel="noopener noreferrer">
               <img className="w-[36px] h-[36px]" src={social2} alt="" />
+              </a>
+              <a href="https://www.instagram.com/scorpion.casino/" target="_blank" rel="noopener noreferrer">
               <img className="w-[36px] h-[36px]" src={social3} alt="" />
+              </a>
             </div>
             <p className="text-[14px]">Email: info@scorpion.casino</p>
           </div>

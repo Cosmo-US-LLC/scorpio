@@ -37,8 +37,8 @@ const PoweredBy = () => {
   ];
 
   return (
-    <section className="w-full bg-[#0B0D10] py-16">
-      <div className="max-w-[1280px] rounded-[17.591px] mx-auto px-[56px] py-[50px]"
+    <section className="w-full bg-[#0B0D10] py-16 max-md:px-4">
+      <div className="max-w-[1280px] rounded-[17.591px] mx-auto px-[20px] md:px-[56px] py-[50px]"
       style={{
         border:" 0.88px solid #414141d2",
         background:"rgba(18, 19, 31, 0.70)",
@@ -46,17 +46,17 @@ const PoweredBy = () => {
       }}
       >
         {/* Heading with gradient */}
-        <h2 className="text-center mb-12 md:mb-16">
+        <h2 className="text-center mb-6 md:mb-16">
           <span className="bg-linear-to-r from-[#d4af37] to-white bg-clip-text text-transparent">
             Powered By
           </span>
         </h2>
 
-        <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
+        <div className="flex flex-wrap justify-center items-center gap-x-2  md:gap-x-12 md:gap-y-8">
           {partners.map((partner, index) => (
             <div
               key={index}
-              className="flex items-center justify-center w-[calc(50%-3rem)] sm:w-[calc(33.333%-3rem)] lg:w-[calc(25%-3rem)] "
+              className="flex items-center justify-center w-[calc(20%-5px)] sm:w-[calc(33.333%-3rem)] lg:w-[calc(25%-3rem)] "
             >
               <div className="h-12 flex items-center justify-center ">
                 <img

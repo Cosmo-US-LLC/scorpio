@@ -111,7 +111,7 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
           <h2 className="text_gradient md:min-w-[400px] max-md:mb-4 max-md:pb-2 max-md:text-center text-start md:pr-2 md:mr-4 w-[100%] md:border-r-[1px] max-md:border-b border-[#E5E7EB]">
             Biggest Buy-in Competition
           </h2>
-          <p className="max-md:text-center pr-10">
+          <p className="max-md:text-center md:pr-10">
             We’ve established a Top 10 Biggest Buy-in competition for all
             pre-sale participants, with a prize pool of 25,000 USD (in
             $SCORP2.0). This is our way of rewarding those who recognise the
@@ -121,9 +121,15 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
         </div>
 
         {/* Table Container */}
-        <div className="rounded-2xl overflow-hidden border border-white/5 backdrop-blur-sm">
+        <div className="rounded-2xl overflow-hidden border border-white/5 "
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(224, 170, 62, 0.05) 38.55%, rgba(184, 138, 68, 0.05) 97.22%)",
+          backdropFilter: "blur(2.599111318588257px)",
+        }}
+        >
           <div className="block md:block overflow-x-auto">
-            <table className="w-[98%] border-separate border-spacing-y-2 mx-auto mt-10 mb-10 p-10 h-full">
+            <table className="w-[98%] border-separate border-spacing-y-2 mx-auto mt-10 mb-10 md:p-10 h-full">
               <thead>
                 <tr className="">
                   <th className=" w-[120px] px-2 py-4 max-md:!text-start !text-center text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
