@@ -362,7 +362,7 @@ box-shadow: 0 -1.538px 3.077px 0 #F5E99C inset, 0 1.538px 3.077px 0 #F5E99C inse
   }
 
   /* Accordion animations */
-
+/* 
   .bg_herosection {
     background-image: url(../src//assets/herosection/herobg.webp);
     background-position: center;
@@ -375,18 +375,8 @@ box-shadow: 0 -1.538px 3.077px 0 #F5E99C inset, 0 1.538px 3.077px 0 #F5E99C inse
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
-  .bg_gambling_con {
-    background-image: url(../src//assets/gambling/gambling_bg.webp);
-    background-position: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-  }
-  .bg_gambling_inner {
-    background-image: url(../src//assets/gambling/gambling_inner.webp);
-    background-position: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-  }
+ 
+ 
   .Benefits_bg {
     background-image: url(../src//assets/Benefits/Benefit_bg.webp);
     background-position: center;
@@ -399,24 +389,14 @@ box-shadow: 0 -1.538px 3.077px 0 #F5E99C inset, 0 1.538px 3.077px 0 #F5E99C inse
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
-  .staking_rewards_bg {
-    background-image: url(../src/assets/stakingrewards/staking_rewards_bg.webp);
-    background-position: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-  }
+ 
   .howdoesit_bg {
     background-image: url(../src/assets/HowDoesIt/howdoesit_bg.webp);
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
-  .SCORPUtility_bg {
-    background-image: url(../src/assets/SCORPUtilitySection/scorpio_ui_bg.webp);
-    background-position: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-  }
+  
 
   .disrupting_bg {
     background-image: url(../src/assets/ComparisonChartSection/comp_bg.webp);
@@ -429,24 +409,52 @@ box-shadow: 0 -1.538px 3.077px 0 #F5E99C inset, 0 1.538px 3.077px 0 #F5E99C inse
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+  } */
+
+   /* .bg_gambling_con {
+    background-image: url(../src//assets/gambling/gambling_bg.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  } */
+   .SCORPUtility_bg {
+    background-image: url(../src/assets/SCORPUtilitySection/scorpio_ui_bg.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+    .staking_rewards_bg {
+    background-image: url(../src/assets/stakingrewards/staking_rewards_bg.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+    .bg_gambling_inner {
+    background-image: url(../src//assets/gambling/gambling_inner.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
   }
 
    @media (max-width: 768px) {
-   .bg_gambling_inner {
+    .bg_gambling_inner {
     background-image: url(../src//assets/gambling/gambling_inner_mob.webp);
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
-  .staking_rewards_bg {
+   .staking_rewards_bg {
     background-image: url(../src/assets/stakingrewards/staking_rewards_bg_mob.webp);
   }
    .SCORPUtility_bg {
     background-image: url(../src/assets/SCORPUtilitySection/scorpio_ui_bg_mob.webp);
   }
+   /* 
+ 
+  
   .bg_herosection {
     background-image: url(../src//assets/herosection/hero_secrtion.webp);
-  }
+  } */
   }
   @keyframes accordion-down {
     from {

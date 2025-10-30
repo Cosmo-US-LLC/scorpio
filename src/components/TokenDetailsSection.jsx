@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 const TokenDetailsSection = () => {
   const walletAddress = "0x37803eccdb9f1889c0974bea0ddb4d7929119a7";
   return (
-    <section className="relative w-full py-12 md:py-16 px-4 md:px-6 lg:px-16 overflow-hidden">
+    <section className="relative w-full py-12 md:py-16 px-4 md:px-6 lg:px-16 ">
       <div className="max-w-[1280px] relative w-full mx-auto">
         <div
           className="absolute left-[-60%] sm:left-[-50%] md:left-[-40%] top-[10%] mx-auto hidden sm:block"
@@ -30,7 +30,7 @@ const TokenDetailsSection = () => {
           }}
         ></div>
 
-        <div className="mb-8 md:mb-10">
+        <div className="mb-8 md:mb-10 relative z-[1] ">
           <h2 className="text-center">
             Token <span className="text_gradient">Details</span>
           </h2>
