@@ -36,7 +36,7 @@ const ExchangeLaunchSection = () => {
   ];
 
   return (
-    <section className="relative w-full  pb-14 pt-[80px] px-4 md:px-16 overflow-hidden max-w-[1280px] mx-auto">
+    <section className="relative w-full  pb-14 pt-5 md:pt-[80px] px-4 md:px-16 overflow-hidden max-w-[1280px] mx-auto">
       
       <div className="">
         {/* Heading */}

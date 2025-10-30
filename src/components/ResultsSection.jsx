@@ -285,11 +285,10 @@ const ResultsSection = ({ phases }) => {
                         <p className="">{result.description}</p>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          // width="233"
-                          // height="228"
-                          viewBox="0 0 233 228"
+                          width="100%"
+                          height="100%"
                           fill="none"
-                          className="absolute -bottom-3 left-0  "
+                          className="absolute w-full h-full -bottom-3 left-0  "
                         >
                           <g filter="url(#filter0_f_206_2451)">
                             <ellipse
@@ -339,30 +338,11 @@ const ResultsSection = ({ phases }) => {
                   ))}
                 </CarouselContent>
 
-                {/* Navigation Arrows - Positioned on sides for desktop */}
-                <CarouselPrevious className="hidden md:flex" />
-                <CarouselNext className="hidden md:flex" />
+                
 
                 {/* Mobile Navigation Arrows with Dots - Below carousel */}
-                <div className="flex md:hidden justify-center items-center gap-4 mt-8">
+                <div className="flex md:hidden justify-center items-center gap-8 mt-8">
                   <CarouselPrevious className="static! transform-none! h-10 w-10" />
-
-                  {/* Pagination Dots */}
-                  <div className="flex gap-2 pb-9">
-                    {Array.from({ length: count }).map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => api?.scrollTo(index)}
-                        className={`transition-all duration-300 rounded-full ${
-                          index === current
-                            ? "w-8 h-2 bg-linear-to-r from-[#F9F295] via-[#E0AA3E] to-[#B88A44]"
-                            : "w-2 h-2 bg-white/30 hover:bg-white/50"
-                        }`}
-                        aria-label={`Go to slide ${index + 1}`}
-                      />
-                    ))}
-                  </div>
-
                   <CarouselNext className="static! transform-none! h-10 w-10" />
                 </div>
               </Carousel>

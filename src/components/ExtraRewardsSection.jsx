@@ -147,7 +147,7 @@ const ExtraRewardsSection = () => {
           </div>
 
           <div
-            className="w-full md:max-w-[700px] overflow-hidden md:max-w-[700px]  rounded-[15.289px] px-[24px] py-[32px] "
+            className="w-full max-md:mt-4 md:max-w-[700px] overflow-hidden md:max-w-[700px]  rounded-[15.289px] px-[24px] py-[32px] "
             style={{
               border: "0.764px solid rgba(255, 255, 255, 0.10)",
               background: "rgba(27, 26, 22, 0.40)",
@@ -286,8 +286,8 @@ const ExtraRewardsSection = () => {
       <style jsx>{`
         .slider-custom::-webkit-slider-thumb {
           appearance: none;
-          width: 0px;
-          height: 0px;
+          width: 10px;
+          height: 10px;
           border-radius: 50%;
           // background: linear-gradient(to right, #fcd34d, #fbbf24);
           cursor: pointer;
@@ -296,8 +296,8 @@ const ExtraRewardsSection = () => {
         }
 
         .slider-custom::-moz-range-thumb {
-          width: 0px;
-          height: 0px;
+          width: 10px;
+          height: 10px;
           border-radius: 50%;
           // background: linear-gradient(to right, #fcd34d, #fbbf24);
           cursor: pointer;
