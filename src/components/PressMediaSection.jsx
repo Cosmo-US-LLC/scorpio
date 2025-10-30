@@ -28,8 +28,19 @@ const PressMediaSection = ({ pressItems }) => {
   const pressData = pressItems || defaultPressItems;
 
   return (
-    <section className="w-full min-h-[400px] md:h-[580px] flex items-center justify-center py-12 md:py-16 px-4 md:px-6 lg:px-8">
-      <div className="max-w-[1280px] mx-auto rounded-2xl flex flex-col gap-8 md:gap-12">
+    <section className="w-full min-h-[400px] md:h-[580px] flex items-center justify-center py-12 md:py-16 px-4 md:px-6 lg:px-8 relative">
+       <div
+        className="absolute max-md:top-[60px] z-[0] md:right-[0%] md:bottom-[60px]"
+        style={{
+          width: "1202px",
+          height: "316px",
+          borderRadius: "1262px",
+          background: "#4D1200",
+          filter: "blur(250px)",
+          zIndex: 0,
+        }}
+      ></div>
+      <div className="max-w-[1280px] relative z-[1] mx-auto rounded-2xl flex flex-col gap-8 md:gap-12">
         <div className="text-center">
           <h2 className="">
             <span className="text-white">Press And </span>

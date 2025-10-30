@@ -1,22 +1,74 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Logo from "../assets/navabar/logo.webp";
 import social1 from "../assets/navabar/insta.webp";
 import social2 from "../assets/navabar/insta (2).webp";
 import social3 from "../assets/navabar/insta (1).webp";
 import enflag from "../assets/navabar/flags/en.svg";
+import flag15 from "../assets/navabar/flags/ar.png";
+import flag1 from "../assets/navabar/flags/flg (1).svg";
+import flag10 from "../assets/navabar/flags/flg (10).svg";
+import flag11 from "../assets/navabar/flags/flg (11).svg";
+import flag12 from "../assets/navabar/flags/flg (12).svg";
+import flag13 from "../assets/navabar/flags/flg (13).svg";
+import flag14 from "../assets/navabar/flags/flg (14).svg";
+import flag2 from "../assets/navabar/flags/flg (2).svg";
+import flag3 from "../assets/navabar/flags/flg (3).svg";
+import flag4 from "../assets/navabar/flags/flg (4).svg";
+import flag5 from "../assets/navabar/flags/flg (5).svg";
+import flag6 from "../assets/navabar/flags/flg (6).svg";
+import flag8 from "../assets/navabar/flags/flg (8).svg";
+import flag9 from "../assets/navabar/flags/flg (9).svg";
 
+const flags = [
+  { flag: flag1, abbreviation: "EN", name: "English" },
+  { flag: flag2, abbreviation: "VI", name: "Vietnamese" },
+  { flag: flag3, abbreviation: "DE", name: "German" },
+  { flag: flag4, abbreviation: "NL", name: "Dutch" },
+  { flag: flag5, abbreviation: "JA", name: "Japanese" },
+  { flag: flag6, abbreviation: "TR", name: "Turkish" },
+  { flag: flag15, abbreviation: "AR", name: "Arabic" },
+  { flag: flag8, abbreviation: "IT", name: "Italian" },
+  { flag: flag9, abbreviation: "NO", name: "Norwegian" },
+  { flag: flag10, abbreviation: "ZH", name: "Chinese" },
+  { flag: flag11, abbreviation: "RU", name: "Russian" },
+  { flag: flag12, abbreviation: "FR", name: "French" },
+  { flag: flag13, abbreviation: "PT", name: "Portuguese" },
+  { flag: flag14, abbreviation: "ES", name: "Spanish" },
+];
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpendrop, setIsOpendrop] = useState(false);
+  const [selectedLang, setSelectedLang] = useState(flags[0]);
+  const dropdownRef = useRef(null);
+
+  const handleSelectLanguage = (lang) => {
+    setSelectedLang(lang);
+    setIsOpendrop(false);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpendrop(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const navLinks = [
-  { href: "#what-is-scorpion", label: "What is Scorpion Casino?", offset: -50 },
-  { href: "#how-to-buy", label: "How to Buy", offset: -50 },
-  { href: "#whitepaper", label: "Whitepaper", offset: -50 },
-  { href: "#tokenomics", label: "Tokenomics", offset: -70 },
-  { href: "#growth-potential", label: "Growth Potential", offset: -50 },
-  { href: "#faq", label: "FAQ", offset: -10 },
-];
+    {
+      href: "#what-is-scorpion",
+      label: "What is Scorpion Casino?",
+      offset: -50,
+    },
+    { href: "#how-to-buy", label: "How to Buy", offset: -50 },
+    { href: "#whitepaper", label: "Whitepaper", offset: -50 },
+    { href: "#tokenomics", label: "Tokenomics", offset: -70 },
+    { href: "#growth-potential", label: "Growth Potential", offset: -50 },
+    { href: "#faq", label: "FAQ", offset: -10 },
+  ];
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
@@ -38,7 +90,7 @@ export default function Navbar() {
           : "bg-transparent top-0 "
       }`}
       style={{
-        borderBottom:"0.5px solid #fff"
+        borderBottom: "0.5px solid #fff",
       }}
     >
       <div className="max-w-[1280px] w-full  mx-auto md:px-0 max-md:px-4 py-4">
@@ -69,7 +121,7 @@ export default function Navbar() {
             </button>
             <div className="max-w-[138px] w-[100%]">
               <a href="/">
-              <img src={Logo} alt="" />
+                <img src={Logo} alt="" />
               </a>
             </div>
           </div>
@@ -94,27 +146,67 @@ export default function Navbar() {
                 {item.label}
               </a>
             ))}
-            <div className="px-3 py-[5px] cursor-pointer flex space-x-1 border-[1px] border-[#fff] rounded-[4px]">
-              <img src={enflag} alt="english" />
-              <a href="#" className="hover:text-[#B88A44] a_tags transition">
-                English
-              </a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="17"
-                height="17"
-                viewBox="0 0 17 17"
-                fill="none"
+            <div className="relative" ref={dropdownRef}>
+              {/* Trigger */}
+              <div
+                onClick={() => setIsOpendrop(!isOpendrop)}
+                className="px-3 py-[5px] cursor-pointer flex items-center space-x-1 border border-white rounded-[4px] transition hover:border-[#B88A44]"
               >
-                <path
-                  d="M13.6167 6.11816L9.15985 10.575C8.63351 11.1013 7.77223 11.1013 7.24588 10.575L2.78906 6.11816"
-                  stroke="white"
-                  stroke-width="1.02534"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                <img
+                  src={selectedLang.flag}
+                  alt={selectedLang.name}
+                  className="w-[20px] h-[20px]"
                 />
-              </svg>
+                <span className="hover:text-[#B88A44] transition">
+                  {selectedLang.name}
+                </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17"
+                  height="17"
+                  viewBox="0 0 17 17"
+                  fill="none"
+                  className={`transition-transform duration-200 ${
+                    isOpendrop ? "rotate-180" : "rotate-0"
+                  }`}
+                >
+                  <path
+                    d="M13.6167 6.11816L9.15985 10.575C8.63351 11.1013 7.77223 11.1013 7.24588 10.575L2.78906 6.11816"
+                    stroke="white"
+                    strokeWidth="1.02534"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+
+              {/* Dropdown */}
+              {isOpendrop && (
+                <div className="absolute border border-[#B88A44] top-[40px] right-0 w-[439px] rounded-[13px] px-[55px] py-[41px] bg-[#000] shadow-lg z-50 animate-fadeIn">
+                  <h3 className="text-[20px] text-white font-[700] mb-4">
+                    Languages
+                  </h3>
+                  <div className="grid grid-cols-2 gap-x-6">
+                    {flags.map((lang, index) => (
+                      <div
+                        key={index}
+                        onClick={() => handleSelectLanguage(lang)}
+                        className="flex items-center space-x-2 cursor-pointer hover:bg-[#0d1b21] p-2 mb-[12px] rounded transition"
+                      >
+                        <img
+                          src={lang.flag}
+                          alt={lang.name}
+                          className="w-[28px] h-[28px]"
+                        />
+                        <span className="text-[14px] font-[500] text-white">
+                          {lang.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </nav>
 

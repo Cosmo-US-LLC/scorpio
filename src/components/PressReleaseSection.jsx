@@ -54,10 +54,10 @@ const PressReleaseSection = ({ articles }) => {
   const articlesData = articles || defaultArticles;
 
   return (
-    <section className="w-full bg-[#0B0D10] py-12 md:py-16 px-4 md:px-6 lg:px-12">
+    <section className="w-full   bg-[#0B0D10] py-12 md:py-16 px-4 md:px-6 lg:px-12">
       <div className="max-w-6xl mx-auto rounded-2xl">
         {/* Heading */}
-        <div className="text-center mb-8 md:mb-10">
+        <div className="text-center relative z-[1] mb-8 md:mb-10">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3">
             <span className="text-white">Press </span>
             <span className="text_gradient">Release</span>

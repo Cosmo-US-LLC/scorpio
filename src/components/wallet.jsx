@@ -7,7 +7,8 @@ import { tokenImageMap, chainImgMap } from "../assets/tokens";
 const Wallet = ({ onTabChange }) => {
   const [selectedToken, setSelectedToken] = useState();
   const [selectedWallet, setSelectedWallet] = useState();
-  const [paymentAmount, setPaymentAmount] = useState("1");
+  const [paymentAmount, setPaymentAmount] = useState("1000");
+  const [paymentReceive , setPaymentReceive ] = useState("1");
   const [receiveAmount, setReceiveAmount] = useState("0");
 
   const TOKEN_PRICE = 0.02; // static price for now
@@ -62,12 +63,21 @@ const Wallet = ({ onTabChange }) => {
 
     setPaymentAmount(value);
     const paymentNum = parseFloat(value) || 0;
-    const received = paymentNum / TOKEN_PRICE; // static ratio for now
+    const received = paymentNum / TOKEN_PRICE; 
     setReceiveAmount(received.toFixed(4));
   };
+  const handlePaymentChangeRecive = (value) => {
+    const regex = /^(\d*|(\d+\.?\d*))$/;
+    if (!regex.test(value)) return;
+
+    setPaymentReceive(value);
+    const paymentNum = parseFloat(value) || 0;
+    const received = paymentNum / TOKEN_PRICE; 
+    setReceiveAmount(received.toFixed(4));
+  };
+  
   const handleBuy = () => {
     console.log("Buy button clicked!");
-    // your logic here — e.g., validate inputs, submit transaction, etc.
   };
 
   return (
@@ -178,7 +188,7 @@ const Wallet = ({ onTabChange }) => {
           />
         </svg>
 
-        <p className="text-[14px] text-[#fff] uppercase font-[700]">Buy with card</p>
+        <p className="text-[14px] text-[#fff] uppercase font-[700]">card</p>
       </div>
 
       {/* Token Select */}
@@ -258,8 +268,8 @@ const Wallet = ({ onTabChange }) => {
               <input
                 type="text"
                 className="py-2 w-full text-[#fff] text-[14.85px] font-[700] outline-none bg-transparent"
-                value={paymentAmount}
-                onChange={(e) => handlePaymentChange(e.target.value)}
+                value={paymentReceive}
+                onChange={(e) => handlePaymentChangeRecive(e.target.value)}
               />
             </div>
             <div

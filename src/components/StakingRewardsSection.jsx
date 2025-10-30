@@ -9,7 +9,7 @@ const StakingRewardsSection = () => {
     
 
       <div className="relative staking_rewards_bg max-md:px-[20px] max-md:py-[30px]  md:px-[60px] md:py-[40px] overflow-hidden max-w-[1280px] mx-auto max-md:rounded-[16px]">
-            <img src={vect_2}  className="max-w-[155.777px] z-[9] md:block hidden -right-6 absolute -bottom-12" alt="Staking Rewards" />
+            {/* <img src={vect_2}  className="max-w-[155.777px] z-[9] md:block hidden -right-6 absolute -bottom-12" alt="Staking Rewards" /> */}
         <div className="flex max-md:flex-col justify-between items-center gap-15 lg:gap-16">
          
           <div className=" relative">

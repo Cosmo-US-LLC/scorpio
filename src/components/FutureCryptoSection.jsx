@@ -2,7 +2,7 @@ import graohicsimg from "../assets/gambling/graohics.webp";
 
 const FutureCryptoSection = () => {
   return (
-    <section className="relative z-[9] relative w-full bg_gambling_con  pb-16 px-6 md:p-16">
+    <section id="what-is-scorpion" className="relative z-[9] relative w-full bg_gambling_con  pb-16 px-6 md:p-16">
       {/* Decorative Stars/Shine Accents */}
       <div
     className="absolute top-[200px] z-[-1]"

@@ -30,7 +30,7 @@ const SCORPUtilitySection = () => {
               <h2 className="md:text-start text-center">
                 35+ Different <span className="faded_heading">Sports</span>
               </h2>
-              <p className="max-md:text-center">Scorpion Casino provides various sports betting opportunities, including football, tennis, American football, horse racing, basketball, golf, boxing,  and MMA.</p>
+              <p className="max-md:text-center max-w-[380px]">Scorpion Casino provides various sports betting opportunities, including football, tennis, American football, horse racing, basketball, golf, boxing,  and MMA.</p>
               <button 
                 onClick={(e) => {
                 e.preventDefault();
@@ -72,7 +72,7 @@ const SCORPUtilitySection = () => {
               <h2 className="md:text-start max-md:text-center">
                 200+ Casino  <span className="faded_heading">Games</span>
               </h2>
-              <p className="max-md:text-center">Scorpion Casino offers a complete online casino with over 200+ games from all major game providers. Casino games include slots, blackjack, roulette, poker, live casino, and more.</p>
+              <p className="max-md:text-center max-w-[380px]">Scorpion Casino offers a complete online casino with over 200+ games from all major game providers. Casino games include slots, blackjack, roulette, poker, live casino, and more.</p>
               <button 
                 onClick={(e) => {
                 e.preventDefault();
