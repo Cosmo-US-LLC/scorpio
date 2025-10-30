@@ -18,7 +18,7 @@ export default function Footer() {
   ];
   return (
     <footer className="w-full py-12 max-md:py-6 max-md:px-4 relative">
-      <img
+      {/* <img
         src={goldGbg}
         alt="footer background"
         className="absolute bottom-0 left-0 w-[400px] h-[400px] z-1 max-md:w-[200px] max-md:h-[200px]"
@@ -27,7 +27,7 @@ export default function Footer() {
         src={redGbg}
         alt="footer background"
         className="absolute top-0 right-0 w-[400px] h-full z-1 max-md:w-[200px] max-md:h-[300px]"
-      />
+      /> */}
       <div className="max-w-[1280px] mx-auto rounded-2xl flex flex-col gap-6 bg-[#12131FB2] border border-[#363636] px-6 py-8 relative z-1 max-md:px-4 max-md:py-6 max-md:gap-8">
         <div className="flex flex-row justify-between gap-10 pb-3 max-md:flex-col max-md:gap-8 max-md:pb-0">
           <div className="w-[34%] flex flex-col gap-4 max-md:w-full max-md:gap-3">
@@ -37,7 +37,7 @@ export default function Footer() {
 
             <p className="text-[#CACACA] max-md:text-sm max-md:leading-relaxed">
               Step into the world of casinos, high stakes, and incredible
-              rewards by joining the Scorpion community today!Experience the
+              rewards by joining the Scorpion community today! Experience the
               unmatched privileges and benefits of being part of the world's
               first social online gambling ecosystem powered by $SCORP.
             </p>

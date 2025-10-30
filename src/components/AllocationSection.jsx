@@ -5,7 +5,7 @@ const AllocationSection = () => {
     <section id="tokenomics" className="relative w-full py-12 md:py-12 px-4 md:px-6 lg:px-16 overflow-hidden">
       <div className="max-w-[1280px] relative w-full mx-auto">
         <div
-          className="absolute bottom-[100px] sm:bottom-[150px] md:bottom-[190px] left-1/2 -translate-x-1/2 mx-auto hidden sm:block"
+          className="absolute bottom-[100px] sm:bottom-[150px] md:top-[150px] left-1/2 -translate-x-1/2 mx-auto hidden sm:block"
           style={{
             width: "1180px",
             height: "216px",
@@ -16,7 +16,7 @@ const AllocationSection = () => {
           }}
         ></div>
 
-        <h2 className="text-center mb-12 sm:mb-20 md:mb-32 lg:mb-40 ">
+        <h2 className="text-center mb-12 relative z-[1] sm:mb-20 md:mb-26 lg:mb-28 ">
           SCORP2.0 Token <span className="text_gradient">Allocation</span>
         </h2>
 
@@ -24,7 +24,7 @@ const AllocationSection = () => {
           <img
             src={AllocationImg}
             alt="Scorpion Casino whitepaper"
-            className="w-full h-auto object-contain"
+            className="w-full h-auto object-contain max-w-[900px] mx-auto"
           />
         </div>
       </div>

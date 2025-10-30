@@ -73,7 +73,7 @@ const ExpertTestimonials = ({ testimonials }) => {
   };
 
   return (
-    <section className="w-full bg-[#0B0D10] py-12 md:py-16 px-4 md:px-6 lg:px-12 xl:px-24">
+    <section className="w-full bg-[#0B0D10]  py-12 md:py-16 px-4 md:px-6 lg:px-12 xl:px-24">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-10 md:mb-16">

@@ -12,9 +12,9 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
     },
     {
       rank: 2,
-      wallet: "0x5B9...18e01",
+      wallet: "0x589...18e01",
       txCount: 5,
-      totalBuy: "$201,191.17",
+      totalBuy: "$201,181.17",
       nft: "Diamond",
       prize: "$5,000",
     },
@@ -28,15 +28,15 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
     },
     {
       rank: 4,
-      wallet: "0x9bd...674ec",
+      wallet: "0x9bd...6746c",
       txCount: 23,
-      totalBuy: "$108,799.20",
+      totalBuy: "$106,799.20",
       nft: "Diamond",
       prize: "$2,000",
     },
     {
       rank: 5,
-      wallet: "0xbbf...c027c",
+      wallet: "0xbbf...c627c",
       txCount: 2,
       totalBuy: "$105,349.88",
       nft: "Diamond",
@@ -44,43 +44,43 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
     },
     {
       rank: 6,
-      wallet: "0xbbf...c027c",
-      txCount: 2,
-      totalBuy: "$105,349.88",
+      wallet: "0xcc6...85fda",
+      txCount: 12,
+      totalBuy: "$105,120.76",
       nft: "Diamond",
-      prize: "$1500",
+      prize: "$900",
     },
     {
       rank: 7,
-      wallet: "0xbbf...c027c",
-      txCount: 2,
-      totalBuy: "$105,349.88",
+      wallet: "0x145...122eb",
+      txCount: 5,
+      totalBuy: "$103,213.41",
       nft: "Diamond",
-      prize: "$1500",
+      prize: "$800",
     },
     {
       rank: 8,
-      wallet: "0xbbf...c027c",
-      txCount: 2,
-      totalBuy: "$105,349.88",
+      wallet: "0x815...7f652",
+      txCount: 5,
+      totalBuy: "$103,160.51",
       nft: "Diamond",
-      prize: "$1500",
+      prize: "$700",
     },
     {
       rank: 9,
-      wallet: "0xbbf...c027c",
-      txCount: 2,
-      totalBuy: "$105,349.88",
+      wallet: "0x809...8a5af",
+      txCount: 8,
+      totalBuy: "$100,942.26",
       nft: "Diamond",
-      prize: "$1500",
+      prize: "$600",
     },
     {
       rank: 10,
-      wallet: "0xbbf...c027c",
-      txCount: 2,
-      totalBuy: "$105,349.88",
-      nft: "Diamond",
-      prize: "$1500",
+      wallet: "0xc13...aebc6",
+      txCount: 6,
+      totalBuy: "$70,840.99",
+      nft: "Platinum",
+      prize: "$500",
     },
   ];
 
@@ -111,7 +111,7 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
           <h2 className="text_gradient md:min-w-[400px] max-md:mb-4 max-md:pb-2 max-md:text-center text-start md:pr-2 md:mr-4 w-[100%] md:border-r-[1px] max-md:border-b border-[#E5E7EB]">
             Biggest Buy-in Competition
           </h2>
-          <p className="max-md:text-center">
+          <p className="max-md:text-center pr-10">
             We’ve established a Top 10 Biggest Buy-in competition for all
             pre-sale participants, with a prize pool of 25,000 USD (in
             $SCORP2.0). This is our way of rewarding those who recognise the
@@ -123,7 +123,7 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
         {/* Table Container */}
         <div className="rounded-2xl overflow-hidden border border-white/5 backdrop-blur-sm">
           <div className="block md:block overflow-x-auto">
-            <table className="w-[98%] mx-auto mt-10 mb-10 p-10">
+            <table className="w-[98%] border-separate border-spacing-y-2 mx-auto mt-10 mb-10 p-10 h-full">
               <thead>
                 <tr className="">
                   <th className=" w-[120px] px-2 py-4 max-md:!text-start !text-center text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
@@ -147,7 +147,7 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
                 </tr>
               </thead>
 
-              <tbody className="w-full">
+              <tbody className="w-full ">
                 {leaderboardData.slice(0, visibleCount).map((entry, index) => {
                   let bgColor = "";
                   let textColor = "";
@@ -170,11 +170,11 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
                   return (
                     <tr
                       key={index}
-                      className={`w-full  transition-colors  ${bgColor}`}
+                      className={`w-full !mb-6 transition-colors  ${bgColor}`}
                     >
                       {/* Rank */}
                       <td
-                        className={`px-4 max-md:px-2 max-md:py-2 max-md:text-[14px] !text-center rounded-l-[30px] py-4 font-bold ${textColor}`}
+                        className={`px-4 max-md:px-2  max-md:py-2 max-md:text-[14px] !text-center rounded-l-[30px] py-4 font-bold ${textColor}`}
                       >
                         {entry.rank === 1
                           ? "1st"

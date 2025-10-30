@@ -1,22 +1,12 @@
-.scorpion_gbg {
+/* .scorpion_gbg {
   background-image: url(../assets/scorpion_casino/scorpion_gbg.webp);
   background-position: center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 600px;
 }
-.what_is_scorpion_bg {
-  background-image: url(../assets/what_scorp/scorp_gbg.webp);
-  background-position: center;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-.collaboration_section_bg {
-  background-image: url(../assets/collaboration/collaboration_gbg.webp);
-  background-position: center;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
+
+
 .press_media_section_bg {
   background-image: url(../assets/press_and_media/press_and_media_bg.webp);
   background-position: center;
@@ -30,30 +20,15 @@
   background-repeat: no-repeat;
   height: 540px;
 }
-.breaking_barriers_section_bg {
-  background-image: url(../assets/breaking_down/bracking_down_gbg.webp);
-  background-position: center;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
+
 .huge_market_section_bg {
   background-image: url(../assets/huge_market/huge_market_box_bg.webp);
   background-position: center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
-.huge_market_gbg {
-  background-image: url(../assets/huge_market/huge_Market_gbg.webp);
-  background-position: center;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-.future_section_bg {
-  background-image: url(../assets/online_gambling/gambling_gold_g.webp);
-  background-position: center;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
+
+
 .Success_stories_bg {
   background-image: url(../assets/scorpion_casino/white_gbg.png);
   background-position: center;
@@ -96,48 +71,23 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
-  .huge_market_gbg {
-    background-image: url(../assets/huge_market/huge_market_bg.webp);
-    background-position: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-  }
-  .breaking_barriers_section_bg {
-    background-image: url(../assets/breaking_down/breaking_down_bg_mob.webp);
-    background-position: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-  }
+  
+ 
   .case_study_section_bg {
     background-image: url(../assets/crypto_casino/crypto_casino_bg_mob.webp);
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
-  .future_section_bg {
-    background-image: url(../assets/online_gambling/gambling_gold_g.webp);
-    background-position: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-  }
-  .what_is_scorpion_bg {
-    background-image: url(../assets/what_scorp/scorp_gbg_mob.webp);
-    background-position: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-  }
+ 
+ 
   .Success_stories_bg {
     background-image: url(../assets/success_stories//success_stories_gbg_mob.webp);
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
-  .collaboration_section_bg {
-    background-image: url(../assets/collaboration/collaboration_bg_mob.webp);
-    background-position: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-  }
+  
   .scorpion_gbg {
     background-image: url(../assets/scorpion_casino/scorpion_casino_gbg_mob.webp);
     background-position: center;
@@ -151,4 +101,68 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
+} */
+ .collaboration_section_bg {
+  background-image: url(../assets/collaboration/collaboration_gbg.webp);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+ .what_is_scorpion_bg {
+  background-image: url(../assets/what_scorp/scorp_gbg.webp);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+ .breaking_barriers_section_bg {
+    background-image: url(../assets/breaking_down/breaking_down_bg_mob.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+.huge_market_gbg {
+  background-image: url(../assets/huge_market/huge_Market_gbg.webp);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+ .future_section_bg {
+    background-image: url(../assets/online_gambling/gambling_gold_g.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+@media (max-width: 768px) { 
+  .future_section_bg {
+  background-image: url(../assets/online_gambling/gambling_gold_g.webp);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.collaboration_section_bg {
+    background-image: url(../assets/collaboration/collaboration_bg_mob.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+ .what_is_scorpion_bg {
+    background-image: url(../assets/what_scorp/scorp_gbg_mob.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+.huge_market_gbg {
+    background-image: url(../assets/huge_market/huge_market_bg.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .breaking_barriers_section_bg {
+  background-image: url(../assets/breaking_down/bracking_down_gbg.webp);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
 }

@@ -32,7 +32,7 @@ const HowDoesItSection = () => {
   return (
     <section className="relative w-full max-md:px-4 max-md:pt-0 py-16 overflow-hidden">
       <div className="relative z-[9] max-w-[1280px] w-[100%] mx-auto ">
-        <div className="text-center max-w-[932px] mx-auto mb-[49px]">
+        <div className="text-center relative z-[1] max-w-[932px] mx-auto mb-[49px]">
           <h2 className="text-center mb-4">
             How Does It <span className="faded_heading">Work</span>?
           </h2>
@@ -45,7 +45,7 @@ const HowDoesItSection = () => {
           </p>
         </div>
         <div className="relative">
-          <img className="md:block hidden" src={howdoesit_img} alt="" />
+          <img className="md:block hidden max-w-[1000px] mx-auto relative z-[1]" src={howdoesit_img} alt="" />
           <img className="md:hidden  block" src={howdoesit_img_mob} alt="" />
           <div
             className="absolute max-md:bottom-[200px] md:bottom-[330px] left-[25%] max-md:left-[-10%] mx-auto"
