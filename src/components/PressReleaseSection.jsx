@@ -81,10 +81,10 @@ const PressReleaseSection = ({ articles }) => {
                 {articlesData.map((article) => (
                   <CarouselItem
                     key={article.id}
-                    className="pl-4 basis-full md:basis-1/2 lg:basis-1/3"
+                    className="pl-4 basis-full  md:basis-1/2 lg:basis-1/3"
                   >
                     <a href={article.link} className="block group">
-                      <div className="rounded-xl relative bg-[#1A1B1F] border border-white/10 overflow-hidden h-full  flex flex-col">
+                      <div className="rounded-xl relative bg-[#1A1B1F] border border-white/10 overflow-hidden h-full  flex flex-col min-h-[370px]">
                         <img
                           src={whiteGbg}
                           alt="white gbg"

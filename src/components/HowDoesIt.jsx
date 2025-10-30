@@ -96,9 +96,8 @@ const HowDoesItSection = () => {
                 </p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 233 228"
                   fill="none"
-                  className="absolute -bottom-3 left-0  "
+                  className="absolute w-full h-auto -bottom-3 left-0  "
                 >
                   <g filter="url(#filter0_f_206_2451)">
                     <ellipse
