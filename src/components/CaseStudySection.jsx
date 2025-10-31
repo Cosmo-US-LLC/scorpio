@@ -2,7 +2,7 @@ import case_study_img from "../assets/crypto_casino/crypto_casino_left.webp";
 
 const CaseStudySection = () => {
   return (
-    <section className="relative w-full min-h-[500px] case_study_section_bg md:h-[540px] flex items-center justify-center py-12 md:py-16 px-4 md:px-6 lg:px-8">
+    <section className="relative w-full min-h-[500px] max-md:pt-0 case_study_section_bg md:h-[540px] flex items-center justify-center py-12 md:py-16 px-4 md:px-6 lg:px-8">
        <div
         className="absolute bottom-[50px] md:left-0 max-md:-left-40"
         style={{
