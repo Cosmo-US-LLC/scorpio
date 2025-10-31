@@ -2,14 +2,16 @@ import Featured1 from "../assets/Featured/Featured (12).svg"
 import Featured2 from "../assets/Featured/Featured (11).svg"
 import Featured3 from "../assets/Featured/Featured (10).svg"
 import Featured4 from "../assets/Featured/Featured (9).svg"
-import Featured5 from "../assets/Featured/Featured (8).svg"
-import Featured6 from "../assets/Featured/Featured (7).svg"
-import Featured7 from "../assets/Featured/Featured (6).svg"
-import Featured8 from "../assets/Featured/Featured (5).svg"
-import Featured9 from "../assets/Featured/Featured (4).svg"
-import Featured10 from "../assets/Featured/Featured (3).svg"
-import Featured11 from "../assets/Featured/Featured (2).svg"
-import Featured12 from "../assets/Featured/Featured (1).svg"
+import Featured5 from "../assets/Featured/mob_icn (4).webp"
+import Featured6 from "../assets/Featured/mob_icn (3).webp"
+import Featured7 from "../assets/Featured/mob_icn (2).webp"
+import Featured8 from "../assets/Featured/mob_icn (1).webp"
+import Featured9 from "../assets/Featured/mob_icn (5).webp"
+import Featured10 from "../assets/Featured/mob_icn (6).webp"
+import Featured11 from "../assets/Featured/mob_icn (7).webp"
+import Featured12 from "../assets/Featured/mob_icn (8).webp"
+
+
 
 
 const FeaturedInSection = () => {
@@ -27,6 +29,7 @@ const FeaturedInSection = () => {
     { id: 11, name: "Washington CityPaper", logo: Featured11 },
     { id: 12, name: "Kryptoszene", logo: Featured12 },
   ];
+ 
 
   return (
     <section className="relative w-ful md:mt-[-80px] mt-[-100px]  md:pb-16 px-4 md:px-16 ">
@@ -41,7 +44,7 @@ const FeaturedInSection = () => {
           zIndex: 0,
         }}
       ></div>
-      <div className="relative max-w-[1280px] md:py-[48px] md:px-6 py-[20px] mx-auto rounded-2xl Featured_mobile max-md:p-4"
+      <div className="relative z-[9] max-w-[1280px] md:py-[48px] md:px-6 py-[20px] mx-auto rounded-2xl Featured_mobile max-md:p-4"
          style={{
                 background: "rgba(27, 26, 22, 0.40)",
                 border: "0.764px solid rgba(255, 255, 255, 0.10)",
@@ -65,11 +68,11 @@ const FeaturedInSection = () => {
           {publications.map((publication) => (
             <div
               key={publication.id}
-              className="flex flex-col items-center justify-center group cursor-pointer"
+              className="flex flex-col items-center justify-center "
             >
               <div className="flex items-center justify-center w-full relative">
-                <div className="flex flex-col items-center justify-center  gap-2  transition-all duration-300 group-hover:scale-105">
-                  <img src={publication.logo} alt="" />
+                <div className="flex flex-col items-center  justify-center  gap-2 ">
+                  <img src={publication.logo} className="max-md:object-cover" alt="" />
                 </div>
 
                
@@ -77,6 +80,8 @@ const FeaturedInSection = () => {
             </div>
           ))}
         </div>
+     
+        
       </div>
     </section>
   );

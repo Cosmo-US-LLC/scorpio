@@ -114,12 +114,13 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
- .breaking_barriers_section_bg {
-    background-image: url(../assets/breaking_down/breaking_down_bg_mob.webp);
-    background-position: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-  }
+ 
+   .breaking_barriers_section_bg {
+  background-image: url(../assets/breaking_down/bracking_down_gbg.webp);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
 .huge_market_gbg {
   background-image: url(../assets/huge_market/huge_Market_gbg.webp);
   background-position: center;
@@ -158,11 +159,11 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
-  .breaking_barriers_section_bg {
-  background-image: url(../assets/breaking_down/bracking_down_gbg.webp);
-  background-position: center;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-
+ 
+.breaking_barriers_section_bg {
+    background-image: url(../assets/breaking_down/breaking_down_bg_mob.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
 }
