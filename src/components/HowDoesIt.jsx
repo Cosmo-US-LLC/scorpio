@@ -45,7 +45,7 @@ const HowDoesItSection = () => {
           </p>
         </div>
         <div className="relative">
-          <img className="md:block hidden max-w-[1000px] mx-auto relative z-[1]" src={howdoesit_img} alt="" />
+          <img className="md:block hidden max-w-[850px] mx-auto relative z-[1]" src={howdoesit_img} alt="" />
           <img className="md:hidden  block" src={howdoesit_img_mob} alt="" />
           <div
             className="absolute max-md:bottom-[200px] md:bottom-[330px] left-[25%] max-md:left-[-10%] mx-auto"
@@ -61,7 +61,7 @@ const HowDoesItSection = () => {
         </div>
       </div>
       <div className="howdoesit_bg md:mt-[80px] ">
-        <div className="max-w-[1280px] relative mx-auto md:py-[100px] pt-[60px]">
+        <div className="max-w-[1280px] relative mx-auto md:py-[50px] pt-[60px]">
           <div
             className="absolute max-md:bottom-[330px] md:bottom-[60px] mx-auto"
             style={{

@@ -125,7 +125,7 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
         style={{
           background:
             "linear-gradient(90deg, rgba(224, 170, 62, 0.05) 38.55%, rgba(184, 138, 68, 0.05) 97.22%)",
-          backdropFilter: "blur(2.599111318588257px)",
+          // backdropFilter: "blur(2.599111318588257px)",
         }}
         >
           <div className="block md:block overflow-x-auto">
