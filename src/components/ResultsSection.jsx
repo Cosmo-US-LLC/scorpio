@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+
 import {
   Carousel,
   CarouselContent,
@@ -13,9 +13,7 @@ import resulticon4 from "../assets/results/resulticon (2).webp";
 import resulticon5 from "../assets/results/resulticon (1).webp";
 
 const ResultsSection = ({ phases }) => {
-  const [api, setApi] = useState(null);
-  const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
+
   const results = [
     {
       id: 1,
@@ -45,21 +43,6 @@ const ResultsSection = ({ phases }) => {
       icon: resulticon5,
     },
   ];
-
-  const phasesData = phases || results;
-
-  useEffect(() => {
-    if (!api) {
-      return;
-    }
-
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap());
-
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap());
-    });
-  }, [api]);
 
   return (
     <div className="relative">
@@ -94,7 +77,7 @@ const ResultsSection = ({ phases }) => {
               <p className="text-center">
                 SCORP was listed on multiple exchanges, reaching a $280M market
                 cap, soaring 560% from launch, and delivering up to 2800% (28x)
-                returns for presale buyers.
+                returns for presale buyers at its all-time high.
               </p>
               <p className="text-center">
                 Now, with SCORP 2.0, a new era begins, migrating to the Ethereum
@@ -243,7 +226,6 @@ const ResultsSection = ({ phases }) => {
                   align: "start",
                   loop: false,
                 }}
-                setApi={setApi}
                 className="w-full"
               >
                 <CarouselContent className="-ml-4 md:-ml-6">

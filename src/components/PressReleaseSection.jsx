@@ -84,7 +84,7 @@ const PressReleaseSection = ({ articles }) => {
                     className="pl-4 basis-full  md:basis-1/2 lg:basis-1/3"
                   >
                     <a href={article.link} className="block group">
-                      <div className="rounded-xl relative bg-[#1A1B1F] border border-white/10 overflow-hidden h-full  flex flex-col min-h-[370px]">
+                      <div className="rounded-xl relative bg-[#1A1B1F] border border-white/10 overflow-hidden h-full  flex flex-col min-h-[380px] md:min-h-[425px]">
                         <img
                           src={whiteGbg}
                           alt="white gbg"

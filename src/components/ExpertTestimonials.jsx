@@ -155,13 +155,13 @@ const ExpertTestimonials = ({ testimonials }) => {
 
                     <img
                       src={StarRating}
-                      className="max-w-[120px]"
+                      className="max-w-[120px] "
                       alt="StarRating"
                     />
                   </div>
 
                   {/* Media Block */}
-                  <div className="flex-1 relative w-full max-w-[573px]">
+                  <div className="flex-1 relative w-full max-w-[573px] relative z-[1]">
                     <div className=" ">
                       <div className=" ">
                         <img

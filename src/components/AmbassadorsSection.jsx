@@ -14,7 +14,6 @@ import imgtick from "../assets/scorpion_casino/image (2).webp";
 
 const AmbassadorsSection = ({ ambassadors }) => {
 
-  // Default ambassadors data
   const defaultAmbassadors = [
     {
       name: "COKI RAMIREZ",

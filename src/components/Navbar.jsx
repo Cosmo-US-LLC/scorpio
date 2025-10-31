@@ -232,7 +232,7 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-[#0B0D10] relative flex flex-col justify-between h-[90vh] text-center space-y-3 py-12 font-inter text-sm">
           <div
-            className="absolute bottom-[-20%] right-[-70%] mx-auto"
+            className="absolute bottom-[-20%]  z-[1] right-[-70%] mx-auto"
             style={{
               width: "490px",
               height: "490px",
@@ -268,8 +268,67 @@ export default function Navbar() {
             </h5>
               </a>
             ))}
+             <div className="relative " ref={dropdownRef}>
+              {/* Trigger */}
+              <div
+                onClick={() => setIsOpendrop(!isOpendrop)}
+                className="px-3 max-w-[160px] w-auto mx-auto py-[5px] cursor-pointer flex items-center justify-center space-x-1 border border-white rounded-[4px] transition hover:border-[#B88A44]"
+              >
+                <img
+                  src={selectedLang.flag}
+                  alt={selectedLang.name}
+                  className="w-[20px] h-[20px]"
+                />
+                <span className="hover:text-[#B88A44] transition">
+                  {selectedLang.name}
+                </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17"
+                  height="17"
+                  viewBox="0 0 17 17"
+                  fill="none"
+                  className={`transition-transform duration-200 ${
+                    isOpendrop ? "rotate-180" : "rotate-0"
+                  }`}
+                >
+                  <path
+                    d="M13.6167 6.11816L9.15985 10.575C8.63351 11.1013 7.77223 11.1013 7.24588 10.575L2.78906 6.11816"
+                    stroke="white"
+                    strokeWidth="1.02534"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+
+              {/* Dropdown */}
+              {isOpendrop && (
+                <div className="absolute border max-w-[200px] border-[#B88A44] max-h-[200px] overflow-y-scroll top-[35px] left-[30%] w-[439px] rounded-[13px] px-[15px] py-[11px] bg-[#000] shadow-lg z-50 animate-fadeIn">
+                  <div className="grid grid-cols-1">
+                    {flags.map((lang, index) => (
+                      <div
+                        key={index}
+                        onClick={() => handleSelectLanguage(lang)}
+                        className="flex items-center space-x-1 cursor-pointer hover:bg-[#0d1b21] p-1 mb-[12px] rounded transition"
+                      >
+                        <img
+                          src={lang.flag}
+                          alt={lang.name}
+                          className="w-[18px] h-[18px]"
+                        />
+                        <span className="text-[12px] font-[500] text-white">
+                          {lang.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
-          <div className="space-y-2">
+          <div className="space-y-2 relative z-[9]">
             <h5>Join Our Social </h5>
             <div className="flex justify-center items-center space-x-2">
               <a href="https://x.com/ScorpionCasino" target="_blank" rel="noopener noreferrer">
