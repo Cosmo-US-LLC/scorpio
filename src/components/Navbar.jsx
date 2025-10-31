@@ -120,7 +120,19 @@ export default function Navbar() {
               </svg>
             </button>
             <div className="max-w-[138px] w-[100%]">
-              <a href="/">
+              <a href="#wallet"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.querySelector("#wallet");
+                  if (element) {
+                    const y =
+                      element.getBoundingClientRect().top +
+                      window.scrollY +
+                      -70;
+                    window.scrollTo({ top: y, behavior: "smooth" });
+                  }
+                }}
+              >
                 <img src={Logo} alt="" />
               </a>
             </div>
