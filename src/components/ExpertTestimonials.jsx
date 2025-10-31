@@ -77,8 +77,8 @@ const ExpertTestimonials = ({ testimonials }) => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-10 md:mb-16">
-          <h2 className="text-center  max-md:!text-[28px] md:max-w-[660px] mx-auto">
-            <span className="block max-md:tracking-[-1.5px] text-[#ffffff] mb-2">
+          <h2 className="text-center  max-w-[353px] md:max-w-[660px] mx-auto">
+            <span className="block  text-[#ffffff] mb-2">
               What Crypto Experts Think About{" "}
               <span className="text_gradient">$SCORP2.0</span>
             </span>
@@ -129,13 +129,13 @@ const ExpertTestimonials = ({ testimonials }) => {
 
                     {/* Headline */}
                     <h3
-                      className="text-center text-[30px] md:text-left mb-3 md:mb-4 text_gradient"
+                      className=" text-[30px] text-left mb-3 md:mb-4 text_gradient"
                       dangerouslySetInnerHTML={{
                         __html: highlightKeywords(testimonial.quote),
                       }}
                     />
 
-                    <p className="text-[#CACACA] mb-5 md:mb-6 text-sm md:text-base">
+                    <p className="text-[#CACACA] max-md:text-left mb-5 md:mb-6 text-sm md:text-base">
                       {testimonial.body}
                     </p>
 
@@ -155,7 +155,7 @@ const ExpertTestimonials = ({ testimonials }) => {
 
                     <img
                       src={StarRating}
-                      className="max-w-[120px] "
+                      className="max-w-[120px] max-md:mx-auto"
                       alt="StarRating"
                     />
                   </div>

@@ -20,8 +20,7 @@ const FutureSection = () => {
 
             {/* Body Paragraph */}
             <p className="text-left text-[#CACACA] md:text-base">
-             People have been gambling for the last 3,000 years, regardless of location, time, or market conditions. Gambling is hard-wired in human psychology. This makes an online gambling platform one of the most interesting opportunities
-to generate cash flow with passive staking income, and build long-term wealth.
+             People have been gambling for the last 3,000 years, regardless of location, time, or market conditions. Gambling is hard-wired in human psychology. This makes an online gambling platform one of the most interesting opportunities to generate cash flow with passive staking income, and build long-term wealth.
             </p>
 
             {/* CTA Button */}

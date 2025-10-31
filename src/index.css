@@ -435,8 +435,15 @@ box-shadow: 0 -1.538px 3.077px 0 #F5E99C inset, 0 1.538px 3.077px 0 #F5E99C inse
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
+  .mob_br br {
+    display: none !important;
+  }
 
    @media (max-width: 768px) {
+      .mob_br br {
+    display: block !important;
+  }
+
     .bg_gambling_inner {
     background-image: url(../src//assets/gambling/gambling_inner_mob.webp);
     background-position: center;

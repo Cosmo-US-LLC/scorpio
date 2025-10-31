@@ -149,12 +149,12 @@ export const defaultFaqs = [
   },
   {
     id: "when-list",
-    question: "When will $SCORP list?",
+    question: "When will $SCORP launch?",
     type: "rich",
     content: (
       <div className="space-y-4">
         <p className="">
-          The launch of our cryptocurrency $SCORP is just around the corner.
+         The launch of our cryptocurrency $SCORP is just around the corner.
         </p>
         <p className="">
           The $SCORP launch will take place after the pre-sale is sold out.

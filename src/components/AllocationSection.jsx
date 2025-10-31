@@ -16,8 +16,8 @@ const AllocationSection = () => {
           }}
         ></div>
 
-        <h2 className="text-center mb-12 relative z-[1] sm:mb-20 md:mb-26 lg:mb-28 ">
-          SCORP2.0 Token <span className="text_gradient">Allocation</span>
+        <h2 className="text-center mob_br mb-12 relative z-[1] sm:mb-20 md:mb-26 lg:mb-28 ">
+          $SCORP2.0 <br /> Token <span className="text_gradient">Allocation</span>
         </h2>
 
         <div className="relative px-4 sm:px-6 md:px-0">
