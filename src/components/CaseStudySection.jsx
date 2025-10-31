@@ -25,7 +25,7 @@ const CaseStudySection = () => {
           </div>
         </div>
 
-        <div className="w-full md:max-w-[630px] flex flex-col gap-4 md:gap-6 px-4 md:px-0">
+        <div className="w-full md:max-w-[630px] relative z-[1] flex flex-col gap-4 md:gap-6 px-4 md:px-0">
           <h2 className="text-left max-w-full md:max-w-[530px]">
             <span className="text-[#ffffff]">Crypto Casino</span> <br />
             <span className="text_gradient">Case Study</span>

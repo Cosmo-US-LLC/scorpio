@@ -45,7 +45,7 @@ const SuccessStories = ({ stories }) => {
       ></div>
       <div className="md:relative max-w-[1280px] mx-auto Success_stories_bg flex flex-col items-center justify-center gap-8 md:gap-12">
         {/* Section Heading */}
-        <div className="text-center">
+        <div className="text-center relative z-[1]">
           <h2 className="">
             <span className="text-white">
               Success Stories & <br /> Growth{" "}
