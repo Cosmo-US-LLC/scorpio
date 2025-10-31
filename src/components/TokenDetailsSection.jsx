@@ -51,7 +51,20 @@ const TokenDetailsSection = () => {
                 backdropFilter: "blur(8.922223091125488px)",
               }}
             >
-              <div className="space-y-2 md:space-y-[12px]">
+              <div className="hidden md:block space-y-2 md:space-y-[12px]">
+                <h4 className="text-start text-sm md:text-base">Token Name</h4>
+                <p className="text-sm md:text-[15px] text-[#fff]">
+                  Scorpion Casino
+                </p>
+              </div>
+              <div className="hidden md:block space-y-2 md:space-y-[12px]">
+                <h4 className="text-start text-sm md:text-base">
+                  Token Symbol
+                </h4>
+                <p className="text-sm md:text-[15px] text-[#fff]">$SCORP2.0</p>
+              </div>
+              <div className="md:hidden flex justify-between items-center">
+                 <div className="space-y-2 md:space-y-[12px]">
                 <h4 className="text-start text-sm md:text-base">Token Name</h4>
                 <p className="text-sm md:text-[15px] text-[#fff]">
                   Scorpion Casino
@@ -62,6 +75,7 @@ const TokenDetailsSection = () => {
                   Token Symbol
                 </h4>
                 <p className="text-sm md:text-[15px] text-[#fff]">$SCORP2.0</p>
+              </div>
               </div>
               <div className="space-y-2 md:space-y-[12px]">
                 <h4 className="text-start text-sm md:text-base">Token Type</h4>
@@ -76,8 +90,8 @@ const TokenDetailsSection = () => {
                 <h4 className="text-start text-sm md:text-base">
                   Token Contract Address
                 </h4>
-                <p className="text-sm md:text-[15px] text-[#fff] break-words">
-                  {walletAddress}
+                <p className=" md:text-[15px] text-[#fff] break-words">
+                  <span className="max-md:!text-[11px]">{walletAddress}</span>
                   <span>
                     <img
                       className="inline-block cursor-pointer ml-1 max-h-[13.333px]"

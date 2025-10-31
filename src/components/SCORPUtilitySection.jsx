@@ -22,7 +22,7 @@ const SCORPUtilitySection = () => {
 
   return (
     <section className="relative w-full max-md:pt-0 py-20 px-4 md:px-16 overflow-hidden">
-      <div className="relative max-w-[1280px] overflow-hidden md:rounded-[20px] SCORPUtility_bg w-[100%] mx-auto pb-[50px]  max-md:py-[48px]">
+      <div className="relative max-w-[1280px] max-md:rounded-b-[10px] overflow-hidden md:rounded-[20px] SCORPUtility_bg w-[100%] mx-auto pb-[50px]  max-md:py-[48px]">
         {/* Section Heading */}
         <div className="md:px-[60px] max-md:px-[20px] max-md:mb-15 max-md:border-b max-md:border-[#ffffff73]">
           <div className="flex max-md:flex-col justify-between items-center relative">
@@ -30,7 +30,7 @@ const SCORPUtilitySection = () => {
               <h2 className="md:text-start text-center">
                 35+ Different <span className="faded_heading">Sports</span>
               </h2>
-              <p className="max-md:text-center max-w-[380px]">Scorpion Casino provides various sports betting opportunities, including football, tennis, American football, horse racing, basketball, golf, boxing,  and MMA.</p>
+              <p className="max-md:text-center max-w-[380px]">SCORPION provides various sports betting opportunities, including football, tennis, American football, horse racing, basketball, golf, boxing, and MMA.</p>
               <button 
                 onClick={(e) => {
                 e.preventDefault();
@@ -72,7 +72,7 @@ const SCORPUtilitySection = () => {
               <h2 className="md:text-start max-md:text-center">
                 200+ Casino  <span className="faded_heading">Games</span>
               </h2>
-              <p className="max-md:text-center max-w-[380px]">Scorpion Casino offers a complete online casino with over 200+ games from all major game providers. Casino games include slots, blackjack, roulette, poker, live casino, and more.</p>
+              <p className="max-md:text-center max-w-[380px]">SCORPION offers a complete online casino with over 200+ games from all major game providers. Casino games include slots, blackjack, roulette, poker, live casino, and more.</p>
               <button 
                 onClick={(e) => {
                 e.preventDefault();

@@ -15,7 +15,7 @@ const HowToBuySection = () => {
       title: "Step 2",
       maintitle:"Confirm Transaction",
       description:
-        "You can buy $SCORP 2.0 with a card or using ETH, USDC, USDT, SOL, BNB, and over 10 other currencies. Simply click the Buy button and confirm the transaction in your wallet.",
+        "You can buy $SCORP 2.0 with a card or using ETH, USDC, USDT, SOL, BNB, and over 10 other currencies. <br/> Simply click the Buy button and confirm the transaction in your wallet.",
     },
     {
       id: 3,
@@ -67,8 +67,9 @@ const HowToBuySection = () => {
                 {badge.maintitle}
               </h3>
 
-              <p className="border-t-[1px] border-[#36383F] pt-[17px]">
-                {badge.description}
+              <p className="border-t-[1px] mob_br border-[#36383F] pt-[17px]"
+               dangerouslySetInnerHTML={{ __html: badge.description }}
+              >
               </p>
                 
             </div>
