@@ -120,7 +120,8 @@ export default function Navbar() {
               </svg>
             </button>
             <div className="max-w-[138px] w-[100%]">
-              <a href="#wallet"
+              <a
+                href="#wallet"
                 onClick={(e) => {
                   e.preventDefault();
                   const element = document.querySelector("#wallet");
@@ -261,14 +262,17 @@ export default function Navbar() {
                 }}
                 className="hover:text-[#B88A44]  a_tags transition cursor-pointer"
               >
-              <h5>
-              <a href="#" className="text-[16px] mb-[27px] block hover:text-[#B88A44]">
-                  {item.label}
-              </a>
-            </h5>
+                <h5>
+                  <a
+                    href="#"
+                    className="text-[16px] mb-[27px] block hover:text-[#B88A44]"
+                  >
+                    {item.label}
+                  </a>
+                </h5>
               </a>
             ))}
-             <div className="relative " ref={dropdownRef}>
+            <div className="relative " ref={dropdownRef}>
               {/* Trigger */}
               <div
                 onClick={() => setIsOpendrop(!isOpendrop)}
@@ -331,17 +335,38 @@ export default function Navbar() {
           <div className="space-y-2 relative z-[9]">
             <h5>Join Our Social </h5>
             <div className="flex justify-center items-center space-x-2">
-              <a href="https://x.com/ScorpionCasino" target="_blank" rel="noopener noreferrer">
-              <img className="w-[36px] h-[36px]" src={social1} alt="" />
+              <a
+                href="https://x.com/ScorpionCasino"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img className="w-[36px] h-[36px]" src={social1} alt="" />
               </a>
-              <a href="https://t.me/scorpioncasino_official" target="_blank" rel="noopener noreferrer">
-              <img className="w-[36px] h-[36px]" src={social2} alt="" />
+              <a
+                href="https://t.me/scorpioncasino_official"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img className="w-[36px] h-[36px]" src={social2} alt="" />
               </a>
-              <a href="https://www.instagram.com/scorpion.casino/" target="_blank" rel="noopener noreferrer">
-              <img className="w-[36px] h-[36px]" src={social3} alt="" />
+              <a
+                href="https://www.instagram.com/scorpion.casino/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img className="w-[36px] h-[36px]" src={social3} alt="" />
               </a>
             </div>
-            <p className="text-[14px]">Email: info@scorpion.casino</p>
+            <p className="text-[14px]">
+              Email:{" "}
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@scorpion.casino"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                info@scorpion.casino
+              </a>
+            </p>
           </div>
           <div>
             <p className="text-[#fff] text-[14px]">
