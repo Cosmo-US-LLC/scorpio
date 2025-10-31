@@ -37,7 +37,7 @@ const PoweredBy = () => {
   ];
 
   return (
-    <section className="w-full bg-[#0B0D10] py-16 max-md:px-4">
+    <section className="w-full bg-[#0B0D10] md:py-16 max-md:px-4">
       <div className="max-w-[1280px] rounded-[17.591px] mx-auto px-[20px] md:px-[56px] py-[50px]"
       style={{
         border:" 0.88px solid #414141d2",

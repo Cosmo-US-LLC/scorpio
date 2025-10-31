@@ -22,7 +22,7 @@ const SCORPUtilitySection = () => {
 
   return (
     <section className="relative w-full max-md:pt-0 py-20 px-4 md:px-16 overflow-hidden">
-      <div className="relative max-w-[1280px] overflow-hidden rounded-[20px] SCORPUtility_bg w-[100%] mx-auto pb-[50px]  max-md:py-[48px]">
+      <div className="relative max-w-[1280px] overflow-hidden md:rounded-[20px] SCORPUtility_bg w-[100%] mx-auto pb-[50px]  max-md:py-[48px]">
         {/* Section Heading */}
         <div className="md:px-[60px] max-md:px-[20px] max-md:mb-15 max-md:border-b max-md:border-[#ffffff73]">
           <div className="flex max-md:flex-col justify-between items-center relative">
