@@ -13,9 +13,7 @@ import whiteGbg from "../assets/scorpion_casino/white_gbg.png";
 import imgtick from "../assets/scorpion_casino/image (2).webp";
 
 const AmbassadorsSection = ({ ambassadors }) => {
-  const [api, setApi] = useState(null);
-  const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
+
   // Default ambassadors data
   const defaultAmbassadors = [
     {
@@ -42,20 +40,6 @@ const AmbassadorsSection = ({ ambassadors }) => {
     },
   ];
 
-  const phasesData = ambassadors || defaultAmbassadors;
-
-  useEffect(() => {
-    if (!api) {
-      return;
-    }
-
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap());
-
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap());
-    });
-  }, [api]);
 
   const ambassadorsData = ambassadors || defaultAmbassadors;
 
@@ -74,7 +58,7 @@ const AmbassadorsSection = ({ ambassadors }) => {
           {ambassadorsData.map((ambassador, index) => (
             <div
               key={index}
-              className="group relative rounded-xl bg-linear-to-br from-[#1a1a1a] via-[#0f0f0f] to-black p-5 sm:p-6 md:p-8 border border-white/10"
+              className="group relative overflow-hidden rounded-xl bg-linear-to-br from-[#1a1a1a] via-[#0f0f0f] to-black p-5 sm:p-6 md:p-8 border border-white/10"
             >
               {/* Content Container */}
               <div className="flex flex-col items-center text-center relative z-10">
@@ -141,18 +125,17 @@ const AmbassadorsSection = ({ ambassadors }) => {
               align: "start",
               loop: false,
             }}
-            setApi={setApi}
             className="w-full"
           >
             <CarouselContent className="-ml-4 md:-ml-6">
               {ambassadorsData.map((ambassador, index) => (
                 <CarouselItem
                   key={index}
-                  className="pl-4 md:pl-6 basis-full rounded-[16.067px] sm:basis-1/2 lg:basis-[28%] xl:basis-[28%]"
+                  className=" pl-4 md:pl-6 basis-full rounded-[16.067px] sm:basis-1/2 lg:basis-[28%] xl:basis-[28%]"
                 >
                   <div
                     key={index}
-                    className="group relative rounded-xl bg-linear-to-br from-[#1a1a1a] via-[#0f0f0f] to-black p-5 sm:p-6 md:p-8 border border-white/10"
+                    className="group !overflow-hidden relative rounded-xl bg-linear-to-br from-[#1a1a1a] via-[#0f0f0f] to-black p-5 sm:p-6 md:p-8 border border-white/10"
                   >
                     {/* Content Container */}
                     <div className="flex flex-col items-center text-center relative z-10">
@@ -211,7 +194,7 @@ const AmbassadorsSection = ({ ambassadors }) => {
                       alt="white gbg"
                       className="absolute top-0 left-0 w-full h-full pointer-events-none"
                     />
-                    <div class="absolute bottom-0  w-full h-[1px] bg-gradient-to-r from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
+                    <div class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
                   </div>
                 </CarouselItem>
               ))}
@@ -220,7 +203,6 @@ const AmbassadorsSection = ({ ambassadors }) => {
             <CarouselPrevious className="hidden md:flex" />
             <CarouselNext className="hidden md:flex" />
 
-            {/* Mobile Navigation Arrows with Dots - Below carousel */}
             <div className="flex md:hidden justify-center items-center gap-4 mt-8">
               <CarouselPrevious className="static! transform-none! h-10 w-10" />
               <CarouselNext className="static! transform-none! h-10 w-10" />

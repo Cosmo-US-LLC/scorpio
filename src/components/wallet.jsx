@@ -219,11 +219,11 @@ const Wallet = ({ onTabChange }) => {
         }}
       >
         <p className="md:!text-[14px] max-md:!text-[13px] max-md:pr-[2px]">
-          Presale Price = <span className="text_gradient">$0.055</span>
+          Presale Price = <span className="font-[700] text_gradient">$0.055</span>
         </p>
         <p className="md:!text-[14px] max-md:!text-[13px]">|</p>
         <p className="md:!text-[14px] max-md:!text-[13px] max-md:pl-[2px]">
-          Listing Price = <span className="text_gradient">$0.15</span>
+          Listing Price = <span className="font-[700] text_gradient">$0.15</span>
         </p>
       </div>
 
