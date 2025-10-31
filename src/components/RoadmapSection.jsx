@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+
 import {
   Carousel,
   CarouselContent,
@@ -14,10 +14,7 @@ import card_icon4 from "../assets/Roadmap/road_card (1).webp";
 import tick from "../assets/Roadmap/tick.webp";
 
 const RoadmapSection = ({ phases }) => {
-  const [api, setApi] = useState(null);
-  const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
-  // Default roadmap phases data
+ 
   const defaultPhases = [
     {
       id: 1,
@@ -80,18 +77,7 @@ const RoadmapSection = ({ phases }) => {
 
   const phasesData = phases || defaultPhases;
 
-  useEffect(() => {
-    if (!api) {
-      return;
-    }
-
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap());
-
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap());
-    });
-  }, [api]);
+ 
 
   const getStatusBadge = (status) => {
     const badges = {
@@ -155,7 +141,6 @@ const RoadmapSection = ({ phases }) => {
               align: "start",
               loop: false,
             }}
-            setApi={setApi}
             className="w-full"
           >
             <CarouselContent className="-ml-4 md:-ml-6">

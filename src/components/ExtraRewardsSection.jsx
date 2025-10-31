@@ -274,7 +274,7 @@ const ExtraRewardsSection = () => {
                 className="btn-primary w-full">Buy $SCORP2.0</button>
 
                 <p className="!leading-[111%] pt-4 text-center !text-[14px]">
-                  You will get the membership NFT <br /> automatically when you
+                 (You will get the membership NFT <br /> automatically when you
                   purchase $SCORP)
                 </p>
               </div>
