@@ -231,7 +231,7 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-[#0B0D10] relative flex flex-col justify-between h-[90vh] text-center space-y-3 py-12 font-inter text-sm">
+        <div className="md:hidden bg-[#0B0D10] relative flex flex-col justify-between h-[100vh] text-center space-y-3 pt-12 pb-30 font-inter text-sm">
           <div
             className="absolute bottom-[-20%]  z-[1] right-[-70%] mx-auto"
             style={{
@@ -332,7 +332,8 @@ export default function Navbar() {
               )}
             </div>
           </div>
-          <div className="space-y-2 relative z-[9]">
+         <div className="space-y-[25px]">
+           <div className="space-y-2 relative z-[9]">
             <h5>Join Our Social </h5>
             <div className="flex justify-center items-center space-x-2">
               <a
@@ -374,6 +375,7 @@ export default function Navbar() {
               All Rights Reserved.
             </p>
           </div>
+         </div>
         </div>
       )}
     </header>

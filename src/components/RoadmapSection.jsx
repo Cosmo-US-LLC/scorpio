@@ -126,7 +126,7 @@ const RoadmapSection = ({ phases }) => {
   };
 
   return (
-    <section className="relative w-full py-12 md:py-16 px-4 md:px-6 lg:px-12 Roadmap_bg">
+    <section className="relative w-full max-md:pt-4 py-0 md:py-16 px-4 md:px-6 lg:px-12 Roadmap_bg">
       <div className="max-w-[1280px] mx-auto">
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-center">Roadmap</h2>
