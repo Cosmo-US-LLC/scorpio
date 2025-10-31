@@ -12,13 +12,13 @@ const PressMediaSection = ({ pressItems }) => {
         '"This gaming-related project’s inviting atmosphere and excellent rewards make it asuccess. As such, many analysts think it could be the next billion-dollar crypto."',
     },
     {
-      name: "cryptonews.com",
+      name: "Crypto News",
       logo: logo2,
       quote:
         '"Overall, Scorpion Casino is one of the only projects that can provide a sustainable passive income to holders - regardless of the overall market conditions."',
     },
     {
-      name: "CITYPAPER",
+      name: "CityPaper",
       logo: logo3,
       quote:
         "Scorpion Casino is on a mission to create the world’s leading crypto-based online casino, where holders of its token can earn a daily yield based on the casino’s performance.",
@@ -59,15 +59,18 @@ const PressMediaSection = ({ pressItems }) => {
                   borderRadius: "17.844px",
                   backdropFilter: "blur(8.922223091125488px)",
                 }}
-            >
+                >
               <div className="absolute bottom-0 w-full h-[1px] bg-gradient-to-r from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
 
-              <div className="flex items-center justify-center mb-5 md:mb-6  sm:h-24 w-full pb-3 md:pb-10 border-b border-gray-600 relative z-10">
-                <img
+              <div className="flex items-center justify-center mb-5 md:mb-6  sm:h-24 w-full pb-3 md:pb-10 border-b border-[#36383F] relative z-10">
+               <div className="flex flex-col items-center">
+                 <img
                   src={item.logo}
                   alt={`${item.name} logo`}
                   className="max-h-[90px] max-w-full "
                 />
+                <h4 className="text-center md:hidden pt-[29px]">{item.name}</h4>
+               </div>
               </div>
 
               {/* Quote */}

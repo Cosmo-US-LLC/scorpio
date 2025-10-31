@@ -10,21 +10,21 @@ const HowDoesItSection = () => {
       id: 1,
       title: "Buy-Back System",
       description:
-        "Scorpion Casino uses a smart contract to purchase $SCORP2.0 tokens from public exchanges on a daily basis. These purchases are financed through a portion of the Casino and Betting revenue. During this buying process the $SCORP price goes automatically up.",
+        "Scorpion Casino uses a smart contract to purchase $SCORP2.0 tokens from public exchanges on a daily basis. These purchases are financed through a portion of the Casino and Betting revenue. <br/> During this buying process the $SCORP price goes automatically up.",
       icon: trusticon1,
     },
     {
       id: 2,
       title: "Automatic Token Burn",
       description:
-        "The smart contract automatically burns half of the purchased $SCORP2.0 tokens each day. This process reduces the circulating $SCORP2.0 supply, which makes the remaining tokens more valuable.",
+        "The smart contract automatically burns half of the purchased $SCORP2.0 tokens each day. <br/> This process reduces the circulating $SCORP2.0 supply, which makes the remaining tokens more valuable.",
       icon: trusticon2,
     },
     {
       id: 3,
       title: "Daily Profits",
       description:
-        "The other half of the tokens obtained through the buyback process will be automatically transferred to the Scorpion Staking Pool. This staking pool then distributes rewards daily to $SCORP2.0 holders based on the number of tokens they hold, generating daily profits for them.",
+        "The other half of the tokens obtained through the buyback process will be automatically transferred to the Scorpion Staking Pool. <br/> This staking pool then distributes rewards daily to $SCORP2.0 holders based on the number of tokens they hold, generating daily profits for them.",
       icon: trusticon3,
     },
   ];
@@ -36,9 +36,9 @@ const HowDoesItSection = () => {
           <h2 className="text-center mb-4">
             How Does It <span className="faded_heading">Work</span>?
           </h2>
-          <p className="text-center">
+          <p className="text-center mob_br">
             Curious about how the Scorpion Casino ecosystem works? Here’s a
-            simplified explanation. Scorpion Casino is a global Crypto Casino
+            simplified explanation. <br /> Scorpion Casino is a global Crypto Casino
             and Sports Betting platform generating daily revenue. This income
             drives the growth of the $SCORP2.0 Token through an integrated daily
             Buy-Back, Burn and Reward System.
@@ -91,8 +91,9 @@ const HowDoesItSection = () => {
 
                 <h3 className="mb-[20px] text_gradient">{badge.title}</h3>
 
-                <p className="border-t-[1px] border-[#36383F] pt-[20px]">
-                  {badge.description}
+                <p className="border-t-[1px] mob_br border-[#36383F] pt-[20px]"
+                 dangerouslySetInnerHTML={{ __html: badge.description }}
+                >
                 </p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
