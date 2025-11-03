@@ -144,9 +144,9 @@ const RoadmapSection = ({ phases }) => {
             className="w-full"
           >
             <CarouselContent className="-ml-4 md:-ml-6">
-              {phasesData.map((phase) => (
+              {phasesData.map((items) => (
                 <CarouselItem
-                  key={phase.id}
+                  key={items.id}
                   className="pl-4 md:pl-6 basis-full rounded-[16.067px] sm:basis-1/2 lg:basis-[28%] xl:basis-[28%]"
                 >
                   <div className="h-full relative">
@@ -161,22 +161,22 @@ const RoadmapSection = ({ phases }) => {
                       <div className="">
                         <img
                           className="mb-3 md:mb-4 max-w-[70px] sm:max-w-[80px] md:max-w-[88.367px]"
-                          src={phase.icon}
-                          alt={phase.title}
+                          src={items.icon}
+                          alt={items.title}
                         />
                         <h6 className="text_gradient text-sm md:text-base">
-                          {phase.phase}
+                          {items.phase}
                         </h6>
 
                         <h4 className="uppercase text-start text_gradient text-base md:text-lg">
-                          {phase.title}
+                          {items.title}
                         </h4>
                       </div>
                       <div className="h-px bg-[#36383F] w-full mt-2 md:mt-3 mb-2 md:mb-3"></div>
 
                       <div className="flex-1 mb-4 md:mb-6">
                         <ul className="space-y-1 md:space-y-1">
-                          {phase.tasks.map((task, index) => (
+                          {items.tasks.map((task, index) => (
                             <li key={index} className="flex items-start py-1 gap-x-3">
                               {task.completed ? (
                                 <>
@@ -206,7 +206,7 @@ const RoadmapSection = ({ phases }) => {
                       </div>
 
                       <div className="flex justify-center sm:justify-end">
-                        {getStatusBadge(phase.status)}
+                        {getStatusBadge(items.status)}
                       </div>
 
                       <svg
@@ -261,8 +261,8 @@ const RoadmapSection = ({ phases }) => {
 
             {/* Mobile Navigation Arrows with Dots - Below carousel */}
             <div className="flex md:hidden justify-center items-center gap-4 mt-8">
-              <CarouselPrevious className="static! transform-none! h-10 w-10" />
-              <CarouselNext className="static! transform-none! h-10 w-10" />
+              <CarouselPrevious className="!static !transform-none h-10 w-10" />
+                <CarouselNext className="!static !transform-none h-10 w-10" />
             </div>
           </Carousel>
         </div>

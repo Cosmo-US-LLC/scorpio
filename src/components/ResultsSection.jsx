@@ -12,7 +12,7 @@ import resulticon3 from "../assets/results/resulticon (3).webp";
 import resulticon4 from "../assets/results/resulticon (2).webp";
 import resulticon5 from "../assets/results/resulticon (1).webp";
 
-const ResultsSection = ({ phases }) => {
+const ResultsSection = () => {
 
   const results = [
     {
@@ -133,9 +133,9 @@ const ResultsSection = ({ phases }) => {
 
             {/* Results Cards - Desktop Grid */}
             <div className="max-md:hidden  grid grid-cols-1 md:grid md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-[20px] px-[15px]">
-              {results.map((result) => (
+              {results.map((items) => (
                 <div
-                  key={result.id}
+                  key={items.id}
                   className=" overflow-hidden px-6 py-10 flex flex-col items-center text-center "
                   style={{
                     borderRadius: "17.844px",
@@ -146,13 +146,13 @@ const ResultsSection = ({ phases }) => {
                 >
                   {/* Icon */}
                   <img
-                    src={result.icon}
+                    src={items.icon}
                     className="w-[98.144px] h-[98.144px]"
-                    alt={result.title}
+                    alt={items.title}
                   />
 
                   <h4 className="text-center text_gradient mt-[36px]">
-                    {result.title}
+                    {items.title}
                   </h4>
 
                   <div
@@ -164,7 +164,7 @@ const ResultsSection = ({ phases }) => {
                     {" "}
                   </div>
 
-                  <p className="">{result.description}</p>
+                  <p className="">{items.description}</p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     // width="233"
@@ -229,13 +229,13 @@ const ResultsSection = ({ phases }) => {
                 className="w-full"
               >
                 <CarouselContent className="-ml-4 md:-ml-6">
-                  {results.map((result) => (
+                  {results.map((items) => (
                     <CarouselItem
-                      key={result.id}
+                      key={items.id}
                       className="pl-4 md:pl-6 basis-full rounded-[16.067px] sm:basis-1/2"
                     >
                       <div
-                        key={result.id}
+                        key={items.id}
                         className=" overflow-hidden px-6 py-10 flex flex-col items-center text-center "
                         style={{
                           borderRadius: "17.844px",
@@ -246,13 +246,13 @@ const ResultsSection = ({ phases }) => {
                       >
                         {/* Icon */}
                         <img
-                          src={result.icon}
+                          src={items.icon}
                           className="w-[98.144px] h-[98.144px]"
-                          alt={result.title}
+                          alt={items.title}
                         />
 
                         <h4 className="text-center text_gradient mt-[36px]">
-                          {result.title}
+                          {items.title}
                         </h4>
 
                         <div
@@ -264,7 +264,7 @@ const ResultsSection = ({ phases }) => {
                           {" "}
                         </div>
 
-                        <p className="">{result.description}</p>
+                        <p className="">{items.description}</p>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="100%"
@@ -324,8 +324,8 @@ const ResultsSection = ({ phases }) => {
 
                 {/* Mobile Navigation Arrows with Dots - Below carousel */}
                 <div className="flex md:hidden justify-center items-center gap-8 mt-8">
-                  <CarouselPrevious className="static! transform-none! h-10 w-10" />
-                  <CarouselNext className="static! transform-none! h-10 w-10" />
+                  <CarouselPrevious className="!static !transform-none h-10 w-10" />
+                <CarouselNext className="!static !transform-none h-10 w-10" />
                 </div>
               </Carousel>
             </div>
