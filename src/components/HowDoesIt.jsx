@@ -10,21 +10,21 @@ const HowDoesItSection = () => {
       id: 1,
       title: "Buy-Back System",
       description:
-        "Scorpion Casino uses a smart contract to purchase $SCORP2.0 tokens from public exchanges on a daily basis. These purchases are financed through a portion of the Casino and Betting revenue. <br/> During this buying process the $SCORP price goes automatically up.",
+        "Scorpion Casino uses a smart contract to purchase $SCORP2.0 tokens from public exchanges on a daily basis. These purchases are financed through a portion of the Casino and Betting revenue.  During this buying process the $SCORP price goes automatically up.",
       icon: trusticon1,
     },
     {
       id: 2,
       title: "Automatic Token Burn",
       description:
-        "The smart contract automatically burns half of the purchased $SCORP2.0 tokens each day. <br/> This process reduces the circulating $SCORP2.0 supply, which makes the remaining tokens more valuable.",
+        "The smart contract automatically burns half of the purchased $SCORP2.0 tokens each day. This process reduces the circulating $SCORP2.0 supply, which makes the remaining tokens more valuable.",
       icon: trusticon2,
     },
     {
       id: 3,
       title: "Daily Profits",
       description:
-        "The other half of the tokens obtained through the buyback process will be automatically transferred to the Scorpion Staking Pool. <br/> This staking pool then distributes rewards daily to $SCORP2.0 holders based on the number of tokens they hold, generating daily profits for them.",
+        "The other half of the tokens obtained through the buyback process will be automatically transferred to the Scorpion Staking Pool. This staking pool then distributes rewards daily to $SCORP2.0 holders based on the number of tokens they hold, generating daily profits for them.",
       icon: trusticon3,
     },
   ];
