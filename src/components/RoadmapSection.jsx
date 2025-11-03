@@ -138,8 +138,8 @@ const RoadmapSection = ({ phases }) => {
         <div className="relative px-0 sm:px-4 md:px-12">
           <Carousel
             opts={{
-              align: "start",
-              loop: false,
+             align: "start",
+                loop: true,
             }}
             className="w-full"
           >

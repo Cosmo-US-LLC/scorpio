@@ -66,7 +66,7 @@ const ExchangeLaunchSection = () => {
               >
                 <div
                   className={`flex flex-col  items-center justify-center max-md:h-[100px] md:h-[195px] w-full ${
-      exchange.id <= 4 ? "blur-[10px]" : "blur-0"
+      exchange.id == 4 ? "blur-[10px]" : "blur-[0px]"
     }`}
                 >
                   <img src={exchange.logo} alt="" />

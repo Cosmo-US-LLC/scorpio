@@ -224,7 +224,7 @@ const ResultsSection = ({ phases }) => {
               <Carousel
                 opts={{
                   align: "start",
-                  loop: false,
+                loop: true,
                 }}
                 className="w-full"
               >
