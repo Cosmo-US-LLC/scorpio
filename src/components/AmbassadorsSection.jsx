@@ -13,7 +13,6 @@ import whiteGbg from "../assets/scorpion_casino/white_gbg.png";
 import imgtick from "../assets/scorpion_casino/image (2).webp";
 
 const AmbassadorsSection = ({ ambassadors }) => {
-
   const defaultAmbassadors = [
     {
       name: "COKI RAMIREZ",
@@ -39,7 +38,6 @@ const AmbassadorsSection = ({ ambassadors }) => {
     },
   ];
 
-
   const ambassadorsData = ambassadors || defaultAmbassadors;
 
   return (
@@ -54,7 +52,7 @@ const AmbassadorsSection = ({ ambassadors }) => {
 
         {/* Ambassador Cards */}
         <div className="max-md:hidden grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full">
-          {ambassadorsData.map((ambassador, index) => (
+          {ambassadorsData.map((item, index) => (
             <div
               key={index}
               className="group relative overflow-hidden rounded-xl bg-linear-to-br from-[#1a1a1a] via-[#0f0f0f] to-black p-5 sm:p-6 md:p-8 border border-white/10"
@@ -65,8 +63,8 @@ const AmbassadorsSection = ({ ambassadors }) => {
                 <div className="relative">
                   <div className="h-24 w-24 md:h-28 md:w-28 rounded-full ring-2 ring-[#F7D774] ring-offset-2 ring-offset-black shadow-[0_0_20px_rgba(247,215,116,0.3)] overflow-hidden">
                     <img
-                      src={ambassador.avatar}
-                      alt={ambassador.name}
+                      src={item.avatar}
+                      alt={item.name}
                       className="w-full h-full object-cover"
                       onError={(e) => {
                         e.target.style.display = "none";
@@ -85,28 +83,28 @@ const AmbassadorsSection = ({ ambassadors }) => {
                 {/* Name with Verification Badge */}
                 <div className="flex items-center gap-2 mt-4 mb-2">
                   <h4 className=" text_gradient  font-bold text-white uppercase tracking-wide">
-                    {ambassador.name}
+                    {item.name}
                   </h4>
 
-                  {ambassador.verified && (
+                  {item.verified && (
                     <img src={imgtick} className="w-[20.86px]" alt="" />
                   )}
                 </div>
 
                 {/* Followers/Status */}
-                <p className=" text-[#fff] mb-3">{ambassador.followers}</p>
+                <p className=" text-[#fff] mb-3">{item.followers}</p>
 
                 {/* Description */}
                 <p className=" md:text-base text-[#fff] mb-4">
-                  {ambassador.description}
+                  {item.description}
                 </p>
 
                 {/* CTA Link */}
                 <a
-                  href={ambassador.link.url}
+                  href={item.link.url}
                   className="text-[14px] text-[#fff] hover:text-[#E0AA3E] underline transition-colors duration-200  px-4 -mx-4"
                 >
-                  {ambassador.link.text}
+                  {item.link.text}
                 </a>
               </div>
               <img
@@ -121,13 +119,13 @@ const AmbassadorsSection = ({ ambassadors }) => {
         <div className="relative md:hidden px-0 sm:px-4 md:px-12">
           <Carousel
             opts={{
-             align: "start",
-                loop: true,
+              align: "start",
+              loop: true,
             }}
             className="w-full"
           >
             <CarouselContent className="-ml-4 md:-ml-6">
-              {ambassadorsData.map((ambassador, index) => (
+              {ambassadorsData.map((item, index) => (
                 <CarouselItem
                   key={index}
                   className=" pl-4 md:pl-6 basis-full rounded-[16.067px] sm:basis-1/2 lg:basis-[28%] xl:basis-[28%]"
@@ -142,8 +140,8 @@ const AmbassadorsSection = ({ ambassadors }) => {
                       <div className="relative">
                         <div className="h-24 w-24 md:h-28 md:w-28 rounded-full ring-2 ring-[#F7D774] ring-offset-2 ring-offset-black shadow-[0_0_20px_rgba(247,215,116,0.3)] overflow-hidden">
                           <img
-                            src={ambassador.avatar}
-                            alt={ambassador.name}
+                            src={item.avatar}
+                            alt={item.name}
                             className="w-full h-full object-cover"
                             onError={(e) => {
                               e.target.style.display = "none";
@@ -162,30 +160,28 @@ const AmbassadorsSection = ({ ambassadors }) => {
                       {/* Name with Verification Badge */}
                       <div className="flex items-center gap-2 mt-4 mb-2">
                         <h4 className=" text_gradient  font-bold text-white uppercase tracking-wide">
-                          {ambassador.name}
+                          {item.name}
                         </h4>
 
-                        {ambassador.verified && (
+                        {item.verified && (
                           <img src={imgtick} className="w-[20.86px]" alt="" />
                         )}
                       </div>
 
                       {/* Followers/Status */}
-                      <p className=" text-[#fff] mb-3">
-                        {ambassador.followers}
-                      </p>
+                      <p className=" text-[#fff] mb-3">{item.followers}</p>
 
                       {/* Description */}
                       <p className=" md:text-base text-[#fff] mb-4">
-                        {ambassador.description}
+                        {item.description}
                       </p>
 
                       {/* CTA Link */}
                       <a
-                        href={ambassador.link.url}
+                        href={item.link.url}
                         className="text-[14px] text-[#fff] hover:text-[#E0AA3E] underline transition-colors duration-200  px-4 -mx-4"
                       >
-                        {ambassador.link.text}
+                        {item.link.text}
                       </a>
                     </div>
                     <img
@@ -203,8 +199,8 @@ const AmbassadorsSection = ({ ambassadors }) => {
             <CarouselNext className="hidden md:flex" />
 
             <div className="flex md:hidden justify-center items-center gap-4 mt-8">
-              <CarouselPrevious className="static! transform-none! h-10 w-10" />
-              <CarouselNext className="static! transform-none! h-10 w-10" />
+              <CarouselPrevious className="!static !transform-none h-10 w-10" />
+              <CarouselNext className="!static !transform-none h-10 w-10" />
             </div>
           </Carousel>
         </div>
