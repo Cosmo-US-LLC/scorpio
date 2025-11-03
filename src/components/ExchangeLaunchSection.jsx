@@ -65,13 +65,15 @@ const ExchangeLaunchSection = () => {
                 }}
               >
                 <div
-                  className={`flex flex-col  items-center justify-center max-md:h-[100px] md:h-[195px] w-full `}
+                  className={`flex flex-col  items-center justify-center max-md:h-[100px] md:h-[195px] w-full ${
+      exchange.id <= 4 ? "blur-[10px]" : "blur-0"
+    }`}
                 >
                   <img src={exchange.logo} alt="" />
                 </div>
               </div>
               <div
-                className="absolute -left-1 z-[-99] -bottom-13 rounded-[335.71px] w-[335.71px] h-[53.164px]"
+                className="absolute -left-1 z-[-99] -bottom-14 rounded-[335.71px] w-[335.71px] h-[53.164px]"
                 style={{
                   background: "",
                   boxShadow: "0 4px 100px #FFBE40",
