@@ -21,7 +21,7 @@ const PressMediaSection = ({ pressItems }) => {
       name: "CityPaper",
       logo: logo3,
       quote:
-        "Scorpion Casino is on a mission to create the world’s leading crypto-based online casino, where holders of its token can earn a daily yield based on the casino’s performance.",
+        '"Scorpion Casino is on a mission to create the world’s leading crypto-based online casino, where holders of its token can earn a daily yield based on the casino’s performance."',
     },
   ];
 
