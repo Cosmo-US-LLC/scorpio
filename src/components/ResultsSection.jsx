@@ -224,11 +224,24 @@ const ResultsSection = () => {
               <Carousel
                 opts={{
                   align: "start",
-                loop: true,
+                loop: false,
                 }}
                 className="w-full"
+                style={{
+      WebkitTransform: "translateZ(0)",
+      transform: "translateZ(0)",
+      WebkitOverflowScrolling: "touch",
+    }}
               >
-                <CarouselContent className="-ml-4 md:-ml-6">
+                <CarouselContent className="-ml-4 md:-ml-6"
+                style={{
+        WebkitOverflowScrolling: "touch",
+        scrollSnapType: "x mandatory",
+        WebkitScrollSnapType: "x mandatory",
+        WebkitTransform: "translateZ(0)",
+        transform: "translateZ(0)",
+      }}
+                >
                   {results.map((items) => (
                     <CarouselItem
                       key={items.id}
@@ -323,10 +336,10 @@ const ResultsSection = () => {
                 
 
                 {/* Mobile Navigation Arrows with Dots - Below carousel */}
-                <div className="flex md:hidden justify-center items-center gap-8 mt-8">
-                  <CarouselPrevious className="!static !transform-none h-10 w-10" />
+              <div className="flex md:hidden justify-center gap-4 mt-8">
+                <CarouselPrevious className="!static !transform-none h-10 w-10" />
                 <CarouselNext className="!static !transform-none h-10 w-10" />
-                </div>
+              </div>
               </Carousel>
             </div>
 
