@@ -285,14 +285,13 @@ const ExtraRewardsSection = () => {
         .slider-custom::-webkit-slider-thumb {
           -webkit-appearance: none;
           appearance: none;
-          width: 15px !important;
+          width: 18px !important;
           height: 18px !important;
           border-radius: 50%;
            background: #00000002;
           cursor: pointer;
           transition: transform 0.2s ease;
-          // box-shadow: 0 0 15px #fff;
-          // border: 2px solid #fff;
+          box-shadow: 0 0 0px #fff !important;
         }
 
         .slider-custom::-webkit-slider-thumb:hover {
@@ -303,13 +302,13 @@ const ExtraRewardsSection = () => {
         .slider-custom::-moz-range-thumb {
           -webkit-appearance: none;
           appearance: none;
-          width: 15px !important;
+          width: 18px !important;
           height: 18px !important;
           border-radius: 50%;
            background: #00000002;
           cursor: pointer;
           transition: transform 0.2s ease;
-          // box-shadow: 0 0 15px #ddd;
+          box-shadow: 0 0 0px #ddd !important;
         }
 
         .slider-custom::-moz-range-thumb:hover {
