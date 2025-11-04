@@ -39,7 +39,7 @@ export default function Footer() {
               Step into the world of casinos, high stakes, and incredible
               rewards by joining the Scorpion community today! Experience the
               unmatched privileges and benefits of being part of the world's
-              first social online gambling ecosystem powered by $SCORP.
+              first social online gambling ecosystem powered by $SCORP2.0.
             </p>
           </div>
 

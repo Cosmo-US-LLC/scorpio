@@ -7,7 +7,7 @@ import card5 from "../assets/Rewards/card (1).webp";
 import tick from "../assets/Rewards/tick.webp";
 
 const ExtraRewardsSection = () => {
-  const [spendAmount, setSpendAmount] = useState(56256);
+  const [spendAmount, setSpendAmount] = useState(1000);
 
   const getTierInfo = (amount) => {
     if (amount >= 100000) {
@@ -70,7 +70,7 @@ const ExtraRewardsSection = () => {
       return {
         tier: "Bronze",
         nft: "Bronze Scorpion NFT",
-        threshold: "$58,256",
+        threshold: "$1,000",
         card: card1,
         rewards: [
           { text: "10% $SCORP2.0 Bonus", tick: true },
@@ -227,54 +227,41 @@ const ExtraRewardsSection = () => {
                         </h4>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 16 16"
+                          width="15"
+                          height="15"
+                          viewBox="0 0 22 22"
                           fill="none"
+                          class="cursor-pointer"
                         >
                           <path
-                            d="M7.64062 4.93652V8.28097"
-                            stroke="#8D8F8F"
-                            stroke-width="1.14667"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M13.4266 5.46614V9.82345C13.4266 10.5369 13.0443 11.1995 12.4264 11.5626L8.6424 13.7476C8.02447 14.1044 7.26001 14.1044 6.63572 13.7476L2.85172 11.5626C2.23379 11.2058 1.85156 10.5433 1.85156 9.82345V5.46614C1.85156 4.75266 2.23379 4.09011 2.85172 3.727L6.63572 1.54197C7.25364 1.18523 8.0181 1.18523 8.6424 1.54197L12.4264 3.727C13.0443 4.09011 13.4266 4.74629 13.4266 5.46614Z"
-                            stroke="#8D8F8F"
-                            stroke-width="1.14667"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M7.64062 10.3203V10.384"
-                            stroke="#8D8F8F"
-                            stroke-width="1.52889"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
+                            d="M10.5 0C16.023 0 20.5 4.477 20.5 10C20.5 15.523 16.023 20 10.5 20C4.977 20 0.5 15.523 0.5 10C0.5 4.477 4.977 0 10.5 0ZM10.5 1.395C8.21781 1.395 6.0291 2.3016 4.41535 3.91535C2.8016 5.5291 1.895 7.71781 1.895 10C1.895 12.2822 2.8016 14.4709 4.41535 16.0847C6.0291 17.6984 8.21781 18.605 10.5 18.605C12.7822 18.605 14.9709 17.6984 16.5847 16.0847C18.1984 14.4709 19.105 12.2822 19.105 10C19.105 7.71781 18.1984 5.5291 16.5847 3.91535C14.9709 2.3016 12.7822 1.395 10.5 1.395ZM10.355 7.21C10.74 7.21 11.052 7.523 11.052 7.908V15.466C11.0452 15.6464 10.9687 15.8172 10.8386 15.9424C10.7086 16.0676 10.535 16.1376 10.3545 16.1376C10.174 16.1376 10.0004 16.0676 9.87037 15.9424C9.74031 15.8172 9.66383 15.6464 9.657 15.466V7.907C9.657 7.522 9.969 7.21 10.355 7.21ZM10.383 4.419C10.6297 4.419 10.8662 4.51698 11.0406 4.69139C11.215 4.8658 11.313 5.10235 11.313 5.349C11.313 5.59565 11.215 5.8322 11.0406 6.00661C10.8662 6.18102 10.6297 6.279 10.383 6.279C10.1363 6.279 9.8998 6.18102 9.72539 6.00661C9.55098 5.8322 9.453 5.59565 9.453 5.349C9.453 5.10235 9.55098 4.8658 9.72539 4.69139C9.8998 4.51698 10.1363 4.419 10.383 4.419Z"
+                            fill="white"
+                          ></path>
                         </svg>
                       </div>
                     </div>
                   ))}
                 </div>
-                <button 
+                <button
                   onClick={(e) => {
-                e.preventDefault();
-                const target = document.querySelector("#wallet");
-                if (target) {
-                  const yOffset = 20;
-                  const y =
-                    target.getBoundingClientRect().top +
-                    window.scrollY +
-                    yOffset;
-                  window.scrollTo({ top: y, behavior: "smooth" });
-                }
-              }}
-                className="btn-primary w-full">Buy $SCORP2.0</button>
+                    e.preventDefault();
+                    const target = document.querySelector("#wallet");
+                    if (target) {
+                      const yOffset = 20;
+                      const y =
+                        target.getBoundingClientRect().top +
+                        window.scrollY +
+                        yOffset;
+                      window.scrollTo({ top: y, behavior: "smooth" });
+                    }
+                  }}
+                  className="btn-primary w-full"
+                >
+                  Buy $SCORP2.0
+                </button>
 
                 <p className="!leading-[111%] pt-4 text-center !text-[14px]">
-                 (You will get the membership NFT <br /> automatically when you
+                  (You will get the membership NFT <br /> automatically when you
                   purchase $SCORP)
                 </p>
               </div>

@@ -7,7 +7,7 @@ const BenefitsSection = () => {
   const benefits = [
     {
       id: 1,
-      title: "LOWEST $SCORP2.0 PRICE",
+      title: "LOWEST <br/> $SCORP2.0 PRICE",
       description:
         "During the pre-sale, you can buy $SCORP2.0 at its lowest price before it launches on centralised and decentralised exchanges.",
       icon: benefitsicon1,
@@ -35,7 +35,7 @@ const BenefitsSection = () => {
     },
     {
       id: 4,
-      title: "DAILY PASSIVE STAKING INCOME",
+      title: "DAILY PASSIVE <br/> STAKING INCOME",
       description:
         "Get daily passive staking income automatically added to your wallet - even during the pre-sale period!",
       icon: benefitsicon4,
@@ -93,8 +93,9 @@ const BenefitsSection = () => {
                 </div>
               </div>
 
-              <h4 className="text_gradient text-center pb-[15px]">
-                {benefit.title}
+              <h4 className="text_gradient text-center pb-[15px]"
+               dangerouslySetInnerHTML={{ __html: benefit.title }}
+              >
               </h4>
 
               <p className=" text-center">{benefit.description}</p>

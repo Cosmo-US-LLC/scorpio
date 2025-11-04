@@ -193,27 +193,27 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
 
                       {/* Wallet */}
                       <td
-                        className={`px-4 max-md:px-1 max-md:py-2 max-md:text-[14px]  py-4 !text-center text-sm font-medium ${textColor}`}
+                        className={`px-4 max-md:px-1 max-md:py-2 max-md:text-[14px]  py-4 !text-center text-sm font-bold ${textColor}`}
                       >
                         {entry.wallet}
                       </td>
 
                       {/* TX Count */}
                       <td
-                        className={` max-md:hidden px-4 max-md:px-1 max-md:py-2 max-md:text-[14px] py-4 text-center text-sm  ${textColor}`}
+                        className={` max-md:hidden px-4 max-md:px-1 max-md:py-2 max-md:text-[14px] py-4 text-center text-sm font-bold  ${textColor}`}
                       >
                         {entry.txCount}
                       </td>
 
                       {/* Total Buy */}
                       <td
-                        className={`px-4 max-md:px-1 max-md:py-2 max-md:text-[14px] py-4 text-sm !text-center font-semibold ${textColor}`}
+                        className={`px-4 max-md:px-1 max-md:py-2 max-md:text-[14px] py-4 text-sm !text-center font-bold ${textColor}`}
                       >
                         {entry.totalBuy}
                       </td>
 
                       {/* NFT */}
-                      <td className="max-md:hidden px-4 max-md:px-1 max-md:py-2 max-md:text-[14px] py-4 text-sm !text-center">
+                      <td className="max-md:hidden px-4 max-md:px-1 max-md:py-2 max-md:text-[14px] py-4 text-sm !text-center font-bold">
                         {entry.nft}
                       </td>
 
