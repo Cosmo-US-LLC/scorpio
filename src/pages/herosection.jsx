@@ -31,11 +31,11 @@ function Herosection() {
             <div className="flex items-center pt-2 max-md:space-x-[20px] md:space-x-[34px]">
                 <div className="space-y-[10px]">
                  <p className="text-[#fff] !font-[600]">Audited by</p>  
-                 <img src={auditedLogo} className="max-md:max-w-[122.618px] md:max-h-[43.321px]" alt="Audited by" /> 
+                 <img src={auditedLogo} className="max-md:max-w-[152.618px] md:max-h-[43.321px]" alt="Audited by" /> 
                 </div>
                 <div className="space-y-[10px]">
                  <p className="text-[#fff] !font-[600]">Licensed and Regulated by</p>  
-                 <img src={licensedLogo} className="max-md:max-w-[116.837px] max-h-[43.321px]" alt="Licensed" /> 
+                 <img src={licensedLogo} className="max-md:max-w-[156.837px] max-h-[43.321px]" alt="Licensed" /> 
                 </div>
             </div>
             <div className="pt-4 md:pt-17">

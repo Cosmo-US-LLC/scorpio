@@ -18,7 +18,7 @@ const BenefitsSection = () => {
       id: 2,
       title: "RECEIVE UP TO 40% CASINO CREDITS",
       description:
-        "Receive up to 40% free credits to play on Scorpion.Casino - no conditions or obligations attached!",
+        "Receive up to 40% free credits to play on Scorpion Casino, no conditions or obligations attached!",
       icon: benefitsicon2,
       height: "248px",
       width: "258.004px",
@@ -27,7 +27,7 @@ const BenefitsSection = () => {
       id: 3,
       title: "$250K GIVEAWAY PARTICIPATION",
       description:
-        "Participate in our 250k Giveaway and go all out to win big! This event is exclusively available for Pre-Sale buyers.",
+        "Participate in our 250k Giveaway and go all out to win big! This event is exclusively available <br/> for Pre-Sale buyers.",
       icon: benefitsicon3,
       height: "184px",
       width: "205.223px",
@@ -37,7 +37,7 @@ const BenefitsSection = () => {
       id: 4,
       title: "DAILY PASSIVE <br/> STAKING INCOME",
       description:
-        "Get daily passive staking income automatically added to your wallet - even during the pre-sale period!",
+        "Get daily passive staking income automatically added to your wallet, even during the pre-sale period!",
       icon: benefitsicon4,
       height: "199px",
       width: "206px",
@@ -60,7 +60,7 @@ const BenefitsSection = () => {
       ></div>
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center max-w-[725px] mx-auto max-md:mb-[90px] md:mb-[129px]">
-          <h2 className="">
+          <h2 className="max-md:max-w-[350px] mx-auto">
             <span className="text_gradient">Benefits</span> Of Buying{" "}
             <span className="text_gradient">$SCORP2.0</span> In The Pre-sale
           </h2>
@@ -98,7 +98,9 @@ const BenefitsSection = () => {
               >
               </h4>
 
-              <p className=" text-center">{benefit.description}</p>
+              <p className=" text-center mob_br"
+               dangerouslySetInnerHTML={{ __html: benefit.description }}
+              ></p>
             </div>
           ))}
         </div>

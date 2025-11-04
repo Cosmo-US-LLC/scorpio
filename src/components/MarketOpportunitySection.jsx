@@ -28,7 +28,7 @@ const MarketOpportunitySection = () => {
             <h6 className="text-xs sm:text-sm text-[#CACACA] md:text-base">
               Crypto Casino Market
             </h6>
-            <h6 className="font-bold text-xs sm:text-sm md:text-base">
+            <h6 className="!font-bold text-xs sm:text-sm md:text-base">
               $250 Million
             </h6>
           </div>
@@ -36,7 +36,7 @@ const MarketOpportunitySection = () => {
             <h6 className="text-xs sm:text-sm text-[#CACACA]  md:text-base">
               Global Online Gambling Industry
             </h6>
-            <h6 className="font-bold text-xs sm:text-sm md:text-base">
+            <h6 className="!font-bold text-xs sm:text-sm md:text-base">
              $263.3 Billion
             </h6>
           </div>

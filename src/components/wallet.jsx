@@ -218,18 +218,18 @@ const Wallet = ({ onTabChange }) => {
           background: "rgba(60, 60, 60, 0.50)",
         }}
       >
-        <p className="md:!text-[14px] max-md:!text-[13px] max-md:pr-[2px]">
+        <p className="md:!text-[14px] max-md:!text-[13px] font-[700] max-md:pr-[2px]">
           Presale Price = <span className="font-[700] text_gradient">$0.055</span>
         </p>
         <p className="md:!text-[14px] max-md:!text-[13px]">|</p>
-        <p className="md:!text-[14px] max-md:!text-[13px] max-md:pl-[2px]">
+        <p className="md:!text-[14px] max-md:!text-[13px] font-[700] max-md:pl-[2px]">
           Listing Price = <span className="font-[700] text_gradient">$0.15</span>
         </p>
       </div>
 
       {/* Payment Input */}
       <div className="space-y-[5px]">
-        <p className="text-[14px] font-[700]">You Pay:</p>
+        <p className="text-[14px] font-[700]">You Pay</p>
         <div className="px-2 rounded-[8px] walletinput_bg">
           <div className="px-1 flex justify-between items-center">
             <div className="w-[80%] ">
@@ -413,14 +413,14 @@ const Wallet = ({ onTabChange }) => {
       <div className="">
         
         <div
-          className="px-[5px] py-1 w-full"
+          className="px-[6px] py-1 w-full"
           style={{
             borderRadius: "7.442px",
             background: "rgba(255, 255, 255, 0.10)",
           }}
         >
-          <p className="!text-[12px] text-center">
-            <span className="text-[#E0AA3E]">Special Offer: </span>Get 20% more $SCORP2.0 tokens  with the code SCORP20 (valid for a limited time only)
+          <p className="!text-[12px]  text-center">
+            <span className="text-[#E0AA3E]">Special Offer: </span>Get 20% more $SCORP2.0 tokens  with the code SCORP20 (valid for a limited time)
           </p>
         </div>
       </div>
