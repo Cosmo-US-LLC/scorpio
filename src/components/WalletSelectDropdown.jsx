@@ -50,7 +50,7 @@ export default function WalletSelectDropdown({ tokens, onChange }) {
             className={`leading-[15px] text-[#fff] text-start ${
               selected.symbol === "More"
                 ? "text-[14px] font-[700] "
-                : "2xl:text-[14px] font-[700] xl:text-[14px] lg:text-[14px] md:text-[14px] sm:text-[9.7px] text-[9.7px] "
+                : "2xl:text-[14px] font-[700] xl:text-[14px] lg:text-[14px] md:text-[14px] sm:text-[12px] text-[12px] "
             }`}
           >
             {selected.symbol}

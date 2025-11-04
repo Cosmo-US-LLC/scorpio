@@ -13,7 +13,7 @@ const ScorpSection = () => {
     <section  className="w-full min-h-[600px] md:h-[800px] py-12 md:py-16 px-4 md:px-6 lg:px-8">
       <div className="max-w-[1280px] mx-auto rounded-2xl what_is_scorpion_bg h-full flex items-center justify-center">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16 py-8 md:py-0">
-          <div className="hidden md:flex-1 relative w-full max-w-sm md:max-w-none">
+          <div className="max-md:hidden md:flex-1 relative w-full max-w-sm md:max-w-none">
             <div className="relative z-10">
               <img
                 src={scorpionCoin}
@@ -68,7 +68,7 @@ const ScorpSection = () => {
               className="btn-primary w-full">Buy $SCORP2.0</button>
             </div>
           </div>
-             <div className=" flex-1 relative w-full max-w-sm md:max-w-none">
+             <div className="md:hidden flex-1 relative w-full max-w-sm md:max-w-none">
             <div className="relative z-10">
               <img
                 src={scorpionCoin}
