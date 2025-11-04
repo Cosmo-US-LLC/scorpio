@@ -192,7 +192,7 @@ const Wallet = ({ onTabChange }) => {
       </div>
 
       {/* Token Select */}
-      <div className="grid grid-cols-3 gap-2 md:grid-cols-3">
+      <div className="grid grid-cols-3 gap-2 md:grid-cols-3 py-2">
         {tokenSelect.map((data, index) => (
           <WalletSelectDropdown
             key={index}
@@ -260,7 +260,7 @@ const Wallet = ({ onTabChange }) => {
 
       <div className="space-y-[5px]">
         <p className="text-[14px] font-[700]">
-          You Receive + <span className="text-[#E0AA3E] underline font-[700]">Bronze NFT</span>:
+          You Receive SCORP2.0 + <span className="text-[#E0AA3E] underline font-[700]">Bronze NFT</span>
         </p>
         <div className="px-2 rounded-[8px] walletinput_bg">
           <div className="px-1 flex justify-between items-center">
@@ -329,8 +329,8 @@ const Wallet = ({ onTabChange }) => {
             </svg>
             Bonus Code
           </button>
-          <button
-            className="!text-[14px] max-md:px-[15px] md:px-[35px] flex items-center justify-center py-[5px]"
+             <button
+            className="!text-[14px] cursor-pointer max-md:px-[15px] md:px-[35px] flex items-center justify-center py-[5px]"
             style={{
               borderRadius: "68.376px",
               background: "rgba(0, 0, 0, 0.50)",
@@ -364,7 +364,18 @@ const Wallet = ({ onTabChange }) => {
         </div>
         <div className="flex justify-center space-x-3">
           <button
-            className="!text-[14px] max-md:px-[15px] md:px-[35px] flex items-center justify-center py-[5px]"
+           onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.querySelector("#how-to-buy");
+                  if (element) {
+                    const y =
+                      element.getBoundingClientRect().top +
+                      window.scrollY +
+                      -70;
+                    window.scrollTo({ top: y, behavior: "smooth" });
+                  }
+                }}
+            className="!text-[14px] cursor-pointer max-md:px-[15px] md:px-[35px] flex items-center justify-center py-[5px]"
             style={{
               borderRadius: "68.376px",
               background: "rgba(0, 0, 0, 0.50)",

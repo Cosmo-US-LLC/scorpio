@@ -438,10 +438,16 @@ box-shadow: 0 -1.538px 3.077px 0 #F5E99C inset, 0 1.538px 3.077px 0 #F5E99C inse
   .mob_br br {
     display: none !important;
   }
+  .des_br br {
+    display: block !important;
+  }
 
    @media (max-width: 768px) {
       .mob_br br {
     display: block !important;
+  }
+  .des_br br {
+    display: none !important;
   }
 
     .bg_gambling_inner {

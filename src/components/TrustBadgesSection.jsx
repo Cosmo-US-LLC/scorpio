@@ -15,14 +15,14 @@ const TrustBadgesSection = () => {
       id: 2,
       title: "Team is KYC Verified",
       description:
-        "The Scorpion Team has been successfully verified by Assure DeFi the KYC Gold Standard.",
+        "The Scorpion Team has been successfully verified by Assure DeFi <br/> the KYC Gold Standard.",
       icon: trusticon2,
     },
     {
       id: 3,
       title: "Audited by Coinsult",
       description:
-        "Scorpion Casino has been fully audited by Coinsult and shown to be 100% secure.",
+        "Scorpion Casino has been fully audited by Coinsult and shown to be <br/> 100% secure.",
       icon: trusticon3,
     },
   ];
@@ -54,8 +54,9 @@ const TrustBadgesSection = () => {
                 {badge.title}
               </h3>
 
-              <p className="border-t-[1px] md:px-[20px] max-md:text-start border-[#36383F] pt-[20px]">
-                {badge.description}
+              <p className="border-t-[1px] md:px-[20px] des_br max-md:text-start border-[#36383F] pt-[20px]"
+              dangerouslySetInnerHTML={{ __html: badge.description }}
+              >
               </p>
                    <svg
                   xmlns="http://www.w3.org/2000/svg"

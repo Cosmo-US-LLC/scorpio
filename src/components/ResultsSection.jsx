@@ -69,7 +69,7 @@ const ResultsSection = () => {
         >
           <div className="">
             {/* Header */}
-            <div className="text-center space-y-[15px] mb-12 max-w-[720px] mx-auto">
+            <div className="text-center space-y-[15px] mb-12 max-w-[730px] mx-auto">
               <h2 className="max-md:tracking-[-0.5px]">
                 Results of
                 <span className="text_gradient"> SCORP 1.0</span>
@@ -82,7 +82,7 @@ const ResultsSection = () => {
               <p className="text-center">
                 Now, with SCORP 2.0, a new era begins, migrating to the Ethereum
                 blockchain with a fully upgraded next-gen casino, 20,000+
-                holders, major partnerships, and 5+ upcoming exchange listings -
+                holders, major partnerships, and 5+ upcoming exchange listings,
                 all coming together to build the #1 crypto casino ecosystem
                 worldwide.
               </p>
