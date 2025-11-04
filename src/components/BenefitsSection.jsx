@@ -27,7 +27,7 @@ const BenefitsSection = () => {
       id: 3,
       title: "$250K GIVEAWAY PARTICIPATION",
       description:
-        "Participate in our 250k Giveaway and go all out to win big! This event is exclusively available <br/> for Pre-Sale buyers.",
+        "Participate in our 250k Giveaway and go all out to win big! This event is exclusively available for Pre-Sale buyers.",
       icon: benefitsicon3,
       height: "184px",
       width: "205.223px",
