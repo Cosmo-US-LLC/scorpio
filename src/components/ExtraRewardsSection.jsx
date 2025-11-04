@@ -285,8 +285,8 @@ const ExtraRewardsSection = () => {
         .slider-custom::-webkit-slider-thumb {
           -webkit-appearance: none;
           appearance: none;
-          width: 0px !important;
-          height: 0px !important;
+          width: 5px !important;
+          height: 18px !important;
           border-radius: 50%;
            background: #fff;
           cursor: pointer;
@@ -303,8 +303,8 @@ const ExtraRewardsSection = () => {
         .slider-custom::-moz-range-thumb {
           -webkit-appearance: none;
           appearance: none;
-          width: 0px !important;
-          height: 0px !important;
+          width: 5px !important;
+          height: 18px !important;
           border-radius: 50%;
            background: #ddd;
           cursor: pointer;
