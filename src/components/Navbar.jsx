@@ -84,14 +84,11 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed left-0 w-full md:!border-0 z-[999] text-white  transition-all duration-300 ${
+      className={`fixed left-0 w-full  z-[999] text-white  transition-all duration-300 ${
         isScrolled
           ? "backdrop-blur-md bg-[#000] top-0 "
           : "bg-[#000] top-0 "
       }`}
-      style={{
-        borderBottom: "0.5px solid #fff",
-      }}
     >
       <div className="max-w-[1280px] w-full  mx-auto md:px-0 max-md:px-4 py-4">
         <div className="w-full flex justify-between items-center">
@@ -231,7 +228,7 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-[#0B0D10] relative flex flex-col justify-between h-[100vh] text-center space-y-3 pt-12 pb-30 font-inter text-sm">
+        <div className="md:hidden bg-[#000] relative flex flex-col justify-between h-[100vh] text-center space-y-3 pt-12 pb-30 font-inter text-sm">
           <div
             className="absolute bottom-[-20%]  z-[1] right-[-70%] mx-auto"
             style={{

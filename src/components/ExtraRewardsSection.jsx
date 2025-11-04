@@ -33,9 +33,9 @@ const ExtraRewardsSection = () => {
         rewards: [
           { text: "40% $SCORP2.0 Bonus", tick: true },
           { text: "25% Casino Credits", tick: true },
-          { text: "10% Bonus Staking Rewards", tick: false },
-          { text: "15% USDT Staking Rewards", tick: false },
-          { text: "Scorpion Casino VIP Package", tick: false },
+          { text: "10% Bonus Staking Rewards", tick: true },
+          { text: "15% USDT Staking Rewards", tick: true },
+          { text: "Scorpion Casino VIP Package", tick: true },
         ],
       };
     } else if (amount >= 10435) {
@@ -115,8 +115,8 @@ const ExtraRewardsSection = () => {
 
             <div className="mt-8">
               <div className="flex justify-between items-center mb-3">
-                <h6 className="">How much do you want to send?</h6>
-                <h6 className="">{formatCurrency(spendAmount)}</h6>
+                <h6 className="!font-[700] max:md!text-[15px]">How much do you want to send?</h6>
+                <h6 className="max:md!text-[15px] !font-[700]">{formatCurrency(spendAmount)}</h6>
               </div>
 
               <div className="relative">
@@ -137,9 +137,9 @@ const ExtraRewardsSection = () => {
                   }}
                 />
                 <div
-                  className="absolute top-[9px] -translate-y-1/2 w-[5px] h-[30px] bg-[#FFF] rounded-full  pointer-events-none"
+                  className="absolute top-[9px] -translate-y-1/2 w-[7px] h-[30px] bg-[#FFF] rounded-full  pointer-events-none"
                   style={{
-                    left: `calc(${(spendAmount / 100000) * 100}% - 0px)`,
+                    left: `calc(${(spendAmount / 100000) * 100}% - 7px)`,
                   }}
                 ></div>
               </div>
@@ -271,24 +271,27 @@ const ExtraRewardsSection = () => {
       </div>
 
       <style jsx>{`
-        .slider-custom::-webkit-slider-thumb {
+        .slider-custom {
+          -webkit-appearance: none; /* Safari / iOS Safari reset */
           appearance: none;
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          // background: linear-gradient(to right, #fcd34d, #fbbf24);
-          cursor: pointer;
-          // box-shadow: 0 0 15px rgba(252, 211, 77, 0.8);
-          // border: 2px solid #fff;
+          width: 100%;
+          height: 18px;
+          background: #ddd;
+          border-radius: 18px;
+          outline: none;
         }
 
-        .slider-custom::-moz-range-thumb {
-          width: 10px;
-          height: 10px;
+        /* ---------- WebKit browsers (Chrome, Safari, iOS Safari) ---------- */
+        .slider-custom::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 0px !important;
+          height: 0px !important;
           border-radius: 50%;
-          // background: linear-gradient(to right, #fcd34d, #fbbf24);
+           background: #fff;
           cursor: pointer;
-          // box-shadow: 0 0 15px rgba(252, 211, 77, 0.8);
+          transition: transform 0.2s ease;
+          box-shadow: 0 0 15px #fff;
           // border: 2px solid #fff;
         }
 
@@ -296,8 +299,28 @@ const ExtraRewardsSection = () => {
           transform: scale(1.1);
         }
 
+        /* ---------- Firefox ---------- */
+        .slider-custom::-moz-range-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 0px !important;
+          height: 0px !important;
+          border-radius: 50%;
+           background: #ddd;
+          cursor: pointer;
+          transition: transform 0.2s ease;
+          box-shadow: 0 0 15px #ddd;
+        }
+
         .slider-custom::-moz-range-thumb:hover {
           transform: scale(1.1);
+        }
+
+        /* ---------- Optional: track styling for iOS Safari ---------- */
+        .slider-custom::-webkit-slider-runnable-track {
+          height: 18px;
+          border-radius: 18px;
+          background: rgba(255, 255, 255, 0.2);
         }
       `}</style>
     </section>

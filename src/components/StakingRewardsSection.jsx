@@ -22,7 +22,7 @@ const StakingRewardsSection = () => {
           <div className="  max-md:flex max-md:flex-col max-md:items-center max-w-[611px] w-[100%]">
             {/* Heading */}
             <div className=" mb-[31px]">
-              <h2 className="md:text-start text-center capitalize">
+              <h2 className="md:text-start max-md:max-w-[300px] max-md:mx-auto text-center capitalize">
                Daily staking rewards <span className="faded_heading">are live now</span> 
               </h2>
             </div>
