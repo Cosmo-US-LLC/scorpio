@@ -18,14 +18,14 @@ const CollaborationSection = () => {
               and Everdome (80x return from its pre-sale).
             </p>
 
-            <p className="text-[#CACACA]">
+            <p className="text-[#CACACA] ">
               Tenset’s Infinity Program has an impressive track record in
               working with new cryptocurrencies and delivering high returns to
               early supporters.
             </p>
 
-            <p className="text-[#CACACA]">
-                This partnership required months to establish and is set to take
+            <p className="text-[#CACACA] md:max-w-[600px]">
+              This partnership required months to establish and is set to take
               $SCORP2.0 to the next level.
             </p>
           </div>

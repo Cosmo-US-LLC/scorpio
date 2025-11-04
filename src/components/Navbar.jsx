@@ -87,7 +87,7 @@ export default function Navbar() {
       className={`fixed left-0 w-full md:!border-0 z-[999] text-white  transition-all duration-300 ${
         isScrolled
           ? "backdrop-blur-md bg-[#000] top-0 "
-          : "bg-transparent top-0 "
+          : "bg-[#000] top-0 "
       }`}
       style={{
         borderBottom: "0.5px solid #fff",

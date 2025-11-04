@@ -120,11 +120,25 @@ const AmbassadorsSection = ({ ambassadors }) => {
           <Carousel
             opts={{
               align: "start",
-              loop: true,
+              loop: false,
             }}
             className="w-full"
+            style={{
+              WebkitTransform: "translateZ(0)",
+              transform: "translateZ(0)",
+              WebkitOverflowScrolling: "touch",
+            }}
           >
-            <CarouselContent className="-ml-4 md:-ml-6">
+            <CarouselContent
+              className="-ml-4 md:-ml-6"
+              style={{
+                WebkitOverflowScrolling: "touch",
+                scrollSnapType: "x mandatory",
+                WebkitScrollSnapType: "x mandatory",
+                WebkitTransform: "translateZ(0)",
+                transform: "translateZ(0)",
+              }}
+            >
               {ambassadorsData.map((item, index) => (
                 <CarouselItem
                   key={index}

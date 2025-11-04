@@ -68,7 +68,7 @@ const ScorpSection = () => {
               className="btn-primary w-full">Buy $SCORP2.0</button>
             </div>
           </div>
-             <div className="md:hidden flex-1 relative w-full max-w-sm md:max-w-none">
+             <div className=" flex-1 relative w-full max-w-sm md:max-w-none">
             <div className="relative z-10">
               <img
                 src={scorpionCoin}
