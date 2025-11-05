@@ -18,7 +18,7 @@ const ResultsSection = () => {
     {
       id: 1,
       title: "Market Cap",
-      description: "$SCORP reached a market cap of $280 million.",
+      description: "$SCORP reached a market cap <br/> of $280 million.",
       icon: resulticon1,
     },
     {
@@ -277,7 +277,9 @@ const ResultsSection = () => {
                           {" "}
                         </div>
 
-                        <p className="">{items.description}</p>
+                        <p className=""
+                        dangerouslySetInnerHTML={{ __html: items.description }}
+                        ></p>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="100%"

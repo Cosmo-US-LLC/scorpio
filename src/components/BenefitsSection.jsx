@@ -98,7 +98,7 @@ const BenefitsSection = () => {
               >
               </h4>
 
-              <p className=" text-center mob_br"
+              <p className=" text-center mob_br max-md:max-w-[350px] mx-auto"
                dangerouslySetInnerHTML={{ __html: benefit.description }}
               ></p>
             </div>
