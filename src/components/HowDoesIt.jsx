@@ -37,14 +37,17 @@ const HowDoesItSection = () => {
             How Does It <span className="faded_heading">Work</span>?
           </h2>
           <p className="text-center mob_br">
-            Curious about how the Scorpion Casino ecosystem works? Here’s a
-            simplified explanation. <br /> Scorpion Casino is a global Crypto Casino
-            and Sports Betting platform generating daily revenue. This income
-            drives the growth of the $SCORP2.0 Token through an integrated daily
-            Buy-Back, Burn and Reward System.
+            Curious about how the Scorpion Casino ecosystem works? Here’s a simplified explanation: Scorpion Casino is a global crypto casino and sports betting platform that generates daily revenue. This income supports the growth of the $SCORP2.0 token through an integrated daily buyback, burn, and reward system.
           </p>
         </div>
-        <div className="relative">
+        <div className="relative max-md:pb-5 max-md:px-3 md:py-[60px]"
+         style={{
+                background: "rgba(27, 26, 22, 0.40)",
+                border: "0.764px solid rgba(255, 255, 255, 0.10)",
+                borderRadius: "16px",
+                backdropFilter: "blur(8.922223091125488px)",
+              }}
+        >
           <img className="md:block hidden max-w-[850px] mx-auto relative z-[1]" src={howdoesit_img} alt="" />
           <img className="md:hidden relative z-[1] block" src={howdoesit_img_mob} alt="" />
           <div
@@ -60,7 +63,7 @@ const HowDoesItSection = () => {
           ></div>
         </div>
       </div>
-      <div className="howdoesit_bg md:mt-[80px] ">
+      <div className="howdoesit_bg md:mt-[30px] ">
         <div className="max-w-[1280px] relative mx-auto md:py-[50px] pt-[60px]">
           <div
             className="absolute max-md:bottom-[330px] md:bottom-[60px] mx-auto"
