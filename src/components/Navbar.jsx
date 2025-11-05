@@ -163,14 +163,16 @@ export default function Navbar() {
                 className="px-3 py-[5px] cursor-pointer flex items-center space-x-1 border border-white rounded-[4px] transition hover:border-[#B88A44]"
               >
                 <img
-                  src={selectedLang.flag}
-                  alt={selectedLang.name}
+                src={flag1}
+                  // src={selectedLang.flag}
+                  // alt={selectedLang.name}
+                  alt="eng"
                   className="w-[20px] h-[20px]"
                 />
                 <span className="hover:text-[#B88A44] transition">
                   {selectedLang.name}
                 </span>
-                <svg
+                {/* <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="17"
                   height="17"
@@ -188,11 +190,11 @@ export default function Navbar() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
-                </svg>
+                </svg> */}
               </div>
 
               {/* Dropdown */}
-              {isOpendrop && (
+              {/* {isOpendrop && (
                 <div className="absolute border border-[#B88A44] top-[40px] right-0 w-[439px] rounded-[13px] px-[55px] py-[41px] bg-[#000] shadow-lg z-50 animate-fadeIn">
                   <h3 className="text-[20px] text-white font-[700] mb-4">
                     Languages
@@ -216,7 +218,7 @@ export default function Navbar() {
                     ))}
                   </div>
                 </div>
-              )}
+              )} */}
             </div>
           </nav>
 
@@ -276,14 +278,16 @@ export default function Navbar() {
                 className="px-3 max-w-[160px] w-auto mx-auto py-[5px] cursor-pointer flex items-center justify-center space-x-1 border border-white rounded-[4px] transition hover:border-[#B88A44]"
               >
                 <img
-                  src={selectedLang.flag}
-                  alt={selectedLang.name}
+                src={flag1}
+                  // src={selectedLang.flag}
+                  // alt={selectedLang.name}
+                  alt="eng"
                   className="w-[20px] h-[20px]"
                 />
                 <span className="hover:text-[#B88A44] transition">
                   {selectedLang.name}
                 </span>
-                <svg
+                {/* <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="17"
                   height="17"
@@ -301,11 +305,11 @@ export default function Navbar() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
-                </svg>
+                </svg> */}
               </div>
 
               {/* Dropdown */}
-              {isOpendrop && (
+              {/* {isOpendrop && (
                 <div className="absolute border max-w-[200px] border-[#B88A44] max-h-[200px] overflow-y-scroll top-[35px] left-[30%] w-[439px] rounded-[13px] px-[15px] py-[11px] bg-[#000] shadow-lg z-50 animate-fadeIn">
                   <div className="grid grid-cols-1">
                     {flags.map((lang, index) => (
@@ -326,7 +330,7 @@ export default function Navbar() {
                     ))}
                   </div>
                 </div>
-              )}
+              )} */}
             </div>
           </div>
          <div className="space-y-[25px]">

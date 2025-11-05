@@ -27,12 +27,12 @@ const ScorpSection = () => {
           <div className="flex-1 z-10 flex flex-col gap-4 md:gap-6 px-4 sm:px-6 md:px-8 w-full">
             <h2 className="text-left">
               <span className="text-white">What is </span>
-              <span className="text-white/50">$SCORP?</span>
+              <span className="text-white/50">$SCORP2.0</span>
             </h2>
 
-            <p className="text-left text-[#FFF] font-[700] md:text-base">
+            {/* <p className="text-left text-[#FFF] font-[700] md:text-base">
               Gambling is one of the oldest and most lucrative industries in the history of mankind and digitization is just the next logical step.
-            </p>
+            </p> */}
 
             <p className="text-left text-[#CACACA]  md:text-base">
              The $SCORP2.0 token is the one-stop token that will facilitate all forms of gambling with a licensed, transparent, and provably fair crypto platform. It comes with different advantages and use cases. Crypto casinos are booming, and it’s your turn to benefit.
