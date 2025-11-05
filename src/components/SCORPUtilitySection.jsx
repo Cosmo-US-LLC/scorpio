@@ -72,7 +72,7 @@ const SCORPUtilitySection = () => {
               <h2 className="md:text-start max-md:text-center">
                 200+ Casino  <span className="faded_heading">Games</span>
               </h2>
-              <p className="max-md:text-center max-w-[380px]">SCORPION offers a complete online casino with over 200+ games from all major game providers. Casino games include slots, blackjack, roulette, poker, live casino, and more.</p>
+              <p className="max-md:text-center max-w-[335px] md:max-w-[380px]">SCORPION offers a complete online casino with over 200+ games from all major game providers. Casino games include slots, blackjack, roulette, poker, live casino, and more.</p>
               <button 
                 onClick={(e) => {
                 e.preventDefault();

@@ -13,7 +13,7 @@ const BreakingBarriersSection = () => {
             <span className="text-[#CACACA] ">The Casino Industry</span>
           </h2>
 
-          <p className="text-[#fff] font-[700] text-left md:text-base">
+          <p className="text-[#fff] font-[700] text-left md:text-base max-md:max-w-[360px]">
             $SCORP Delivers Exclusive Insider Access to the world of Gambling.
           </p>
 
