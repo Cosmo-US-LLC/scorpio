@@ -80,7 +80,7 @@ const TokenDetailsSection = () => {
               <div className="space-y-2 md:space-y-[12px]">
                 <h4 className="text-start text-sm md:text-base">Token Type</h4>
                 <p className="text-sm md:text-[15px] text-[#fff] tracking-[-0.5px]">
-                  ERC-20 (Ethereum Blockchain)
+                  ERC-20 <br /> (Ethereum Blockchain)
                 </p>
               </div>
               <div className="md:hidden w-full h-[1px] bg-gradient-to-r from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
@@ -127,7 +127,7 @@ const TokenDetailsSection = () => {
                   <h4 className="text-start text-sm md:text-base">
                   Pre-Sale Details
                 </h4>
-                <p className="text-sm md:text-base font-medium max-md:max-w-[240px]">
+                <p className="text-sm md:text-base font-medium md:pr-18 max-md:max-w-[240px]">
                   3,000,000,000 $SCORP tokens will be sold during the pre-sale.
                 </p>
                 </div>
@@ -150,12 +150,14 @@ const TokenDetailsSection = () => {
               <div className="space-y-2 md:space-y-[12px]"
               >
                 
-                <h4 className="text-start text-sm md:text-base">
+                <div>
+                  <h4 className="text-start text-sm md:text-base">
                   Exchange Listing Price
                 </h4>
                 <p className="text-sm md:text-base font-medium">
                   1 $SCORP = $0.15
                 </p>
+                </div>
           
               </div>
             </div>

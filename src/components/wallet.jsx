@@ -132,7 +132,7 @@ const Wallet = ({ onTabChange }) => {
           </div>
         </div>
         <div className="">
-          <h5 className="text-center max-md:!text-[18px]">18,948 Holders</h5>
+          <h5 className="text-center max-md:!text-[18px]">21,948 Holders</h5>
         </div>
       </div>
       <div
@@ -419,8 +419,8 @@ const Wallet = ({ onTabChange }) => {
             background: "rgba(255, 255, 255, 0.10)",
           }}
         >
-          <p className="!text-[12px]  text-center">
-            <span className="text-[#E0AA3E]">Special Offer: </span>Get 20% more $SCORP2.0 tokens  with the code SCORP20 (valid for a limited time)
+          <p className="!text-[12px] md:max-w-[300px] mx-auto  text-center">
+            <span className="text-[#E0AA3E] !font-[700]">Special Offer: </span>Get 20% more $SCORP2.0 tokens  with the code SCORP20 (valid for a limited time)
           </p>
         </div>
       </div>

@@ -22,8 +22,8 @@ const ExpertTestimonials = ({ testimonials }) => {
       backgroundImage: card1BG,
     },
     {
-      quote: "I think that crypto casino projects are going to be huge in 2024",
-      body: "I'm interested in profitable sectors, and as we all know, Crypto Casinos are highly profitable. Many people believe Crypto will pump in 2024 because of the Bitcoin halving, and I think crypto casino projects are going to be huge.",
+      quote: "I think that crypto casino projects are going to be huge",
+      body: "I'm interested in profitable sectors, and as we all know, Crypto Casinos are highly profitable. Many people believe crypto casino projects are going to be huge.",
       author: {
         name: "Ben Crypto",
         role: "Youtuber | 28k Followers",

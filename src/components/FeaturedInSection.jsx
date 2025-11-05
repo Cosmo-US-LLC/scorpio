@@ -1,7 +1,7 @@
 import Featured1 from "../assets/Featured/Featured (12).svg"
 import Featured2 from "../assets/Featured/Featured (11).svg"
 import Featured3 from "../assets/Featured/Featured (10).svg"
-import Featured4 from "../assets/Featured/Featured (9).svg"
+import Featured4 from "../assets/Featured/Featured (9).webp"
 import Featured5 from "../assets/Featured/mob_icn (4).webp"
 import Featured6 from "../assets/Featured/mob_icn (3).webp"
 import Featured7 from "../assets/Featured/mob_icn (2).webp"

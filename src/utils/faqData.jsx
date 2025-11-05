@@ -84,7 +84,7 @@ export const defaultFaqs = [
         </ul>
         <p className="">
           Get in on the action and experience the benefits of the $SCORP2.0 token
-          for yourself. Join the SCORPION community today!
+          for yourself. <br /> Join the SCORPION community today!
         </p>
       </div>
     ),
