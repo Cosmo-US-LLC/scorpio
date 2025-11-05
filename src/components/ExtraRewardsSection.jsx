@@ -8,6 +8,13 @@ import tick from "../assets/Rewards/tick.webp";
 
 const ExtraRewardsSection = () => {
   const [spendAmount, setSpendAmount] = useState(1000);
+  const [activeTooltip, setActiveTooltip] = useState(null);
+
+  const handleToggle = (index) => {
+    if (window.innerWidth < 768) {
+      setActiveTooltip((prev) => (prev === index ? null : index));
+    }
+  };
 
   // const getTierInfo = (amount) => {
   //   if (amount >= 100000) {
@@ -138,7 +145,7 @@ const ExtraRewardsSection = () => {
           {
             text: "10% Bonus Staking Rewards",
             tick: true,
-            info: "You will earn additional Daily Staking Rewards. For example, with the Platinum Membership NFT, you’ll receive an additional 10% on the current daily staking rewards rate.",
+            info: "You will earn additional Daily Staking Rewards. For example, with the Gold Membership NFT, you’ll receive an additional 10% on the current daily staking rewards rate. So, if the daily rate is hypothetically 1%, you would get 1.05% staking rewards based on the total SCORP tokens you purchased.",
           },
           {
             text: "15% USDT Staking Rewards",
@@ -172,7 +179,7 @@ const ExtraRewardsSection = () => {
           {
             text: "5% Bonus Staking Rewards",
             tick: true,
-            info: "You will earn additional Daily Staking Rewards. For example, with the Gold Membership NFT, you’ll receive an additional 5% on the current daily staking rewards rate.",
+            info: "You will earn additional Daily Staking Rewards. For example, with the Gold Membership NFT, you’ll receive an additional 5% on the current daily staking rewards rate. So, if the daily rate is hypothetically 1%, you would get 1.05% staking rewards based on the total SCORP tokens you purchased.",
           },
           {
             text: "10% USDT Staking Rewards",
@@ -206,7 +213,7 @@ const ExtraRewardsSection = () => {
           {
             text: "2% Bonus Staking Rewards",
             tick: true,
-            info: "You will earn additional Daily Staking Rewards. For example, with the Silver Membership NFT, you’ll receive an additional 2% on the current daily staking rewards rate.",
+            info: "You will earn additional Daily Staking Rewards. For example, with the Gold Membership NFT, you’ll receive an additional 5% on the current daily staking rewards rate. So, if the daily rate is hypothetically 1%, you would get 1.05% staking rewards based on the total SCORP tokens you purchased.",
           },
           {
             text: "USDT Staking Rewards",
@@ -240,7 +247,7 @@ const ExtraRewardsSection = () => {
           {
             text: "Bonus Staking Rewards",
             tick: false,
-            info: "You will earn additional Daily Staking Rewards. For example, with the Gold Membership NFT, you’ll receive an additional 5% on the current daily staking rewards rate.",
+            info: "You will earn additional Daily Staking Rewards. For example, with the Gold Membership NFT, you’ll receive an additional 5% on the current daily staking rewards rate. So, if the daily rate is hypothetically 1%, you would get 1.05% staking rewards based on the total SCORP tokens you purchased.",
           },
           {
             text: "USDT Staking Rewards",
@@ -403,7 +410,10 @@ const ExtraRewardsSection = () => {
                         <h4 className="max-md:!text-[14px] md:text-[16px]">
                           {reward.text}
                         </h4>
-                        <div className="relative group">
+                        <div
+                          className="relative group"
+                          onClick={() => handleToggle(index)}
+                        >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="15"
@@ -418,7 +428,14 @@ const ExtraRewardsSection = () => {
                             ></path>
                           </svg>
 
-                          <div className="absolute z-[999] hidden group-hover:block w-60 bg-black text-white text-xs p-3 rounded-lg shadow-lg  -top-2 left-[-200px] transform -translate-y-full">
+                          <div
+                            className={`absolute z-[999] w-60 bg-black text-white text-xs p-3 rounded-lg shadow-lg -top-2 left-[-200px] transform -translate-y-full transition-opacity duration-200
+  ${
+    activeTooltip === index
+      ? "block opacity-100"
+      : "hidden group-hover:block md:opacity-100"
+  }`}
+                          >
                             {reward.info}
                             <div className="absolute right-8 top-[96%] w-2 h-2 bg-black rotate-45"></div>
                           </div>
