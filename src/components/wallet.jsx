@@ -213,7 +213,7 @@ const Wallet = ({ onTabChange }) => {
       </div>
 
       <div
-        className="rounded-[68.376px] flex items-center justify-center max-md:space-x-0 md:space-x-4 md:py-2 max-md:py-1 md:px-4 max-md:px-1 w-full"
+        className="rounded-[68.376px] flex items-center justify-center max-md:space-x-2 md:space-x-4 md:py-2 max-md:py-1 md:px-4 max-md:px-1 w-full"
         style={{
           background: "rgba(60, 60, 60, 0.50)",
         }}
@@ -298,7 +298,7 @@ const Wallet = ({ onTabChange }) => {
       <div className="space-y-[8px]">
         <div className="flex justify-center space-x-3">
           <button
-            className="!text-[14px] max-md:px-[15px] md:px-[35px] flex items-center justify-center py-[5px]"
+            className="!text-[14px] font-[700] max-md:px-[15px] md:px-[35px] flex items-center justify-center py-[5px]"
             style={{
               borderRadius: "68.376px",
               background: "rgba(0, 0, 0, 0.50)",
@@ -330,7 +330,7 @@ const Wallet = ({ onTabChange }) => {
             Bonus Code
           </button>
              <button
-            className="!text-[14px] cursor-pointer max-md:px-[15px] md:px-[35px] flex items-center justify-center py-[5px]"
+            className="!text-[14px] font-[700] cursor-pointer max-md:px-[15px] md:px-[35px] flex items-center justify-center py-[5px]"
             style={{
               borderRadius: "68.376px",
               background: "rgba(0, 0, 0, 0.50)",
@@ -375,7 +375,7 @@ const Wallet = ({ onTabChange }) => {
                     window.scrollTo({ top: y, behavior: "smooth" });
                   }
                 }}
-            className="!text-[14px] cursor-pointer max-md:px-[15px] md:px-[35px] flex items-center justify-center py-[5px]"
+            className="!text-[14px] !font-[700] cursor-pointer max-md:px-[15px] md:px-[35px] flex items-center justify-center py-[5px]"
             style={{
               borderRadius: "68.376px",
               background: "rgba(0, 0, 0, 0.50)",
@@ -419,7 +419,7 @@ const Wallet = ({ onTabChange }) => {
             background: "rgba(255, 255, 255, 0.10)",
           }}
         >
-          <p className="!text-[12px] md:max-w-[300px] mx-auto  text-center">
+          <p className="!text-[12px] max-w-[300px] mx-auto  text-center">
             <span className="text-[#E0AA3E] !font-[700]">Special Offer: </span>Get 20% more $SCORP2.0 tokens  with the code SCORP20 (valid for a limited time)
           </p>
         </div>
