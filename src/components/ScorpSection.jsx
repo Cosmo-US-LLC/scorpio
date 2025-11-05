@@ -27,7 +27,7 @@ const ScorpSection = () => {
           <div className="flex-1 z-10 flex flex-col gap-4 md:gap-6 px-4 sm:px-6 md:px-8 w-full">
             <h2 className="text-left">
               <span className="text-white">What is </span>
-              <span className="text-white/50">$SCORP2.0</span>
+              <span className="text-white/50">$SCORP2.0?</span>
             </h2>
 
             {/* <p className="text-left text-[#FFF] font-[700] md:text-base">

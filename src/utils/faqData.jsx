@@ -47,7 +47,7 @@ export const defaultFaqs = [
         </p>
         <p className="">
           Our main targets are to have 100,000 people sign up for the casino and
-          maintain 500 to 1,000 players wagering daily. These achievements will
+          maintain 1000 to 2000 players wagering daily. These achievements will
           lead to significant profits and ensure the long-term success of the
           $SCORP2.0 token.
         </p>
@@ -82,7 +82,7 @@ export const defaultFaqs = [
           <li>Participate in our affiliate reward system</li>
           <li>Plus many more exciting features!</li>
         </ul>
-        <p className="">
+        <p className="!text-sm md:!text-[15px] text-gray-300">
           Get in on the action and experience the benefits of the $SCORP2.0 token
           for yourself. <br /> Join the SCORPION community today!
         </p>
@@ -145,7 +145,7 @@ export const defaultFaqs = [
     question: "What is the $SCORP2.0 Listing Price?",
     type: "text",
     answer:
-      "The $SCORP2.0 Listing Price refers to the price at which $SCORP2.0 tokens will be available for purchase during the launch of Scorpion Casino. The initial launch price for 1 $SCORP2.0 is set at $0.05.",
+      "The $SCORP2.0 Listing Price refers to the price at which $SCORP2.0 tokens will be available for purchase during the launch of Scorpion Casino. The initial launch price for 1 $SCORP2.0 is set at $0.15.",
   },
   {
     id: "when-list",
