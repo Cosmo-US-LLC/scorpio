@@ -344,7 +344,7 @@ const ExtraRewardsSection = () => {
                 <h3 className="text_gradient_gray  text-start !text-[30px]">
                   {tierInfo.tier} <br /> SCORPION NFT
                 </h3>
-                <p className="pb-4 pt-2 ">
+                <p className="pb-4 pt-2 font-[700]">
                   When you spend {formatCurrency(spendAmount)} or more
                 </p>
                 <div className="">
