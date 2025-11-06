@@ -14,9 +14,12 @@ const CaseStudySection = () => {
           zIndex: 0,
         }}
       ></div>
-      <div className="max-w-[1280px] mx-auto rounded-2xl  h-full flex flex-col md:flex-row gap-6 md:gap-3 items-center justify-center py-8 md:py-0">
+      <div className="max-w-[1280px] mx-auto rounded-2xl  h-full flex flex-col md:flex-row gap-6 md:gap-3 items-center justify-center py-8 md:py-0 max-md:rounded-[17.844px] 
+    max-md:border max-md:border-[rgba(255,255,255,0.10)] 
+    max-md:bg-[rgba(27,26,22,0.40)] 
+    max-md:backdrop-blur-[8.922223091125488px]">
         <div className="w-full md:max-w-[630px] relative">
-          <div className="relative rounded-xl overflow-hidden p-6 sm:p-10 ">
+          <div className="relative rounded-xl overflow-hidden p-6 max-md:pt-0 sm:p-10 ">
             <img
               src={case_study_img}
               alt="The Guardian Article on Phone"

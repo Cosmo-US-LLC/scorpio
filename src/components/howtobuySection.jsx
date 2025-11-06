@@ -15,7 +15,7 @@ const HowToBuySection = () => {
       title: "Step 2",
       maintitle:"Confirm Transaction",
       description:
-        "You can buy $SCORP2.0 with a card or using ETH, USDC, USDT, SOL, BNB, and over 10 other currencies. <br/> Simply click the Buy button and confirm the transaction in your wallet.",
+        "You can buy $SCORP2.0 with a card or using ETH, USDC, USDT, SOL, BNB, and over 10 other currencies. <br/><br/> Simply click the Buy button and confirm the transaction in your wallet.",
     },
     {
       id: 3,
