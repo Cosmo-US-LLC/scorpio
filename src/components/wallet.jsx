@@ -82,7 +82,7 @@ const Wallet = ({ onTabChange }) => {
 
   return (
     <div
-      className="justify-between max-md:space-y-[15px] md:space-y-[10px] flex max-md:p-[12px] md:p-[24px] flex-col relative w-full min-h-full isolate"
+      className="justify-between max-md:space-y-[15px] md:space-y-[10px] flex max-md:p-[12px] md:p-[24px] flex-col relative w-full min-h-full isolate md:mt-[4px]"
       style={{
         borderRadius: "13.675px",
         border: "0.684px solid #D4AA49",

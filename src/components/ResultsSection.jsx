@@ -39,7 +39,7 @@ const ResultsSection = () => {
       id: 5,
       title: "Migration",
       description:
-        "All $SCORP presale holders will be automatically migrated to SCORP 2.0 ",
+        "All $SCORP presale holders will be automatically migrated to $SCORP 2.0 ",
       icon: resulticon5,
     },
   ];
@@ -80,7 +80,7 @@ const ResultsSection = () => {
                 returns for presale buyers at its all-time high.
               </p>
               <p className="text-center">
-                Now, with SCORP 2.0, a new era begins, migrating to the Ethereum
+                Now, with $SCORP 2.0, a new era begins, migrating to the Ethereum
                 blockchain with a fully upgraded next-gen casino, 20,000+
                 holders, major partnerships, and 5+ upcoming exchange listings,
                 all coming together to build the #1 crypto casino ecosystem
