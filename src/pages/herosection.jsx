@@ -102,7 +102,7 @@ function Herosection() {
         </div>
           <img src={vector3} className="  absolute max-w-[30px] md:max-w-[53.203px] md:right-[38.5%] right-[18%] z-[4] top-[9%] md:top-[1%]" alt="SCORP2" />
            <img src={vector3} className="  absolute max-w-[25px] md:max-w-[33.203px] right-[3%] md:right-[37.5%] z-[4] md:top-[12%] top-[26%]" alt="SCORP2" />
-            <img src={vector4} className="  absolute max-w-[20px] md:max-w-[27.907px] right-[10%] md:right-[43.5%] z-[4] md:top-[-3%] top-[10%]" alt="SCORP2" />
+            <img src={vector4} className="  absolute max-w-[20px] md:max-w-[27.907px] right-[7%] md:right-[43.5%] z-[4] md:top-[-3%] top-[10%]" alt="SCORP2" />
              <img src={vector3} className="max-md:hidden  absolute max-w-[43.203px] left-[31.5%] z-[4] top-[52%]" alt="SCORP2" />
             <img src={vector4} className="max-md:hidden  absolute max-w-[27.907px] right-[58.5%] z-[4] top-[50%]" alt="SCORP2" />
              <img src={vector3} className="max-md:hidden  absolute max-w-[33.203px] right-[46%] z-[4] top-[65%]" alt="SCORP2" />
