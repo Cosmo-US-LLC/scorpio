@@ -90,11 +90,11 @@ function Herosection() {
                  <img src={licensedLogo} className="max-md:max-w-[156.837px] max-h-[43.321px]" alt="Licensed" /> 
                 </div>
             </div>
-            <div className="flex items-center space-x-2 md:space-x-3">
+            <div className="flex items-center space-x-2 md:pt-2 md:space-x-3">
               <h5 className="underline max-md:!text-[12px]">Audited & KYC | 100% Secure & Verified</h5>
               <img src={solid} className="max-w-[78px] md:max-w-[120px] mb-1" alt="solid" />
             </div>
-            <div className="pt-4 md:pt-17">
+            <div className="pt-4 md:pt-6">
                 {/* <video src=""></video> */}
                 <img src={poster} className=" hidden md:block max-md:max-w-[100%] md:max-w-[656px] min-h-[377px] aspect-[656/377]" alt="poster" />
                    <img src={poster} className="block md:hidden max-md:max-w-[100%] md:max-w-[656px] min-h-[203px] " alt="poster" />
@@ -103,11 +103,11 @@ function Herosection() {
           <img src={vector3} className="  absolute max-w-[30px] md:max-w-[53.203px] md:right-[38.5%] right-[18%] z-[4] top-[9%] md:top-[1%]" alt="SCORP2" />
            <img src={vector3} className="  absolute max-w-[25px] md:max-w-[33.203px] right-[3%] md:right-[37.5%] z-[4] md:top-[12%] top-[26%]" alt="SCORP2" />
             <img src={vector4} className="  absolute max-w-[20px] md:max-w-[27.907px] right-[7%] md:right-[43.5%] z-[4] md:top-[-3%] top-[10%]" alt="SCORP2" />
-             <img src={vector3} className="max-md:hidden  absolute max-w-[43.203px] left-[31.5%] z-[4] top-[52%]" alt="SCORP2" />
+             <img src={vector3} className="max-md:hidden  absolute max-w-[43.203px] left-[31.5%] z-[4] top-[51%]" alt="SCORP2" />
             <img src={vector4} className="max-md:hidden  absolute max-w-[27.907px] right-[58.5%] z-[4] top-[50%]" alt="SCORP2" />
              <img src={vector3} className="max-md:hidden  absolute max-w-[33.203px] right-[46%] z-[4] top-[65%]" alt="SCORP2" />
             <img src={vector4} className="max-md:hidden  absolute max-w-[27.907px] right-[42.5%] z-[4] top-[60%]" alt="SCORP2" />
-        <img src={vector1} className="max-md:hidden  absolute max-w-[358.368px] right-[31.5%] z-[4] top-[27%]" alt="SCORP2" />
+        <img src={vector1} className="max-md:hidden  absolute max-w-[350.368px] right-[36.5%] z-[4] top-[18%]" alt="SCORP2" />
         <img src={vector2} className="absolute max-md:hidden max-w-[109.584px] right-[36%] z-[4] bottom-[15%]" alt="SCORP2" />
         
         <div className="max-w-[448px] w-full min-h-[600px]">

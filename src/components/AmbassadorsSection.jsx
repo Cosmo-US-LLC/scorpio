@@ -100,12 +100,20 @@ const AmbassadorsSection = ({ ambassadors }) => {
                 </p>
 
                 {/* CTA Link */}
-                <a
-                  href={item.link.url}
-                  className="text-[14px] text-[#fff] hover:text-[#E0AA3E] underline transition-colors duration-200  px-4 -mx-4"
-                >
-                  {item.link.text}
-                </a>
+                 {item.link.url && item.link.url !== "#" ? (
+                        <a
+                          href={item.link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[14px] text-[#fff] hover:text-[#E0AA3E] underline transition-colors duration-200 px-4 -mx-4"
+                        >
+                          {item.link.text}
+                        </a>
+                      ) : (
+                        <span className="text-[14px] ext-[#fff]  px-4 -mx-4 select-none">
+                          {item.link.text}
+                        </span>
+                      )}
               </div>
               <img
                 src={whiteGbg}
@@ -190,13 +198,20 @@ const AmbassadorsSection = ({ ambassadors }) => {
                         {item.description}
                       </p>
 
-                      {/* CTA Link */}
-                      <a
-                        href={item.link.url}
-                        className="text-[14px] text-[#fff] hover:text-[#E0AA3E] underline transition-colors duration-200  px-4 -mx-4"
-                      >
-                        {item.link.text}
-                      </a>
+                      {item.link.url && item.link.url !== "#" ? (
+                        <a
+                          href={item.link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[14px] text-[#fff] hover:text-[#E0AA3E] underline transition-colors duration-200 px-4 -mx-4"
+                        >
+                          {item.link.text}
+                        </a>
+                      ) : (
+                        <span className="text-[14px] ext-[#fff]  px-4 -mx-4 select-none">
+                          {item.link.text}
+                        </span>
+                      )}
                     </div>
                     <img
                       src={whiteGbg}

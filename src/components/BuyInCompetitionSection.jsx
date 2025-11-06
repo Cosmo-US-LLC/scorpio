@@ -107,7 +107,7 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
         }}
       >
         {/* Header */}
-        <div className="flex max-md:flex-col justify-between mb-[30px] ms-start">
+        <div className="flex max-md:flex-col justify-between md:items-center mb-[30px] ms-start">
           <h2 className="text_gradient md:min-w-[400px] max-md:mb-4 max-md:pb-2 max-md:text-center text-start md:pr-2 md:mr-4 w-[100%] md:border-r-[1px] max-md:border-b border-[#E5E7EB]">
             Biggest Buy-in Competition
           </h2>
