@@ -1,84 +1,33 @@
-import { useState } from "react";
-import WalletSelectDropdown from "./WalletSelectDropdown";
-import USDTicon from "../assets/tokens/usdt.svg"
+import { useEffect, useState } from "react";
 
-import Scorpiontoken from "../assets/tokens/Scorpion_token.svg";
-import { tokenImageMap, chainImgMap } from "../assets/tokens";
-const Wallet = ({ onTabChange }) => {
-  const [selectedToken, setSelectedToken] = useState();
-  const [selectedWallet, setSelectedWallet] = useState();
-  const [paymentAmount, setPaymentAmount] = useState("1000");
-  const [paymentReceive , setPaymentReceive ] = useState("1");
+import TokenSelectGrid from "./Widget/TokenSelectGrid";
+import { useApiState } from "@/presale-gg/stores";
+import { formatDollar, parseNum } from "@/presale-gg/util";
+import TokenAmountInputs from "./Widget/TokenAmountInputs";
+
+/**
+ * @typedef {import("@/presale-gg/api/api.types").API.PaymentToken} PaymentToken
+ */
+
+const Wallet = () => {
+  /** @type {[PaymentToken | null, (newToken: PaymentToken | null) => void]} */
+  const [selectedToken, setSelectedToken] = useState(null);
+  const [paymentAmount, setPaymentAmount] = useState("1");
   const [receiveAmount, setReceiveAmount] = useState("0");
 
-  const TOKEN_PRICE = 0.02; // static price for now
+  const apiData = useApiState()
 
-  const tokenSelect = [
-    [
-      { id: 1, symbol: "ETH", sub_symbol: "ERC-20" },
-      { id: 2, symbol: "USDT", sub_symbol: "ERC-20" },
-      { id: 3, symbol: "SHIB", sub_symbol: "ERC-20" },
-      { id: 4, symbol: "PEPE", sub_symbol: "ERC-20" },
-      { id: 5, symbol: "USDTC", sub_symbol: "ERC-20" },
-    ],
-    [
-      { id: 6, symbol: "BNB", sub_symbol: "BEP-20" },
-      { id: 6, symbol: "BUSD", sub_symbol: "BEP-20" },
-      { id: 7, symbol: "USDT", sub_symbol: "BEP-20" },
-      { id: 8, symbol: "USDC", sub_symbol: "BEP-20" },
-    ],
-    [
-      { id: 9, symbol: "USDT", sub_symbol: "ERC-20" },
-      { id: 10, symbol: "USDT", sub_symbol: "TRC-20" },
-      { id: 11, symbol: "USDT", sub_symbol: "SOLANA" },
-      { id: 12, symbol: "USDT", sub_symbol: "BEP-20" },
-    ],
-    [
-      { id: 13, symbol: "USDC", sub_symbol: "BEP-20" },
-      { id: 14, symbol: "BTC", sub_symbol: "SOLANA" },
-      { id: 15, symbol: "USDT", sub_symbol: "SOLANA" },
-      { id: 16, symbol: "USDC", sub_symbol: "SOLANA" },
-    ],
-    [
-      { id: 17, symbol: "SOL", sub_symbol: "ERC-20" },
-      { id: 18, symbol: "BNB", sub_symbol: "ERC-20" },
-    ],
-    [
-      { id: 19, symbol: "More" },
-      { id: 20, symbol: "XRP", sub_symbol: "XRP" },
-      { id: 21, symbol: "DOGE", sub_symbol: "DOGECOIN" },
-      { id: 22, symbol: "TON", sub_symbol: "TON CHAIN" },
-      { id: 23, symbol: "TRX", sub_symbol: "TRX-20" },
-      { id: 24, symbol: "ADA", sub_symbol: "CARDANO" },
-      { id: 25, symbol: "USDT", sub_symbol: "TRC-20" },
-      { id: 26, symbol: "LCT", sub_symbol: "LITECOIN" },
-      { id: 27, symbol: "USDC", sub_symbol: "BASE" },
-      { id: 28, symbol: "ETH", sub_symbol: "BASE" },
-    ],
-  ];
+  useEffect(() => {
+    if (!apiData.paymentTokens?.length || selectedToken !== null) return
+    setSelectedToken(apiData.paymentTokens.find((token) => token.symbol.toUpperCase() === "ETH") ?? apiData.paymentTokens[0] ?? null)
+  }, [apiData.paymentTokens, selectedToken])
 
-  const handlePaymentChange = (value) => {
-    const regex = /^(\d*|(\d+\.?\d*))$/;
-    if (!regex.test(value)) return;
-
-    setPaymentAmount(value);
-    const paymentNum = parseFloat(value) || 0;
-    const received = paymentNum / TOKEN_PRICE; 
-    setReceiveAmount(received.toFixed(4));
-  };
-  const handlePaymentChangeRecive = (value) => {
-    const regex = /^(\d*|(\d+\.?\d*))$/;
-    if (!regex.test(value)) return;
-
-    setPaymentReceive(value);
-    const paymentNum = parseFloat(value) || 0;
-    const received = paymentNum / TOKEN_PRICE; 
-    setReceiveAmount(received.toFixed(4));
-  };
-  
-  const handleBuy = () => {
-    console.log("Buy button clicked!");
-  };
+  useEffect(() => {
+    if (!selectedToken || !apiData.stage) return
+    const receiveNum = parseNum(selectedToken.price) * parseNum(paymentAmount) / parseNum(apiData.stage?.token_price ?? 1)
+    setReceiveAmount(receiveNum)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedToken, apiData.stage?.token_price])
 
   return (
     <div
@@ -96,14 +45,14 @@ const Wallet = ({ onTabChange }) => {
           color: "rgba(255, 255, 254, 0.50)",
         }}
       >
-        SCORP2.0 PRESALE
+        {apiData.presaleEnded ? "Presale Ended" : apiData.stage?.stage_name ?? "SCORP2.0 PRESALE"}
       </h2>
       <div
         className="px-[30px] py-[20px] space-y-[8px] border-[1px] border-[#F9F295] rounded-[8px]"
         style={{ background: "#000" }}
       >
         <h2 className="text-center text_gradient md:text-[40px] max-md:!text-[32px] font-[700]">
-          $11,756,398.80
+          {formatDollar(parseNum(apiData.stage?.cumulative_usd_raised))}
         </h2>
         <div className="">
           <div className="flex justify-between items-center pb-1">
@@ -135,82 +84,7 @@ const Wallet = ({ onTabChange }) => {
           <h5 className="text-center max-md:!text-[18px]">21,948 Holders</h5>
         </div>
       </div>
-      <div
-        className="py-[6px] space-x-[8px] flex justify-center items-center rounded-[8.829px]"
-        style={{
-          background: "rgba(176, 176, 176, 0.17)",
-        }}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="34"
-          height="18"
-          viewBox="0 0 34 18"
-          fill="none"
-        >
-          <rect
-            width="33.1579"
-            height="18"
-            rx="2.52907"
-            fill="white"
-            fill-opacity="0.35"
-          />
-          <path
-            d="M14.2318 5.36914L12.9877 12.6354H14.9775L16.2226 5.36914H14.2318ZM11.3193 5.37729L9.37045 10.3326L9.16267 9.58442C8.77833 8.68289 7.68722 7.38816 6.40625 6.5722L8.18825 12.6318L10.2937 12.6282L13.4273 5.37576L11.3193 5.37729Z"
-            fill="black"
-          />
-          <path
-            d="M8.39939 5.89809C8.28373 5.45547 7.94852 5.32355 7.53244 5.30777H4.44746L4.42188 5.45242C6.82261 6.03204 8.41116 7.42865 9.07033 9.10794L8.39939 5.89809ZM20.2475 6.76294C20.7579 6.75163 21.2651 6.84635 21.7368 7.04104L21.9164 7.12508L22.1856 5.55021C21.7915 5.40301 21.1738 5.24512 20.4031 5.24512C18.4368 5.24512 17.0509 6.23069 17.0402 7.64308C17.0274 8.68671 18.0274 9.2694 18.7828 9.61727C19.5581 9.97381 19.8181 10.2005 19.8145 10.5188C19.8084 11.0052 19.1963 11.2283 18.6247 11.2283C17.8278 11.2283 17.4046 11.1188 16.751 10.8478L16.4946 10.7317L16.2147 12.358C16.6804 12.5612 17.5397 12.7359 18.4317 12.7451C20.5233 12.7451 21.8826 11.7713 21.8969 10.2621C21.9056 9.43646 21.3749 8.80641 20.225 8.28943C19.529 7.95225 19.1032 7.72814 19.1073 7.3879C19.1073 7.08586 19.4686 6.76294 20.2475 6.76294ZM27.2921 5.37805H25.7547C25.2772 5.37805 24.922 5.50743 24.7122 5.98111L21.7577 12.6402H23.8473C23.8473 12.6402 24.1882 11.7448 24.2654 11.5487L26.8136 11.5517C26.8729 11.8054 27.0561 12.6402 27.0561 12.6402H28.9021L27.2921 5.37805ZM24.8381 10.0614C25.0019 9.64427 25.6309 8.03069 25.6309 8.03069C25.6201 8.05055 25.7931 7.61048 25.896 7.33697L26.03 7.96345L26.4911 10.0614H24.8381Z"
-            fill="black"
-          />
-        </svg>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="35"
-          height="18"
-          viewBox="0 0 35 18"
-          fill="none"
-        >
-          <rect
-            width="34.1053"
-            height="18"
-            rx="2.52907"
-            fill="white"
-            fill-opacity="0.35"
-          />
-          <path
-            d="M13.9757 15.1655C10.6333 15.1655 7.91406 12.5344 7.91406 9.3003C7.91406 6.0662 10.6333 3.43506 13.9757 3.43506C17.3182 3.43506 20.0374 6.0662 20.0374 9.3003C20.0374 12.5344 17.3182 15.1655 13.9757 15.1655Z"
-            fill="#EE2C3C"
-          />
-          <path
-            d="M21.2569 3.43506C19.2845 3.43506 17.5461 4.36529 16.4392 5.78116H18.8021C19.0869 6.1448 19.3403 6.5319 19.5318 6.9542H15.7105C15.537 7.33053 15.4058 7.7238 15.319 8.12725H19.9235C20.0022 8.50615 20.0447 8.89911 20.0447 9.3003H15.1953C15.1953 9.70147 15.2377 10.0945 15.3178 10.4733H19.9222C19.8355 10.8768 19.7041 11.2701 19.5306 11.6464H15.7093C15.9009 12.0687 16.1542 12.4558 16.4392 12.8194H18.8021C18.4641 13.251 18.0664 13.6355 17.62 13.9619C18.6631 14.7383 19.941 15.1613 21.2569 15.1655C24.5994 15.1655 27.3187 12.5344 27.3187 9.3003C27.3187 6.0662 24.5994 3.43506 21.2569 3.43506Z"
-            fill="#F99D3C"
-          />
-        </svg>
-
-        <p className="text-[14px] text-[#fff] uppercase font-[700]">card</p>
-      </div>
-
-      {/* Token Select */}
-      <div className="grid grid-cols-3 gap-2 md:grid-cols-3 py-2">
-        {tokenSelect.map((data, index) => (
-          <WalletSelectDropdown
-            key={index}
-            tokens={
-              Array.isArray(data)
-                ? data.map((token) => ({
-                    ...token,
-                    icon:
-                      tokenImageMap?.[token.symbol?.toLowerCase()] ||
-                      chainImgMap?.[token.sub_symbol?.toUpperCase()] ||
-                      undefined,
-                  }))
-                : []
-            }
-            onChange={(token) => setSelectedToken(token)}
-          />
-        ))}
-      </div>
+      <TokenSelectGrid value={selectedToken} onChange={setSelectedToken} />
 
       <div
         className="rounded-[68.376px] flex items-center justify-center max-md:space-x-2 md:space-x-4 md:py-2 max-md:py-1 md:px-4 max-md:px-1 w-full"
@@ -219,7 +93,7 @@ const Wallet = ({ onTabChange }) => {
         }}
       >
         <p className="md:!text-[14px] max-md:!text-[13px] font-[700] max-md:pr-[2px]">
-          Presale Price = <span className="font-[700] text_gradient">$0.055</span>
+          Presale Price = <span className="font-[700] text_gradient">{formatDollar(parseNum(apiData.stage?.token_price), true, 0, 6)}</span>
         </p>
         <p className="md:!text-[14px] max-md:!text-[13px]">|</p>
         <p className="md:!text-[14px] max-md:!text-[13px] font-[700] max-md:pl-[2px]">
@@ -227,70 +101,15 @@ const Wallet = ({ onTabChange }) => {
         </p>
       </div>
 
-      {/* Payment Input */}
-      <div className="space-y-[5px]">
-        <p className="text-[14px] font-[700]">You Pay</p>
-        <div className="px-2 rounded-[8px] walletinput_bg">
-          <div className="px-1 flex justify-between items-center">
-            <div className="w-[80%] ">
-              <input
-                type="text"
-                className="py-2 w-full text-[#fff] text-[14.85px] font-[700] outline-none bg-transparent"
-                value={paymentAmount}
-                onChange={(e) => handlePaymentChange(e.target.value)}
-              />
-            </div>
-            <div
-              className="relative flex justify-center py-2  px-[10px] w-[70px]"
-              style={{
-                borderLeft: "1px solid rgba(255, 255, 255, 0.20)",
-              }}
-            >
-              <div className="w-[100%] justify-center flex  items-center">
-                <img
-                  className="w-[25.813px] h-[25.813px] object-cover"
-                  src={selectedToken?.icon || USDTicon}
-                  alt={selectedToken?.symbol || "token"}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="space-y-[5px]">
-        <p className="text-[14px] font-[700]">
-          You Receive SCORP2.0 + <span className="text-[#E0AA3E] underline font-[700]">Bronze NFT</span>
-        </p>
-        <div className="px-2 rounded-[8px] walletinput_bg">
-          <div className="px-1 flex justify-between items-center">
-            <div className="w-[80%] ">
-              <input
-                type="text"
-                className="py-2 w-full text-[#fff] text-[14.85px] font-[700] outline-none bg-transparent"
-                value={paymentReceive}
-                onChange={(e) => handlePaymentChangeRecive(e.target.value)}
-              />
-            </div>
-            <div
-              className="relative flex justify-center py-2  px-[10px] w-[70px]"
-              style={{
-                borderLeft: "1px solid rgba(255, 255, 255, 0.20)",
-              }}
-            >
-              <div className="w-[100%] justify-center flex  items-center">
-                <img
-                  className="w-[25.813px] h-[25.813px] object-cover"
-                  src={Scorpiontoken}
-                  alt="Scorpiontoken"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-   <button
-        onClick={handleBuy}
+      <TokenAmountInputs
+        paymentAmountStr={paymentAmount}
+        receiveAmountStr={receiveAmount}
+        onPaymentAmountChange={setPaymentAmount}
+        onReceiveAmountChange={setReceiveAmount}
+        selectedToken={selectedToken}
+      />
+      <button
+        onClick={() => {}}
         className="btn-primary !text-[20px] !text-[#000] mb-4 mt-2 w-[100%] max-md:py-[14px] md:!py-[16px]"
       >
         Connect Wallet

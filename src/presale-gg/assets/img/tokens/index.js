@@ -1,16 +1,17 @@
 import ada from "./ada.svg";
 import avax from "./avax.svg";
+import base from "./base.svg";
 import bch from "./bch.svg";
 import bnb from "./bnb.svg";
 import btc from "./btc.svg";
 import busd from "./busd.svg";
 import card from "./card.svg";
-import visaCard from "./visacard.svg";
 import cro from "./cro.svg";
 import doge from "./doge.svg";
 import etc from "./etc.svg";
 import eth from "./eth.svg";
 import fil from "./fil.svg";
+import floki from "./floki.svg";
 import ltc from "./ltc.svg";
 import matic from "./matic.svg";
 import pepe from "./pepe.svg";
@@ -27,17 +28,18 @@ import xrp from "./xrp.svg";
 export const tokenImageMap = {
   ada,
   avax,
+  base,
   bch,
   bnb,
   btc,
   busd,
   card,
-  visaCard,
   cro,
   doge,
   etc,
   eth,
   fil,
+  floki,
   ltc,
   matic,
   pepe,
@@ -54,10 +56,12 @@ export const tokenImageMap = {
 /** @type {Record<string, string | undefined>} */
 export const tokenNameMap = {
   tether: usdt,
+  usdt,
+  base,
   bnb,
   card,
-  visaCard,
   ethereum: eth,
+  floki,
   solana: sol,
   ripple: xrp,
   dogecoin: doge,
@@ -76,6 +80,7 @@ export const tokenNameMap = {
   fil,
   matic,
   xlm,
+  polygon: matic,
 };
 
 /** @type {Record<string, string | undefined>} */
@@ -83,6 +88,7 @@ export const chainImgMap = {
   "ERC-20": tokenImageMap["eth"],
   "BEP-20": tokenImageMap["bnb"],
   "TRC-20": tokenImageMap["trx"],
+  BASE: tokenImageMap["base"],
   BITCOIN: tokenImageMap["btc"],
   "TON CHAIN": tokenImageMap["ton"],
   AVALANCHE: tokenImageMap["avax"],
