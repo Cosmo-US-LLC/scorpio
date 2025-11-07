@@ -103,10 +103,9 @@ export const getIsMobile = () => {
 export const copyText = (text) => {
   try {
     navigator.clipboard.writeText(text);
-    console.log("COPIED TEXT", text);
     toast("Copied text");
+  // eslint-disable-next-line no-unused-vars
   } catch (err) {
-    console.log("ERROR COPYING TEXT", text);
     toast("Error copying text, copy manually");
   }
 };

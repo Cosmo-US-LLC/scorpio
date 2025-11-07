@@ -5,6 +5,7 @@
  */
 export const truncateString = (str, numChars) => {
   if (str.length <= numChars) return str;
+  if (str.startsWith("0x")) return `0x${truncateString(str.substring(2), numChars - 2)}`
   const charsLeft = Math.ceil((numChars - 3) / 2);
   const charsRight = Math.floor((numChars - 3) / 2);
   return (

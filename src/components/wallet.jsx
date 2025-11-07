@@ -1,21 +1,33 @@
 import { useEffect, useState } from "react";
 
 import TokenSelectGrid from "./Widget/TokenSelectGrid";
-import { useApiState } from "@/presale-gg/stores";
-import { formatDollar, parseNum } from "@/presale-gg/util";
+import { refetchUserData, refetchUserStakeData, showConnectWalletModal, useApiState } from "@/presale-gg/stores";
+import { buyWithCard, buyWithCrypto, formatDollar, formatLargeNumber, formatPrecision, parseNum } from "@/presale-gg/util";
 import TokenAmountInputs from "./Widget/TokenAmountInputs";
+import StageBox from "./Widget/StageBox";
+import { useAccount } from "@/presale-gg/web3";
+import toast from "react-hot-toast";
+import { api } from "@/presale-gg/api";
+import NowpaymentsModal from "./Widget/NowPaymentsModal";
+import WalletTransferModal from "./Widget/WalletTransferModal";
+import Modal from "./Widget/Modal";
+import ContactModal from "./Widget/ContactModal";
 
 /**
  * @typedef {import("@/presale-gg/api/api.types").API.PaymentToken} PaymentToken
+ * @typedef {import("@/presale-gg/api/api.types").API.PurchaseTransactionHistoryItemV2} PurchaseTransactionHistoryItemV2
+ * @typedef {import("@/presale-gg/api/api.types").API.Transaction} Transaction
+ * @typedef {import("@/presale-gg/util/buy.util").BuyState} BuyState
  */
 
 const Wallet = () => {
   /** @type {[PaymentToken | null, (newToken: PaymentToken | null) => void]} */
   const [selectedToken, setSelectedToken] = useState(null);
-  const [paymentAmount, setPaymentAmount] = useState("1");
-  const [receiveAmount, setReceiveAmount] = useState("0");
+  const [paymentAmountStr, setPaymentAmountStr] = useState("1");
+  const [receiveAmountStr, setReceiveAmountStr] = useState("0");
 
   const apiData = useApiState()
+  const accountData = useAccount()
 
   useEffect(() => {
     if (!apiData.paymentTokens?.length || selectedToken !== null) return
@@ -24,10 +36,115 @@ const Wallet = () => {
 
   useEffect(() => {
     if (!selectedToken || !apiData.stage) return
-    const receiveNum = parseNum(selectedToken.price) * parseNum(paymentAmount) / parseNum(apiData.stage?.token_price ?? 1)
-    setReceiveAmount(receiveNum)
+    const receiveNum = parseNum(selectedToken.price) * parseNum(paymentAmountStr) / parseNum(apiData.stage?.token_price ?? 1)
+    setReceiveAmountStr(formatPrecision(receiveNum, 0, 3))
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedToken, apiData.stage?.token_price])
+
+   const [transactionLoading, setTransactionLoading] = useState(false);
+  /** @type {[Transaction | null, (newVal: Transaction | null) => void]} */
+  const [createdTransaction, setCreatedTransaction] = useState(null);
+  const [transactionModalOpen, setTransactionModalOpen] = useState(false);
+
+  /** @type {[BuyState["type"] | null, (newVal: BuyState["type"] | null) => void]} */
+  const [buyState, setBuyState] = useState(null);
+  /** @type {[PurchaseTransactionHistoryItemV2 | null, (newVal: PurchaseTransactionHistoryItemV2 | null) => void]} */
+  const [boughtTransaction, setBoughtTransaction] = useState(null);
+  const [boughtTransactionHash, setBoughtTransactionHash] = useState(null);
+  /** @type {[PaymentToken | null, (newVal: PaymentToken | null) => void]} */
+  const [boughtPaymentToken, setBoughtPaymentToken] = useState(null);
+  const [boughtPaymentAmountStr, setBoughtPaymentAmountStr] = useState(null);
+  const [boughtModalOpen, setBoughtModalOpen] = useState(true);
+  const [contactModalOpen, setContactModalOpen] = useState(false);
+  const [transactionErrorMessage, setTransactionErrorMessage] = useState(null);
+
+  const buy = async () => {
+    const account = accountData.address;
+    if (apiData.presaleEnded) return toast.error("Presale has ended");
+    if (!account) return toast.error("You must connect your wallet first");
+    if (transactionLoading) return;
+    if (!selectedToken) return;
+    setTransactionLoading(true);
+    try {
+      if (selectedToken.symbol.toLowerCase() === "card") {
+        await buyCard();
+      } else {
+        setBuyState(null);
+        setBoughtModalOpen(true);
+        setBoughtTransaction(null);
+        setBoughtTransactionHash(null);
+        setBoughtPaymentToken(selectedToken);
+        setBoughtPaymentAmountStr(paymentAmountStr);
+        setTransactionLoading(true);
+        const res = await buyWithCrypto({
+          paymentToken: selectedToken,
+          paymentTokenNum: paymentAmountStr,
+          walletAddress: account,
+          onStateChanged: (state) => {
+            setBuyState(state.type);
+            if (state.type === "confirming") {
+              setBoughtTransactionHash(state.transactionHash);
+            } else if (state.type === "finished") {
+              setBoughtTransaction(state.transaction);
+              refetchUserData();
+              refetchUserStakeData();
+            } else if (state.type === "errored") {
+              setTransactionErrorMessage(
+                api.getApiErrorMessage(state.error, "Error sending transaction")
+              );
+            }
+            if (state.type !== "sending") {
+              setTransactionLoading(false);
+            }
+          },
+        });
+        if (!res) return setTransactionLoading(false);
+        if (res.type === "created") {
+          setCreatedTransaction(res.transaction);
+          setTimeout(() => {
+            setTransactionModalOpen(true);
+          }, 50);
+          setTransactionLoading(false);
+        }
+      }
+    } catch (err) {
+      console.error(err);
+      setTransactionLoading(false);
+    }
+  };
+
+  const [successModalOpen, setSuccessModalOpen] = useState(false);
+  const [erroredModalOpen, setErroredModalOpen] = useState(false);
+  const [pendingModalOpen, setPendingModalOpen] = useState(false);
+  const [successBoughtModalOpen, setSuccessBoughtModalOpen] = useState(false);
+
+  const buyCard = async () => {
+    try {
+      const account = accountData.address;
+      if (!account) return toast.error("You must connect your wallet first");
+      const usdAmount = parseNum(paymentAmountStr);
+      await buyWithCard({
+        name: `${formatLargeNumber(parseNum(receiveAmountStr))} $SCORP2.0`,
+        usd: usdAmount,
+        walletAddress: account,
+        onClosedEarly: () => {
+          setPendingModalOpen(true);
+        },
+        onError: () => setErroredModalOpen(true),
+        onSuccess: (tokens) => {
+          if (tokens !== undefined) {
+            setSuccessBoughtModalOpen(true);
+          } else {
+            setSuccessModalOpen(true);
+          }
+          refetchUserData();
+          refetchUserStakeData();
+        },
+      });
+    // eslint-disable-next-line no-unused-vars
+    } catch (_) { /* empty */ }
+    setTransactionLoading(false);
+  };
 
   return (
     <div
@@ -47,43 +164,7 @@ const Wallet = () => {
       >
         {apiData.presaleEnded ? "Presale Ended" : apiData.stage?.stage_name ?? "SCORP2.0 PRESALE"}
       </h2>
-      <div
-        className="px-[30px] py-[20px] space-y-[8px] border-[1px] border-[#F9F295] rounded-[8px]"
-        style={{ background: "#000" }}
-      >
-        <h2 className="text-center text_gradient md:text-[40px] max-md:!text-[32px] font-[700]">
-          {formatDollar(parseNum(apiData.stage?.cumulative_usd_raised))}
-        </h2>
-        <div className="">
-          <div className="flex justify-between items-center pb-1">
-            <p className="text-[#fff] text-[14px] font-[700] leading-[100%]">
-              80% of presale stage softcap
-            </p>
-          </div>
-          <div className="bg-gray-800 w-[100%] md:h-[17px] max-md:h-[32px] rounded-[20px]">
-            <div
-              className="md:h-[17px] max-md:h-[32px] rounded-[20px]"
-              style={{
-                width: "80%",
-                background: "#E2B146",
-              }}
-            />
-          </div>
-          <div>
-            <p
-              className=" !text-[14px] text-end  font-[700] leading-[150%]"
-              style={{
-                color: "rgba(255, 255, 255, 0.50)",
-              }}
-            >
-              $12,000,000
-            </p>
-          </div>
-        </div>
-        <div className="">
-          <h5 className="text-center max-md:!text-[18px]">21,948 Holders</h5>
-        </div>
-      </div>
+      <StageBox />
       <TokenSelectGrid value={selectedToken} onChange={setSelectedToken} />
 
       <div
@@ -97,22 +178,28 @@ const Wallet = () => {
         </p>
         <p className="md:!text-[14px] max-md:!text-[13px]">|</p>
         <p className="md:!text-[14px] max-md:!text-[13px] font-[700] max-md:pl-[2px]">
-          Listing Price = <span className="font-[700] text_gradient">$0.15</span>
+          Listing Price = <span className="font-[700] text_gradient">$0.15</span>
         </p>
       </div>
 
       <TokenAmountInputs
-        paymentAmountStr={paymentAmount}
-        receiveAmountStr={receiveAmount}
-        onPaymentAmountChange={setPaymentAmount}
-        onReceiveAmountChange={setReceiveAmount}
+        paymentAmountStr={paymentAmountStr}
+        receiveAmountStr={receiveAmountStr}
+        onPaymentAmountChange={setPaymentAmountStr}
+        onReceiveAmountChange={setReceiveAmountStr}
         selectedToken={selectedToken}
       />
       <button
-        onClick={() => {}}
+        onClick={async () => {
+          if (accountData.isConnected) {
+            buy()
+          } else {
+            showConnectWalletModal()
+          }
+        }}
         className="btn-primary !text-[20px] !text-[#000] mb-4 mt-2 w-[100%] max-md:py-[14px] md:!py-[16px]"
       >
-        Connect Wallet
+        {accountData.isConnected ? "Buy Now" : "Connect Wallet"}
       </button>
       <div className="space-y-[8px]">
         <div className="flex justify-center space-x-3">
@@ -148,7 +235,7 @@ const Wallet = () => {
             </svg>
             Bonus Code
           </button>
-             <button
+          <button
             className="!text-[14px] font-[700] cursor-pointer max-md:px-[15px] md:px-[35px] flex items-center justify-center py-[5px]"
             style={{
               borderRadius: "68.376px",
@@ -183,17 +270,17 @@ const Wallet = () => {
         </div>
         <div className="flex justify-center space-x-3">
           <button
-           onClick={(e) => {
-                  e.preventDefault();
-                  const element = document.querySelector("#how-to-buy");
-                  if (element) {
-                    const y =
-                      element.getBoundingClientRect().top +
-                      window.scrollY +
-                      -70;
-                    window.scrollTo({ top: y, behavior: "smooth" });
-                  }
-                }}
+            onClick={(e) => {
+              e.preventDefault();
+              const element = document.querySelector("#how-to-buy");
+              if (element) {
+                const y =
+                  element.getBoundingClientRect().top +
+                  window.scrollY +
+                  -70;
+                window.scrollTo({ top: y, behavior: "smooth" });
+              }
+            }}
             className="!text-[14px] !font-[700] cursor-pointer max-md:px-[15px] md:px-[35px] flex items-center justify-center py-[5px]"
             style={{
               borderRadius: "68.376px",
@@ -239,10 +326,83 @@ const Wallet = () => {
           }}
         >
           <p className="!text-[12px] max-w-[300px] mx-auto  text-center">
-            <span className="text-[#E0AA3E] !font-[700]">Special Offer: </span>Get 20% more $SCORP2.0 tokens  with the code SCORP20 (valid for a limited time)
+            <span className="text-[#E0AA3E] !font-[700]">Special Offer: </span>Get 20% more $SCORP2.0 tokens with the code SCORP20 (valid for a limited time)
           </p>
         </div>
       </div>
+
+      {createdTransaction && (
+        <NowpaymentsModal
+          open={transactionModalOpen}
+          onClose={() => {
+            setTransactionModalOpen(false);
+            setContactModalOpen(true);
+          }}
+          transaction={createdTransaction}
+        />
+      )}
+      {boughtPaymentAmountStr !== null && boughtPaymentToken !== null && buyState !== null && (
+        <WalletTransferModal
+          open={boughtModalOpen}
+          onClose={() => {
+            setBoughtModalOpen(false);
+            setContactModalOpen(true);
+          }}
+          payCurrency={boughtPaymentToken}
+          payAmount={boughtPaymentAmountStr}
+          state={buyState}
+          transactionHash={boughtTransactionHash}
+          transaction={boughtTransaction}
+          transactionError={transactionErrorMessage}
+        />
+      )}
+      <ContactModal open={contactModalOpen} onClose={() => setContactModalOpen(false)} />
+      <Modal
+        title="Transaction Successful"
+        open={successModalOpen}
+        onClose={() => {
+          setSuccessModalOpen(false);
+          setContactModalOpen(true);
+        }}
+      >
+        <p>
+          The transaction was successful. Please wait a minute and refresh the
+          transactions tab to see your package.
+        </p>
+      </Modal>
+      <Modal
+        title="Transaction Successful"
+        open={successBoughtModalOpen}
+        onClose={() => {
+          setSuccessBoughtModalOpen(false);
+          setContactModalOpen(true);
+        }}
+      >
+        <p>
+          The transaction was successful. You bought{" "}
+          {boughtTransaction?.tokens_bought ?? "Unknown"} DOGEBALL.
+        </p>
+      </Modal>
+      <Modal
+        title="Transaction Errored"
+        open={erroredModalOpen}
+        onClose={() => setErroredModalOpen(false)}
+      >
+        <p>The transaction was not successful. Please try again.</p>
+      </Modal>
+      <Modal
+        title="Transaction Pending"
+        open={pendingModalOpen}
+        onClose={() => {
+          setPendingModalOpen(false);
+          setContactModalOpen(true);
+        }}
+      >
+        <p>
+          The transaction is pending. Please wait a minute and refresh the
+          transactions tab to see your tokens.
+        </p>
+      </Modal>
     </div>
   );
 };

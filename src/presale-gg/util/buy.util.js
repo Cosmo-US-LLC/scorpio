@@ -40,7 +40,7 @@ export const walletBuyTokens = new Set([
 ]);
 
 /**
- * @typedef {import("../api/api.types.d.ts").API.TransactionHistoryItem} TransactionHistoryItem
+ * @typedef {import("../api/api.types").API.PurchaseTransactionHistoryItemV2} PurchaseTransactionHistoryItemV2
  * @typedef {{type: "created", transaction: Transaction}, {type: "sent"}} TransactionFinishedReturn
  */
 
@@ -49,35 +49,35 @@ export const walletBuyTokens = new Set([
  * @param {string} walletAddress 
  * @param {number} createdAt 
  * @param {{signal?: AbortSignal}} [args]
- * @returns {Promise<TransactionHistoryItem>} 
+ * @returns {Promise<PurchaseTransactionHistoryItemV2>} 
  */
-export const waitForNextTransaction = (
-  walletAddress,
-  createdAt,
-  args
-) => {
-  return new Promise((resolve, reject) => {
-    const confirm = (transaction) => {
-      clearInterval(checkInterval)
-      resolve(transaction)
-    }
-    const checkInterval = setInterval(async () => {
-      if (args?.signal?.aborted) {
-        reject()
-        return clearInterval(checkInterval)
-      }
-      try {
-        const res = await api.getTransactionHistory(walletAddress, 0, 1)
-        const transaction = res.data[0]
-        if (!transaction) return
-        if (new Date(transaction.created_at).getTime() < createdAt) return
-        if (transaction.status === 'completed') {
-          confirm(transaction)
+
+export const waitForNextTransaction = (walletAddress, createdAt, args) => {
+  return new Promise(
+    (resolve, reject) => {
+      const confirm = (transaction) => {
+        clearInterval(checkInterval);
+        resolve(transaction);
+      };
+      const checkInterval = setInterval(async () => {
+        if (args?.signal?.aborted) {
+          reject();
+          return clearInterval(checkInterval);
         }
-      } catch (_) {}
-    }, 5000)
-  })
-}
+        try {
+          const res = await api.getTransactionHistoryV2(walletAddress, 0, 10);
+          const transaction = res.data.find((transaction) => transaction.record_type === "transaction");
+          if (!transaction) return;
+          if (new Date(transaction.created_at).getTime() < createdAt) return;
+          if (transaction.status === "completed") {
+            confirm(transaction);
+          }
+        // eslint-disable-next-line no-unused-vars
+        } catch (_) { /* empty */ }
+      }, 5000);
+    }
+  );
+};
 
 /**
  * @typedef {{type: 'sending' | 'finalizing'} | {type: 'confirming', transactionHash: string} | {type: 'finished', transaction: TransactionHistoryItem} | {type: 'errored', error: unknown}} BuyState

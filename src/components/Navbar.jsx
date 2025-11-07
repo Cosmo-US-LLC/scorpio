@@ -18,6 +18,10 @@ import flag5 from "../assets/navabar/flags/flg (5).svg";
 import flag6 from "../assets/navabar/flags/flg (6).svg";
 import flag8 from "../assets/navabar/flags/flg (8).svg";
 import flag9 from "../assets/navabar/flags/flg (9).svg";
+import { getConfig, useAccount } from "@/presale-gg/web3";
+import { showConnectWalletModal } from "@/presale-gg/stores";
+import { disconnect } from "@wagmi/core";
+import { truncateString } from "@/presale-gg/util";
 
 const flags = [
   { flag: flag1, abbreviation: "EN", name: "English" },
@@ -81,6 +85,8 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const accountData = useAccount()
 
   return (
     <header
@@ -222,8 +228,20 @@ export default function Navbar() {
             </div>
           </nav>
 
-          <button className="md:px-[13px] max-md:px-[12px] max-md:text-[14px] btn-primary cursor-pointer max-md:py-[13px] md:py-[16px]">
-            Connect Wallet
+          <button
+            className="md:px-[13px] max-md:px-[12px] max-md:text-[14px] btn-primary cursor-pointer max-md:py-[13px] md:py-[16px]"
+            onClick={async () => {
+              if (accountData.isConnected) {
+                const { config } = await getConfig()
+                // Disconnect twice to avoid issues
+                await disconnect(config)
+                setTimeout(() => disconnect(config), 100)
+              } else {
+                showConnectWalletModal()
+              }
+            }}
+          >
+            {accountData.isConnected ? `Disconnect ${truncateString(accountData.address ?? "", 11)}` : "Connect Wallet"}
           </button>
         </div>
       </div>

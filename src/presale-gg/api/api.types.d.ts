@@ -4,15 +4,18 @@ export namespace API {
   export interface Stage {
     id: number;
     stage_name: string;
-    total_tokens: string;
     total_tokens_sold: string;
-    tokens_available: string;
+    total_tokens: string;
     token_price: string;
+    tokens_available: string;
     cumulative_usd_raised: string | null;
-    cumulative_tokens_sold: string;
-    next_stage_target_usd: string;
-    next_stage_target_tokens: string;
-    next_stage_price: string;
+    cumulative_tokens_sold: string | null;
+    next_stage_price: string | null;
+    next_stage_target_tokens: string | null;
+    next_stage_target_usd: string | null;
+    stage_max_duration_seconds: number | null;
+    stage_start: string | null;
+    stage_end: string | null;
   }
 
   export interface Info {
@@ -48,13 +51,94 @@ export namespace API {
       | "completed"
       | "failed"
       | "expired"
-      | "refunded";
+      | "refunded"
+      | "finalising"
+      | "error";
     created_at: string;
   };
 
+  export const defaultTransactionHistoryItem: TransactionHistoryItem = {
+    id: 0,
+    project: "",
+    stage_name: null,
+    wallet_address: "",
+    transaction_hash: "",
+    payment_token_name: "",
+    payment_usd_amount: "123",
+    tokens_bought: null,
+    status: "pending",
+    created_at: new Date().toISOString(),
+    payment_token_amount: "123123",
+    type: "",
+  };
+
+  export type PurchaseTransactionHistoryItemV2 = {
+    created_at: string;
+    id: number;
+    payment_token_amount: string;
+    payment_token_name: string | null;
+    payment_usd_amount: string;
+    project_id: string;
+    record_type: "transaction";
+    stage_name: string | null;
+    status: API.TransactionHistoryItem["status"] | null;
+    tokens_bought: string | null;
+    transaction_hash: string | null;
+    type: "external" | "blockchain";
+    wallet_address: string;
+  };
+
+  export type ManualTransactionHistoryItemV2 = {
+    authoriser: number;
+    created_at: string;
+    id: number;
+    project_id: string;
+    reason: string;
+    record_type: "manual_transaction";
+    status: API.TransactionHistoryItem["status"] | null;
+    tokens_bought: string;
+    wallet_address: string;
+  };
+
+  export type BonusTransactionHistoryItemV2 = {
+    bonus_token_amount: string;
+    bonus_type: "bonus_code" | "referral" | "referrer";
+    created_at: string;
+    id: number;
+    identifier: string;
+    parent_transaction_hash: string;
+    parent_transaction_id: string;
+    project_id: string;
+    record_type: "bonus_transaction";
+    wallet_address: string;
+    status?: undefined;
+  };
+
+  export type TransactionHistoryItemV2 =
+    | PurchaseTransactionHistoryItemV2
+    | ManualTransactionHistoryItemV2
+    | BonusTransactionHistoryItemV2;
+
+  export const defaultTransactionHistoryItemV2: PurchaseTransactionHistoryItemV2 =
+    {
+      id: 0,
+      stage_name: null,
+      wallet_address: "",
+      transaction_hash: "",
+      payment_token_name: "",
+      payment_usd_amount: "123",
+      tokens_bought: null,
+      status: "pending",
+      created_at: new Date().toISOString(),
+      payment_token_amount: "123123",
+      project_id: "dball",
+      record_type: "transaction",
+      type: "blockchain",
+    };
+
   export type BonusTransactionHistoryItem = {
     id: number;
-    transaction_id: Number;
+    transaction_id: number;
     wallet_address: string;
     bonus_token_amount: string;
     type: "rank" | "referral" | "referrer" | "bonus_code";
@@ -77,13 +161,15 @@ export namespace API {
     referral_count: number;
     referred_by: string | null;
     total_referral_usd_rewards: string;
+    claim_wallet_address: string;
   }
 
   export interface LeaderboardEntry {
     rank: string;
     wallet_address: string;
     referral_count: string;
-    total_earned: string;
+    total_spent_usd: string;
+    total_earned_tokens: string;
   }
 
   export interface PriceChartEntry {
@@ -98,7 +184,7 @@ export namespace API {
     expiration_estimate_date: string;
     ipn_callback_url: string;
     is_fee_paid_by_user: boolean;
-    is_fixed_rate: false;
+    is_fixed_rate: boolean;
     network: string;
     network_precision: number | null;
     order_description: string;
@@ -112,7 +198,7 @@ export namespace API {
     price_amount: number;
     price_currency: string;
     product: string;
-    purchase_ud: string;
+    purchase_id: string;
     smart_contract: null;
     time_limit: null;
     type: string;
@@ -175,5 +261,26 @@ export namespace API {
     referral_token_bonus_percentage: number;
     referral_payout_percentage: number;
     min_referral_spend: number;
+  };
+
+  export type CardTransaction = {
+    clickId: string;
+    signedData: {
+      address: string;
+      commodity: string;
+      commodity_amount: number;
+      network: string;
+      sc_address: string;
+      sc_input_data: string;
+      signature: string;
+    };
+  };
+
+  export type Banner = {
+    id: number;
+    desktop_image_url: string;
+    mobile_image_url: string;
+    ordering: number;
+    click_url: string | null;
   };
 }
