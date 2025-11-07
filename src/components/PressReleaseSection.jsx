@@ -100,7 +100,7 @@ const PressReleaseSection = ({ articles }) => {
                         </div>
 
                         <div className="p-4 sm:p-5 md:p-6 flex-1 flex flex-col relative z-10">
-                          <h6 className="text-left mb-2 md:mb-3 line-clamp-3">
+                          <h6 className="text-left mb-2 !font-[700] md:mb-3 line-clamp-3">
                             {article.title}
                           </h6>
                           <p className="text-[#CACACA] flex-1 line-clamp-3 md:line-clamp-4 text-sm md:text-base">

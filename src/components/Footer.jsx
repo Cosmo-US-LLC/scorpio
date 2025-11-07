@@ -185,7 +185,7 @@ export default function Footer() {
           <div className="flex flex-col gap-2 max-md:gap-3">
             <h3 className="text-left max-md:text-lg">Scorpion Casino</h3>
             <p className="text-[#CACACA] max-md:text-sm">
-              Registration Number: 14904288
+              License Number: 149948
             </p>
             <div className="flex flex-wrap gap-x-4 gap-y-2 max-md:gap-x-3 max-md:gap-y-2">
               <a
