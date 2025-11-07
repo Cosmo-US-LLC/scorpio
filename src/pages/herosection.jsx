@@ -78,7 +78,7 @@ function Herosection() {
      <div className="max-md:block relative z-[1] md:flex max-md:space-y-[47px] justify-between items-start w-[100%]">
         <div className="max-w-[745px] space-y-[20px] w-full">
             <h3 className="text_gradient text-start !text-[16px] !font-[700]">FAST-GROWING CASINO REVEALS NEW 2.0 TOKEN WITH SHOCKING REWARDS</h3>
-            <h1 className="md:max-w-[645px]">$SCORP2.0 is providing <span className="faded">daily rewards</span> to holders based on its <span className="faded">casino’s performance</span> </h1>
+            <h1 className="md:max-w-[645px]">$SCORP2.0 <span className="faded"> is providing </span> daily  rewards <span className="faded"> to </span> holders <span className="faded"> based on its </span> casino’s performance </h1>
             <p className="max-w-[559px] pr-5">Start earning today and receive up to 10,000 USDT in daily passive staking income from a licensed and regulated global Casino and Betting Platform, no matter the market conditions.</p>
             <div className="flex items-center pt-2 max-md:space-x-[15px] md:space-x-[34px]">
                 <div className="space-y-[10px]">
