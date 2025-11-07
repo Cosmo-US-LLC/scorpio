@@ -2,7 +2,7 @@ import onlineGamblingRightImage from "../assets/online_gambling/online_cambling_
 
 const FutureSection = () => {
   return (
-    <section className="w-full min-h-[600px] md:h-[700px] py-12 md:py-16 px-4 md:px-6 lg:px-8">
+    <section className="w-full min-h-[600px] md:h-[700px] py-12 md:py-14 px-4 md:px-6 lg:px-8">
       <div className="max-w-[1280px] future_section_bg mx-auto relative overflow-hidden h-full flex items-center justify-center">
         <div className="relative flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16 rounded-2xl overflow-hidden px-4 sm:px-6 md:px-8 py-6 md:py-6">
           <div className="flex-1 flex flex-col z-10 justify-center gap-4 md:gap-6 w-full">

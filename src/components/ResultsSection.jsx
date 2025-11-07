@@ -39,7 +39,7 @@ const ResultsSection = () => {
       id: 5,
       title: "Migration",
       description:
-        "All $SCORP presale holders will be automatically migrated to $SCORP 2.0 ",
+        "All $SCORP presale holders will be automatically migrated to $SCORP2.0 ",
       icon: resulticon5,
     },
   ];
@@ -164,7 +164,9 @@ const ResultsSection = () => {
                     {" "}
                   </div>
 
-                  <p className="">{items.description}</p>
+                  <p className="mob_br"
+                  dangerouslySetInnerHTML={{ __html: items.description }}
+                  ></p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     // width="233"
