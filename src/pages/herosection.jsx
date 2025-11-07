@@ -25,7 +25,7 @@ function Herosection() {
     toast.success("Link copied!");
   };
   return (
-    <div id="wallet" className=" pt-[120px] pb-[160px] max-w-[1280px] w-full mx-auto md:px-0 max-md:px-4 h-full bg_herosection relative">
+    <div id="wallet" className=" pt-[100px] md:pt-[120px] pb-[160px] max-w-[1280px] w-full mx-auto md:px-0 max-md:px-4 h-full bg_herosection relative">
       <div
         className="absolute max-md:top-[60px] z-[0] md:right-[0%] md:top-[100px]"
         style={{
@@ -80,33 +80,33 @@ function Herosection() {
             <h3 className="text_gradient text-start !text-[16px] !font-[700]">FAST-GROWING CASINO REVEALS NEW 2.0 TOKEN WITH SHOCKING REWARDS</h3>
             <h1 className="md:max-w-[645px]">$SCORP2.0 is providing <span className="faded">daily rewards</span> to holders based on its <span className="faded">casino’s performance</span> </h1>
             <p className="max-w-[559px] pr-5">Start earning today and receive up to 10,000 USDT in daily passive staking income from a licensed and regulated global Casino and Betting Platform, no matter the market conditions.</p>
-            <div className="flex items-center pt-2 max-md:space-x-[20px] md:space-x-[34px]">
+            <div className="flex items-center pt-2 max-md:space-x-[15px] md:space-x-[34px]">
                 <div className="space-y-[10px]">
-                 <p className="text-[#fff] !font-[600]">Audited by</p>  
+                 <p className="text-[#fff] max-md:!text-[13px] !font-[600]">Audited by</p>  
                  <img src={auditedLogo} className="max-md:max-w-[152.618px] md:max-h-[43.321px]" alt="Audited by" /> 
                 </div>
                 <div className="space-y-[10px]">
-                 <p className="text-[#fff] !font-[600]">Licensed and Regulated by</p>  
+                 <p className="text-[#fff] max-md:!text-[13px] !font-[600]">Licensed & Regulated by</p>  
                  <img src={licensedLogo} className="max-md:max-w-[156.837px] max-h-[43.321px]" alt="Licensed" /> 
                 </div>
             </div>
-            <div className="flex items-center space-x-2 md:pt-2 md:space-x-3">
-              <h5 className="underline max-md:!text-[12px]">Audited & KYC | 100% Secure & Verified</h5>
-              <img src={solid} className="max-w-[78px] md:max-w-[120px] mb-1" alt="solid" />
+            <div className="flex items-center max-md:hidden space-x-2 md:pt-6 md:space-x-3">
+              <h5 className="underline max-md:!text-[12px] !font-[600]">Audited & KYC | 100% Secure & Verified</h5>
+              <img src={solid} className="max-w-[78px] md:max-w-[160px] mb-1" alt="solid" />
             </div>
-            <div className="pt-4 md:pt-6">
+            <div className="pt-4 md:pt-0">
                 {/* <video src=""></video> */}
                 <img src={poster} className=" hidden md:block max-md:max-w-[100%] md:max-w-[656px] min-h-[377px] aspect-[656/377]" alt="poster" />
                    <img src={poster} className="block md:hidden max-md:max-w-[100%] md:max-w-[656px] min-h-[203px] " alt="poster" />
             </div>
         </div>
-          <img src={vector3} className="  absolute max-w-[30px] md:max-w-[53.203px] md:right-[38.5%] right-[18%] z-[4] top-[9%] md:top-[1%]" alt="SCORP2" />
+          {/* <img src={vector3} className="  absolute max-w-[30px] md:max-w-[53.203px] md:right-[38.5%] right-[18%] z-[4] top-[9%] md:top-[1%]" alt="SCORP2" />
            <img src={vector3} className="  absolute max-w-[25px] md:max-w-[33.203px] right-[3%] md:right-[37.5%] z-[4] md:top-[12%] top-[26%]" alt="SCORP2" />
             <img src={vector4} className="  absolute max-w-[20px] md:max-w-[27.907px] right-[7%] md:right-[43.5%] z-[4] md:top-[-3%] top-[10%]" alt="SCORP2" />
              <img src={vector3} className="max-md:hidden  absolute max-w-[43.203px] left-[31.5%] z-[4] top-[51%]" alt="SCORP2" />
             <img src={vector4} className="max-md:hidden  absolute max-w-[27.907px] right-[58.5%] z-[4] top-[50%]" alt="SCORP2" />
              <img src={vector3} className="max-md:hidden  absolute max-w-[33.203px] right-[46%] z-[4] top-[65%]" alt="SCORP2" />
-            <img src={vector4} className="max-md:hidden  absolute max-w-[27.907px] right-[42.5%] z-[4] top-[60%]" alt="SCORP2" />
+            <img src={vector4} className="max-md:hidden  absolute max-w-[27.907px] right-[42.5%] z-[4] top-[60%]" alt="SCORP2" /> */}
         <img src={vector1} className="max-md:hidden  absolute max-w-[350.368px] right-[36.5%] z-[4] top-[18%]" alt="SCORP2" />
         <img src={vector2} className="absolute max-md:hidden max-w-[109.584px] right-[36%] z-[4] bottom-[15%]" alt="SCORP2" />
         

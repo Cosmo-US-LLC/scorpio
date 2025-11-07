@@ -37,7 +37,7 @@ const BenefitsSection = () => {
       id: 4,
       title: "DAILY PASSIVE <br/> STAKING INCOME",
       description:
-        "Get daily passive staking income automatically added to your wallet, even during the pre-sale period!",
+        "Get daily passive staking income automatically added to your wallet, <br/>  even during the pre-sale period!",
       icon: benefitsicon4,
       height: "199px",
       width: "206px",

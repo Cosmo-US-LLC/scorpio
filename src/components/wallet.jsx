@@ -92,9 +92,7 @@ const Wallet = ({ onTabChange }) => {
     >
       <h2
         className="text-center md:text-[25px] max-md:!text-[22px]"
-        style={{
-          color: "rgba(255, 255, 254, 0.50)",
-        }}
+        
       >
         SCORP2.0 PRESALE
       </h2>
@@ -107,7 +105,10 @@ const Wallet = ({ onTabChange }) => {
         </h2>
         <div className="">
           <div className="flex justify-between items-center pb-1">
-            <p className="text-[#fff] text-[14px] font-[700] leading-[100%]">
+            <p className=" text-[14px] font-[700] leading-[100%]"
+             style={{
+                color: "rgba(255, 255, 255, 0.50)",
+              }}>
               80% of presale stage softcap
             </p>
           </div>

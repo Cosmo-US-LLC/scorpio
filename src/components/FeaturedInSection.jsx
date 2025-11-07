@@ -55,9 +55,6 @@ const FeaturedInSection = () => {
         {/* Header */}
         <div className="text-center max-md:mb-8 md:mb-[28px]">
           <h2 className="text-center"
-          style={{
-            color:"rgba(255, 255, 255, 0.50)"
-          }}
           >
             Featured In
           </h2>
