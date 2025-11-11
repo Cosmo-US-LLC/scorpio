@@ -76,7 +76,7 @@ const ResultsSection = () => {
               </h2>
               <p className="text-center">
                 SCORP was listed on multiple exchanges, reaching a $280M market
-                cap, soaring 560% from launch, and delivering up to 2800% (28x)
+                cap, and delivering up to 2800% (28x)
                 returns for presale buyers at its all-time high.
               </p>
               <p className="text-center">

@@ -69,7 +69,7 @@ const PressMediaSection = ({ pressItems }) => {
                   alt={`${item.name} logo`}
                   className="max-h-[90px] max-w-full "
                 />
-                <h4 className="text-center md:hidden pt-[29px]">{item.name}</h4>
+                {/* <h4 className="text-center md:hidden pt-[29px]">{item.name}</h4> */}
                </div>
               </div>
 
