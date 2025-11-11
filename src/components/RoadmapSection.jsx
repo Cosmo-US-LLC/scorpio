@@ -177,7 +177,7 @@ const RoadmapSection = ({ phases }) => {
                           src={items.icon}
                           alt={items.title}
                         />
-                        <h6 className="text_gradient text-sm md:text-base">
+                        <h6 className="text-[#fff] text-sm md:text-base">
                           {items.phase}
                         </h6>
 
