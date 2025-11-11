@@ -89,7 +89,7 @@ export default function Navbar() {
           ? "backdrop-blur-md bg-[#000] top-0 "
           : "bg-[#000] top-0 "
       }
-       ${isOpen ? "max-md:h-[100dvh]" : "max-md:h-auto"}
+       ${isOpen ? "max-md:h-[100dvh] !min-h-[100svh]" : "max-md:h-auto"}
       `}
     >
       <div className="max-w-[1280px] w-full  mx-auto md:px-0 max-md:px-4 py-4">
@@ -232,7 +232,7 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-[#000] relative flex flex-col justify-between h-[100dvh] text-center space-y-3 pt-12 pb-30 font-inter text-sm">
+        <div className="md:hidden bg-[#000] relative flex flex-col !min-h-[100svh] justify-between h-[100dvh] text-center space-y-3 pt-12 pb-30 font-inter text-sm">
           <div
             className="absolute bottom-[-20%]  z-[1] right-[-70%] mx-auto"
             style={{
