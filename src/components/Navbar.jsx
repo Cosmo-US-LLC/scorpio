@@ -230,7 +230,7 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-[#000] relative flex flex-col justify-between h-screen text-center space-y-3 pt-12 pb-30 font-inter text-sm">
+        <div className="md:hidden bg-[#000] relative flex flex-col justify-between h-[100dvh] text-center space-y-3 pt-12 pb-30 font-inter text-sm">
           <div
             className="absolute bottom-[-20%]  z-[1] right-[-70%] mx-auto"
             style={{
