@@ -84,7 +84,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed max-md:h-[100dvh] left-0 w-full  z-[99] text-white  transition-all duration-300 ${
+      className={`fixed left-0 w-full  z-[99] text-white  transition-all duration-300 ${
         isScrolled
           ? "backdrop-blur-md bg-[#000] top-0 "
           : "bg-[#000] top-0 "
