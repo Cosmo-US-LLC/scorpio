@@ -84,11 +84,13 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed left-0 w-full  z-[99] text-white  transition-all duration-300 ${
+      className={`fixed max-md:h-[100dvh] left-0 w-full  z-[99] text-white  transition-all duration-300 ${
         isScrolled
           ? "backdrop-blur-md bg-[#000] top-0 "
           : "bg-[#000] top-0 "
-      }`}
+      }
+       ${isOpen ? "max-md:h-[100dvh]" : "max-md:h-auto"}
+      `}
     >
       <div className="max-w-[1280px] w-full  mx-auto md:px-0 max-md:px-4 py-4">
         <div className="w-full flex justify-between items-center">
