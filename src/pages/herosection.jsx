@@ -27,7 +27,7 @@ function Herosection() {
   return (
     <div
       id="wallet"
-      className=" pt-[100px] md:pt-[100px] pb-[160px] max-w-[1280px] w-full mx-auto md:px-0 max-md:px-4 h-full bg_herosection relative"
+      className=" pt-[100px] md:pt-[114px] pb-[160px] max-w-[1280px] w-full mx-auto md:px-0 max-md:px-4 h-full bg_herosection relative"
     >
       <div
         className="absolute max-md:top-[60px] z-[0] md:right-[0%] md:top-[100px]"
