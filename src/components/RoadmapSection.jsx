@@ -66,9 +66,9 @@ const RoadmapSection = ({ phases }) => {
       tasks: [
         { text: "New Casino Release", completed: true },
         { text: "SCORP2.0 Presale", completed: true },
-        { text: "Global Marketing", completed: false },
-        { text: "Partnerships", completed: true },
-        { text: "SCORP2.0 launch", completed: true },
+        { text: "Global Marketing", completed: true },
+        { text: "Partnerships", completed: false },
+        { text: "SCORP2.0 launch", completed: false },
       ],
       status: "upcoming",
     },
@@ -78,13 +78,13 @@ const RoadmapSection = ({ phases }) => {
       title: "GROWTH",
       icon: card_icon4,
       tasks: [
-        { text: "Multiple CEX listings", completed: true },
-        { text: "Influencer Marketing", completed: true },
+        { text: "Multiple CEX listings", completed: false },
+        { text: "Influencer Marketing", completed: false },
         { text: "Partner up with Softswiss", completed: false },
-        { text: "Launch Affiliate Marketing", completed: true },
-        { text: "Further Casino Development", completed: true },
+        { text: "Launch Affiliate Marketing", completed: false },
+        { text: "Further Casino Development", completed: false },
       ],
-      status: "completed",
+      status: "upcoming",
     },
   ];
 
