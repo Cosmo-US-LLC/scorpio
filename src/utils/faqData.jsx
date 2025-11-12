@@ -145,7 +145,7 @@ export const defaultFaqs = [
     question: "What is the $SCORP2.0 Listing Price?",
     type: "text",
     answer:
-      "The $SCORP2.0 Listing Price refers to the price at which $SCORP2.0 tokens will be available for purchase during the launch of Scorpion Casino. The initial launch price for 1 $SCORP2.0 is set at $0.15.",
+      "The $SCORP2.0 Listing Price refers to the price at which $SCORP2.0 tokens will be available for purchase during the launch of Scorpion Casino. The initial launch price is set at $0.15.",
   },
   {
     id: "when-list",

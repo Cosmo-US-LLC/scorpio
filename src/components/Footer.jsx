@@ -36,10 +36,7 @@ export default function Footer() {
             </div>
 
             <p className="text-[#CACACA] max-md:text-sm max-md:leading-relaxed">
-              Step into the world of casinos, high stakes, and incredible
-              rewards by joining the Scorpion community today! Experience the
-              unmatched privileges and benefits of being part of the world's
-              first social online gambling ecosystem powered by $SCORP2.0.
+              Step into the world of casinos, high stakes, and massive rewards by joining the Scorpion community today, the world’s first social gambling ecosystem powered by $SCORP2.0.
             </p>
           </div>
 

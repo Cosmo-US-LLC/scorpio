@@ -19,59 +19,72 @@ const RoadmapSection = ({ phases }) => {
     {
       id: 1,
       phase: "Phase 1",
-      title: "Preparation",
+      title: "FOUNDATION",
       icon: card_icon1,
       tasks: [
         { text: "Idea conception", completed: true },
         { text: "Team onboarding", completed: true },
+        { text: "eGaming License secured", completed: true },
         { text: "Integrating Coinspaid", completed: true },
-        { text: "Developing the Ecosystem", completed: true },
-        { text: "Applying for an eGambling License", completed: true },
+        { text: "Integrating Betradar", completed: true },
       ],
       status: "completed",
     },
     {
       id: 2,
       phase: "Phase 2",
-      title: "Pre-Launch",
+      title: "PRE-LAUNCH",
       icon: card_icon2,
       tasks: [
-        { text: "$SCORP Token creation", completed: true },
-        { text: "Whitepaper Release", completed: true },
-        { text: "Integrating Betradar", completed: true },
-        { text: "Scorpion.casino Release", completed: true },
-        { text: "$SCORP Token Audit", completed: true },
-        { text: "Pre Sale start", completed: true },
+        { text: "Whitepaper release", completed: true },
+        { text: "Casino launch", completed: true },
+        { text: "SCORP token creation", completed: true },
+        { text: "Launch staking pool", completed: true },
+        { text: "USDT rewards distribution ", completed: true },
       ],
       status: "completed",
     },
     {
       id: 3,
       phase: "Phase 3",
-      title: "Launch",
+      title: "LAUNCH",
       icon: card_icon3,
       tasks: [
-        { text: "Launching Affiliate Program", completed: true },
-        { text: "Integrating the Level System", completed: true },
-        { text: "Listing on CEX", completed: true },
-        { text: "Further Casino Development", completed: true },
-        { text: "Community Events", completed: true },
+        { text: "SCORP Presale", completed: true },
+        { text: "SCORP launch", completed: true },
+        { text: "Multiple CEX listings", completed: true },
+        { text: "Reach 280M Market cap", completed: true },
+        { text: "Launch Casino Loyalty Program ", completed: true },
       ],
-      status: "current",
+      status: "completed",
     },
     {
       id: 4,
       phase: "Phase 4",
-      title: "Exponential growth",
+      title: "SCORP2.0",
       icon: card_icon4,
       tasks: [
-        { text: "Live Affiliate Events", completed: false },
-        { text: "Partner Up with Softswiss", completed: false },
-        { text: "Influencer Marketing", completed: false },
-        { text: "Collaborations with Athletes", completed: false },
-        { text: "More to come", completed: false },
+        { text: "New Casino Release", completed: true },
+        { text: "SCORP2.0 Presale", completed: true },
+        { text: "Global Marketing", completed: false },
+        { text: "Partnerships", completed: true },
+        { text: "SCORP2.0 launch", completed: true },
       ],
       status: "upcoming",
+    },
+    {
+      id: 5,
+      phase: "Phase 5",
+      title: "GROWTH",
+      icon: card_icon4,
+      tasks: [
+        { text: "Multiple CEX listings", completed: true },
+        { text: "Influencer Marketing", completed: true },
+        { text: "Partner up with Softswiss", completed: false },
+        { text: "Launch Affiliate Marketing", completed: true },
+        { text: "Further Casino Development", completed: true },
+      ],
+      status: "completed",
     },
   ];
 
@@ -225,7 +238,7 @@ const RoadmapSection = ({ phases }) => {
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
-                        className="absolute w-full h-full  left-0  "
+                        className="absolute w-full h-full bottom-[-10%]  left-0  "
                       >
                         <g filter="url(#filter0_f_206_2451)">
                           <ellipse

@@ -7,7 +7,7 @@ import vector2 from "../assets/herosection/scorpion_vec2.webp";
 import vector3 from "../assets/herosection/scorpion_vec3.webp";
 import vector4 from "../assets/herosection/scorpion_vec4.webp";
 import solid from "../assets/herosection/solid.png";
-
+import Video from "../assets/herosection/course-video2.1b5cb8ac835162be39a6 (1).mp4";
 import social_1 from "../assets/herosection/social (5).svg";
 import social_2 from "../assets/herosection/social (2).svg";
 import social_3 from "../assets/herosection/social (3).svg";
@@ -50,8 +50,8 @@ function Herosection() {
             rewards <span className="faded"> to </span> holders{" "}
             <span className="faded"> based on its </span> casino’s performance{" "}
           </h1>
-          <p className="max-w-[559px] md:pr-5 mob_br">
-            Start earning today and receive up to <br /> 10,000 USDT in daily passive
+          <p className="max-w-[559px] md:pr-5 mob_br max-md:!text-[13px]">
+            Start earning today and receive up to 10,000 USDT <br /> in daily passive
             staking income from a licensed and regulated global Casino and
             Betting Platform, no matter the market conditions.
           </p>
@@ -77,7 +77,7 @@ function Herosection() {
               />
             </div>
           </div>
-          <div className="flex items-center  space-x-2 pt-2 md:pt-6 md:space-x-3">
+          <div className="md:flex hidden items-center  space-x-2 pt-2 md:pt-6 md:space-x-3">
             <h5 className="underline max-md:!text-[12px] !font-[700]">
               Audited & KYC | 100% Secure & Verified
             </h5>
@@ -87,18 +87,23 @@ function Herosection() {
               alt="solid"
             />
           </div>
-          <div className="pt-0 md:pt-0">
+          <div className="pt-4 md:pt-0">
             {/* <video src=""></video> */}
-            <img
-              src={poster}
-              className=" hidden md:block max-md:max-w-[100%] md:max-w-[656px] min-h-[377px] aspect-[656/377]"
-              alt="poster"
-            />
-            <img
-              src={poster}
-              className="block md:hidden max-md:max-w-[100%] md:max-w-[656px] min-h-[203px] "
-              alt="poster"
-            />
+             <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          controls={true}
+          className="w-full h-full max-w-[685px] rounded-[8px] object-cover"
+          style={{ objectFit: "", objectPosition: "" }}
+        >
+          <source
+            src={Video}
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
           </div>
         </div>
         {/* <img src={vector3} className="  absolute max-w-[30px] md:max-w-[53.203px] md:right-[38.5%] right-[18%] z-[4] top-[9%] md:top-[1%]" alt="SCORP2" />
