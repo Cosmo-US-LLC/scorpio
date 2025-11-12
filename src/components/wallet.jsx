@@ -1,6 +1,8 @@
 import { useState } from "react";
 import WalletSelectDropdown from "./WalletSelectDropdown";
 import USDTicon from "../assets/tokens/usdt.svg"
+import solid from "../assets/herosection/solid.png";
+
 
 import Scorpiontoken from "../assets/tokens/Scorpion_token.svg";
 import { tokenImageMap, chainImgMap } from "../assets/tokens";
@@ -299,7 +301,7 @@ const Wallet = ({ onTabChange }) => {
       <div className="space-y-[8px]">
         <div className="flex justify-center space-x-1">
           <button
-            className="!text-[12px] font-[700] max-md:px-[15px] md:px-[18px] flex items-center justify-center py-[5px]"
+            className="!text-[10px] md:!text-[12px] font-[700] max-md:px-[10px] md:px-[15px] flex items-center justify-center py-[5px]"
             style={{
               borderRadius: "68.376px",
               background: "rgba(0, 0, 0, 0.50)",
@@ -331,7 +333,7 @@ const Wallet = ({ onTabChange }) => {
             Bonus Code
           </button>
              <button
-            className="!text-[12px] font-[700] cursor-pointer max-md:px-[15px] md:px-[18px] flex items-center justify-center py-[5px]"
+            className="!text-[10px] md:!text-[12px] font-[700] cursor-pointer max-md:px-[10px] md:px-[16px] flex items-center justify-center py-[5px] w-auto"
             style={{
               borderRadius: "68.376px",
               background: "rgba(0, 0, 0, 0.50)",
@@ -374,7 +376,7 @@ const Wallet = ({ onTabChange }) => {
                     window.scrollTo({ top: y, behavior: "smooth" });
                   }
                 }}
-            className="!text-[12px] max-md:hidden md:flex !font-[700] cursor-pointer max-md:px-[15px] md:px-[18px] flex items-center justify-center py-[5px]"
+            className="!text-[10px] md:!text-[12px] flex !font-[700] cursor-pointer max-md:px-[10px] md:px-[16px] flex items-center justify-center py-[5px]"
             style={{ 
               borderRadius: "68.376px",
               background: "rgba(0, 0, 0, 0.50)",
@@ -406,51 +408,7 @@ const Wallet = ({ onTabChange }) => {
             How to buy
           </button>
         </div>
-        <div className="max-md:flex md:hidden justify-center space-x-3">
-          <button
-           onClick={(e) => {
-                  e.preventDefault();
-                  const element = document.querySelector("#how-to-buy");
-                  if (element) {
-                    const y =
-                      element.getBoundingClientRect().top +
-                      window.scrollY +
-                      -70;
-                    window.scrollTo({ top: y, behavior: "smooth" });
-                  }
-                }}
-            className="!text-[12px]  !font-[700] cursor-pointer max-md:px-[15px] md:px-[18px] flex items-center justify-center py-[5px]"
-            style={{ 
-              borderRadius: "68.376px",
-              background: "rgba(0, 0, 0, 0.50)",
-            }}
-          >
-            <svg
-              className="mr-1"
-              xmlns="http://www.w3.org/2000/svg"
-              width="15"
-              height="15"
-              viewBox="0 0 15 15"
-              fill="none"
-            >
-              <path
-                d="M7.83953 11.1722C8.16296 11.1722 8.42515 10.91 8.42515 10.5866C8.42515 10.2632 8.16296 10.001 7.83953 10.001C7.5161 10.001 7.25391 10.2632 7.25391 10.5866C7.25391 10.91 7.5161 11.1722 7.83953 11.1722Z"
-                fill="white"
-              />
-              <path
-                d="M7.84082 2.04883C10.9732 2.04885 13.5078 4.58388 13.5078 7.71582C13.5078 10.8482 10.9727 13.3828 7.84082 13.3828C4.70846 13.3828 2.17385 10.8478 2.17383 7.71582C2.17383 4.58345 4.70887 2.04883 7.84082 2.04883ZM7.84082 3.06055C5.26752 3.06055 3.18555 5.14286 3.18555 7.71582C3.18557 10.2891 5.26787 12.3711 7.84082 12.3711C10.4141 12.3711 12.4961 10.2888 12.4961 7.71582C12.4961 5.14253 10.4138 3.06057 7.84082 3.06055Z"
-                fill="white"
-                stroke="white"
-                stroke-width="0.136752"
-              />
-              <path
-                d="M7.83937 4.72852C6.80576 4.72852 5.96484 5.56943 5.96484 6.60305C5.96484 6.86187 6.17465 7.07168 6.43348 7.07168C6.6923 7.07168 6.90211 6.86187 6.90211 6.60305C6.90211 6.08624 7.32257 5.66578 7.83937 5.66578C8.35618 5.66578 8.77664 6.08624 8.77664 6.60305C8.77664 7.11985 8.35618 7.54031 7.83937 7.54031C7.58055 7.54031 7.37074 7.75012 7.37074 8.00894V9.18053C7.37074 9.43935 7.58055 9.64916 7.83937 9.64916C8.0982 9.64916 8.30801 9.43935 8.30801 9.18053V8.41827C9.1156 8.20966 9.71391 7.47491 9.71391 6.60305C9.71391 5.56943 8.87299 4.72852 7.83937 4.72852Z"
-                fill="white"
-              />
-            </svg>
-            How to buy
-          </button>
-        </div>
+       
       </div>
 
    
@@ -467,6 +425,21 @@ const Wallet = ({ onTabChange }) => {
             <span className="text-[#E0AA3E] !font-[700]">Special Offer: </span>Get 20% more $SCORP2.0 tokens  with the code SCORP20 (valid for a limited time)
           </p>
         </div>
+        <div 
+        style={{
+            borderRadius: "7.442px",
+            background: "rgba(255, 255, 255, 0.10)",
+          }}
+        className="md:hidden mt-4 flex items-center justify-center space-x-2 py-2 md:pt-6 md:space-x-3">
+                    <h5 className="underline max-md:!text-[10px] !font-[700]">
+                      Audited & KYC | 100% Secure & Verified
+                    </h5>
+                    <img
+                      src={solid}
+                      className="max-w-[78px] md:max-w-[160px]"
+                      alt="solid"
+                    />
+                  </div>
       </div>
     </div>
   );

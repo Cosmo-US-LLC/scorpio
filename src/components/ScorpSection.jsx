@@ -41,8 +41,8 @@ const ScorpSection = () => {
             <ul className="space-y-2 md:space-y-2">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-center gap-2 md:gap-3">
-                 <img src={tick} className="h-[18px]" alt="" />
-                  <h5 className="font-[700] md:text-base">{feature}</h5>
+                 <img src={tick} className="h-[15px] md:h-[18px]" alt="" />
+                  <h5 className="font-[700] max-md:tracking-[-0.1px] max-md:!text-[14px] md:text-base">{feature}</h5>
                 </li>
               ))}
             </ul>
