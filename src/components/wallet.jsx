@@ -301,7 +301,7 @@ const Wallet = ({ onTabChange }) => {
       <div className="space-y-[8px]">
         <div className="flex justify-center space-x-1">
           <button
-            className="!text-[10px] md:!text-[12px] font-[700] max-md:px-[10px] md:px-[15px] flex items-center justify-center py-[5px]"
+            className="!text-[10px] md:!text-[10px] font-[700] max-md:px-[10px] md:px-[15px] flex items-center justify-center py-[5px]"
             style={{
               borderRadius: "68.376px",
               background: "rgba(0, 0, 0, 0.50)",
@@ -333,7 +333,7 @@ const Wallet = ({ onTabChange }) => {
             Bonus Code
           </button>
              <button
-            className="!text-[10px] md:!text-[12px] font-[700] cursor-pointer max-md:px-[10px] md:px-[16px] flex items-center justify-center py-[5px] w-auto"
+            className="!text-[10px] md:!text-[10px] font-[700] cursor-pointer max-md:px-[10px] md:px-[16px] flex items-center justify-center py-[5px] w-auto"
             style={{
               borderRadius: "68.376px",
               background: "rgba(0, 0, 0, 0.50)",
@@ -376,7 +376,7 @@ const Wallet = ({ onTabChange }) => {
                     window.scrollTo({ top: y, behavior: "smooth" });
                   }
                 }}
-            className="!text-[10px] md:!text-[12px] flex !font-[700] cursor-pointer max-md:px-[10px] md:px-[16px] flex items-center justify-center py-[5px]"
+            className="!text-[10px] md:!text-[10px] flex !font-[700] cursor-pointer max-md:px-[10px] md:px-[16px] flex items-center justify-center py-[5px]"
             style={{ 
               borderRadius: "68.376px",
               background: "rgba(0, 0, 0, 0.50)",
