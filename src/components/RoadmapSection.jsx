@@ -238,7 +238,7 @@ const RoadmapSection = ({ phases }) => {
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
-                        className="absolute w-full h-full bottom-[-10%]  left-0  "
+                        className="absolute w-full h-full bottom-[-10%]  left-0 !z-[-1] "
                       >
                         <g filter="url(#filter0_f_206_2451)">
                           <ellipse
@@ -287,8 +287,8 @@ const RoadmapSection = ({ phases }) => {
 
             {/* Mobile Navigation Arrows with Dots - Below carousel */}
             <div className="flex md:hidden justify-center items-center gap-4 mt-8">
-              <CarouselPrevious className="!static !transform-none h-10 w-10" />
-                <CarouselNext className="!static !transform-none h-10 w-10" />
+              <CarouselPrevious className="!static !transform-none h-10 w-10 !z-[99]" />
+                <CarouselNext className="!static !transform-none h-10 w-10 !z-[99]" />
             </div>
           </Carousel>
         </div>

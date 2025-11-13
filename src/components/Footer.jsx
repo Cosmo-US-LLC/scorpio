@@ -35,7 +35,7 @@ export default function Footer() {
               <img src={Logo} alt="footer logo" />
             </div>
 
-            <p className="text-[#CACACA] max-md:text-sm max-md:leading-relaxed">
+            <p className="text-[#CACACA] md:max-w-[365px] max-md:text-sm max-md:leading-relaxed">
               Step into the world of casinos, high stakes, and massive rewards by joining the Scorpion community today, the world’s first social gambling ecosystem powered by $SCORP2.0.
             </p>
           </div>
@@ -180,14 +180,21 @@ export default function Footer() {
                 info@scropion.casino
               </a>
             </div>
+             <div className="w-[100%] pt-2">
+               <img
+              src={licence}
+              alt="footer logo"
+              className=" w-[100px] h-[100px] z-1 aign-start mr-auto hidden  md:flex "
+            />
+             </div>
           </div>
         </div>
 
         <div className="flex flex-col gap-6 pt-6 border-t border-[#363636] max-md:gap-5 max-md:pt-5">
-          <div className="flex flex-row">
+          <div className="flex flex-row md:justify-center">
             <div className="flex flex-col gap-2 max-md:gap-3">
-              <h3 className="text-left max-md:text-lg">Scorpion Casino</h3>
-            <p className="text-[#CACACA] max-md:text-sm">
+              <h3 className="md:text-center text-start max-md:text-lg">Scorpion Casino</h3>
+            <p className="text-[#CACACA] md:text-center max-md:text-sm">
               License Number: 149948
             </p>
             <div className="flex flex-wrap gap-x-4 gap-y-2 max-md:gap-x-3 max-md:gap-y-2">
@@ -221,14 +228,10 @@ export default function Footer() {
               </a>
             </div>
             </div>
-            <img
-              src={licence}
-              alt="footer logo"
-              className=" w-[60px] h-[60px] z-1 aign-end ml-auto hidden  md:flex "
-            />
+          
           </div>
 
-          <p className="text-[#B4A5A5] max-md:text-xs max-md:leading-relaxed">
+          <p className="text-[#B4A5A5] md:text-center max-md:text-xs max-md:leading-relaxed">
             Scorpion Casino operates the website Scorpion.casino (“Platform”).
             By using the Platform, you accept our Terms of Service, Privacy
             Policy, Cookie Policy, and the SCORP2.0 Token sale agreement.

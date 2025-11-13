@@ -38,14 +38,30 @@ const CaseStudySection = () => {
             <span className="text_gradient">Case Study</span>
           </h2>
 
-          <p className="text-[#fff] font-[700] text-left text-sm md:text-base">
-           26-year-old Crypto Casino Owner Buys a Villa for $80 Million.
+          <p className="text-[#fff] font-[700] mob_br text-left  md:text-base">
+           26-year-old Crypto Casino Owner <br /> Buys a Villa for $80 Million.
           </p>
 
-          <p className="text-[#CACACA] text-sm md:text-base">
+          <p className="text-[#CACACA]  md:text-base">
            According to The Guardian, a 26-year-old owner of a crypto casino made headlines by purchasing Australia’s most expensive villa for an astounding $88 million USD after just a few years of operating his online casino alongside his co-founder. The growth of crypto casinos is truly impressive, and now, for the first time ever, you have
 the chance to get involved. While these outcomes are exceptional and not the norm, they clearly demonstrate the immense potential
           </p>
+          <div className="w-full sm:w-[300px] md:hidden mt-2">
+            <button 
+              onClick={(e) => {
+                e.preventDefault();
+                const target = document.querySelector("#wallet");
+                if (target) {
+                  const yOffset = 20;
+                  const y =
+                    target.getBoundingClientRect().top +
+                    window.scrollY +
+                    yOffset;
+                  window.scrollTo({ top: y, behavior: "smooth" });
+                }
+              }}
+            className="btn-primary w-full">Buy $SCORP2.0</button>{" "}
+          </div>
         </div>
       </div>
     </section>
