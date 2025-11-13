@@ -50,8 +50,8 @@ function Herosection() {
             rewards <span className="faded"> to </span> holders{" "}
             <span className="faded"> based on its </span> casino’s performance{" "}
           </h1>
-          <p className="max-w-[559px] md:pr-5 mob_br max-md:!text-[13px]">
-            Start earning today and receive up to 10,000 USDT <br /> in daily passive
+          <p className="max-w-[559px] md:pr-5 mob_br max-md:!text-[14px] max-md:max-w-[360px]">
+            Start earning today and receive up to 10,000 USDT in daily passive
             staking income from a licensed and regulated global Casino and
             Betting Platform, no matter the market conditions.
           </p>

@@ -5,13 +5,13 @@ const CollaborationSection = () => {
     <section className="w-full min-h-[500px] md:h-[666px] flex items-center justify-center py-12 md:py-16 px-4 md:px-6 lg:px-8">
       <div className="max-w-[1280px] mx-auto rounded-2xl relative overflow-hidden collaboration_section_bg px-6 sm:px-8 py-8 md:py-8 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-0">
         <div className="flex-1 text-left flex flex-col gap-4 md:gap-6 pr-0 md:pr-12 w-full">
-          <h2 className="md:!text-left !text-center">
+          <h2 className="!text-left">
             <span className="text-white">Collaboration with a </span>
             <span className="">Leading Blockchain</span>
             <span className="text-white"> incubator</span>
           </h2>
 
-          <div className="space-y-3 md:space-y-4">
+          <div className="space-y-3 md:space-y-4 md:max-w-[570px]">
             <p className="text-[#CACACA]">
               Scorpion Casino is partnering with Tenset, the masterminds behind
               the success stories of Meta Hero (100x return from its pre-sale)
@@ -24,7 +24,7 @@ const CollaborationSection = () => {
               early supporters.
             </p>
 
-            <p className="text-[#CACACA] md:max-w-[600px]">
+            <p className="text-[#CACACA] md:max-w-[570px]">
               This partnership required months to establish and is set to take
               $SCORP2.0 to the next level.
             </p>

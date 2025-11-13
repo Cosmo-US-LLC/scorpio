@@ -67,7 +67,7 @@ const HowToBuySection = () => {
                 {badge.maintitle}
               </h3>
 
-              <p className="border-t-[1px] mob_br border-[#36383F] pt-[17px]"
+              <p className="border-t-[1px] mob_br border-[#36383F] pt-[17px] max-md:max-w-[340px]"
                dangerouslySetInnerHTML={{ __html: badge.description }}
               >
               </p>
