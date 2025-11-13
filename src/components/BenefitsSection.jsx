@@ -16,7 +16,7 @@ const BenefitsSection = () => {
     },
     {
       id: 2,
-      title: "RECEIVE UP TO 40% CASINO CREDITS",
+      title: "RECEIVE UP TO 40% <br/> CASINO CREDITS",
       description:
         "Receive up to 40% free credits to play on Scorpion Casino, no conditions or obligations attached!",
       icon: benefitsicon2,
@@ -93,7 +93,7 @@ const BenefitsSection = () => {
                 </div>
               </div>
 
-              <h4 className="text_gradient text-center pb-[15px]"
+              <h4 className="text_gradient  text-center pb-[15px]"
                dangerouslySetInnerHTML={{ __html: benefit.title }}
               >
               </h4>
