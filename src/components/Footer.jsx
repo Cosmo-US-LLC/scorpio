@@ -180,11 +180,11 @@ export default function Footer() {
                 info@scropion.casino
               </a>
             </div>
-             <div className="w-[100%] pt-2 hidden  md:flex justify-center">
+             <div className="w-[100%] pt-2 hidden  md:flex justify-start pl-8">
                <img
               src={licence}
               alt="footer logo"
-              className=" w-[100px] h-[100px] z-1    "
+              className=" w-[100px] h-[100px] z-1   "
             />
              </div>
           </div>
