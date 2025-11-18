@@ -229,7 +229,7 @@ export default function Navbar() {
           </nav>
 
           <button
-            className="md:px-[13px] max-md:px-[12px] max-md:text-[14px] btn-primary cursor-pointer max-md:py-[13px] md:py-[16px] leading-[1.1] h-[3.125rem]"
+            className="md:px-[13px] max-md:px-[12px] max-md:text-[14px] btn-primary cursor-pointer leading-[1.1] h-[2.75rem] md:h-[3.125rem] py-0 min-w-[8rem] md:min-w-[9.5rem]"
             onClick={async () => {
               if (accountData.isConnected) {
                 const { config } = await getConfig()
@@ -241,7 +241,7 @@ export default function Navbar() {
               }
             }}
           >
-            {accountData.isConnected ? <>Disconnect {truncateString(accountData.address ?? "", 11)}</>: "Connect Wallet"}
+            {accountData.isConnected ? <>Disconnect<br />{truncateString(accountData.address ?? "", 11)}</>: "Connect Wallet"}
           </button>
         </div>
       </div>
