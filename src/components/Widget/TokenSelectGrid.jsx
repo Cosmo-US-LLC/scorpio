@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react"
 import WalletSelectDropdown from "../WalletSelectDropdown"
 import { useApiState } from "@/presale-gg/stores"
 import { groupTokens } from "@/presale-gg/util"
+import Loader from "./Loader"
 
 /**
  * @param {object} props
@@ -9,12 +10,12 @@ import { groupTokens } from "@/presale-gg/util"
  * @param {PaymentToken} props.value
  */
 const TokenSelectGrid = ({ onChange, value }) => {
-  const apiState = useApiState()
+  const apiData = useApiState()
   const [selectedGroupIndex, setSelectedGroupIndex] = useState(0)
 
   const tokenLists = useMemo(() => {
-    return groupTokens(apiState.paymentTokens ?? [])
-  }, [apiState.paymentTokens])
+    return groupTokens(apiData.paymentTokens ?? [])
+  }, [apiData.paymentTokens])
 
   useEffect(() => {
     if (tokenLists[selectedGroupIndex].currencies.includes(value)) return
@@ -23,29 +24,33 @@ const TokenSelectGrid = ({ onChange, value }) => {
     setSelectedGroupIndex(groupIndex)
   }, [value, selectedGroupIndex, tokenLists])
 
-	return (
-		<div className="grid grid-cols-3 gap-2 md:grid-cols-3 py-2">
-      {tokenLists.map((list, i) => {
-        const selected =
-          list.currencies.find((token) => token.id === value?.id) !== undefined && selectedGroupIndex === i;
 
-        return (
-          <WalletSelectDropdown
-            style={{"grid-column": i === 0 ? "1 / -1" : undefined}}
-            tokens={list.currencies}
-            onChange={(token) => {
-              onChange(token)
-              setSelectedGroupIndex(i)
-            }}
-            value={selected ? value : null}
-            defaultLabel={list.defaultLabel}
-            placeholder={list.placeholder}
-            defaultToken={list.defaultToken}
-            selected={selected}
-          />
-        )
-      })}
-		</div>
+	return (
+    <Loader loading={apiData.stageLoading || apiData.paymentTokensLoading}>
+      <div className="grid grid-cols-3 gap-2 md:grid-cols-3 py-2">
+        {tokenLists.map((list, i) => {
+          const selected =
+            list.currencies.find((token) => token.id === value?.id) !== undefined && selectedGroupIndex === i;
+
+          return (
+            <WalletSelectDropdown
+              key={i}
+              style={{"grid-column": i === 0 ? "1 / -1" : undefined}}
+              tokens={list.currencies}
+              onChange={(token) => {
+                onChange(token)
+                setSelectedGroupIndex(i)
+              }}
+              value={selected ? value : null}
+              defaultLabel={list.defaultLabel}
+              placeholder={list.placeholder}
+              defaultToken={list.defaultToken}
+              selected={selected}
+            />
+          )
+        })}
+      </div>
+    </Loader>
 	)
 }
 

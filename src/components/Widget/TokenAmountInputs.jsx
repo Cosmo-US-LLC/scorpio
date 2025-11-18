@@ -40,7 +40,7 @@ const TokenAmountInputs = ({
   return (
     <>
       <div className="space-y-[5px]">
-        <p className="text-[14px] font-[700]">You Pay {selectedToken?.symbol.toUpperCase() === "CARD" ? "USD" : `${selectedToken?.symbol.toUpperCase()} (${selectedToken?.chain})`}</p>
+        <p className="text-[14px] font-[700]">You Pay {selectedToken?.symbol.toUpperCase() === "CARD" ? "USD" : `${selectedToken?.symbol.toUpperCase() ?? ''} (${selectedToken?.chain ?? ''})`}</p>
         <div className="px-2 rounded-[8px] walletinput_bg">
           <div className="px-1 flex justify-between items-center">
             <div className="w-[80%] ">

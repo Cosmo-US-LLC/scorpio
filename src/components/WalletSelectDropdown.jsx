@@ -1,6 +1,7 @@
 import { tokenImageMap } from "@/presale-gg/assets/img/tokens";
 import clsx from "clsx";
 import { useState, useRef, useEffect, useMemo } from "react";
+import { Loadable } from "./Widget/Loader";
 /**
  * @typedef {import("@/presale-gg/api/api.types").API.PaymentToken} PaymentToken
  * 
@@ -68,10 +69,13 @@ export default function WalletSelectDropdown({ tokens, onChange, value, defaultL
         <span className="flex items-center 2xl:gap-2 xl:gap-2 lg:gap-2 md:gap-2 sm:gap-[5px] gap-[4px] text-[11.7px] font-[700] font-[Inter]">
           {(value || defaultToken) && !isCard && (
             <div className="min-w-[20px]">
-              <img
+              <Loadable
+                loadVariant="block"
+                component="img"
+                loadClass="!rounded-full"
                 src={tokenImageMap[(value ?? defaultToken).symbol.toLowerCase()]}
                 alt=""
-                className="2xl:max-h-[22px] xl:max-h-[22px] lg:max-h-[22px] md:max-h-[22px] sm:max-h-[16px] max-h-[16px]"
+                className="2xl:max-h-[22px] xl:max-h-[22px] lg:max-h-[22px] md:max-h-[22px] sm:max-h-[16px] max-h-[16px] aspect-square"
               />
             </div>
           )}
@@ -125,7 +129,9 @@ export default function WalletSelectDropdown({ tokens, onChange, value, defaultL
               </svg>
             </div>
           )}
-          <span
+          <Loadable
+            length={3}
+            component="span"
             className={clsx("leading-[15px] text-[#fff] text-start", {
               "!text-[#000]": selected,
               "text-[14px] font-[700]": text === "More",
@@ -141,7 +147,7 @@ export default function WalletSelectDropdown({ tokens, onChange, value, defaultL
                 {(value ?? defaultToken).chain}
               </span>
             )}
-          </span>
+          </Loadable>
         </span>
         {tokens.length > 1 && (
           <svg

@@ -4,18 +4,20 @@ export namespace API {
   export interface Stage {
     id: number;
     stage_name: string;
-    total_tokens_sold: string;
     total_tokens: string;
-    token_price: string;
+    total_tokens_sold: string;
     tokens_available: string;
+    token_price: string;
     cumulative_usd_raised: string | null;
     cumulative_tokens_sold: string | null;
-    next_stage_price: string | null;
-    next_stage_target_tokens: string | null;
     next_stage_target_usd: string | null;
-    stage_max_duration_seconds: number | null;
-    stage_start: string | null;
-    stage_end: string | null;
+    next_stage_target_tokens: string | null;
+    next_stage_price: string | null;
+    overflow_duration_seconds: number;
+    overflow_started: string | null;
+    overflow_tokens_sold: string;
+    overflow_end: string | null;
+    in_overflow_phase: boolean;
   }
 
   export interface Info {
@@ -131,7 +133,7 @@ export namespace API {
       status: "pending",
       created_at: new Date().toISOString(),
       payment_token_amount: "123123",
-      project_id: "dball",
+      project_id: "scorpio",
       record_type: "transaction",
       type: "blockchain",
     };

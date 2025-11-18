@@ -67,7 +67,7 @@ export const setApiInfo = (info) => {
 api
   .getActiveStage()
   .then((res) => {
-    if (res.data === null) return setPresaleEnded(true);
+    if (res.data === null) setPresaleEnded(true);
     setStage(res.data);
   })
   .catch(() => {});

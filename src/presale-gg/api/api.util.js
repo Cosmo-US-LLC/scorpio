@@ -370,6 +370,27 @@ export const getReferralBonuses = (walletAddress) => {
 };
 
 /**
+ * @param {string} address
+ * @param {number} page
+ * @param {number} [limit]
+ * @returns {Promise<AxiosResponse<import("../../presale-gg/api/api.types").API.TransactionHistoryItemV2[]>>}
+ */
+export const getTransactionHistoryV2 = (address, page,limit = 12) => {
+  return apiFetch(
+    `${baseUrl.replace(
+      "/v1",
+      "/v2"
+    )}/projects/${project}/wallets/${address}/transactions`,
+    {
+      params: {
+        page,
+        limit,
+      },
+    }
+  );
+};
+
+/**
  *
  * @param {unknown} e
  * @param {string} [defaultMsg]

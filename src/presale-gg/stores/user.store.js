@@ -73,35 +73,11 @@ document.addEventListener("wagmi-loaded", async () => {
 
       api.getUser(address).then((res) => $userState.setKey("user", res.data));
       api
-        .getUserRanks(address)
-        .then((res) => $userState.setKey("rankData", res.data));
-      api
         .getUserStakeData(address)
         .then((res) => $userState.setKey("userStakeData", res.data));
-      api
-        .getUserLeaderboardRank(address)
-        .then((res) => $userState.setKey("leaderboardRank", res.data));
-      getAllBonusTransactions().then((data) =>
-        $userState.setKey("bonusTransactions", data)
-      );
     },
   });
 });
-
-/**
- * @returns {BonusTransactionHistoryItem[]}
- */
-export const getAllBonusTransactions = async () => {
-  const { config } = await getConfig();
-  const { address } = getAccount(config);
-  let pages = [];
-  for (let i = 0; i < 5; i++) {
-    const res = await api.getBonusTransactionHistory(address, i, 100);
-    pages = pages.concat(res.data);
-    if (res.data.length < 100) return pages;
-  }
-  return pages;
-};
 
 /**
  * @param {object} [options]

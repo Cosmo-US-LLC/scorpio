@@ -248,8 +248,8 @@ const Input = ({ loading, label, value }) => {
     <div className="space-y-[5px]">
       <p className="text-[14px] font-[700]">{label}</p>
       <div className="pl-2 pr-1 rounded-[8px] bg-[#222] border border-[#333] py-1">
-        <div className="flex justify-between items-center">
-          <div className="flex-1">
+        <div className="flex gap-1 justify-between items-center">
+          <div className="flex-1 flex">
             {loading ? (
               <div className="flex gap-2 items-center">
                 <ValueLoader loading />
