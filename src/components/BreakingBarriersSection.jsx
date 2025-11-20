@@ -15,7 +15,7 @@ const BreakingBarriersSection = () => {
           </h2>
 
           <p className="text-[#fff] font-[700] text-left md:text-base max-md:max-w-[360px]">
-            $SCORP Delivers Exclusive Insider Access to the world of Gambling.
+            $SCORP2.0 Delivers Exclusive Insider Access to the world of Gambling.
           </p>
 
           <p className="text-[#CACACA] md:text-base mob_br">
@@ -27,8 +27,7 @@ const BreakingBarriersSection = () => {
             without massive capital or experience and potentially earn
             substantial profits.
           </p>
-        </div>
-        <div className="w-full sm:w-[300px] md:hidden">
+        <div className="w-full md:max-w-[300px] max-md:pt-2">
             <button 
               onClick={(e) => {
                 e.preventDefault();
@@ -44,6 +43,7 @@ const BreakingBarriersSection = () => {
               }}
             className="btn-primary w-full">Buy $SCORP2.0</button>{" "}
           </div>
+        </div>
 
         <div className="w-full md:w-[50%] relative pt-8 md:pt-16 pb-4 px-4 md:px-8">
           <img

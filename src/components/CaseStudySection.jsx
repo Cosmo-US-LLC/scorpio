@@ -46,7 +46,7 @@ const CaseStudySection = () => {
            According to The Guardian, a 26-year-old owner of a crypto casino made headlines by purchasing Australia’s most expensive villa for an astounding $88 million USD after just a few years of operating his online casino alongside his co-founder. The growth of crypto casinos is truly impressive, and now, for the first time ever, you have
 the chance to get involved. While these outcomes are exceptional and not the norm, they clearly demonstrate the immense potential.
           </p>
-          <div className="w-full sm:w-[300px] md:hidden mt-2">
+          <div className="w-full sm:w-[300px] mt-2">
             <button 
               onClick={(e) => {
                 e.preventDefault();
