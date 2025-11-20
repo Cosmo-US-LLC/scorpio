@@ -38,7 +38,7 @@ const RoadmapSection = ({ phases }) => {
       tasks: [
         { text: "Whitepaper release", completed: true },
         { text: "Casino launch", completed: true },
-        { text: "SCORP token creation", completed: true },
+        { text: "$SCORP2.0 token creation", completed: true },
         { text: "Launch staking pool", completed: true },
         { text: "USDT rewards distribution ", completed: true },
       ],
@@ -50,8 +50,8 @@ const RoadmapSection = ({ phases }) => {
       title: "LAUNCH",
       icon: card_icon3,
       tasks: [
-        { text: "SCORP Presale", completed: true },
-        { text: "SCORP launch", completed: true },
+        { text: "$SCORP2.0 Presale", completed: true },
+        { text: "$SCORP2.0 launch", completed: true },
         { text: "Multiple CEX listings", completed: true },
         { text: "Reach 280M Market cap", completed: true },
         { text: "Launch Casino Loyalty Program ", completed: true },

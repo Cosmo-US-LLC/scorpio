@@ -128,7 +128,7 @@ const TokenDetailsSection = () => {
                   Pre-Sale Details
                 </h4>
                 <p className="text-sm md:text-base font-medium md:pr-18 max-md:max-w-[240px]">
-                  3,000,000,000 $SCORP tokens will be sold during the pre-sale.
+                  3,000,000,000 $SCORP2.0 tokens will be sold during the pre-sale.
                 </p>
                 </div>
                 <div className="max-md:hidden w-[1px] ml-8 mr-2 h-full bg-gradient-to-b from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
@@ -141,7 +141,7 @@ const TokenDetailsSection = () => {
                   Current Stage Price
                 </h4>
                 <p className="text-sm md:text-base font-medium">
-                  1 $SCORP = $0.055
+                  1 $SCORP2.0 = $0.055
                 </p>
                </div>
                    <div className="max-md:hidden w-[1px] ml-20 mr-2 h-full bg-gradient-to-b from-[rgba(255,255,255,0)] via-white to-[rgba(255,255,255,0)]"></div>
@@ -155,7 +155,7 @@ const TokenDetailsSection = () => {
                   Exchange Listing Price
                 </h4>
                 <p className="text-sm md:text-base font-medium">
-                  1 $SCORP = $0.15
+                  1 $SCORP2.0 = $0.15
                 </p>
                 </div>
           

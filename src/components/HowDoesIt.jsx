@@ -10,7 +10,7 @@ const HowDoesItSection = () => {
       id: 1,
       title: "Buy-Back System",
       description:
-        "Scorpion Casino uses a smart contract to purchase $SCORP2.0 tokens from public exchanges on a daily basis. These purchases are financed through a portion of the Casino and Betting revenue. During this buying process the $SCORP price goes automatically up.",
+        "Scorpion Casino uses a smart contract to purchase $SCORP2.0 tokens from public exchanges on a daily basis. These purchases are financed through a portion of the Casino and Betting revenue. During this buying process the $SCORP2.0 price goes automatically up.",
       icon: trusticon1,
     },
     {

@@ -101,7 +101,7 @@ const ExtraRewardsSection = () => {
           {
             text: "60% $SCORP2.0 Bonus",
             tick: true,
-            info: "You will automatically receive additional SCORP tokens to your wallet. For example, if you purchase the Diamond Membership NFT with 60% bonus tokens and you buy 100,000 SCORP, you’ll receive 160,000 SCORP tokens.",
+            info: "You will automatically receive additional $SCORP2.0 tokens to your wallet. For example, if you purchase the Diamond Membership NFT with 60% bonus tokens and you buy 100,000 $SCORP2.0, you’ll receive 160,000 $SCORP2.0 tokens.",
           },
           {
             text: "40% Casino Credits",
@@ -111,12 +111,12 @@ const ExtraRewardsSection = () => {
           {
             text: "20% Bonus Staking Rewards",
             tick: true,
-            info: "You will earn additional Daily Staking Rewards. For example, with the Diamond Membership NFT, you’ll receive an additional 20% on the current daily staking rewards rate. So, if the daily rate is hypothetically 1%, you would get 1.20% staking rewards based on the total SCORP tokens you purchased.",
+            info: "You will earn additional Daily Staking Rewards. For example, with the Diamond Membership NFT, you’ll receive an additional 20% on the current daily staking rewards rate. So, if the daily rate is hypothetically 1%, you would get 1.20% staking rewards based on the total $SCORP2.0 tokens you purchased.",
           },
           {
             text: "20% USDT Staking Rewards",
             tick: true,
-            info: "You can withdraw a portion of your SCORP staking rewards in USDT. For example, with Diamond Membership, you can get 20% of your total staking rewards paid out in USDT.",
+            info: "You can withdraw a portion of your $SCORP2.0 staking rewards in USDT. For example, with Diamond Membership, you can get 20% of your total staking rewards paid out in USDT.",
           },
           {
             text: "Scorpion Casino VIP Package",
@@ -135,7 +135,7 @@ const ExtraRewardsSection = () => {
           {
             text: "40% $SCORP2.0 Bonus",
             tick: true,
-            info: "You will automatically receive additional SCORP tokens to your wallet. For example, if you purchase the Platinum Membership NFT with 40% bonus tokens and you buy 100,000 SCORP, you’ll receive 140,000 SCORP tokens.",
+            info: "You will automatically receive additional $SCORP2.0 tokens to your wallet. For example, if you purchase the Platinum Membership NFT with 40% bonus tokens and you buy 100,000 $SCORP2.0, you’ll receive 140,000 $SCORP2.0 tokens.",
           },
           {
             text: "25% Casino Credits",
@@ -145,12 +145,12 @@ const ExtraRewardsSection = () => {
           {
             text: "10% Bonus Staking Rewards",
             tick: true,
-            info: "You will earn additional Daily Staking Rewards. For example, with the Gold Membership NFT, you’ll receive an additional 10% on the current daily staking rewards rate. So, if the daily rate is hypothetically 1%, you would get 1.05% staking rewards based on the total SCORP tokens you purchased.",
+            info: "You will earn additional Daily Staking Rewards. For example, with the Gold Membership NFT, you’ll receive an additional 10% on the current daily staking rewards rate. So, if the daily rate is hypothetically 1%, you would get 1.05% staking rewards based on the total $SCORP2.0 tokens you purchased.",
           },
           {
             text: "15% USDT Staking Rewards",
             tick: true,
-            info: "You can withdraw a portion of your SCORP staking rewards in USDT. For example, with Platinum Membership, you can get 15% of your total staking rewards paid out in USDT.",
+            info: "You can withdraw a portion of your $SCORP2.0 staking rewards in USDT. For example, with Platinum Membership, you can get 15% of your total staking rewards paid out in USDT.",
           },
           {
             text: "Scorpion Casino VIP Package",
@@ -169,7 +169,7 @@ const ExtraRewardsSection = () => {
           {
             text: "25% $SCORP2.0 Bonus",
             tick: true,
-            info: "You will automatically receive additional SCORP tokens to your wallet. For example, if you purchase the Gold Membership NFT with 25% bonus tokens and you buy 100,000 SCORP, you’ll receive 125,000 SCORP tokens.",
+            info: "You will automatically receive additional $SCORP2.0 tokens to your wallet. For example, if you purchase the Gold Membership NFT with 25% bonus tokens and you buy 100,000 $SCORP2.0, you’ll receive 125,000 $SCORP2.0 tokens.",
           },
           {
             text: "15% Casino Credits",
@@ -179,12 +179,12 @@ const ExtraRewardsSection = () => {
           {
             text: "5% Bonus Staking Rewards",
             tick: true,
-            info: "You will earn additional Daily Staking Rewards. For example, with the Gold Membership NFT, you’ll receive an additional 5% on the current daily staking rewards rate. So, if the daily rate is hypothetically 1%, you would get 1.05% staking rewards based on the total SCORP tokens you purchased.",
+            info: "You will earn additional Daily Staking Rewards. For example, with the Gold Membership NFT, you’ll receive an additional 5% on the current daily staking rewards rate. So, if the daily rate is hypothetically 1%, you would get 1.05% staking rewards based on the total $SCORP2.0 tokens you purchased.",
           },
           {
             text: "10% USDT Staking Rewards",
             tick: true,
-            info: "You can withdraw a portion of your SCORP staking rewards in USDT. For example, with Gold Membership, you can get 10% of your total staking rewards paid out in USDT.",
+            info: "You can withdraw a portion of your $SCORP2.0 staking rewards in USDT. For example, with Gold Membership, you can get 10% of your total staking rewards paid out in USDT.",
           },
           {
             text: "Scorpion Casino VIP Package",
@@ -203,7 +203,7 @@ const ExtraRewardsSection = () => {
           {
             text: "15% $SCORP2.0 Bonus",
             tick: true,
-            info: "You will automatically receive additional SCORP tokens to your wallet. For example, if you purchase the Silver Membership NFT with 15% bonus tokens and you buy 100,000 SCORP, you’ll receive 115,000 SCORP tokens.",
+            info: "You will automatically receive additional $SCORP2.0 tokens to your wallet. For example, if you purchase the Silver Membership NFT with 15% bonus tokens and you buy 100,000 $SCORP2.0, you’ll receive 115,000 $SCORP2.0 tokens.",
           },
           {
             text: "10% Casino Credits",
@@ -213,12 +213,12 @@ const ExtraRewardsSection = () => {
           {
             text: "2% Bonus Staking Rewards",
             tick: true,
-            info: "You will earn additional Daily Staking Rewards. For example, with the Gold Membership NFT, you’ll receive an additional 5% on the current daily staking rewards rate. So, if the daily rate is hypothetically 1%, you would get 1.05% staking rewards based on the total SCORP tokens you purchased.",
+            info: "You will earn additional Daily Staking Rewards. For example, with the Gold Membership NFT, you’ll receive an additional 5% on the current daily staking rewards rate. So, if the daily rate is hypothetically 1%, you would get 1.05% staking rewards based on the total $SCORP2.0 tokens you purchased.",
           },
           {
             text: "USDT Staking Rewards",
             tick: false,
-            info: "You can withdraw a portion of your SCORP staking rewards in USDT. For example, with Gold Membership, you can get 10% of your total staking rewards paid out in USDT.",
+            info: "You can withdraw a portion of your $SCORP2.0 staking rewards in USDT. For example, with Gold Membership, you can get 10% of your total staking rewards paid out in USDT.",
           },
           {
             text: "Scorpion Casino VIP Package",
@@ -237,7 +237,7 @@ const ExtraRewardsSection = () => {
           {
             text: "10% $SCORP2.0 Bonus",
             tick: true,
-            info: "You will automatically receive additional SCORP tokens to your wallet. For example, if you purchase the Bronze Membership NFT with 10% bonus tokens and you buy 100,000 SCORP, you’ll receive 110,000 SCORP tokens.",
+            info: "You will automatically receive additional $SCORP2.0 tokens to your wallet. For example, if you purchase the Bronze Membership NFT with 10% bonus tokens and you buy 100,000 $SCORP2.0, you’ll receive 110,000 $SCORP2.0 tokens.",
           },
           {
             text: "5% Casino Credits",
@@ -247,12 +247,12 @@ const ExtraRewardsSection = () => {
           {
             text: "Bonus Staking Rewards",
             tick: false,
-            info: "You will earn additional Daily Staking Rewards. For example, with the Gold Membership NFT, you’ll receive an additional 5% on the current daily staking rewards rate. So, if the daily rate is hypothetically 1%, you would get 1.05% staking rewards based on the total SCORP tokens you purchased.",
+            info: "You will earn additional Daily Staking Rewards. For example, with the Gold Membership NFT, you’ll receive an additional 5% on the current daily staking rewards rate. So, if the daily rate is hypothetically 1%, you would get 1.05% staking rewards based on the total $SCORP2.0 tokens you purchased.",
           },
           {
             text: "USDT Staking Rewards",
             tick: false,
-            info: "You can withdraw a portion of your SCORP staking rewards in USDT. For example, with Gold Membership, you can get 10% of your total staking rewards paid out in USDT.",
+            info: "You can withdraw a portion of your $SCORP2.0 staking rewards in USDT. For example, with Gold Membership, you can get 10% of your total staking rewards paid out in USDT.",
           },
           {
             text: "Scorpion Casino VIP Package",
@@ -464,7 +464,7 @@ const ExtraRewardsSection = () => {
 
                 <p className="!leading-[111%] pt-4 text-center !text-[14px]">
                   (You will get the membership NFT <br /> automatically when you
-                  purchase $SCORP)
+                  purchase $SCORP2.0)
                 </p>
               </div>
             </div>
