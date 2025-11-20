@@ -29,7 +29,7 @@ const PressReleaseSection = ({ articles }) => {
       title:
         "Scorpion Casino is The Ultimate Destination for Licensed and Regulated Online Gambling",
       excerpt:
-        "Scorpion Casino (SCORP) has emerged to become one of the top destinations for online gambling, casino games, sports betting...",
+        "Scorpion Casino ($SCORP2.0) has emerged to become one of the top destinations for online gambling, casino games, sports betting...",
       link: "#",
     },
     {
@@ -44,7 +44,7 @@ const PressReleaseSection = ({ articles }) => {
     {
       id: 4,
       image: pressRelease4,
-      title: "Priceless Ethereum Opportunity and $SCORP",
+      title: "Priceless Ethereum Opportunity and $SCORP2.0",
       excerpt:
         "The cryptocurrency market is booming as more investors pile into the space for solid solutions...",
       link: "#",
@@ -63,7 +63,7 @@ const PressReleaseSection = ({ articles }) => {
             <span className="text_gradient">Release</span>
           </h2>
           <p className="text-[#ffffff]">
-            Latest articles and updates about SCORP2.0
+            Latest articles and updates about $SCORP2.0
           </p>
         </div>
 
