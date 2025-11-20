@@ -2,7 +2,7 @@ import market_opportunity_img from "../assets/huge_market/huge_market_bar.webp";
 
 const MarketOpportunitySection = () => {
   return (
-    <section className="relative w-full huge_market_section_bg min-h-[650px] md:h-[650px] flex items-center justify-center py-12 md:py-16 px-4 md:px-6 lg:px-8">
+    <section className="relative w-full huge_market_section_bg min-h-[650px] md:h-[650px] flex items-center justify-center py-12 md:py-14 px-4 md:px-6 lg:px-8">
        <div
         className="absolute bottom-[250px] max-md:-left-40"
         style={{

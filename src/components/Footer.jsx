@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
 import Logo from "../assets/navabar/logo.webp";
-import goldGbg from "../assets/footer/gold_gbg.webp";
+import licence from "../assets/footer/footer.svg";
 import redGbg from "../assets/footer/red_gbg.webp";
 
 export default function Footer() {
@@ -19,7 +19,7 @@ export default function Footer() {
   return (
     <footer className="w-full py-12 max-md:py-6 max-md:px-4 relative">
       {/* <img
-        src={goldGbg}
+        src={licence}
         alt="footer background"
         className="absolute bottom-0 left-0 w-[400px] h-[400px] z-1 max-md:w-[200px] max-md:h-[200px]"
       />
@@ -35,11 +35,8 @@ export default function Footer() {
               <img src={Logo} alt="footer logo" />
             </div>
 
-            <p className="text-[#CACACA] max-md:text-sm max-md:leading-relaxed">
-              Step into the world of casinos, high stakes, and incredible
-              rewards by joining the Scorpion community today! Experience the
-              unmatched privileges and benefits of being part of the world's
-              first social online gambling ecosystem powered by $SCORP2.0.
+            <p className="text-[#CACACA] md:max-w-[365px] max-md:text-sm max-md:leading-relaxed">
+              Step into the world of casinos, high stakes, and massive rewards by joining the Scorpion community today, the world’s first social gambling ecosystem powered by $SCORP2.0.
             </p>
           </div>
 
@@ -80,7 +77,8 @@ export default function Footer() {
             <ul className="space-y-2 max-md:space-y-2.5">
               <li>
                 <a
-                  target="_blank" href="https://scorpio-casino.netlify.app/doc/Privacy.pdf"
+                  target="_blank"
+                  href="https://scorpio-casino.netlify.app/doc/Privacy.pdf"
                   className="quick-link max-md:text-sm"
                 >
                   Privacy Policy
@@ -88,7 +86,8 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  target="_blank" href="https://scorpio-casino.netlify.app/doc/Cookies-Policy-SC.pdf"
+                  target="_blank"
+                  href="https://scorpio-casino.netlify.app/doc/Cookies-Policy-SC.pdf"
                   className="quick-link max-md:text-sm"
                 >
                   Cookies Policy
@@ -96,7 +95,8 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  target="_blank" href="https://scorpio-casino.netlify.app/doc/Terms-of-Service.pdf"
+                  target="_blank"
+                  href="https://scorpio-casino.netlify.app/doc/Terms-of-Service.pdf"
                   className="quick-link max-md:text-sm"
                 >
                   Terms of Service
@@ -104,7 +104,8 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  target="_blank" href="https://scorpio-casino.netlify.app/doc/TokenSaleAgreement.pdf"
+                  target="_blank"
+                  href="https://scorpio-casino.netlify.app/doc/TokenSaleAgreement.pdf"
                   className="quick-link max-md:text-sm"
                 >
                   Token Sale Agreement
@@ -112,7 +113,8 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  target="_blank" href="https://t.me/scorpioncasino_official"
+                  target="_blank"
+                  href="https://t.me/scorpioncasino_official"
                   className="quick-link max-md:text-sm"
                 >
                   Live Support 24/7
@@ -178,44 +180,58 @@ export default function Footer() {
                 info@scropion.casino
               </a>
             </div>
+             <div className="w-[100%] pt-2 hidden  md:flex justify-start pl-8">
+               <img
+              src={licence}
+              alt="footer logo"
+              className=" w-[100px] h-[100px] z-1   "
+            />
+             </div>
           </div>
         </div>
 
         <div className="flex flex-col gap-6 pt-6 border-t border-[#363636] max-md:gap-5 max-md:pt-5">
-          <div className="flex flex-col gap-2 max-md:gap-3">
-            <h3 className="text-left max-md:text-lg">Scorpion Casino</h3>
-            <p className="text-[#CACACA] max-md:text-sm">
-              Registration Number: 14904288
+          <div className="flex flex-row md:justify-center">
+            <div className="flex flex-col gap-2 max-md:gap-3">
+              <h3 className="md:text-center text-start max-md:text-lg">Scorpion Casino</h3>
+            <p className="text-[#CACACA] md:text-center max-md:text-sm">
+              License Number: 149948
             </p>
             <div className="flex flex-wrap gap-x-4 gap-y-2 max-md:gap-x-3 max-md:gap-y-2">
               <a
-                target="_blank" href="https://scorpio-casino.netlify.app/doc/Terms-of-Service.pdf"
+                target="_blank"
+                href="https://scorpio-casino.netlify.app/doc/Terms-of-Service.pdf"
                 className="gradient_quick_links max-md:text-xs"
               >
                 Terms of Service
               </a>
               <a
-                target="_blank" href="https://scorpio-casino.netlify.app/doc/Privacy.pdf"
+                target="_blank"
+                href="https://scorpio-casino.netlify.app/doc/Privacy.pdf"
                 className="gradient_quick_links max-md:text-xs"
               >
                 Privacy Policy
               </a>
               <a
-                target="_blank" href="https://t.me/scorpioncasino_official"
+                target="_blank"
+                href="https://t.me/scorpioncasino_official"
                 className="gradient_quick_links max-md:text-xs"
               >
                 Contact Us
               </a>
               <a
-                target="_blank" href="https://scorpio-casino.netlify.app/doc/TokenSaleAgreement.pdf"
+                target="_blank"
+                href="https://scorpio-casino.netlify.app/doc/TokenSaleAgreement.pdf"
                 className="gradient_quick_links max-md:text-xs"
               >
                 Token Sale Agreement
               </a>
             </div>
+            </div>
+          
           </div>
 
-          <p className="text-[#B4A5A5] max-md:text-xs max-md:leading-relaxed">
+          <p className="text-[#B4A5A5] md:text-center max-md:text-xs max-md:leading-relaxed">
             Scorpion Casino operates the website Scorpion.casino (“Platform”).
             By using the Platform, you accept our Terms of Service, Privacy
             Policy, Cookie Policy, and the SCORP2.0 Token sale agreement.
@@ -235,6 +251,12 @@ export default function Footer() {
             Buying cryptocurrencies involves risk and may result in partial or
             total loss.
           </p>
+
+          <img
+            src={licence}
+            alt="footer logo"
+            className=" w-[60px] h-[60px] z-1 aign-center mx-auto flex md:hidden "
+          />
 
           <div className="text-center text-[#ffffff] max-md:text-sm max-md:pt-2">
             Copyright {new Date().getFullYear()} Scorpion Casino | All Rights

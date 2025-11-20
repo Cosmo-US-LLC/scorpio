@@ -1,10 +1,11 @@
 import breaking_barriers_img from "../assets/breaking_down/scorpion_casino_right.webp";
 import scorpioToken from "../assets/breaking_down/scorpio_token.webp";
 import vec_1 from "../assets/breaking_down/vec_1.svg";
+import vec_1_mob from "../assets/breaking_down/vec_1_mob.svg";
 
 const BreakingBarriersSection = () => {
   return (
-    <section className="relative w-full overflow-hidden min-h-[600px] md:h-[660px] flex items-center justify-center py-12 md:py-16 px-4 md:px-6 lg:px-8">
+    <section className="relative w-full overflow-hidden min-h-[600px] md:h-[660px] flex items-center justify-center py-12 md:py-14 px-4 md:px-6 lg:px-8">
       <div className="max-w-[1280px] mx-auto relative overflow-hidden rounded-2xl breaking_barriers_section_bg flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 px-4 sm:px-6 md:px-8 py-8 md:py-8">
         <div className="w-full md:w-[50%] flex flex-col gap-4 md:gap-6">
           <h2 className="text-left max-w-[530px]">
@@ -27,6 +28,22 @@ const BreakingBarriersSection = () => {
             substantial profits.
           </p>
         </div>
+        <div className="w-full sm:w-[300px] md:hidden">
+            <button 
+              onClick={(e) => {
+                e.preventDefault();
+                const target = document.querySelector("#wallet");
+                if (target) {
+                  const yOffset = 20;
+                  const y =
+                    target.getBoundingClientRect().top +
+                    window.scrollY +
+                    yOffset;
+                  window.scrollTo({ top: y, behavior: "smooth" });
+                }
+              }}
+            className="btn-primary w-full">Buy $SCORP2.0</button>{" "}
+          </div>
 
         <div className="w-full md:w-[50%] relative pt-8 md:pt-16 pb-4 px-4 md:px-8">
           <img
@@ -38,7 +55,13 @@ const BreakingBarriersSection = () => {
            <img
             src={vec_1}
             alt="Scorpion Casino Token"
-            className="w-[60px] h-[60px] sm:w-[150px] sm:h-[150px] md:w-[120px] md:h-[120px] object-cover rounded-xl z-10 absolute -right-[16px] sm:-right-[40px] md:-right-[40px] top-[-10px] sm:top-[-10px] md:top-[-10px]"
+            className="w-[60px] h-[60px] max-md:hidden sm:w-[150px] sm:h-[150px] md:w-[120px] md:h-[120px] object-cover rounded-xl z-10 absolute -right-[16px] sm:-right-[40px] md:-right-[40px] top-[-10px] sm:top-[-10px] md:top-[-33px]"
+
+          />
+            <img
+            src={vec_1_mob}
+            alt="Scorpion Casino Token"
+            className="w-[60px] md:hidden h-[60px] sm:w-[150px] sm:h-[150px] md:w-[120px] md:h-[120px] object-cover rounded-xl z-10 absolute -right-[16px] sm:-right-[40px] md:-right-[40px] top-[-10px] sm:top-[-10px] md:top-[-33px]"
 
           />
           

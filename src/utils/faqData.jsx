@@ -70,19 +70,19 @@ export const defaultFaqs = [
     type: "rich",
     content: (
       <div className="space-y-4">
-        <p className="text-sm md:text-[15px] leading-6 text-gray-300">
+        <p className="text-sm md:text-[16px] leading-6 text-gray-300">
           The $SCORP2.0 token is an all-in-one solution for becoming a part of a
           licensed, transparent, and provably fair Scorpion Casino iGaming
           platform. With a large range of benefits and use cases.
         </p>
-        <ul className="list-disc list-inside space-y-2 text-sm md:text-[15px] text-gray-300 ml-2">
+        <ul className="list-disc list-inside font-[Inter] space-y-2 text-sm md:text-[16px] text-gray-300 ml-2">
           <li>Play with $SCORP2.0 on Scorpion Casino</li>
           <li>Earn passive income for holding $SCORP2.0</li>
           <li>Receive weekly bonuses and free games</li>
           <li>Participate in our affiliate reward system</li>
           <li>Plus many more exciting features!</li>
         </ul>
-        <p className="!text-sm md:!text-[15px] text-gray-300">
+        <p className="!text-sm md:!text-[16px] text-gray-300">
           Get in on the action and experience the benefits of the $SCORP2.0 token
           for yourself. <br /> Join the SCORPION community today!
         </p>
@@ -145,7 +145,7 @@ export const defaultFaqs = [
     question: "What is the $SCORP2.0 Listing Price?",
     type: "text",
     answer:
-      "The $SCORP2.0 Listing Price refers to the price at which $SCORP2.0 tokens will be available for purchase during the launch of Scorpion Casino. The initial launch price for 1 $SCORP2.0 is set at $0.15.",
+      "The $SCORP2.0 Listing Price refers to the price at which $SCORP2.0 tokens will be available for purchase during the launch of Scorpion Casino. The initial launch price is set at $0.15.",
   },
   {
     id: "when-list",

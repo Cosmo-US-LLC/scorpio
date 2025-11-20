@@ -48,7 +48,7 @@ const SCORPUtilitySection = () => {
             </div>
             <div className="md:min-h-[500px] min-h-[380px] max-md:pt-4"> 
               <img className="md:block hidden max-w-[636.797px] absolute w-[100%] right-0" src={sportsImg} alt=" 35+ Different Sports" />
-                  <img className="md:hidden block max-w-[636.797px] absolute w-[100%] right-0" src={sportsImg_mob} alt=" 35+ Different Sports" />
+                  <img className="md:hidden block max-w-[330.797px] absolute w-[100%] right-0" src={sportsImg_mob} alt=" 35+ Different Sports" />
             </div>
           </div>
             <div className="flex max-md:grid max-md:grid-cols-3 max-md:gap-y-[20px] justify-between items-center space-x-4 mb-14 md:mb-20">

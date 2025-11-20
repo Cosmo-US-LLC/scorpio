@@ -39,7 +39,7 @@ const ResultsSection = () => {
       id: 5,
       title: "Migration",
       description:
-        "All $SCORP presale holders will be automatically migrated to SCORP 2.0 ",
+        "All $SCORP presale holders will be automatically migrated to $SCORP2.0 ",
       icon: resulticon5,
     },
   ];
@@ -74,13 +74,13 @@ const ResultsSection = () => {
                 Results of
                 <span className="text_gradient"> SCORP 1.0</span>
               </h2>
-              <p className="text-center">
+              <p className="text-center des_br">
                 SCORP was listed on multiple exchanges, reaching a $280M market
-                cap, soaring 560% from launch, and delivering up to 2800% (28x)
+                cap, <br /> and delivering up to 2800% (28x)
                 returns for presale buyers at its all-time high.
               </p>
               <p className="text-center">
-                Now, with SCORP 2.0, a new era begins, migrating to the Ethereum
+                Now, with $SCORP 2.0, a new era begins, migrating to the Ethereum
                 blockchain with a fully upgraded next-gen casino, 20,000+
                 holders, major partnerships, and 5+ upcoming exchange listings,
                 all coming together to build the #1 crypto casino ecosystem
@@ -164,7 +164,9 @@ const ResultsSection = () => {
                     {" "}
                   </div>
 
-                  <p className="">{items.description}</p>
+                  <p className="mob_br"
+                  dangerouslySetInnerHTML={{ __html: items.description }}
+                  ></p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     // width="233"
@@ -285,7 +287,7 @@ const ResultsSection = () => {
                           width="100%"
                           height="100%"
                           fill="none"
-                          className="absolute w-full h-full -bottom-3 left-0  "
+                          className="absolute w-full h-full -bottom-3 left-0 z-[-1]  "
                         >
                           <g filter="url(#filter0_f_206_2451)">
                             <ellipse
@@ -338,9 +340,9 @@ const ResultsSection = () => {
                 
 
                 {/* Mobile Navigation Arrows with Dots - Below carousel */}
-              <div className="flex md:hidden justify-center gap-4 mt-8">
-                <CarouselPrevious className="!static !transform-none h-10 w-10" />
-                <CarouselNext className="!static !transform-none h-10 w-10" />
+              <div className="flex md:hidden justify-center relative gap-4 mt-8">
+                <CarouselPrevious className="!static top-0 !transform-none h-10 w-10 !z-[99]" />
+                <CarouselNext className="!static !transform-none h-10 w-10 !z-[99]" />
               </div>
               </Carousel>
             </div>

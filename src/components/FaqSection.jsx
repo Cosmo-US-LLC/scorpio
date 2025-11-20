@@ -14,7 +14,7 @@ const FaqSection = ({ faqs }) => {
   const renderContent = (faq) => {
     if (faq.type === "text") {
       return (
-        <p className="text-sm md:text-[15px] leading-6 text-gray-300">
+        <p className="text-sm md:text-[16px] leading-6 text-gray-300">
           {faq.answer}
         </p>
       );
@@ -36,13 +36,13 @@ const FaqSection = ({ faqs }) => {
                     "linear-gradient(90deg, #AE8625 0%, #F7EF8A 29.71%, #D2AC47 73.6%, #EDC967 100%)",
                 }}
               >
-                <th className="px-4 py-3 text-left text-sm font-semibold text-black">
+                <th className="px-4 font-[Inter] py-3 text-left text-sm font-semibold text-black">
                   Claimer
                 </th>
-                <th className="px-4 py-3 text-left text-sm font-semibold text-black">
+                <th className="px-4 font-[Inter] py-3 text-left text-sm font-semibold text-black">
                   Percentage
                 </th>
-                <th className="px-4 py-3 text-left text-sm font-semibold text-black">
+                <th className="px-4 font-[Inter] py-3 text-left text-sm font-semibold text-black">
                   Unlock Period
                 </th>
               </tr>
@@ -53,13 +53,13 @@ const FaqSection = ({ faqs }) => {
                   key={index}
                   className="even:bg-white/3 hover:bg-white/5 transition-colors"
                 >
-                  <td className="px-4 py-3 text-sm text-gray-300">
+                  <td className="px-4 py-3 font-[Inter] text-sm text-gray-300">
                     {row.claimer}
                   </td>
-                  <td className="px-4 py-3 text-sm text-gray-300">
+                  <td className="px-4 py-3 font-[Inter] text-sm text-gray-300">
                     {row.percentage}
                   </td>
-                  <td className="px-4 py-3 text-sm text-gray-300">
+                  <td className="px-4 py-3 font-[Inter] text-sm text-gray-300">
                     {row.unlock}
                   </td>
                 </tr>

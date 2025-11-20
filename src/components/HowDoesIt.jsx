@@ -10,7 +10,7 @@ const HowDoesItSection = () => {
       id: 1,
       title: "Buy-Back System",
       description:
-        "Scorpion Casino uses a smart contract to purchase $SCORP2.0 tokens from public exchanges on a daily basis. These purchases are financed through a portion of the Casino and Betting revenue.  During this buying process the $SCORP price goes automatically up.",
+        "Scorpion Casino uses a smart contract to purchase $SCORP2.0 tokens from public exchanges on a daily basis. These purchases are financed through a portion of the Casino and Betting revenue. During this buying process the $SCORP price goes automatically up.",
       icon: trusticon1,
     },
     {
@@ -31,7 +31,14 @@ const HowDoesItSection = () => {
 
   return (
     <section className="relative w-full max-md:px-4 max-md:pt-0 py-16 overflow-hidden">
-      <div className="relative z-[9] max-w-[1280px] w-[100%] mx-auto ">
+      <div className="relative z-[9] max-w-[1280px] w-[100%] mx-auto max-md:py-12 max-md:px-3 md:py-[60px]"
+       style={{
+                background: "rgba(27, 26, 22, 0.40)",
+                border: "0.764px solid rgba(255, 255, 255, 0.10)",
+                borderRadius: "16px",
+                backdropFilter: "blur(8.922223091125488px)",
+              }}
+      >
         <div className="text-center relative z-[1] max-w-[932px] mx-auto mb-[49px]">
           <h2 className="text-center mb-4">
             How Does It <span className="faded_heading">Work</span>?
@@ -40,13 +47,8 @@ const HowDoesItSection = () => {
             Curious about how the Scorpion Casino ecosystem works? Here’s a simplified explanation: Scorpion Casino is a global crypto casino and sports betting platform that generates daily revenue. This income supports the growth of the $SCORP2.0 token through an integrated daily buyback, burn, and reward system.
           </p>
         </div>
-        <div className="relative max-md:pb-5 max-md:px-3 md:py-[60px]"
-         style={{
-                background: "rgba(27, 26, 22, 0.40)",
-                border: "0.764px solid rgba(255, 255, 255, 0.10)",
-                borderRadius: "16px",
-                backdropFilter: "blur(8.922223091125488px)",
-              }}
+        <div className="relative "
+        
         >
           <img className="md:block hidden max-w-[850px] mx-auto relative z-[1]" src={howdoesit_img} alt="" />
           <img className="md:hidden relative z-[1] block" src={howdoesit_img_mob} alt="" />
