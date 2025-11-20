@@ -57,12 +57,9 @@ const Countdown = ({ endDate, onEnd, ...others }) => {
     <div {...others} className={clsx("flex justify-between items-center", others.className)}>
       {countdownData.map((data, i) => (
         <React.Fragment key={i}>
-          {i > 0 && (
-            <div className={"text-[2rem] font-bold"}>:</div>
-          )}
-          <div className="flex flex-col items-center justify-center w-[3rem]">
-            <Loadable component="p" length={1.5} className="text-[2rem] font-bold leading-[1] !text-[inherit]">{data[1]}</Loadable>
-            <Loadable component="p" length={3} className="text-xs font-[500] !text-[#aaa]">{data[0]}</Loadable>
+          <div className="flex items-end gap-1 justify-center w-[5.5rem]">
+            <Loadable component="p" length={1.5} className="text-[1.5rem] font-bold leading-[1] !text-[inherit]">{data[1]}</Loadable>
+            <Loadable component="p" length={3} className="text-sn font-[500] !text-[inherit]">{data[0]}</Loadable>
           </div>
         </React.Fragment>
       ))}

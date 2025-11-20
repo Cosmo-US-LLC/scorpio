@@ -27,7 +27,7 @@ function Herosection() {
   return (
     <div
       id="wallet"
-      className=" pt-[100px] md:pt-[114px] pb-[160px] max-w-[1280px] w-full mx-auto md:px-0 max-md:px-4 h-full bg_herosection relative"
+      className="pt-[8px] pb-[160px] max-w-[1280px] w-full mx-auto md:px-0 max-md:px-4 h-full bg_herosection relative"
     >
       <div
         className="absolute max-md:top-[60px] z-[0] md:right-[0%] md:top-[100px]"
@@ -115,12 +115,12 @@ function Herosection() {
             <img src={vector4} className="max-md:hidden  absolute max-w-[27.907px] right-[42.5%] z-[4] top-[60%]" alt="SCORP2" /> */}
         <img
           src={vector1}
-          className="max-md:hidden  absolute max-w-[350.368px] right-[36.5%] z-[4] top-[18%]"
+          className="max-md:hidden  absolute max-w-[350.368px] right-[36.5%] z-[4] top-[18%] pointer-events-none"
           alt="SCORP2"
         />
         <img
           src={vector2}
-          className="absolute max-md:hidden max-w-[109.584px] right-[36%] z-[4] bottom-[15%]"
+          className="absolute max-md:hidden max-w-[109.584px] right-[36%] z-[4] bottom-[15%] pointer-events-none"
           alt="SCORP2"
         />
 

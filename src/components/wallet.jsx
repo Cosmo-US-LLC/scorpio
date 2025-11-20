@@ -77,6 +77,7 @@ const Wallet = () => {
   return (
     <Loader loading={apiData.stageLoading}>
       <div
+        id="widget"
         className="flex flex-col overflow-hidden relative isolate [&_p]:text-[inherit]"
         style={{
           boxSizing: "content-box",

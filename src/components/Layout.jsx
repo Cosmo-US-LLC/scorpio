@@ -8,9 +8,7 @@ function Layout() {
   return (
     <div>
       <ConnectWalletModal />
-      <div className="">
-        <Navbar />
-      </div>
+      <Navbar />
       <div className="">
         <Outlet />
       </div>

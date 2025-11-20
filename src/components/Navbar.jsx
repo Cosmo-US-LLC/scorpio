@@ -19,9 +19,10 @@ import flag6 from "../assets/navabar/flags/flg (6).svg";
 import flag8 from "../assets/navabar/flags/flg (8).svg";
 import flag9 from "../assets/navabar/flags/flg (9).svg";
 import { getConfig, useAccount } from "@/presale-gg/web3";
-import { showConnectWalletModal } from "@/presale-gg/stores";
+import { showConnectWalletModal, useApiState } from "@/presale-gg/stores";
 import { disconnect } from "@wagmi/core";
 import { truncateString } from "@/presale-gg/util";
+import CountdownBanner from "./Widget/CountdownBanner";
 
 const flags = [
   { flag: flag1, abbreviation: "EN", name: "English" },
@@ -87,10 +88,11 @@ export default function Navbar() {
   }, []);
 
   const accountData = useAccount()
+  const apiData = useApiState()
 
   return (
     <header
-      className={`fixed left-0 w-full  z-[99] text-white  transition-all duration-300 ${
+      className={`sticky left-0 w-full  z-[99] text-white  transition-all duration-300 flex flex-col ${
         isScrolled
           ? "backdrop-blur-md bg-[#000] top-0 "
           : "bg-[#000] top-0 "
@@ -98,6 +100,9 @@ export default function Navbar() {
        ${isOpen ? "max-md:h-[100dvh] !min-h-[100svh]" : "max-md:h-auto"}
       `}
     >
+      {apiData.stage?.in_overflow_phase && (
+        <CountdownBanner />
+      )}
       <div className="max-w-[1280px] w-full  mx-auto md:px-0 max-md:px-4 py-4">
         <div className="w-full flex justify-between items-center">
           <div className="flex space-x-1">
