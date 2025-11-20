@@ -13,9 +13,14 @@ const StageBox = () => {
     }
     return parseNum(apiData.stage?.cumulative_usd_raised) / parseNum(apiData.stage?.next_stage_target_usd ?? 1)
   }, [apiData.stage])
+  
   const limitedStageFrac = useMemo(() => {
     return minMax(stageFrac, 0, 1)
   }, [stageFrac])
+
+  const overflowCountdownFrac = useMemo(() => {
+    return (Date.now() - new Date(apiData.stage.overflow_started).getTime()) / (new Date(apiData.stage.overflow_end).getTime() - new Date(apiData.stage.overflow_started))
+  }, [apiData.stage])
 
   return (
     <div
@@ -35,14 +40,18 @@ const StageBox = () => {
             </Loadable>
           </div>
 
-          <div className="bg-gray-800 w-[100%] md:h-[17px] max-md:h-[32px] rounded-[20px]">
+          <div className="relative bg-gray-800 w-[100%] md:h-[17px] max-md:h-[32px] rounded-[20px] overflow-hidden">
             <div
               className="md:h-[17px] max-md:h-[32px] rounded-[20px]"
               style={{
                 width: `${limitedStageFrac * 100}%`,
                 background: "#E2B146",
+                opacity: apiData.stage?.in_overflow_phase ? 0.4 : 1
               }}
             />
+            {apiData.stage?.in_overflow_phase && (
+              <div className="absolute top-0 left-0 h-full bg-[#E2B146] rounded-full" style={{width: `${overflowCountdownFrac * 100}%`}} />
+            )}
           </div>
           <div>
             <Loadable
