@@ -2,13 +2,13 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import ConnectWalletModal from "./Widget/ConnectWalletModal";
 
 function Layout() {
   return (
     <div>
-      <div className="">
-        <Navbar />
-      </div>
+      <ConnectWalletModal />
+      <Navbar />
       <div className="">
         <Outlet />
       </div>
