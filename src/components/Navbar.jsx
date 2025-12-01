@@ -18,6 +18,11 @@ import flag5 from "../assets/navabar/flags/flg (5).svg";
 import flag6 from "../assets/navabar/flags/flg (6).svg";
 import flag8 from "../assets/navabar/flags/flg (8).svg";
 import flag9 from "../assets/navabar/flags/flg (9).svg";
+import { getConfig, useAccount } from "@/presale-gg/web3";
+import { showConnectWalletModal, useApiState } from "@/presale-gg/stores";
+import { disconnect } from "@wagmi/core";
+import { truncateString } from "@/presale-gg/util";
+import CountdownBanner from "./Widget/CountdownBanner";
 
 const flags = [
   { flag: flag1, abbreviation: "EN", name: "English" },
@@ -82,9 +87,12 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const accountData = useAccount()
+  const apiData = useApiState()
+
   return (
     <header
-      className={`fixed left-0 w-full  z-[99] text-white  transition-all duration-300 ${
+      className={`sticky left-0 w-full  z-[99] text-white  transition-all duration-300 flex flex-col ${
         isScrolled
           ? "backdrop-blur-md bg-[#000] top-0 "
           : "bg-[#000] top-0 "
@@ -92,6 +100,9 @@ export default function Navbar() {
        ${isOpen ? "max-md:h-[100dvh] !min-h-[100svh]" : "max-md:h-auto"}
       `}
     >
+      {apiData.stage?.in_overflow_phase && (
+        <CountdownBanner />
+      )}
       <div className="max-w-[1280px] w-full  mx-auto md:px-0 max-md:px-4 py-4">
         <div className="w-full flex justify-between items-center">
           <div className="flex space-x-1">
@@ -224,8 +235,20 @@ export default function Navbar() {
             </div>
           </nav>
 
-          <button className="md:px-[13px] max-md:px-[12px] max-md:text-[14px] btn-primary cursor-pointer max-md:py-[13px] md:py-[16px]">
-            Connect Wallet
+          <button
+            className="md:px-[13px] max-md:px-[12px] max-md:text-[14px] btn-primary cursor-pointer leading-[1.1] h-[2.75rem] md:h-[3.125rem] py-0 min-w-[8rem] md:min-w-[9.5rem]"
+            onClick={async () => {
+              if (accountData.isConnected) {
+                const { config } = await getConfig()
+                // Disconnect twice to avoid issues
+                await disconnect(config)
+                setTimeout(() => disconnect(config), 100)
+              } else {
+                showConnectWalletModal()
+              }
+            }}
+          >
+            {accountData.isConnected ? <>Disconnect<br />{truncateString(accountData.address ?? "", 11)}</>: "Connect Wallet"}
           </button>
         </div>
       </div>

@@ -35,15 +35,14 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-
+  overflow-x: clip;
 }
 
 body {
   margin: 0 auto;
   min-height: 100vh;
   background: #0b0d10;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 @layer base {
@@ -68,9 +67,9 @@ body {
     h2 {
       font-size: 22px;
     }
-     h3 {
-    font-size: 18px ;
-  }
+    h3 {
+      font-size: 18px;
+    }
     .Featured_mobile {
       border-radius: 16px;
       border: 0.764px solid rgba(255, 255, 255, 0.1);
@@ -206,7 +205,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: 136.752px;
+    border-radius: inherit;
     background: linear-gradient(
       90deg,
       #f9f295 5.47%,
@@ -222,7 +221,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: 136.752px;
+    border-radius: inherit;
     background: linear-gradient(
       90deg,
       rgba(249, 242, 149, 0.2) 5.47%,
@@ -285,7 +284,7 @@ body {
     z-index: -1;
   }
 
-   .btn-fade {
+  .btn-fade {
     position: relative;
     cursor: pointer;
     color: #0d0e1e;
@@ -293,26 +292,37 @@ body {
     font-family: Inter, sans-serif;
     font-size: 16px;
     font-weight: 800;
-   
   }
   .btn-fade::before {
     content: "";
     position: absolute;
     width: 94%;
     inset: 0;
-   border-radius: 153.846px;
-background: linear-gradient(90deg, #F9F295 5.47%, #E0AA3E 38.55%, #F9F295 69.43%, #B88A44 97.22%);
-filter: blur(7.692307949066162px);
+    border-radius: 153.846px;
+    background: linear-gradient(
+      90deg,
+      #f9f295 5.47%,
+      #e0aa3e 38.55%,
+      #f9f295 69.43%,
+      #b88a44 97.22%
+    );
+    filter: blur(7.692307949066162px);
     z-index: -1;
-
   }
   .btn-fade::after {
     content: "";
     position: absolute;
     inset: 0;
-  border-radius: 153.846px;
-background: linear-gradient(90deg, rgba(249, 242, 149, 0.20) 5.47%, rgba(224, 170, 62, 0.20) 38.55%, rgba(249, 242, 149, 0.20) 69.43%, rgba(184, 138, 68, 0.20) 97.22%);
-box-shadow: 0 -1.538px 3.077px 0 #F5E99C inset, 0 1.538px 3.077px 0 #F5E99C inset;
+    border-radius: 153.846px;
+    background: linear-gradient(
+      90deg,
+      rgba(249, 242, 149, 0.2) 5.47%,
+      rgba(224, 170, 62, 0.2) 38.55%,
+      rgba(249, 242, 149, 0.2) 69.43%,
+      rgba(184, 138, 68, 0.2) 97.22%
+    );
+    box-shadow: 0 -1.538px 3.077px 0 #f5e99c inset,
+      0 1.538px 3.077px 0 #f5e99c inset;
     z-index: -1;
   }
 }
@@ -362,7 +372,7 @@ box-shadow: 0 -1.538px 3.077px 0 #F5E99C inset, 0 1.538px 3.077px 0 #F5E99C inse
   }
 
   /* Accordion animations */
-/* 
+  /* 
   .bg_herosection {
     background-image: url(../src//assets/herosection/herobg.webp);
     background-position: center;
@@ -411,25 +421,25 @@ box-shadow: 0 -1.538px 3.077px 0 #F5E99C inset, 0 1.538px 3.077px 0 #F5E99C inse
     background-repeat: no-repeat;
   } */
 
-   /* .bg_gambling_con {
+  /* .bg_gambling_con {
     background-image: url(../src//assets/gambling/gambling_bg.webp);
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
   } */
-   .SCORPUtility_bg {
+  .SCORPUtility_bg {
     background-image: url(../src/assets/SCORPUtilitySection/scorpio_ui_bg.webp);
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
-    .staking_rewards_bg {
+  .staking_rewards_bg {
     background-image: url(../src/assets/stakingrewards/staking_rewards_bg.webp);
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
-    .bg_gambling_inner {
+  .bg_gambling_inner {
     background-image: url(../src//assets/gambling/gambling_inner.webp);
     background-position: center;
     background-size: 100% 100%;
@@ -442,27 +452,27 @@ box-shadow: 0 -1.538px 3.077px 0 #F5E99C inset, 0 1.538px 3.077px 0 #F5E99C inse
     display: block !important;
   }
 
-   @media (max-width: 768px) {
-      .mob_br br {
-    display: block !important;
-  }
-  .des_br br {
-    display: none !important;
-  }
+  @media (max-width: 768px) {
+    .mob_br br {
+      display: block !important;
+    }
+    .des_br br {
+      display: none !important;
+    }
 
     .bg_gambling_inner {
-    background-image: url(../src//assets/gambling/gambling_inner_mob.webp);
-    background-position: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-  }
-   .staking_rewards_bg {
-    background-image: url(../src/assets/stakingrewards/staking_rewards_bg_mob.webp);
-  }
-   .SCORPUtility_bg {
-    background-image: url(../src/assets/SCORPUtilitySection/scorpio_ui_bg_mob.webp);
-  }
-   /* 
+      background-image: url(../src//assets/gambling/gambling_inner_mob.webp);
+      background-position: center;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    .staking_rewards_bg {
+      background-image: url(../src/assets/stakingrewards/staking_rewards_bg_mob.webp);
+    }
+    .SCORPUtility_bg {
+      background-image: url(../src/assets/SCORPUtilitySection/scorpio_ui_bg_mob.webp);
+    }
+    /* 
  
   
   .bg_herosection {
@@ -588,5 +598,4 @@ box-shadow: 0 -1.538px 3.077px 0 #F5E99C inset, 0 1.538px 3.077px 0 #F5E99C inse
     font-weight: 600;
     line-height: 22px;
   }
-  
 }
