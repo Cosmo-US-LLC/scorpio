@@ -49,14 +49,14 @@ export default function WalletSelectDropdown({ tokens, onChange }) {
           <span
             className={`leading-[15px] text-[#fff] text-start ${
               selected.symbol === "More"
-                ? "text-[14px] "
-                : "2xl:text-[14px] xl:text-[14px] lg:text-[14px] md:text-[14px] sm:text-[9.7px] text-[9.7px] "
+                ? "text-[14px] font-[700] "
+                : "2xl:text-[14px] font-[700] xl:text-[14px] lg:text-[14px] md:text-[14px] sm:text-[12px] text-[12px] "
             }`}
           >
             {selected.symbol}
             <br />
             {selected.sub_symbol && (
-              <span className="text-[12px] text-gray-500 leading-[8px] font-[400]">
+              <span className="md:text-[12px] text-[9px] text-gray-500 leading-[8px] font-[400]">
                 {selected.sub_symbol}
               </span>
             )}

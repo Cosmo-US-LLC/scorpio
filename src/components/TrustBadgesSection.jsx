@@ -8,21 +8,21 @@ const TrustBadgesSection = () => {
       id: 1,
       title: "Secured Licensed Platform",
       description:
-        "The SCORPION platform is regulated and licensed by the Curacao EGaming  licensing entity.",
+        "The SCORPION platform is regulated and licensed by the Curacao EGaming licensing entity.",
       icon: trusticon1,
     },
     {
       id: 2,
       title: "Team is KYC Verified",
       description:
-        "The Scorpion Team has been successfully verified by Assure DeFi at the KYC Gold Standard.",
+        "The Scorpion Team has been successfully verified by Assure DeFi <br/> the KYC Gold Standard.",
       icon: trusticon2,
     },
     {
       id: 3,
-      title: "Audited by Solidproof",
+      title: "Audited by Coinsult",
       description:
-        "Scorpion Casino has been fully audited  by Solidproof and shown to  be 100% secure.",
+        "Scorpion Casino has been fully audited by Coinsult and shown to be <br/> 100% secure.",
       icon: trusticon3,
     },
   ];
@@ -46,7 +46,7 @@ const TrustBadgesSection = () => {
               }}
             >
               <div className="flex md:max-w-[110px] max-w-[100px] mx-auto justify-center items-center md:mb-6 max-md:ml-2 ">
-                <img src={badge.icon} alt={badge.title} />
+                <img src={badge.icon} className="min-w-[100px] min-h-[100px]" alt={badge.title} />
               </div>
 
               <div>
@@ -54,15 +54,15 @@ const TrustBadgesSection = () => {
                 {badge.title}
               </h3>
 
-              <p className="border-t-[1px] max-md:text-start border-[#36383F] pt-[20px]">
-                {badge.description}
+              <p className="border-t-[1px] md:px-[20px] des_br max-md:text-start border-[#36383F] pt-[20px]"
+              dangerouslySetInnerHTML={{ __html: badge.description }}
+              >
               </p>
                    <svg
                   xmlns="http://www.w3.org/2000/svg"
                  
-                  viewBox="0 0 233 228"
                   fill="none"
-                  className="absolute bottom-0 left-0  "
+                  className="absolute w-full h-full bottom-0 left-0  "
                 >
                   <g filter="url(#filter0_f_206_2451)">
                     <ellipse

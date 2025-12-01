@@ -2,7 +2,7 @@ import case_study_img from "../assets/crypto_casino/crypto_casino_left.webp";
 
 const CaseStudySection = () => {
   return (
-    <section className="relative w-full min-h-[500px] case_study_section_bg md:h-[540px] flex items-center justify-center py-12 md:py-16 px-4 md:px-6 lg:px-8">
+    <section className="relative w-full min-h-[500px] max-md:pt-0 case_study_section_bg md:min-h-[540px] flex items-center justify-center py-12 md:py-14 px-4 md:px-6 lg:px-8">
        <div
         className="absolute bottom-[50px] md:left-0 max-md:-left-40"
         style={{
@@ -14,9 +14,16 @@ const CaseStudySection = () => {
           zIndex: 0,
         }}
       ></div>
-      <div className="max-w-[1280px] mx-auto rounded-2xl  h-full flex flex-col md:flex-row gap-6 md:gap-10 items-center justify-center py-8 md:py-0">
-        <div className="w-full md:w-[50%] relative">
-          <div className="relative rounded-xl overflow-hidden p-6 sm:p-10 md:p-20">
+      <div className="max-w-[1280px] mx-auto rounded-2xl  h-full flex flex-col md:flex-row gap-6 md:gap-12 items-center justify-center py-8 md:py-8 md:px-8 "
+       style={{
+                background: "rgba(27, 26, 22, 0.40)",
+                border: "0.764px solid rgba(255, 255, 255, 0.10)",
+                borderRadius: "16px",
+                backdropFilter: "blur(8.922223091125488px)",
+              }}
+      >
+        <div className="w-full md:max-w-[630px] relative">
+          <div className="relative rounded-xl overflow-hidden p-6 max-md:pt-0 md:px-0 sm:p-10 ">
             <img
               src={case_study_img}
               alt="The Guardian Article on Phone"
@@ -25,20 +32,36 @@ const CaseStudySection = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-[50%] flex flex-col gap-4 md:gap-6 px-4 md:px-0">
+        <div className="w-full md:max-w-[630px] relative z-[1] flex flex-col gap-4 md:gap-6 px-4 md:px-0">
           <h2 className="text-left max-w-full md:max-w-[530px]">
             <span className="text-[#ffffff]">Crypto Casino</span> <br />
             <span className="text_gradient">Case Study</span>
           </h2>
 
-          <h6 className="text-[#ffffff] text-left text-sm md:text-base">
-           26-year-old Crypto Casino Owner Buys a Villa for $80 Million.
-          </h6>
+          <p className="text-[#fff] font-[700] mob_br text-left  md:text-base">
+           26-year-old Crypto Casino Owner <br /> Buys a Villa for $80 Million.
+          </p>
 
-          <h6 className="text-[#CACACA] text-sm md:text-base">
-            According to The Guardian, a 26-year-old owner of a crypto casino made headlines by purchasing Australia’s most expensive villa for an astounding $88 million USD after just a few years of operating his online casino alongside his co-founder. The growth of crypto casinos is truly impressive, and now, for the first time ever, you have
-the chance to get involved. While these outcomes are exceptional and not the norm, they clearly demonstrate the immense potential
-          </h6>
+          <p className="text-[#CACACA]  md:text-base">
+           According to The Guardian, a 26-year-old owner of a crypto casino made headlines by purchasing Australia’s most expensive villa for an astounding $88 million USD after just a few years of operating his online casino alongside his co-founder. The growth of crypto casinos is truly impressive, and now, for the first time ever, you have
+the chance to get involved. While these outcomes are exceptional and not the norm, they clearly demonstrate the immense potential.
+          </p>
+          <div className="w-full sm:w-[300px] mt-2">
+            <button 
+              onClick={(e) => {
+                e.preventDefault();
+                const target = document.querySelector("#wallet");
+                if (target) {
+                  const yOffset = 20;
+                  const y =
+                    target.getBoundingClientRect().top +
+                    window.scrollY +
+                    yOffset;
+                  window.scrollTo({ top: y, behavior: "smooth" });
+                }
+              }}
+            className="btn-primary w-full">Buy $SCORP2.0</button>{" "}
+          </div>
         </div>
       </div>
     </section>

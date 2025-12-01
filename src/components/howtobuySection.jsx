@@ -15,7 +15,7 @@ const HowToBuySection = () => {
       title: "Step 2",
       maintitle:"Confirm Transaction",
       description:
-        "You can buy $SCORP 2.0 with a card or using ETH, USDC, USDT, SOL, BNB, and over 10 other currencies. Simply click the Buy button and confirm the transaction in your wallet.",
+        "You can buy $SCORP2.0 with a card or using ETH, USDC, USDT, SOL, BNB, and over 10 other currencies. <br/><br/> Simply click the buy button and confirm the transaction in your wallet.",
     },
     {
       id: 3,
@@ -27,7 +27,7 @@ const HowToBuySection = () => {
   ];
 
   return (
-    <section className="relative w-full max-md:pt-0 py-16 px-4 md:px-16 ">
+    <section id="how-to-buy" className="relative w-full max-md:pt-0 py-16 px-4 md:px-16 ">
        <div
         className="absolute bottom-[300px] max-md:-left-40"
         style={{
@@ -67,8 +67,9 @@ const HowToBuySection = () => {
                 {badge.maintitle}
               </h3>
 
-              <p className="border-t-[1px] border-[#36383F] pt-[17px]">
-                {badge.description}
+              <p className="border-t-[1px] mob_br border-[#36383F] pt-[17px] max-md:max-w-[340px]"
+               dangerouslySetInnerHTML={{ __html: badge.description }}
+              >
               </p>
                 
             </div>
@@ -80,12 +81,28 @@ const HowToBuySection = () => {
         </div>
 
         <div className="flex items-center md:mt-[-50px] justify-center space-x-5">
-          <button className="md:px-[57px] max-md:px-[20px] max-md:py-[10px] md:py-[19px] btn-primary max-md:!text-[16px]"
+          <button 
+            onClick={(e) => {
+                e.preventDefault();
+                const target = document.querySelector("#wallet");
+                if (target) {
+                  const yOffset = 20;
+                  const y =
+                    target.getBoundingClientRect().top +
+                    window.scrollY +
+                    yOffset;
+                  window.scrollTo({ top: y, behavior: "smooth" });
+                }
+              }}
+          className="md:px-[57px] max-md:px-[20px] max-md:py-[10px] md:py-[19px] btn-primary max-md:!text-[16px]"
            style={{
     boxShadow: "0 -1.76px 3.52px 0 #F5E99C inset, 0 1.76px 3.52px 0 #F5E99C inset",
   }}
           >Buy $SCORP2.0</button>
-          <button className="max-md:!text-[16px] md:px-[57px] max-md:px-[20px] max-md:py-[10px] md:py-[19px] btn-secondary"> Need Support?</button>
+          <button 
+              onClick={() => window.open("https://t.me/scorpioncasino_official", "_blank")}
+          
+          className="max-md:!text-[16px] md:px-[57px] max-md:px-[20px] max-md:py-[10px] md:py-[19px] btn-secondary"> Need Support?</button>
         </div>
 
        

@@ -29,7 +29,7 @@ const PressReleaseSection = ({ articles }) => {
       title:
         "Scorpion Casino is The Ultimate Destination for Licensed and Regulated Online Gambling",
       excerpt:
-        "Scorpion Casino (SCORP) has emerged to become one of the top destinations for online gambling, casino games, sports betting...",
+        "Scorpion Casino ($SCORP2.0) has emerged to become one of the top destinations for online gambling, casino games, sports betting...",
       link: "#",
     },
     {
@@ -44,7 +44,7 @@ const PressReleaseSection = ({ articles }) => {
     {
       id: 4,
       image: pressRelease4,
-      title: "Priceless Ethereum Opportunity and $SCORP",
+      title: "Priceless Ethereum Opportunity and $SCORP2.0",
       excerpt:
         "The cryptocurrency market is booming as more investors pile into the space for solid solutions...",
       link: "#",
@@ -54,16 +54,16 @@ const PressReleaseSection = ({ articles }) => {
   const articlesData = articles || defaultArticles;
 
   return (
-    <section className="w-full bg-[#0B0D10] py-12 md:py-16 px-4 md:px-6 lg:px-12">
+    <section className="w-full   bg-[#0B0D10] py-0 max-md:pt-5 md:py-16 px-4 md:px-6 lg:px-12">
       <div className="max-w-6xl mx-auto rounded-2xl">
         {/* Heading */}
-        <div className="text-center mb-8 md:mb-10">
+        <div className="text-center relative z-[1] mb-8 md:mb-10">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3">
             <span className="text-white">Press </span>
             <span className="text_gradient">Release</span>
           </h2>
           <p className="text-[#ffffff]">
-            Latest articles and updates about SCORP2.0
+            Latest articles and updates about $SCORP2.0
           </p>
         </div>
 
@@ -81,11 +81,10 @@ const PressReleaseSection = ({ articles }) => {
                 {articlesData.map((article) => (
                   <CarouselItem
                     key={article.id}
-                    className="pl-4 basis-full md:basis-1/2 lg:basis-1/3"
+                    className="pl-4 basis-full  md:basis-1/2 lg:basis-1/3"
                   >
                     <a href={article.link} className="block group">
-                      <div className="rounded-xl relative bg-[#1A1B1F] border border-white/10 overflow-hidden h-full flex flex-col">
-                        {/* Image */}
+                      <div className="rounded-xl relative bg-[#1A1B1F] border border-white/10 overflow-hidden h-full  flex flex-col min-h-[380px] md:min-h-[425px]">
                         <img
                           src={whiteGbg}
                           alt="white gbg"
@@ -100,9 +99,8 @@ const PressReleaseSection = ({ articles }) => {
                           />
                         </div>
 
-                        {/* Text Content */}
                         <div className="p-4 sm:p-5 md:p-6 flex-1 flex flex-col relative z-10">
-                          <h6 className="text-left mb-2 md:mb-3 line-clamp-3">
+                          <h6 className="text-left mb-2 !font-[700] md:mb-3 !text-[#fff] line-clamp-3">
                             {article.title}
                           </h6>
                           <p className="text-[#CACACA] flex-1 line-clamp-3 md:line-clamp-4 text-sm md:text-base">
@@ -115,7 +113,6 @@ const PressReleaseSection = ({ articles }) => {
                 ))}
               </CarouselContent>
 
-              {/* Navigation Arrows - Positioned on sides for desktop */}
               <CarouselPrevious className="hidden md:flex" />
               <CarouselNext className="hidden md:flex" />
 
@@ -131,7 +128,6 @@ const PressReleaseSection = ({ articles }) => {
           </div>
         </div>
 
-        {/* Optional: Pagination dots could be added here */}
       </div>
     </section>
   );

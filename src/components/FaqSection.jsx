@@ -14,7 +14,7 @@ const FaqSection = ({ faqs }) => {
   const renderContent = (faq) => {
     if (faq.type === "text") {
       return (
-        <p className="text-sm md:text-[15px] leading-6 text-gray-300">
+        <p className="text-sm md:text-[16px] leading-6 text-gray-300">
           {faq.answer}
         </p>
       );
@@ -36,13 +36,13 @@ const FaqSection = ({ faqs }) => {
                     "linear-gradient(90deg, #AE8625 0%, #F7EF8A 29.71%, #D2AC47 73.6%, #EDC967 100%)",
                 }}
               >
-                <th className="px-4 py-3 text-left text-sm font-semibold text-black">
+                <th className="px-4 font-[Inter] py-3 text-left text-sm font-semibold text-black">
                   Claimer
                 </th>
-                <th className="px-4 py-3 text-left text-sm font-semibold text-black">
+                <th className="px-4 font-[Inter] py-3 text-left text-sm font-semibold text-black">
                   Percentage
                 </th>
-                <th className="px-4 py-3 text-left text-sm font-semibold text-black">
+                <th className="px-4 font-[Inter] py-3 text-left text-sm font-semibold text-black">
                   Unlock Period
                 </th>
               </tr>
@@ -53,13 +53,13 @@ const FaqSection = ({ faqs }) => {
                   key={index}
                   className="even:bg-white/3 hover:bg-white/5 transition-colors"
                 >
-                  <td className="px-4 py-3 text-sm text-gray-300">
+                  <td className="px-4 py-3 font-[Inter] text-sm text-gray-300">
                     {row.claimer}
                   </td>
-                  <td className="px-4 py-3 text-sm text-gray-300">
+                  <td className="px-4 py-3 font-[Inter] text-sm text-gray-300">
                     {row.percentage}
                   </td>
-                  <td className="px-4 py-3 text-sm text-gray-300">
+                  <td className="px-4 py-3 font-[Inter] text-sm text-gray-300">
                     {row.unlock}
                   </td>
                 </tr>
@@ -74,7 +74,7 @@ const FaqSection = ({ faqs }) => {
   };
 
   return (
-    <section className="w-full bg-[#0B0D10] py-16 md:py-24 px-4 md:px-8">
+    <section id="faq" className="w-full bg-[#0B0D10] py-16 md:py-24 px-4 md:px-8">
       <div className="max-w-4xl md:max-w-5xl mx-auto">
         {/* Heading Block */}
         <div className="text-center mb-8 md:mb-10">
@@ -104,7 +104,7 @@ const FaqSection = ({ faqs }) => {
               <div className="absolute inset-0 bg-gradient-radial from-white/3 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
 
               <AccordionTrigger className="relative z-10 flex w-full items-center justify-between py-3 text-left hover:cursor-pointer transition-colors rounded-lg px-2 -mx-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F7D774] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0C0D10] [&[data-state=open]>div>div]:rotate-45">
-                <span className="text-base md:text-lg font-semibold text-[#fffffe] pr-8 group-data-[state=open]:text-[#EDC967] transition-colors duration-300">
+                <span className="text-base font-[700] md:text-lg  text-[#fffffe] pr-8 group-data-[state=open]:text-[#EDC967] transition-colors duration-300">
                   {faq.question}
                 </span>
                 <div className="flex items-center justify-center shrink-0">

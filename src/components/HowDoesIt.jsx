@@ -1,4 +1,4 @@
-import howdoesit_img from "../assets/HowDoesIt/howdoesit_img.png";
+import howdoesit_img from "../assets/HowDoesIt/howdoesit_img.webp";
 import howdoesit_img_mob from "../assets/HowDoesIt/howdoesit_img_mob.webp";
 import trusticon1 from "../assets/HowDoesIt/howdoes_icns (3).webp";
 import trusticon2 from "../assets/HowDoesIt/howdoes_icns (2).webp";
@@ -10,7 +10,7 @@ const HowDoesItSection = () => {
       id: 1,
       title: "Buy-Back System",
       description:
-        "Scorpion Casino uses a smart contract to purchase $SCORP2.0 tokens from public exchanges on a daily basis. These purchases are financed through a portion of the Casino and Betting revenue. During this buying process the $SCORP price goes automatically up.",
+        "Scorpion Casino uses a smart contract to purchase $SCORP2.0 tokens from public exchanges on a daily basis. These purchases are financed through a portion of the Casino and Betting revenue. During this buying process the $SCORP2.0 price goes automatically up.",
       icon: trusticon1,
     },
     {
@@ -31,22 +31,27 @@ const HowDoesItSection = () => {
 
   return (
     <section className="relative w-full max-md:px-4 max-md:pt-0 py-16 overflow-hidden">
-      <div className="relative z-[9] max-w-[1280px] w-[100%] mx-auto ">
-        <div className="text-center max-w-[932px] mx-auto mb-[49px]">
+      <div className="relative z-[9] max-w-[1280px] w-[100%] mx-auto max-md:py-12 max-md:px-3 md:py-[60px]"
+       style={{
+                background: "rgba(27, 26, 22, 0.40)",
+                border: "0.764px solid rgba(255, 255, 255, 0.10)",
+                borderRadius: "16px",
+                backdropFilter: "blur(8.922223091125488px)",
+              }}
+      >
+        <div className="text-center relative z-[1] max-w-[932px] mx-auto mb-[49px]">
           <h2 className="text-center mb-4">
-            How Does It <span className="faded">Work</span>?
+            How Does It <span className="faded_heading">Work</span>?
           </h2>
-          <p className="text-center">
-            Curious about how the Scorpion Casino ecosystem works? Here’s a
-            simplified explanation. Scorpion Casino is a global Crypto Casino
-            and Sports Betting platform generating daily revenue. This income
-            drives the growth of the $SCORP2.0 Token through an integrated daily
-            Buy-Back, Burn and Reward System.
+          <p className="text-center mob_br">
+            Curious about how the Scorpion Casino ecosystem works? Here’s a simplified explanation: Scorpion Casino is a global crypto casino and sports betting platform that generates daily revenue. This income supports the growth of the $SCORP2.0 token through an integrated daily buyback, burn, and reward system.
           </p>
         </div>
-        <div className="relative">
-          <img className="md:block hidden" src={howdoesit_img} alt="" />
-          <img className="md:hidden  block" src={howdoesit_img_mob} alt="" />
+        <div className="relative "
+        
+        >
+          <img className="md:block hidden max-w-[850px] mx-auto relative z-[1]" src={howdoesit_img} alt="" />
+          <img className="md:hidden relative z-[1] block" src={howdoesit_img_mob} alt="" />
           <div
             className="absolute max-md:bottom-[200px] md:bottom-[330px] left-[25%] max-md:left-[-10%] mx-auto"
             style={{
@@ -60,8 +65,8 @@ const HowDoesItSection = () => {
           ></div>
         </div>
       </div>
-      <div className="howdoesit_bg md:mt-[80px] ">
-        <div className="max-w-[1280px] relative mx-auto md:py-[100px] pt-[60px]">
+      <div className="howdoesit_bg md:mt-[30px] ">
+        <div className="max-w-[1280px] relative mx-auto md:py-[50px] pt-[60px]">
           <div
             className="absolute max-md:bottom-[330px] md:bottom-[60px] mx-auto"
             style={{
@@ -91,14 +96,14 @@ const HowDoesItSection = () => {
 
                 <h3 className="mb-[20px] text_gradient">{badge.title}</h3>
 
-                <p className="border-t-[1px] border-[#36383F] pt-[20px]">
-                  {badge.description}
+                <p className="border-t-[1px] mob_br border-[#36383F] pt-[20px]"
+                 dangerouslySetInnerHTML={{ __html: badge.description }}
+                >
                 </p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 233 228"
                   fill="none"
-                  className="absolute -bottom-3 left-0  "
+                  className="absolute w-full h-auto -bottom-3 left-0  "
                 >
                   <g filter="url(#filter0_f_206_2451)">
                     <ellipse

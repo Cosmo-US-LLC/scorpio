@@ -1,13 +1,10 @@
 import { useState } from "react";
 
 const BuyInCompetitionSection = ({ leaderboard }) => {
-
-  
   const defaultLeaderboard = [
     {
       rank: 1,
       wallet: "0x0de...8e610",
-      date: "2024-03-18",
       txCount: 1,
       totalBuy: "$315,513.01",
       nft: "Diamond",
@@ -15,17 +12,15 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
     },
     {
       rank: 2,
-      wallet: "0x5B9...18e01",
-      date: "2023-07-27",
+      wallet: "0x589...18e01",
       txCount: 5,
-      totalBuy: "$201,191.17",
+      totalBuy: "$201,181.17",
       nft: "Diamond",
       prize: "$5,000",
     },
     {
       rank: 3,
       wallet: "0xe8e...32b4f",
-      date: "2024-03-17",
       txCount: 1,
       totalBuy: "$108,999.00",
       nft: "Diamond",
@@ -33,80 +28,76 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
     },
     {
       rank: 4,
-      wallet: "0x9bd...674ec",
-      date: "2024-03-09",
+      wallet: "0x9bd...6746c",
       txCount: 23,
-      totalBuy: "$108,799.20",
+      totalBuy: "$106,799.20",
       nft: "Diamond",
       prize: "$2,000",
     },
     {
       rank: 5,
-      wallet: "0xbbf...c027c",
-      date: "2024-03-05",
+      wallet: "0xbbf...c627c",
       txCount: 2,
       totalBuy: "$105,349.88",
       nft: "Diamond",
       prize: "$1500",
     },
-     {
+    {
       rank: 6,
-      wallet: "0xbbf...c027c",
-      date: "2024-03-05",
-      txCount: 2,
-      totalBuy: "$105,349.88",
+      wallet: "0xcc6...85fda",
+      txCount: 12,
+      totalBuy: "$105,120.76",
       nft: "Diamond",
-      prize: "$1500",
+      prize: "$900",
     },
-     {
+    {
       rank: 7,
-      wallet: "0xbbf...c027c",
-      date: "2024-03-05",
-      txCount: 2,
-      totalBuy: "$105,349.88",
+      wallet: "0x145...122eb",
+      txCount: 5,
+      totalBuy: "$103,213.41",
       nft: "Diamond",
-      prize: "$1500",
+      prize: "$800",
     },
-     {
+    {
       rank: 8,
-      wallet: "0xbbf...c027c",
-      date: "2024-03-05",
-      txCount: 2,
-      totalBuy: "$105,349.88",
+      wallet: "0x815...7f652",
+      txCount: 5,
+      totalBuy: "$103,160.51",
       nft: "Diamond",
-      prize: "$1500",
+      prize: "$700",
     },
-     {
+    {
       rank: 9,
-      wallet: "0xbbf...c027c",
-      date: "2024-03-05",
-      txCount: 2,
-      totalBuy: "$105,349.88",
+      wallet: "0x809...8a5af",
+      txCount: 8,
+      totalBuy: "$100,942.26",
       nft: "Diamond",
-      prize: "$1500",
+      prize: "$600",
     },
-     {
+    {
       rank: 10,
-      wallet: "0xbbf...c027c",
-      date: "2024-03-05",
-      txCount: 2,
-      totalBuy: "$105,349.88",
-      nft: "Diamond",
-      prize: "$1500",
+      wallet: "0xc13...aebc6",
+      txCount: 6,
+      totalBuy: "$70,840.99",
+      nft: "Platinum",
+      prize: "$500",
     },
   ];
 
- const leaderboardData = leaderboard || defaultLeaderboard;
+  const leaderboardData = leaderboard || defaultLeaderboard;
 
-  const [visibleCount, setVisibleCount] = useState(5);
+  const initialCount = 5;
+
+  const [visibleCount, setVisibleCount] = useState(initialCount);
 
   const handleLoadMore = () => {
-    setVisibleCount(leaderboardData.length); // show all
+    setVisibleCount((prev) => prev + 5); // load 5 more items
   };
+  
   return (
     <section className="relative w-full max-md:pt-0 py-16 px-4 md:px-16 ">
       <div
-        className="max-w-[1280px] mx-auto w-[100%] max-md:px-[20px] max-md:py-[24px] md:px-[40px] md:py-[44px]"
+        className="max-w-[1280px] mx-auto w-[100%] max-md:px-[10px] max-md:py-[24px] md:px-[40px] md:py-[44px]"
         style={{
           borderRadius: "16px",
           border: "0.764px solid rgba(68, 68, 68, 0.5)",
@@ -116,11 +107,11 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
         }}
       >
         {/* Header */}
-        <div className="flex max-md:flex-col justify-between mb-[30px] ms-start">
+        <div className="flex max-md:flex-col justify-between md:items-center mb-[30px] ms-start">
           <h2 className="text_gradient md:min-w-[400px] max-md:mb-4 max-md:pb-2 max-md:text-center text-start md:pr-2 md:mr-4 w-[100%] md:border-r-[1px] max-md:border-b border-[#E5E7EB]">
             Biggest Buy-in Competition
           </h2>
-          <p className="max-md:text-center">
+          <p className="max-md:text-center md:pr-10">
             We’ve established a Top 10 Biggest Buy-in competition for all
             pre-sale participants, with a prize pool of 25,000 USD (in
             $SCORP2.0). This is our way of rewarding those who recognise the
@@ -130,111 +121,113 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
         </div>
 
         {/* Table Container */}
-        <div className="rounded-2xl overflow-hidden border border-white/5 backdrop-blur-sm">
-          {/* Desktop Table */}
+        <div className="rounded-2xl overflow-hidden border border-white/5 "
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(224, 170, 62, 0.05) 38.55%, rgba(184, 138, 68, 0.05) 97.22%)",
+          // backdropFilter: "blur(2.599111318588257px)",
+        }}
+        >
           <div className="block md:block overflow-x-auto">
-            <table className="w-[98%] mx-auto mt-10 mb-10 p-10" >
+            <table className="w-[98%] border-separate border-spacing-y-2 mx-auto mt-10 mb-10 md:p-10 h-full">
               <thead>
                 <tr className="">
-                  <th className=" w-[120px] px-2 py-4 !text-center text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
+                  <th className=" w-[120px] px-2 py-4 max-md:!text-start !text-center text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
                     Rank
                   </th>
-                  <th className="w-[200px] px-3 py-4 !text-center text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
+                  <th className="w-[200px] px-2 py-4 max-md:!text-start !text-center text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
                     Wallet
                   </th>
-                  <th className="w-[120px] px-3 py-4 !text-center text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
-                    Date
-                  </th>
-                  <th className="w-[200px] px-3 py-4  py-4 text-left text-xs font-bold uppercase tracking-wider text-[#F9C333] !text-center">
+                  <th className="max-md:hidden w-[200px] px-2 py-4  py-4 text-left max-md:text-[10px] text-xs font-bold uppercase tracking-wider text-[#F9C333] max-md:!text-start !text-center">
                     No. of TX
                   </th>
-                  <th className="w-[200px] px-3  py-4 text-left text-xs font-bold uppercase tracking-wider text-[#F9C333] !text-center">
+                  <th className="w-[200px] px-2  py-4 text-left max-md:text-[10px] text-xs font-bold uppercase tracking-wider text-[#F9C333] max-md:!text-start !text-center">
                     Total Buy
                   </th>
-                  <th className="w-[200px] px-3 !text-center py-4 text-left text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
+                  <th className=" max-md:hidden w-[200px] px-2 max-md:!text-start !text-center py-4 text-left max-md:text-[10px] text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
                     NFT
                   </th>
-                  <th className="w-[200px] px-3 py-4 text-left !text-center text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
+                  <th className="w-[200px] px-2 py-4 text-left max-md:!text-start !text-center max-md:text-[10px] text-xs font-bold uppercase tracking-wider text-[#F9C333] text-center">
                     Prize
                   </th>
                 </tr>
               </thead>
-              
-                  <tbody className="w-full">
-              {leaderboardData.slice(0, visibleCount).map((entry, index) => {
-                let bgColor = "";
-                let textColor = "";
 
-                if (entry.rank === 1) {
-                  bgColor = "bg-[rgba(255,217,0,0.63)]";
-                  textColor = "text-[#FFF9AD]";
-                } else if (entry.rank === 2) {
-                  bgColor = "bg-[rgba(192,192,192,0.69)]";
-                  textColor = "text-[#FFF9AD]";
-                } else if (entry.rank === 3) {
-                  bgColor = "bg-[rgba(205,128,50,0.71)]";
-                  textColor = "text-[#FFF9AD]";
-                } else {
-                  bgColor = index % 2 === 0 ? "bg-transparent" : "bg-transparent";
-                  textColor = "text-gray-300";
-                }
+              <tbody className="w-full ">
+                {leaderboardData.slice(0, visibleCount).map((entry, index) => {
+                  let bgColor = "";
+                  let textColor = "";
 
-                return (
-                  <tr
-                    key={index}
-                    className={`w-full  transition-colors  ${bgColor}`}
-                  >
-                    {/* Rank */}
-                    <td className={`px-4 !text-center rounded-l-[30px] py-4 font-bold ${textColor}`}>
-                      {entry.rank === 1
-                        ? "1st"
-                        : entry.rank === 2
-                        ? "2nd"
-                        : entry.rank === 3
-                        ? "3rd"
-                        : `${entry.rank}th`}
-                    </td>
+                  if (entry.rank === 1) {
+                    bgColor = "bg-[rgba(255,217,0,0.63)]";
+                    textColor = "text-[#FFF9AD]";
+                  } else if (entry.rank === 2) {
+                    bgColor = "bg-[rgba(192,192,192,0.69)]";
+                    textColor = "text-[#FFF9AD]";
+                  } else if (entry.rank === 3) {
+                    bgColor = "bg-[rgba(205,128,50,0.71)]";
+                    textColor = "text-[#FFF9AD]";
+                  } else {
+                    bgColor =
+                      index % 2 === 0 ? "bg-transparent" : "bg-transparent";
+                    textColor = "text-gray-300";
+                  }
 
-                    {/* Wallet */}
-                    <td
-                      className={`px-4  py-4 !text-center text-sm font-medium ${textColor}`}
+                  return (
+                    <tr
+                      key={index}
+                      className={`w-full !mb-6 transition-colors  ${bgColor}`}
                     >
-                      {entry.wallet}
-                    </td>
+                      {/* Rank */}
+                      <td
+                        className={`px-4 max-md:px-1  max-md:py-2 max-md:text-[14px] !text-center rounded-l-[30px] py-4 font-bold ${textColor}`}
+                      >
+                        {entry.rank === 1
+                          ? "1st"
+                          : entry.rank === 2
+                          ? "2nd"
+                          : entry.rank === 3
+                          ? "3rd"
+                          : `${entry.rank}th`}
+                      </td>
 
-                    {/* Date */}
-                    <td className={`px-4 py-4 !text-center text-sm ${textColor}`}>
-                      {entry.date}
-                    </td>
+                      {/* Wallet */}
+                      <td
+                        className={`px-4 max-md:px-1 max-md:py-2 max-md:text-[14px]  py-4 !text-center text-sm font-bold ${textColor}`}
+                      >
+                        {entry.wallet}
+                      </td>
 
-                    {/* TX Count */}
-                    <td
-                      className={`px-4 py-4 text-center text-sm  ${textColor}`}
-                    >
-                      {entry.txCount}
-                    </td>
+                      {/* TX Count */}
+                      <td
+                        className={` max-md:hidden px-4 max-md:px-1 max-md:py-2 max-md:text-[14px] py-4 text-center text-sm font-bold  ${textColor}`}
+                      >
+                        {entry.txCount}
+                      </td>
 
-                    {/* Total Buy */}
-                    <td
-                      className={`px-4 py-4 text-sm !text-center font-semibold ${textColor}`}
-                    >
-                      {entry.totalBuy}
-                    </td>
+                      {/* Total Buy */}
+                      <td
+                        className={`px-4 max-md:px-1 max-md:py-2 max-md:text-[14px] py-4 text-sm !text-center font-bold ${textColor}`}
+                      >
+                        {entry.totalBuy}
+                      </td>
 
-                    {/* NFT */}
-                    <td className="px-4 py-4 text-sm !text-center">
-                     {entry.nft}
-                    </td>
+                      {/* NFT */}
+                      <td className="max-md:hidden px-4 max-md:px-1 max-md:py-2 max-md:text-[14px] py-4 text-sm !text-center font-bold">
+                        {entry.nft}
+                      </td>
 
-                    {/* Prize */}
-                    <td className={`px-4 py-4  rounded-r-[30px] !text-center font-bold ${textColor}`}>
-                      {entry.prize}
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-            
+                      {/* Prize */}
+                      <td
+                        className={`px-4 max-md:px-1 max-md:py-2 max-md:text-[14px] py-4  rounded-r-[30px] !text-center font-bold ${textColor}`}
+                      >
+                        {entry.prize}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+
               {/* <tbody>
                 {leaderboardData.map((entry, index) => (
                   <tr
@@ -301,7 +294,6 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
                 ))}
               </tbody> */}
             </table>
-        
           </div>
 
           {/* Mobile Cards */}
@@ -373,15 +365,23 @@ const BuyInCompetitionSection = ({ leaderboard }) => {
           </div> */}
         </div>
 
-        {/* Load More Button */}
-        {visibleCount < leaderboardData.length && (
+       {leaderboardData.length > 0 && (
           <div className="flex justify-center mt-8">
-            <button
-              onClick={handleLoadMore}
-              className="inline-flex items-center justify-center px-8 py-3 text-black font-semibold text-base rounded-full btn-primary"
-            >
-              Load More
-            </button>
+            {visibleCount < leaderboardData.length ? (
+              <button
+                onClick={handleLoadMore}
+                className="inline-flex items-center justify-center px-8 py-3 text-black font-semibold text-base rounded-full btn-primary"
+              >
+                Load More
+              </button>
+            ) : (
+              <button
+                onClick={() => setVisibleCount(initialCount)}
+                className="inline-flex items-center justify-center px-8 py-3 text-black font-semibold text-base rounded-full btn-primary"
+              >
+                View Less
+              </button>
+            )}
           </div>
         )}
       </div>

@@ -1,14 +1,25 @@
 import React from "react";
 import { Link } from "react-router";
 import Logo from "../assets/navabar/logo.webp";
-import goldGbg from "../assets/footer/gold_gbg.webp";
+import licence from "../assets/footer/footer.svg";
 import redGbg from "../assets/footer/red_gbg.webp";
 
 export default function Footer() {
+  const quickLinks = [
+    {
+      href: "#what-is-scorpion",
+      label: "What is Scorpion Casino?",
+      offset: -50,
+    },
+    { href: "#how-to-buy", label: "How to Buy", offset: -50 },
+    { href: "#whitepaper", label: "Whitepaper", offset: -50 },
+    { href: "#growth-potential", label: "Growth Potential", offset: -50 },
+    { href: "#faq", label: "FAQ", offset: -10 },
+  ];
   return (
     <footer className="w-full py-12 max-md:py-6 max-md:px-4 relative">
-      <img
-        src={goldGbg}
+      {/* <img
+        src={licence}
         alt="footer background"
         className="absolute bottom-0 left-0 w-[400px] h-[400px] z-1 max-md:w-[200px] max-md:h-[200px]"
       />
@@ -16,7 +27,7 @@ export default function Footer() {
         src={redGbg}
         alt="footer background"
         className="absolute top-0 right-0 w-[400px] h-full z-1 max-md:w-[200px] max-md:h-[300px]"
-      />
+      /> */}
       <div className="max-w-[1280px] mx-auto rounded-2xl flex flex-col gap-6 bg-[#12131FB2] border border-[#363636] px-6 py-8 relative z-1 max-md:px-4 max-md:py-6 max-md:gap-8">
         <div className="flex flex-row justify-between gap-10 pb-3 max-md:flex-col max-md:gap-8 max-md:pb-0">
           <div className="w-[34%] flex flex-col gap-4 max-md:w-full max-md:gap-3">
@@ -24,44 +35,37 @@ export default function Footer() {
               <img src={Logo} alt="footer logo" />
             </div>
 
-            <p className="text-[#CACACA] max-md:text-sm max-md:leading-relaxed">
-              Step into the world of casinos, high stakes, and incredible
-              rewards by joining the Scorpion community today!Experience the
-              unmatched privileges and benefits of being part of the world's
-              first social online gambling ecosystem powered by $SCORP.
+            <p className="text-[#CACACA] md:max-w-[365px] max-md:text-sm max-md:leading-relaxed">
+              Step into the world of casinos, high stakes, and massive rewards by joining the Scorpion community today, the world’s first social gambling ecosystem powered by $SCORP2.0.
             </p>
           </div>
 
-          <div className="w-[15%] ml-12 max-md:w-full max-md:ml-0">
+          <div className="w-[20%] ml-12 max-md:w-full max-md:ml-0">
             <h3 className="text-[#ffffff] text-left mb-4 max-md:text-lg max-md:mb-3">
               Quick Links
             </h3>
             <ul className="space-y-2 max-md:space-y-2.5">
-              <li>
-                <Link to="/" className="quick-link max-md:text-sm">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/about-us" className="quick-link max-md:text-sm">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/faqs" className="quick-link max-md:text-sm">
-                  FAQ's
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="quick-link max-md:text-sm">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link to="/pricing" className="quick-link max-md:text-sm">
-                  Pricing
-                </Link>
-              </li>
+              {quickLinks.map((item) => (
+                <li key={item.href}>
+                  <a
+                    href={item.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const element = document.querySelector(item.href);
+                      if (element) {
+                        const y =
+                          element.getBoundingClientRect().top +
+                          window.scrollY +
+                          item.offset;
+                        window.scrollTo({ top: y, behavior: "smooth" });
+                      }
+                    }}
+                    className="quick-link cursor-pointer max-md:text-sm hover:text-[#B88A44] transition"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -72,44 +76,49 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 max-md:space-y-2.5">
               <li>
-                <Link
-                  to="/privacy-policy"
+                <a
+                  target="_blank"
+                  href="https://scorpio-casino.netlify.app/doc/Privacy.pdf"
                   className="quick-link max-md:text-sm"
                 >
                   Privacy Policy
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  to="/cookies-policy"
+                <a
+                  target="_blank"
+                  href="https://scorpio-casino.netlify.app/doc/Cookies-Policy-SC.pdf"
                   className="quick-link max-md:text-sm"
                 >
                   Cookies Policy
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  to="/terms-of-service"
+                <a
+                  target="_blank"
+                  href="https://scorpio-casino.netlify.app/doc/Terms-of-Service.pdf"
                   className="quick-link max-md:text-sm"
                 >
                   Terms of Service
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  to="/token-sale-agreement"
+                <a
+                  target="_blank"
+                  href="https://scorpio-casino.netlify.app/doc/TokenSaleAgreement.pdf"
                   className="quick-link max-md:text-sm"
                 >
                   Token Sale Agreement
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  to="/live-support-24-7"
+                <a
+                  target="_blank"
+                  href="https://t.me/scorpioncasino_official"
                   className="quick-link max-md:text-sm"
                 >
                   Live Support 24/7
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -121,7 +130,7 @@ export default function Footer() {
             </h3>
             <div className="flex gap-4 mb-4 max-md:gap-3 max-md:mb-3">
               <a
-                href="#"
+                href="https://x.com/ScorpionCasino "
                 className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-all max-md:w-9 max-md:h-9"
                 aria-label="Twitter"
               >
@@ -135,7 +144,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="#"
+                href="https://www.instagram.com/scorpion.casino/ "
                 className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-all max-md:w-9 max-md:h-9"
                 aria-label="Instagram"
               >
@@ -149,7 +158,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="#"
+                href="https://t.me/scorpioncasino_official"
                 className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-all max-md:w-9 max-md:h-9"
                 aria-label="Telegram"
               >
@@ -171,50 +180,58 @@ export default function Footer() {
                 info@scropion.casino
               </a>
             </div>
+             <div className="w-[100%] pt-2 hidden  md:flex justify-start pl-8">
+               <img
+              src={licence}
+              alt="footer logo"
+              className=" w-[100px] h-[100px] z-1   "
+            />
+             </div>
           </div>
         </div>
 
         <div className="flex flex-col gap-6 pt-6 border-t border-[#363636] max-md:gap-5 max-md:pt-5">
-          <div className="flex flex-col gap-2 max-md:gap-3">
-            <h3 className="text-left max-md:text-lg">Scorpion Casino</h3>
-            <p className="text-[#CACACA] max-md:text-sm">
-              Registration Number: 14904288
+          <div className="flex flex-row md:justify-center">
+            <div className="flex flex-col gap-2 max-md:gap-3">
+              <h3 className="md:text-center text-start max-md:text-lg">Scorpion Casino</h3>
+            <p className="text-[#CACACA] md:text-center max-md:text-sm">
+              License Number: 149948
             </p>
             <div className="flex flex-wrap gap-x-4 gap-y-2 max-md:gap-x-3 max-md:gap-y-2">
-              <Link
-                to="/terms-of-service"
+              <a
+                target="_blank"
+                href="https://scorpio-casino.netlify.app/doc/Terms-of-Service.pdf"
                 className="gradient_quick_links max-md:text-xs"
               >
                 Terms of Service
-              </Link>
-              <Link
-                to="/privacy-policy"
+              </a>
+              <a
+                target="_blank"
+                href="https://scorpio-casino.netlify.app/doc/Privacy.pdf"
                 className="gradient_quick_links max-md:text-xs"
               >
                 Privacy Policy
-              </Link>
-              <Link
-                to="/contact-us"
+              </a>
+              <a
+                target="_blank"
+                href="https://t.me/scorpioncasino_official"
                 className="gradient_quick_links max-md:text-xs"
               >
                 Contact Us
-              </Link>
-              <Link
-                to="/token-sale-agreement"
+              </a>
+              <a
+                target="_blank"
+                href="https://scorpio-casino.netlify.app/doc/TokenSaleAgreement.pdf"
                 className="gradient_quick_links max-md:text-xs"
               >
                 Token Sale Agreement
-              </Link>
-              <Link
-                to="/buy-scorp-manually"
-                className="gradient_quick_links max-md:text-xs"
-              >
-                Buy SCORP Manually
-              </Link>
+              </a>
             </div>
+            </div>
+          
           </div>
 
-          <p className="text-[#B4A5A5] max-md:text-xs max-md:leading-relaxed">
+          <p className="text-[#B4A5A5] md:text-center max-md:text-xs max-md:leading-relaxed">
             Scorpion Casino operates the website Scorpion.casino (“Platform”).
             By using the Platform, you accept our Terms of Service, Privacy
             Policy, Cookie Policy, and the SCORP2.0 Token sale agreement.
@@ -234,6 +251,12 @@ export default function Footer() {
             Buying cryptocurrencies involves risk and may result in partial or
             total loss.
           </p>
+
+          <img
+            src={licence}
+            alt="footer logo"
+            className=" w-[60px] h-[60px] z-1 aign-center mx-auto flex md:hidden "
+          />
 
           <div className="text-center text-[#ffffff] max-md:text-sm max-md:pt-2">
             Copyright {new Date().getFullYear()} Scorpion Casino | All Rights

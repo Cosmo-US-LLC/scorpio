@@ -7,77 +7,258 @@ import card5 from "../assets/Rewards/card (1).webp";
 import tick from "../assets/Rewards/tick.webp";
 
 const ExtraRewardsSection = () => {
-  const [spendAmount, setSpendAmount] = useState(56256);
+  const [spendAmount, setSpendAmount] = useState(1000);
+  const [activeTooltip, setActiveTooltip] = useState(null);
+
+  const handleToggle = (index) => {
+    if (window.innerWidth < 768) {
+      setActiveTooltip((prev) => (prev === index ? null : index));
+    }
+  };
+
+  // const getTierInfo = (amount) => {
+  //   if (amount >= 100000) {
+  //     return {
+  //       tier: "Diamond",
+  //       nft: "Diamond Scorpion NFT",
+  //       threshold: "$100000",
+  //       card: card5,
+  //       rewards: [
+  //         { text: "60% $SCORP2.0 Bonus", tick: true },
+  //         { text: "40% Casino Credits", tick: true },
+  //         { text: "20% Bonus Staking Rewards", tick: true },
+  //         { text: "20% USDT Staking Rewards", tick: true },
+  //         { text: "Scorpion Casino VIP Package", tick: true },
+  //       ],
+  //     };
+  //   } else if (amount >= 26369) {
+  //     return {
+  //       tier: "Platinum",
+  //       nft: "Platinum Scorpion NFT",
+  //       threshold: "$26369",
+  //       card: card4,
+  //       rewards: [
+  //         { text: "40% $SCORP2.0 Bonus", tick: true },
+  //         { text: "25% Casino Credits", tick: true },
+  //         { text: "10% Bonus Staking Rewards", tick: true },
+  //         { text: "15% USDT Staking Rewards", tick: true },
+  //         { text: "Scorpion Casino VIP Package", tick: true },
+  //       ],
+  //     };
+  //   } else if (amount >= 10435) {
+  //     return {
+  //       tier: "GOLD",
+  //       nft: "Gold Scorpion NFT",
+  //       threshold: "$10,000",
+  //       card: card3,
+  //       rewards: [
+  //         { text: "25% $SCORP2.0 Bonus", tick: true },
+  //         { text: "15% Casino Credits", tick: true },
+  //         { text: "5% Bonus Staking Rewards", tick: true },
+  //         { text: "10% USDT Staking Rewards", tick: true },
+  //         { text: "Scorpion Casino VIP Package", tick: false },
+  //       ],
+  //     };
+  //   } else if (amount >= 5306) {
+  //     return {
+  //       tier: "SILVER",
+  //       nft: "Silver Scorpion NFT",
+  //       threshold: "$1,000",
+  //       card: card2,
+  //       rewards: [
+  //         { text: "15% $SCORP2.0 Bonus", tick: true },
+  //         { text: "10% Casino Credits", tick: true },
+  //         { text: "2% Bonus Staking Rewards", tick: true },
+  //         { text: "USDT Staking Rewards", tick: false },
+  //         { text: "Scorpion Casino VIP Package", tick: false },
+  //       ],
+  //     };
+  //   } else {
+  //     return {
+  //       tier: "Bronze",
+  //       nft: "Bronze Scorpion NFT",
+  //       threshold: "$1,000",
+  //       card: card1,
+  //       rewards: [
+  //         { text: "10% $SCORP2.0 Bonus", tick: true },
+  //         { text: "5% Casino Credits", tick: true },
+  //         { text: "Bonus Staking Rewards", tick: false },
+  //         { text: "USDT Staking Rewards", tick: false },
+  //         { text: "Scorpion Casino VIP Package", tick: false },
+  //       ],
+  //     };
+  //   }
+  // };
 
   const getTierInfo = (amount) => {
-    if (amount >= 90000) {
+    if (amount >= 100000) {
       return {
         tier: "Diamond",
         nft: "Diamond Scorpion NFT",
-        threshold: "$90000",
+        threshold: "$100000",
         card: card5,
         rewards: [
-          { text: "60% $SCORP2.0 Bonus", tick: true },
-          { text: "40% Casino Credits", tick: true },
-          { text: "20% Bonus Staking Rewards", tick: true },
-          { text: "20% USDT Staking Rewards", tick: true },
-          { text: "Scorpion Casino VIP Package", tick: true },
+          {
+            text: "60% $SCORP2.0 Bonus",
+            tick: true,
+            info: "You will automatically receive additional $SCORP2.0 tokens to your wallet. For example, if you purchase the Diamond Membership NFT with 60% bonus tokens and you buy 100,000 $SCORP2.0, you’ll receive 160,000 $SCORP2.0 tokens.",
+          },
+          {
+            text: "40% Casino Credits",
+            tick: true,
+            info: "You will receive 40% of your total contribution in USD to play on Scorpion Casino. This feature will be available in Q4 with the release of the new Casino Beta.",
+          },
+          {
+            text: "20% Bonus Staking Rewards",
+            tick: true,
+            info: "You will earn additional Daily Staking Rewards. For example, with the Diamond Membership NFT, you’ll receive an additional 20% on the current daily staking rewards rate. So, if the daily rate is hypothetically 1%, you would get 1.20% staking rewards based on the total $SCORP2.0 tokens you purchased.",
+          },
+          {
+            text: "20% USDT Staking Rewards",
+            tick: true,
+            info: "You can withdraw a portion of your $SCORP2.0 staking rewards in USDT. For example, with Diamond Membership, you can get 20% of your total staking rewards paid out in USDT.",
+          },
+          {
+            text: "Scorpion Casino VIP Package",
+            tick: true,
+            info: "You will have priority access to E-Mail and Chat Support. Additionally, you’ll receive dedicated VIP support and invitations to Special VIP Events.",
+          },
         ],
       };
-    } else if (amount >= 58256) {
+    } else if (amount >= 26369) {
       return {
         tier: "Platinum",
         nft: "Platinum Scorpion NFT",
-        threshold: "$58,256",
+        threshold: "$26369",
         card: card4,
         rewards: [
-          { text: "40% $SCORP2.0 Bonus", tick: true },
-          { text: "25% Casino Credits", tick: true },
-          { text: "10% Bonus Staking Rewards", tick: false },
-          { text: "15% USDT Staking Rewards", tick: false },
-          { text: "Scorpion Casino VIP Package", tick: false },
+          {
+            text: "40% $SCORP2.0 Bonus",
+            tick: true,
+            info: "You will automatically receive additional $SCORP2.0 tokens to your wallet. For example, if you purchase the Platinum Membership NFT with 40% bonus tokens and you buy 100,000 $SCORP2.0, you’ll receive 140,000 $SCORP2.0 tokens.",
+          },
+          {
+            text: "25% Casino Credits",
+            tick: true,
+            info: "You will receive 25% of your total contribution in USD to play on Scorpion Casino. This feature will be available in Q4 with the release of the new Casino Beta.",
+          },
+          {
+            text: "10% Bonus Staking Rewards",
+            tick: true,
+            info: "You will earn additional Daily Staking Rewards. For example, with the Gold Membership NFT, you’ll receive an additional 10% on the current daily staking rewards rate. So, if the daily rate is hypothetically 1%, you would get 1.05% staking rewards based on the total $SCORP2.0 tokens you purchased.",
+          },
+          {
+            text: "15% USDT Staking Rewards",
+            tick: true,
+            info: "You can withdraw a portion of your $SCORP2.0 staking rewards in USDT. For example, with Platinum Membership, you can get 15% of your total staking rewards paid out in USDT.",
+          },
+          {
+            text: "Scorpion Casino VIP Package",
+            tick: true,
+            info: "You will have priority access to E-Mail and Chat Support. Additionally, you’ll receive dedicated VIP support and invitations to Special VIP Events.",
+          },
         ],
       };
-    } else if (amount >= 10000) {
+    } else if (amount >= 10435) {
       return {
-        tier: "GOLD",
+        tier: "Gold",
         nft: "Gold Scorpion NFT",
         threshold: "$10,000",
         card: card3,
         rewards: [
-          { text: "25% $SCORP2.0 Bonus", tick: true },
-          { text: "15% Casino Credits", tick: true },
-          { text: "5% Bonus Staking Rewards", tick: true },
-          { text: "10% USDT Staking Rewards", tick: true },
-          { text: "Scorpion Casino VIP Package", tick: false },
+          {
+            text: "25% $SCORP2.0 Bonus",
+            tick: true,
+            info: "You will automatically receive additional $SCORP2.0 tokens to your wallet. For example, if you purchase the Gold Membership NFT with 25% bonus tokens and you buy 100,000 $SCORP2.0, you’ll receive 125,000 $SCORP2.0 tokens.",
+          },
+          {
+            text: "15% Casino Credits",
+            tick: true,
+            info: "You will receive 15% of your total contribution in USD to play on Scorpion Casino. This feature will be available in Q4 with the release of the new Casino Beta.",
+          },
+          {
+            text: "5% Bonus Staking Rewards",
+            tick: true,
+            info: "You will earn additional Daily Staking Rewards. For example, with the Gold Membership NFT, you’ll receive an additional 5% on the current daily staking rewards rate. So, if the daily rate is hypothetically 1%, you would get 1.05% staking rewards based on the total $SCORP2.0 tokens you purchased.",
+          },
+          {
+            text: "10% USDT Staking Rewards",
+            tick: true,
+            info: "You can withdraw a portion of your $SCORP2.0 staking rewards in USDT. For example, with Gold Membership, you can get 10% of your total staking rewards paid out in USDT.",
+          },
+          {
+            text: "Scorpion Casino VIP Package",
+            tick: false,
+            info: "You will have priority access to E-Mail and Chat Support. Additionally, you’ll receive dedicated VIP support and invitations to Special VIP Events.",
+          },
         ],
       };
-    } else if (amount >= 1000) {
+    } else if (amount >= 5306) {
       return {
-        tier: "SILVER",
+        tier: "Silver",
         nft: "Silver Scorpion NFT",
         threshold: "$1,000",
         card: card2,
         rewards: [
-          { text: "15% $SCORP2.0 Bonus", tick: true },
-          { text: "10% Casino Credits", tick: true },
-          { text: "2% Bonus Staking Rewards", tick: true },
-          { text: "USDT Staking Rewards", tick: false },
-          { text: "Scorpion Casino VIP Package", tick: false },
+          {
+            text: "15% $SCORP2.0 Bonus",
+            tick: true,
+            info: "You will automatically receive additional $SCORP2.0 tokens to your wallet. For example, if you purchase the Silver Membership NFT with 15% bonus tokens and you buy 100,000 $SCORP2.0, you’ll receive 115,000 $SCORP2.0 tokens.",
+          },
+          {
+            text: "10% Casino Credits",
+            tick: true,
+            info: "You will receive 10% of your total contribution in USD to play on Scorpion Casino. This feature will be available in Q4 with the release of the new Casino Beta.",
+          },
+          {
+            text: "2% Bonus Staking Rewards",
+            tick: true,
+            info: "You will earn additional Daily Staking Rewards. For example, with the Gold Membership NFT, you’ll receive an additional 5% on the current daily staking rewards rate. So, if the daily rate is hypothetically 1%, you would get 1.05% staking rewards based on the total $SCORP2.0 tokens you purchased.",
+          },
+          {
+            text: "USDT Staking Rewards",
+            tick: false,
+            info: "You can withdraw a portion of your $SCORP2.0 staking rewards in USDT. For example, with Gold Membership, you can get 10% of your total staking rewards paid out in USDT.",
+          },
+          {
+            text: "Scorpion Casino VIP Package",
+            tick: false,
+            info: "You will have priority access to E-Mail and Chat Support. Additionally, you’ll receive dedicated VIP support and invitations to Special VIP Events.",
+          },
         ],
       };
     } else {
       return {
         tier: "Bronze",
         nft: "Bronze Scorpion NFT",
-        threshold: "$58,256",
+        threshold: "$1,000",
         card: card1,
         rewards: [
-          { text: "10% $SCORP2.0 Bonus", tick: true },
-          { text: "5% Casino Credits", tick: true },
-          { text: "Bonus Staking Rewards", tick: false },
-          { text: "USDT Staking Rewards", tick: false },
-          { text: "Scorpion Casino VIP Package", tick: false },
+          {
+            text: "10% $SCORP2.0 Bonus",
+            tick: true,
+            info: "You will automatically receive additional $SCORP2.0 tokens to your wallet. For example, if you purchase the Bronze Membership NFT with 10% bonus tokens and you buy 100,000 $SCORP2.0, you’ll receive 110,000 $SCORP2.0 tokens.",
+          },
+          {
+            text: "5% Casino Credits",
+            tick: true,
+            info: "You will receive 5% of your total contribution in USD to play on Scorpion Casino. This feature will be available in Q4 with the release of the new Casino Beta.",
+          },
+          {
+            text: "Bonus Staking Rewards",
+            tick: false,
+            info: "You will earn additional Daily Staking Rewards. For example, with the Gold Membership NFT, you’ll receive an additional 5% on the current daily staking rewards rate. So, if the daily rate is hypothetically 1%, you would get 1.05% staking rewards based on the total $SCORP2.0 tokens you purchased.",
+          },
+          {
+            text: "USDT Staking Rewards",
+            tick: false,
+            info: "You can withdraw a portion of your $SCORP2.0 staking rewards in USDT. For example, with Gold Membership, you can get 10% of your total staking rewards paid out in USDT.",
+          },
+          {
+            text: "Scorpion Casino VIP Package",
+            tick: false,
+            info: "You will have priority access to E-Mail and Chat Support. Additionally, you’ll receive dedicated VIP support and invitations to Special VIP Events.",
+          },
         ],
       };
     }
@@ -115,14 +296,18 @@ const ExtraRewardsSection = () => {
 
             <div className="mt-8">
               <div className="flex justify-between items-center mb-3">
-                <h6 className="">How much do you want to sh6end?</h6>
-                <h6 className="">{formatCurrency(spendAmount)}</h6>
+                <h6 className="!font-[700] max:md!text-[14px]">
+                  How much do you want to send?
+                </h6>
+                <h6 className="max:md!text-[14px] !font-[700]">
+                  {formatCurrency(spendAmount)}
+                </h6>
               </div>
 
               <div className="relative">
                 <input
                   type="range"
-                  min="100"
+                  min="1000"
                   max="100000"
                   step="100"
                   value={spendAmount}
@@ -130,16 +315,16 @@ const ExtraRewardsSection = () => {
                   className="w-full h-[18px] rounded-full appearance-none cursor-pointer slider-custom"
                   style={{
                     background: `linear-gradient(to right, #94A7B5 ${
-                      (spendAmount / 100000) * 100
+                      ((spendAmount - 1000) / (100000 - 1000)) * 100
                     }%, rgba(255, 255, 255, 0.20) ${
-                      (spendAmount / 100000) * 100
+                      ((spendAmount - 1000) / (100000 - 1000)) * 100
                     }%, rgba(255, 255, 255, 0.20))`,
                   }}
                 />
                 <div
-                  className="absolute top-[9px] -translate-y-1/2 w-[5px] h-[30px] bg-[#FFF] rounded-full  pointer-events-none"
+                  className="absolute top-[9px] -translate-y-1/2 w-[7px] h-[30px] bg-[#FFF] rounded-full  pointer-events-none"
                   style={{
-                    left: `calc(${(spendAmount / 100000) * 100}% - 0px)`,
+                    left: `calc(${(spendAmount / 100000) * 100}% - 7px)`,
                   }}
                 ></div>
               </div>
@@ -147,20 +332,20 @@ const ExtraRewardsSection = () => {
           </div>
 
           <div
-            className="w-full md:max-w-[723px] overflow-hidden md:max-w-[723px]  rounded-[15.289px] px-[24px] py-[32px] "
+            className="w-full max-md:mt-4 md:max-w-[700px]  md:max-w-[700px]  rounded-[15.289px] px-[24px] py-[32px] "
             style={{
               border: "0.764px solid rgba(255, 255, 255, 0.10)",
               background: "rgba(27, 26, 22, 0.40)",
               backdropFilter: "blur(7.644444465637207px)",
             }}
           >
-            <div className="flex max-md:flex-col max-md:space-y-[20px] justify-between items-center md:space-x-6 ">
+            <div className="flex max-md:flex-col max-md:space-y-[20px] justify-between items-center md:space-x-4 ">
               <div className="relative md:max-w-[300px] w-[100%]">
                 <h3 className="text_gradient_gray  text-start !text-[30px]">
                   {tierInfo.tier} <br /> SCORPION NFT
                 </h3>
-                <p className="pb-4 pt-2 ">
-                  When you spend {tierInfo.threshold} or more
+                <p className="pb-4 pt-2 font-[700]">
+                  When you spend {formatCurrency(spendAmount)} or more
                 </p>
                 <div className="">
                   <img src={tierInfo.card} alt="" />
@@ -191,13 +376,12 @@ const ExtraRewardsSection = () => {
                             alt="Tick icon"
                           />
                         ) : (
-                          <div 
-                           style={{
-                    borderRadius: "3.058px",
-                    border:"0.764px solid rgba(255, 255, 255, 0.20)",
-                    background:
-                      "#313133",
-                  }}
+                          <div
+                            style={{
+                              borderRadius: "3.058px",
+                              border: "0.764px solid rgba(255, 255, 255, 0.20)",
+                              background: "#313133",
+                            }}
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -226,44 +410,61 @@ const ExtraRewardsSection = () => {
                         <h4 className="max-md:!text-[14px] md:text-[16px]">
                           {reward.text}
                         </h4>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 16 16"
-                          fill="none"
+                        <div
+                          className="relative group"
+                          onClick={() => handleToggle(index)}
                         >
-                          <path
-                            d="M7.64062 4.93652V8.28097"
-                            stroke="#8D8F8F"
-                            stroke-width="1.14667"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M13.4266 5.46614V9.82345C13.4266 10.5369 13.0443 11.1995 12.4264 11.5626L8.6424 13.7476C8.02447 14.1044 7.26001 14.1044 6.63572 13.7476L2.85172 11.5626C2.23379 11.2058 1.85156 10.5433 1.85156 9.82345V5.46614C1.85156 4.75266 2.23379 4.09011 2.85172 3.727L6.63572 1.54197C7.25364 1.18523 8.0181 1.18523 8.6424 1.54197L12.4264 3.727C13.0443 4.09011 13.4266 4.74629 13.4266 5.46614Z"
-                            stroke="#8D8F8F"
-                            stroke-width="1.14667"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M7.64062 10.3203V10.384"
-                            stroke="#8D8F8F"
-                            stroke-width="1.52889"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="15"
+                            height="15"
+                            viewBox="0 0 22 22"
+                            fill="none"
+                            class="cursor-pointer"
+                          >
+                            <path
+                              d="M10.5 0C16.023 0 20.5 4.477 20.5 10C20.5 15.523 16.023 20 10.5 20C4.977 20 0.5 15.523 0.5 10C0.5 4.477 4.977 0 10.5 0ZM10.5 1.395C8.21781 1.395 6.0291 2.3016 4.41535 3.91535C2.8016 5.5291 1.895 7.71781 1.895 10C1.895 12.2822 2.8016 14.4709 4.41535 16.0847C6.0291 17.6984 8.21781 18.605 10.5 18.605C12.7822 18.605 14.9709 17.6984 16.5847 16.0847C18.1984 14.4709 19.105 12.2822 19.105 10C19.105 7.71781 18.1984 5.5291 16.5847 3.91535C14.9709 2.3016 12.7822 1.395 10.5 1.395ZM10.355 7.21C10.74 7.21 11.052 7.523 11.052 7.908V15.466C11.0452 15.6464 10.9687 15.8172 10.8386 15.9424C10.7086 16.0676 10.535 16.1376 10.3545 16.1376C10.174 16.1376 10.0004 16.0676 9.87037 15.9424C9.74031 15.8172 9.66383 15.6464 9.657 15.466V7.907C9.657 7.522 9.969 7.21 10.355 7.21ZM10.383 4.419C10.6297 4.419 10.8662 4.51698 11.0406 4.69139C11.215 4.8658 11.313 5.10235 11.313 5.349C11.313 5.59565 11.215 5.8322 11.0406 6.00661C10.8662 6.18102 10.6297 6.279 10.383 6.279C10.1363 6.279 9.8998 6.18102 9.72539 6.00661C9.55098 5.8322 9.453 5.59565 9.453 5.349C9.453 5.10235 9.55098 4.8658 9.72539 4.69139C9.8998 4.51698 10.1363 4.419 10.383 4.419Z"
+                              fill="white"
+                            ></path>
+                          </svg>
+
+                          <div
+                            className={`absolute z-[999] w-60 bg-black text-white text-xs p-3 rounded-lg shadow-lg -top-2 left-[-200px] transform -translate-y-full transition-opacity duration-200
+  ${
+    activeTooltip === index
+      ? "block opacity-100"
+      : "hidden group-hover:block md:opacity-100"
+  }`}
+                          >
+                            {reward.info}
+                            <div className="absolute right-8 top-[96%] w-2 h-2 bg-black rotate-45"></div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   ))}
                 </div>
-                <button className="btn-primary w-full">Buy $SCORP</button>
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const target = document.querySelector("#wallet");
+                    if (target) {
+                      const yOffset = 20;
+                      const y =
+                        target.getBoundingClientRect().top +
+                        window.scrollY +
+                        yOffset;
+                      window.scrollTo({ top: y, behavior: "smooth" });
+                    }
+                  }}
+                  className="btn-primary w-full"
+                >
+                  Buy $SCORP2.0
+                </button>
 
                 <p className="!leading-[111%] pt-4 text-center !text-[14px]">
-                  You will get the membership NFT <br /> automatically when you
-                  purchase $SCORP)
+                  (You will get the membership NFT <br /> automatically when you
+                  purchase $SCORP2.0)
                 </p>
               </div>
             </div>
@@ -272,33 +473,55 @@ const ExtraRewardsSection = () => {
       </div>
 
       <style jsx>{`
-        .slider-custom::-webkit-slider-thumb {
+        .slider-custom {
+          -webkit-appearance: none; /* Safari / iOS Safari reset */
           appearance: none;
-          width: 0px;
-          height: 0px;
-          border-radius: 50%;
-          // background: linear-gradient(to right, #fcd34d, #fbbf24);
-          cursor: pointer;
-          // box-shadow: 0 0 15px rgba(252, 211, 77, 0.8);
-          // border: 2px solid #fff;
+          width: 100%;
+          height: 18px;
+          background: #ddd;
+          border-radius: 18px;
+          outline: none;
         }
 
-        .slider-custom::-moz-range-thumb {
-          width: 0px;
-          height: 0px;
+        /* ---------- WebKit browsers (Chrome, Safari, iOS Safari) ---------- */
+        .slider-custom::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 18px !important;
+          height: 18px !important;
           border-radius: 50%;
-          // background: linear-gradient(to right, #fcd34d, #fbbf24);
+          background: #00000002;
           cursor: pointer;
-          // box-shadow: 0 0 15px rgba(252, 211, 77, 0.8);
-          // border: 2px solid #fff;
+          transition: transform 0.2s ease;
+          box-shadow: 0 0 0px #fff !important;
         }
 
         .slider-custom::-webkit-slider-thumb:hover {
           transform: scale(1.1);
         }
 
+        /* ---------- Firefox ---------- */
+        .slider-custom::-moz-range-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 18px !important;
+          height: 18px !important;
+          border-radius: 50%;
+          background: #00000002;
+          cursor: pointer;
+          transition: transform 0.2s ease;
+          box-shadow: 0 0 0px #ddd !important;
+        }
+
         .slider-custom::-moz-range-thumb:hover {
           transform: scale(1.1);
+        }
+
+        /* ---------- Optional: track styling for iOS Safari ---------- */
+        .slider-custom::-webkit-slider-runnable-track {
+          height: 18px;
+          border-radius: 18px;
+          background: rgba(255, 255, 255, 0.2);
         }
       `}</style>
     </section>

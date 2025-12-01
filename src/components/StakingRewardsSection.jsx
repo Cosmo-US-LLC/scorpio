@@ -9,7 +9,7 @@ const StakingRewardsSection = () => {
     
 
       <div className="relative staking_rewards_bg max-md:px-[20px] max-md:py-[30px]  md:px-[60px] md:py-[40px] overflow-hidden max-w-[1280px] mx-auto max-md:rounded-[16px]">
-            <img src={vect_2}  className="max-w-[155.777px] z-[9] md:block hidden -right-6 absolute -bottom-12" alt="Staking Rewards" />
+            {/* <img src={vect_2}  className="max-w-[155.777px] z-[9] md:block hidden -right-6 absolute -bottom-12" alt="Staking Rewards" /> */}
         <div className="flex max-md:flex-col justify-between items-center gap-15 lg:gap-16">
          
           <div className=" relative">
@@ -22,8 +22,8 @@ const StakingRewardsSection = () => {
           <div className="  max-md:flex max-md:flex-col max-md:items-center max-w-[611px] w-[100%]">
             {/* Heading */}
             <div className=" mb-[31px]">
-              <h2 className="md:text-start text-center capitalize">
-               Daily staking rewards <span className="faded">are live now</span> 
+              <h2 className="md:text-start max-md:max-w-[300px] max-md:mx-auto text-center capitalize">
+               Daily staking rewards <span className="faded_heading">are live now</span> 
               </h2>
             </div>
 
@@ -33,7 +33,20 @@ const StakingRewardsSection = () => {
             </p>
 
             {/* CTA Button */}
-            <button className="btn-primary px-[40px] py-[16px] text-[20px]">
+            <button 
+              onClick={(e) => {
+                e.preventDefault();
+                const target = document.querySelector("#wallet");
+                if (target) {
+                  const yOffset = 20;
+                  const y =
+                    target.getBoundingClientRect().top +
+                    window.scrollY +
+                    yOffset;
+                  window.scrollTo({ top: y, behavior: "smooth" });
+                }
+              }}
+            className="btn-primary px-[40px] py-[16px] text-[20px]">
               Buy $SCORP2.0
             </button>
 

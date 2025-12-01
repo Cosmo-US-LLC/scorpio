@@ -7,7 +7,7 @@ const BenefitsSection = () => {
   const benefits = [
     {
       id: 1,
-      title: "LOWEST $SCORP2.0 PRICE",
+      title: "LOWEST <br/> $SCORP2.0 PRICE",
       description:
         "During the pre-sale, you can buy $SCORP2.0 at its lowest price before it launches on centralised and decentralised exchanges.",
       icon: benefitsicon1,
@@ -16,9 +16,9 @@ const BenefitsSection = () => {
     },
     {
       id: 2,
-      title: "RECEIVE UP TO 40% CASINO CREDITS",
+      title: "RECEIVE UP TO 40% <br/> CASINO CREDITS",
       description:
-        "Receive up to 40% free credits to play on Scorpion.Casino - no conditions or obligations attached!",
+        "Receive up to 40% free credits to play on Scorpion Casino, no conditions or obligations attached!",
       icon: benefitsicon2,
       height: "248px",
       width: "258.004px",
@@ -35,9 +35,9 @@ const BenefitsSection = () => {
     },
     {
       id: 4,
-      title: "DAILY PASSIVE STAKING INCOME",
+      title: "DAILY PASSIVE <br/> STAKING INCOME",
       description:
-        "Get daily passive staking income automatically added to your wallet - even during the pre-sale period!",
+        "Get daily passive staking income automatically added to your wallet, <br/>  even during the pre-sale period!",
       icon: benefitsicon4,
       height: "199px",
       width: "206px",
@@ -60,7 +60,7 @@ const BenefitsSection = () => {
       ></div>
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center max-w-[725px] mx-auto max-md:mb-[90px] md:mb-[129px]">
-          <h2 className="">
+          <h2 className="max-md:max-w-[350px] mx-auto">
             <span className="text_gradient">Benefits</span> Of Buying{" "}
             <span className="text_gradient">$SCORP2.0</span> In The Pre-sale
           </h2>
@@ -93,11 +93,14 @@ const BenefitsSection = () => {
                 </div>
               </div>
 
-              <h4 className="text_gradient text-center pb-[15px]">
-                {benefit.title}
+              <h4 className="text_gradient  text-center pb-[15px]"
+               dangerouslySetInnerHTML={{ __html: benefit.title }}
+              >
               </h4>
 
-              <p className=" text-center">{benefit.description}</p>
+              <p className=" text-center mob_br max-md:max-w-[350px] mx-auto"
+               dangerouslySetInnerHTML={{ __html: benefit.description }}
+              ></p>
             </div>
           ))}
         </div>

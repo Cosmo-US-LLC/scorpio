@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+
 import {
   Carousel,
   CarouselContent,
@@ -14,65 +14,75 @@ import card_icon4 from "../assets/Roadmap/road_card (1).webp";
 import tick from "../assets/Roadmap/tick.webp";
 
 const RoadmapSection = ({ phases }) => {
-  const [api, setApi] = useState(null);
-  const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
-  // Default roadmap phases data
+ 
   const defaultPhases = [
     {
       id: 1,
       phase: "Phase 1",
-      title: "Foundation",
+      title: "FOUNDATION",
       icon: card_icon1,
       tasks: [
         { text: "Idea conception", completed: true },
         { text: "Team onboarding", completed: true },
+        { text: "eGaming License secured", completed: true },
         { text: "Integrating Coinspaid", completed: true },
-        { text: "Developing the Ecosystem", completed: true },
-        { text: "Applying for an eGambling License", completed: true },
+        { text: "Integrating Betradar", completed: true },
       ],
       status: "completed",
     },
     {
       id: 2,
       phase: "Phase 2",
-      title: "Pre-Sale",
+      title: "PRE-LAUNCH",
       icon: card_icon2,
       tasks: [
-        { text: "$SCORP Token creation", completed: true },
-        { text: "Whitepaper Release", completed: true },
-        { text: "Integrating Betradar", completed: true },
-        { text: "Scorpion.casino Release", completed: true },
-        { text: "$SCORP Token Audit", completed: true },
-        { text: "Pre Sale start", completed: true },
+        { text: "Whitepaper release", completed: true },
+        { text: "Casino launch", completed: true },
+        { text: "$SCORP2.0 token creation", completed: true },
+        { text: "Launch staking pool", completed: true },
+        { text: "USDT rewards distribution ", completed: true },
       ],
       status: "completed",
     },
     {
       id: 3,
       phase: "Phase 3",
-      title: "Platform Launch",
+      title: "LAUNCH",
       icon: card_icon3,
       tasks: [
-        { text: "Launching Affiliate Program", completed: true },
-        { text: "Integrating the Level System", completed: true },
-        { text: "Listing on CEX", completed: true },
-        { text: "Further Casino Development", completed: true },
-        { text: "Community Events", completed: true },
+        { text: "$SCORP2.0 Presale", completed: true },
+        { text: "$SCORP2.0 launch", completed: true },
+        { text: "Multiple CEX listings", completed: true },
+        { text: "Reach 280M Market cap", completed: true },
+        { text: "Launch Casino Loyalty Program ", completed: true },
       ],
-      status: "current",
+      status: "completed",
     },
     {
       id: 4,
       phase: "Phase 4",
-      title: "Expansion",
+      title: "SCORP2.0",
       icon: card_icon4,
       tasks: [
-        { text: "Live Affiliate Events", completed: false },
-        { text: "Partner Up with Softswiss", completed: false },
+        { text: "New Casino Release", completed: true },
+        { text: "SCORP2.0 Presale", completed: true },
+        { text: "Global Marketing", completed: true },
+        { text: "Partnerships", completed: false },
+        { text: "SCORP2.0 launch", completed: false },
+      ],
+      status: "upcoming",
+    },
+    {
+      id: 5,
+      phase: "Phase 5",
+      title: "GROWTH",
+      icon: card_icon4,
+      tasks: [
+        { text: "Multiple CEX listings", completed: false },
         { text: "Influencer Marketing", completed: false },
-        { text: "Collaborations with Athletes", completed: false },
-        { text: "More to come", completed: false },
+        { text: "Partner up with Softswiss", completed: false },
+        { text: "Launch Affiliate Marketing", completed: false },
+        { text: "Further Casino Development", completed: false },
       ],
       status: "upcoming",
     },
@@ -80,18 +90,7 @@ const RoadmapSection = ({ phases }) => {
 
   const phasesData = phases || defaultPhases;
 
-  useEffect(() => {
-    if (!api) {
-      return;
-    }
-
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap());
-
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap());
-    });
-  }, [api]);
+ 
 
   const getStatusBadge = (status) => {
     const badges = {
@@ -140,7 +139,7 @@ const RoadmapSection = ({ phases }) => {
   };
 
   return (
-    <section className="relative w-full py-12 md:py-16 px-4 md:px-6 lg:px-12 Roadmap_bg">
+    <section className="relative w-full max-md:pt-4 py-0 md:py-16 px-4 md:px-6 lg:px-12 Roadmap_bg">
       <div className="max-w-[1280px] mx-auto">
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-center">Roadmap</h2>
@@ -152,21 +151,33 @@ const RoadmapSection = ({ phases }) => {
         <div className="relative px-0 sm:px-4 md:px-12">
           <Carousel
             opts={{
-              align: "start",
-              loop: false,
+             align: "start",
+                loop: false,
             }}
-            setApi={setApi}
             className="w-full"
+             style={{
+      WebkitTransform: "translateZ(0)",
+      transform: "translateZ(0)",
+      WebkitOverflowScrolling: "touch",
+    }}
           >
-            <CarouselContent className="-ml-4 md:-ml-6">
-              {phasesData.map((phase) => (
+            <CarouselContent className="-ml-4 md:-ml-6"
+             style={{
+        WebkitOverflowScrolling: "touch",
+        scrollSnapType: "x mandatory",
+        WebkitScrollSnapType: "x mandatory",
+        WebkitTransform: "translateZ(0)",
+        transform: "translateZ(0)",
+      }}
+            >
+              {phasesData.map((items) => (
                 <CarouselItem
-                  key={phase.id}
+                  key={items.id}
                   className="pl-4 md:pl-6 basis-full rounded-[16.067px] sm:basis-1/2 lg:basis-[28%] xl:basis-[28%]"
                 >
                   <div className="h-full relative">
                     <div
-                      className="overflow-hidden! rounded-[16.067px] p-4 sm:p-5 md:p-6 flex flex-col justify-between h-full"
+                      className=" rounded-[16.067px] p-4 sm:p-5 md:p-6 flex flex-col justify-between h-full"
                       style={{
                         border: "0.803px solid rgba(255, 255, 255, 0.10)",
                         background: "rgba(27, 26, 22, 0.40)",
@@ -176,23 +187,23 @@ const RoadmapSection = ({ phases }) => {
                       <div className="">
                         <img
                           className="mb-3 md:mb-4 max-w-[70px] sm:max-w-[80px] md:max-w-[88.367px]"
-                          src={phase.icon}
-                          alt={phase.title}
+                          src={items.icon}
+                          alt={items.title}
                         />
-                        <h6 className="text_gradient text-sm md:text-base">
-                          {phase.phase}
+                        <h6 className="text-[#fff] text-sm md:text-base">
+                          {items.phase}
                         </h6>
 
-                        <h4 className="text-start text_gradient text-base md:text-lg">
-                          {phase.title}
+                        <h4 className="uppercase text-start text_gradient text-base md:text-lg">
+                          {items.title}
                         </h4>
                       </div>
                       <div className="h-px bg-[#36383F] w-full mt-2 md:mt-3 mb-2 md:mb-3"></div>
 
                       <div className="flex-1 mb-4 md:mb-6">
                         <ul className="space-y-1 md:space-y-1">
-                          {phase.tasks.map((task, index) => (
-                            <li key={index} className="flex items-start gap-3">
+                          {items.tasks.map((task, index) => (
+                            <li key={index} className="flex items-start py-1 gap-x-3">
                               {task.completed ? (
                                 <>
                                   <img
@@ -212,23 +223,22 @@ const RoadmapSection = ({ phases }) => {
                                   }}
                                 ></div>
                               )}
-                              <h6 className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                              <p className="text-[16px] sm:text-sm text-[#D1D5DB] leading-[100%]">
                                 {task.text}
-                              </h6>
+                              </p>
                             </li>
                           ))}
                         </ul>
                       </div>
 
                       <div className="flex justify-center sm:justify-end">
-                        {getStatusBadge(phase.status)}
+                        {getStatusBadge(items.status)}
                       </div>
 
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 233 228"
                         fill="none"
-                        className="absolute -bottom-3 left-0  "
+                        className="absolute w-full h-full bottom-[-10%]  left-0 !z-[-1] "
                       >
                         <g filter="url(#filter0_f_206_2451)">
                           <ellipse
@@ -272,31 +282,13 @@ const RoadmapSection = ({ phases }) => {
               ))}
             </CarouselContent>
 
-            {/* Navigation Arrows - Positioned on sides for desktop */}
             <CarouselPrevious className="hidden md:flex" />
             <CarouselNext className="hidden md:flex" />
 
             {/* Mobile Navigation Arrows with Dots - Below carousel */}
             <div className="flex md:hidden justify-center items-center gap-4 mt-8">
-              <CarouselPrevious className="static! transform-none! h-10 w-10" />
-
-              {/* Pagination Dots */}
-              <div className="flex gap-2 pb-9">
-                {Array.from({ length: count }).map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => api?.scrollTo(index)}
-                    className={`transition-all duration-300 rounded-full ${
-                      index === current
-                        ? "w-8 h-2 bg-linear-to-r from-[#F9F295] via-[#E0AA3E] to-[#B88A44]"
-                        : "w-2 h-2 bg-white/30 hover:bg-white/50"
-                    }`}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
-              </div>
-
-              <CarouselNext className="static! transform-none! h-10 w-10" />
+              <CarouselPrevious className="!static !transform-none h-10 w-10 !z-[99]" />
+                <CarouselNext className="!static !transform-none h-10 w-10 !z-[99]" />
             </div>
           </Carousel>
         </div>

@@ -22,23 +22,36 @@ const SCORPUtilitySection = () => {
 
   return (
     <section className="relative w-full max-md:pt-0 py-20 px-4 md:px-16 overflow-hidden">
-      <div className="relative max-w-[1280px] overflow-hidden rounded-[20px] SCORPUtility_bg w-[100%] mx-auto pb-[50px] md:px-[60px] max-md:px-[20px] max-md:py-[48px]">
+      <div className="relative max-w-[1280px] max-md:rounded-b-[10px] overflow-hidden md:rounded-[20px] SCORPUtility_bg w-[100%] mx-auto pb-[50px]  max-md:py-[48px]">
         {/* Section Heading */}
-        <div className="">
+        <div className="md:px-[60px] max-md:px-[20px] max-md:mb-15 max-md:border-b max-md:border-[#ffffff73]">
           <div className="flex max-md:flex-col justify-between items-center relative">
             <div className="max-w-[600px] w-[100%] space-y-[34px]">
               <h2 className="md:text-start text-center">
-                35+ Different <span className="faded">Sports</span>
+                35+ Different <span className="faded_heading">Sports</span>
               </h2>
-              <p className="max-md:text-center">Scorpion Casino provides various sports betting opportunities, including football, tennis, American football, horse racing, basketball, golf, boxing,  and MMA.</p>
-              <button className="btn-primary md:text-[20px] text-[16px] md:px-[51px] px-[31px] md:py-[19px] py-[12px]  max-md:min-w-[100%]">Buy $SCORP2.0</button>
+              <p className="max-md:text-center max-w-[380px]">SCORPION provides various sports betting opportunities, including football, tennis, American football, horse racing, basketball, golf, boxing, and MMA.</p>
+              <button 
+                onClick={(e) => {
+                e.preventDefault();
+                const target = document.querySelector("#wallet");
+                if (target) {
+                  const yOffset = 20;
+                  const y =
+                    target.getBoundingClientRect().top +
+                    window.scrollY +
+                    yOffset;
+                  window.scrollTo({ top: y, behavior: "smooth" });
+                }
+              }}
+              className="btn-primary md:text-[20px] text-[16px] md:px-[51px] px-[31px] md:py-[19px] py-[12px]  max-md:min-w-[100%]">Buy $SCORP2.0</button>
             </div>
             <div className="md:min-h-[500px] min-h-[380px] max-md:pt-4"> 
               <img className="md:block hidden max-w-[636.797px] absolute w-[100%] right-0" src={sportsImg} alt=" 35+ Different Sports" />
-                  <img className="md:hidden block max-w-[636.797px] absolute w-[100%] right-0" src={sportsImg_mob} alt=" 35+ Different Sports" />
+                  <img className="md:hidden block max-w-[330.797px] absolute w-[100%] right-0" src={sportsImg_mob} alt=" 35+ Different Sports" />
             </div>
           </div>
-            <div className="flex max-md:grid max-md:grid-cols-3 max-md:gap-y-[20px] justify-between items-center space-x-4 mb-20">
+            <div className="flex max-md:grid max-md:grid-cols-3 max-md:gap-y-[20px] justify-between items-center space-x-4 mb-14 md:mb-20">
               <img src={sportsLogo1} className="md:w-[119.619px] mx-auto w-[60px] h-[24px] md:h-[41.339px]" alt="35+ Different sports Logo" />
               <img src={sportsLogo2} className="md:w-[75.642px] mx-auto w-[36.134px] h-[50px] md:h-[104.667px]" alt="35+ Different sports Logo" />
               <img src={sportsLogo3} className="md:w-[100.269px] mx-auto w-[52.778px] h-[50px] md:h-[94.992px]" alt="35+ Different sports Logo" />
@@ -49,7 +62,7 @@ const SCORPUtilitySection = () => {
         </div>
 
         {/* Utility Cards Grid */}
-        <div className="">
+        <div className="md:px-[60px] max-md:px-[20px]">
           <div className="flex md:-mt-5 max-md:flex-col  md:justify-between md:items-center relative">
             <div className="md:min-h-[604.889px] max-md:relative min-h-[380px]">
               <img src={gameImg} className="md:block hidden max-w-[810.24px] absolute -left-[18%] md:-bottom-9 -bottom-0 w-[100%]" alt=" 200+ Casino  Games" />
@@ -57,10 +70,23 @@ const SCORPUtilitySection = () => {
             </div>
             <div className="max-w-[600px] max-md:flex max-md:flex-col max-md:items-center w-[100%] space-y-[34px]">
               <h2 className="md:text-start max-md:text-center">
-                200+ Casino  <span className="faded">Games</span>
+                200+ Casino  <span className="faded_heading">Games</span>
               </h2>
-              <p className="max-md:text-center">Scorpion Casino offers a complete online casino with over 200+ games from all major game providers. Casino games include slots, blackjack, roulette, poker, live casino, and more.</p>
-              <button className="btn-primary md:px-[51px] max-md:min-w-[100%] px-[31px] md:py-[19px] py-[12px] text-[16px] md:text-[20px]">Buy $SCORP2.0</button>
+              <p className="max-md:text-center max-w-[335px] md:max-w-[380px]">SCORPION offers a complete online casino with over 200+ games from all major game providers. Casino games include slots, blackjack, roulette, poker, live casino, and more.</p>
+              <button 
+                onClick={(e) => {
+                e.preventDefault();
+                const target = document.querySelector("#wallet");
+                if (target) {
+                  const yOffset = 20;
+                  const y =
+                    target.getBoundingClientRect().top +
+                    window.scrollY +
+                    yOffset;
+                  window.scrollTo({ top: y, behavior: "smooth" });
+                }
+              }}
+              className="btn-primary md:px-[51px] max-md:min-w-[100%] px-[31px] md:py-[19px] py-[12px] text-[16px] md:text-[20px]">Buy $SCORP2.0</button>
             </div>
           </div>
             <div className="md:flex md:justify-between max-md:mt-12 md:items-center max-md:grid max-md:grid-cols-3 max-md:gap-y-[20px] md:space-x-4">

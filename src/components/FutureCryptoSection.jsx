@@ -2,7 +2,7 @@ import graohicsimg from "../assets/gambling/graohics.webp";
 
 const FutureCryptoSection = () => {
   return (
-    <section className="relative z-[9] relative w-full bg_gambling_con  pb-16 px-6 md:p-16">
+    <section id="what-is-scorpion" className="relative z-[9] relative w-full bg_gambling_con  pb-16 px-6 md:p-16">
       {/* Decorative Stars/Shine Accents */}
       <div
     className="absolute top-[200px] z-[-1]"
@@ -23,10 +23,10 @@ const FutureCryptoSection = () => {
         <div className=" flex max-md:flex-col max-md:space-y-[32px] justify-between items-center ">
           <div className="max-w-[664px] w-[100%] space-y-[15px] max-md:flex max-md:flex-col max-md:items-center ">
             <h2 className="md:text-start text-center">
-              $SCORP2.0 Is The <span className="faded">Future</span> Leading <span className="faded">Gambling</span> Cryptocurrency
+              $SCORP2.0 Is The <span className="faded_heading">Future</span> Leading <span className="faded_heading">Gambling</span> Cryptocurrency
             </h2>
 
-            <p className="md:text-start text-center">
+            <p className="md:text-start text-center md:max-w-[580px]">
              The $SCORP2.0 token is empowering the SCORPION ecosystem, offering over 30,000 betting opportunities monthly, 210 casino games, and 160 live games on a licensed, transparent, and provably fair platform. 
             </p>
 
@@ -34,7 +34,9 @@ const FutureCryptoSection = () => {
              Don’t wait, come check us out now!
             </p>
 
-            <button className="btn-primary px-[71px]  py-[18px]">
+            <button className="btn-primary px-[71px]  py-[18px]" 
+              onClick={() => window.open("https://scorpion.casino", "_blank")}
+            >
               Visit Casino
             </button>
           </div>
