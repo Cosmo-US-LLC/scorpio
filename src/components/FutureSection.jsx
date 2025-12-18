@@ -62,4 +62,4 @@ const FutureSection = () => {
   );
 };
 
-export default FutureSection;
+export default FutureSection; 

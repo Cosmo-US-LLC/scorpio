@@ -18,9 +18,16 @@ const StageBox = () => {
     return minMax(stageFrac, 0, 1)
   }, [stageFrac])
 
+  // const overflowCountdownFrac = useMemo(() => {
+  //   return (Date.now() - new Date(apiData.stage.overflow_started).getTime()) / (new Date(apiData.stage.overflow_end).getTime() - new Date(apiData.stage.overflow_started))
+  // }, [apiData.stage])
   const overflowCountdownFrac = useMemo(() => {
-    return (Date.now() - new Date(apiData.stage.overflow_started).getTime()) / (new Date(apiData.stage.overflow_end).getTime() - new Date(apiData.stage.overflow_started))
-  }, [apiData.stage])
+  if (!apiData.stage?.overflow_started || !apiData.stage?.overflow_end) return 0
+
+  const start = new Date(apiData.stage.overflow_started).getTime()
+  const end = new Date(apiData.stage.overflow_end).getTime()
+  return (Date.now() - start) / (end - start)
+}, [apiData.stage])
 
   return (
     <div
