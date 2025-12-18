@@ -27,4 +27,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    sourcemap: true, // Enables generation of source map files in the 'dist' folder
+  },
 });
