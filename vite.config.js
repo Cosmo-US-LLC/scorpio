@@ -28,6 +28,6 @@ export default defineConfig({
     },
   },
   build: {
-    sourcemap: true, // Enables generation of source map files in the 'dist' folder
+    sourcemap: false, // Enables generation of source map files in the 'dist' folder
   },
 });
