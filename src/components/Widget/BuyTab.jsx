@@ -343,10 +343,6 @@ const BuyTab = () => {
       )}
       {visibleOption === "bonus" && <BonusCodeInput />}
       {visibleOption === "referral" && <ReferralCodeInput />}
-      <a href="https://presale.gg" target="_blank" className="text-xs flex items-center gap-1 justify-center hover:underline -mb-3">
-        Powered by <img src={presaleGgLogo} alt="Presale.gg" className="h-[1.1875em] w-auto" />
-      </a>
-
       {createdTransaction && (
         <NowpaymentsModal
           open={transactionModalOpen}
