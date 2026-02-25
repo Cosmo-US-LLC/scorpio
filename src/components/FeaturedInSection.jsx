@@ -1,16 +1,15 @@
-import Featured1 from "../assets/Featured/Featured (12).svg"
-import Featured2 from "../assets/Featured/Featured (11).webp"
-import Featured3 from "../assets/Featured/Featured (10).svg"
-import Featured4 from "../assets/Featured/Featured (9).svg"
-import Featured5 from "../assets/Featured/mob_icn (4).webp"
-import Featured6 from "../assets/Featured/mob_icn (3).webp"
-import Featured7 from "../assets/Featured/mob_icn (2).webp"
-import Featured8 from "../assets/Featured/mob_icn (1).webp"
-import Featured9 from "../assets/Featured/mob_icn (5).webp"
-import Featured10 from "../assets/Featured/mob_icn (6).webp"
-import Featured11 from "../assets/Featured/mob_icn (7).webp"
-import Featured12 from "../assets/Featured/mob_icn (8).webp"
-
+import Featured1 from "../assets/Featured/fr_icons (1).svg"
+import Featured2 from "../assets/Featured/fr_icons (2).svg"
+import Featured3 from "../assets/Featured/fr_icons (3).svg"
+import Featured4 from "../assets/Featured/fr_icons (4).svg"
+import Featured5 from "../assets/Featured/fr_icons (5).svg"
+import Featured6 from "../assets/Featured/fr_icons (6).svg"
+import Featured7 from "../assets/Featured/fr_icons (7).svg"
+import Featured8 from "../assets/Featured/fr_icons (8).svg"
+import Featured9 from "../assets/Featured/fr_icons (9).svg"
+import Featured10 from "../assets/Featured/fr_icons (10).svg"
+import Featured11 from "../assets/Featured/fr_icons (11).svg"
+import Featured12 from "../assets/Featured/fr_icons (12).svg"
 
 
 
@@ -69,7 +68,8 @@ const FeaturedInSection = () => {
             >
               <div className="flex items-center justify-center w-full relative">
                 <div className="flex flex-col items-center  justify-center  gap-2 ">
-                  <img src={publication.logo} className="max-md:object-cover" alt="" />
+                  <img src={publication.logo} 
+                  className="max-md:object-cover" alt="" />
                 </div>
 
                
