@@ -27,7 +27,7 @@ function Herosection() {
   return (
     <div
       id="wallet"
-      className="pt-[8px] pb-[160px] max-w-[1280px] w-full mx-auto md:px-0 max-md:px-4 h-full bg_herosection relative"
+      className="pt-[30px] pb-[160px] max-w-[1280px] w-full mx-auto md:px-0 max-md:px-4 h-full bg_herosection relative"
     >
       <div
         className="absolute max-md:top-[60px] z-[0] md:right-[0%] md:top-[100px]"
@@ -95,7 +95,7 @@ function Herosection() {
           muted
           playsInline
           controls={true}
-          className="w-full h-full max-w-[685px] rounded-[8px] object-cover"
+          className="w-full h-full max-w-[672px] rounded-[8px] object-cover"
           style={{ objectFit: "", objectPosition: "" }}
         >
           <source
@@ -125,7 +125,7 @@ function Herosection() {
         />
 
         <div className="max-w-[448px] w-full min-h-[600px]">
-          <div className="max-md:hidden flex justify-end space-x-4 relative z-[9] pb-4">
+          {/* <div className="max-md:hidden flex justify-end space-x-4 relative z-[9] pb-4">
             <div>
               <a
                 href="#"
@@ -178,7 +178,7 @@ function Herosection() {
             >
               <img className="h-[24px]" src={social_5} alt="" />
             </a>
-          </div>
+          </div> */}
           <Wallet />
         </div>
       </div>
