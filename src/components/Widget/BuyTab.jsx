@@ -162,7 +162,7 @@ const BuyTab = () => {
 
   return (
     <>
-      <Loadable component="h2"
+      {/* <Loadable component="h2"
         loadClass="mx-auto"
         className="text-center md:text-[25px] max-md:!text-[22px]"
         style={{
@@ -170,7 +170,7 @@ const BuyTab = () => {
         }}
       >
         {apiData.presaleEnded ? "Presale Ended" : apiData.stage?.stage_name ?? "SCORP2.0 PRESALE"}
-      </Loadable>
+      </Loadable> */}
       <StageBox />
       <TokenSelectGrid value={selectedToken} onChange={setSelectedToken} />
 
